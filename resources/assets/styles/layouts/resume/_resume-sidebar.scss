@@ -1,4 +1,4 @@
-
+/* stylelint-disable */
 aside {
   background-color: $blue;
   color: $white;
@@ -6,10 +6,47 @@ aside {
   width: 30%;
 }
 
+&-technologies {
+  &-container {
+    margin: 15px 0;
+    padding: 15px 0;
+    border-top: 1px solid rgba($white, 0.35);
+  }
+
+  &-list {
+    margin-top: 5px;
+  }
+
+  &-text-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin: 0 7.5px 7.5px 0;
+      padding-right: 7.5px;
+
+      &:not(:last-child) {
+        border-right: 1px solid rgba($white, 0.75);
+      }
+    }
+  }
+
+  &-icon {
+    color: $shade-black;
+    font-size: 20px;
+    margin-right: 5px;
+  }
+}
+
 &-links {
+  margin-bottom: 35px;
+
   ul {
     list-style: none;
-    padding-left: 10px;
+    padding-left: 0;
 
     li {
       margin: 5px 0;

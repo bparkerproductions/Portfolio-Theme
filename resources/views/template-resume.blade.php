@@ -34,10 +34,32 @@
             <ul>
               @foreach($resume['links'] as $link)
                 <li>
-                  <a href="{{$link['link']['url']}}">{{$link['link']['title']}}</a>
+                  <a target="_blank" href="{{$link['link']['url']}}">{{$link['link']['title']}}</a>
                 </li>
               @endforeach
             </ul>
+          </div>
+
+          <div class="resume-technologies">
+            @foreach($resume['technologies'] as $technology)
+              <div class="resume-technologies-container">
+                <h5 class="m-0">{{$technology['title']}}</h5>
+
+                <div class="resume-technologies-list">
+                  @foreach($technology['technology_list'] as $tech)
+                    @if(get_field('fa_icon_class', $tech))
+                      <i class="{{get_field('fa_icon_class', $tech)}} resume-technologies-icon"></i>
+                    @endif
+                  @endforeach
+                </div>
+
+                <ul class="resume-technologies-text-list">
+                  @foreach($technology['technology_list'] as $tech)
+                    <li>{{get_the_title($tech)}}</li>
+                  @endforeach
+                </ul>
+              </div>
+            @endforeach
           </div>
         </aside>
       </div>
