@@ -14,7 +14,11 @@
     <div class="inner-container">
       <div class="resume-content card">
         <div class="resume-main-content">
-          Col 1
+          <h2 class="resume-title">Brandon Parker</h2>
+
+          <div class="resume-intro">
+            <p>{{$resume['intro']}}</p>
+          </div>
         </div>
         <aside>
           Col 2
