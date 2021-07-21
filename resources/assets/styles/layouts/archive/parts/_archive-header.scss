@@ -15,6 +15,11 @@
     color: $white;
   }
 
+  .header-icon {
+    color: $blue;
+    margin-right: 5px;
+  }
+
   .subtitle-container {
     @include mt-custom(50px, 30px);
 
