@@ -1,0 +1,37 @@
+.code-demo-preview {
+  .icon {
+    font-size: 3em;
+    color: $blue;
+    margin-bottom: 25px;
+  }
+
+  .title {
+    margin-bottom: 10px;
+  }
+
+  .description {
+    margin-top: 0;
+    font-style: italic;
+  }
+
+  .inner-container {
+    padding: 30px;
+  }
+
+  .demo-container {
+    @include mt-medium;
+
+    .card {
+      border: 1px solid rgba($shade-black, 0.15);
+
+      .body {
+        padding: 20px;
+
+        .desc {
+          font-size: $SMALL_PARA_FONT_SIZE;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

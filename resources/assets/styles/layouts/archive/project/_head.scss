@@ -1,0 +1,53 @@
+.project-single-head {
+  background-color: rgba($bg-grey, 0.5);
+  margin-top: -25px;
+
+  .inner-container {
+    display: flex;
+
+    @include atPortrait {
+      flex-direction: column;
+    }
+  }
+
+  .image-container {
+    @include atPortraitAndUp {
+      width: 50%;
+    }
+
+    img {
+      max-width: 300px;
+      margin-bottom: 10px;
+    }
+
+    .caption {
+      color: $para;
+      margin: 0;
+    }
+  }
+
+  .list-container {
+    @include atPortrait {
+      margin-top: $spacer-small;
+    }
+
+    h6 {
+      margin: 0 0 0 10px;
+    }
+
+    ul {
+      padding-left: 12px;
+      margin-top: 5px;
+
+      @include color-bullets($blue);
+
+      @include atPortrait {
+        padding: 0;
+      }
+    }
+
+    li {
+      margin: 5px 0;
+    }
+  }
+}

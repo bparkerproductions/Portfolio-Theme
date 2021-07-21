@@ -1,0 +1,7 @@
+.page-content {
+  p {
+    @include atMobileAndUp {
+      max-width: 80%;
+    }
+  }
+}

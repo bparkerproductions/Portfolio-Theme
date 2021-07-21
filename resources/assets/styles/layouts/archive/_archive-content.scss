@@ -1,0 +1,50 @@
+/* General styles shared across blogs, projects, and so on */
+
+.entry-content {
+  font-size: 18px;
+
+  a {
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  @include allHeaders {
+    color: $blue;
+    margin: 35px 0 10px 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  p,
+  li {
+    @extend %excerpt-text;
+  }
+
+  ul {
+    @include color-bullets($blue);
+
+    padding-left: 10px;
+    margin-top: 5px;
+
+    li,
+    li a {
+      color: $black;
+      font-size: 1.05em;
+    }
+
+    li {
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  strong {
+    font-size: 1.1em;
+    color: $shade-black;
+  }
+}

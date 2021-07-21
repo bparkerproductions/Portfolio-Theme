@@ -1,0 +1,14 @@
+.home-about {
+  @include spacer;
+
+  .content-container {
+    @include atTabletAndUp {
+      width: 75%;
+    }
+  }
+
+  .title {
+    margin-bottom: 22.5px;
+    color: $black;
+  }
+}

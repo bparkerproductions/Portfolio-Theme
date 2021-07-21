@@ -1,0 +1,19 @@
+@mixin ml-custom($large, $small) {
+  margin-left: $large;
+
+  @include atTablet {
+    margin-left: $small;
+  }
+}
+
+@mixin ml-custom-full($large, $medium, $small) {
+  margin-left: $large;
+
+  @include atTablet {
+    margin-left: $medium;
+  }
+
+  @include atSmall {
+    margin-left: $small;
+  }
+}

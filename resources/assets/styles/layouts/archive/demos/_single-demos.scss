@@ -1,0 +1,17 @@
+.single-demos {
+  .inline-icon-container {
+    @extend %inline-icons;
+
+    @include mb-custom($spacer-medium, $spacer-small);
+  }
+
+  .project-demo img {
+    @include width(60%, 100%);
+  }
+
+  .demo-content {
+    @include atMobileAndUp {
+      max-width: 75%;
+    }
+  }
+}

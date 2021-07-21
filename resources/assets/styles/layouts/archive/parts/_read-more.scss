@@ -1,0 +1,39 @@
+.read-more-link {
+  background-color: $shade-black;
+  padding: 30px;
+  text-decoration: none;
+  transition: all 0.35s ease;
+
+  @include atTablet {
+    padding: 10px;
+  }
+
+  &:hover {
+    color: $black;
+
+    svg {
+      transform: translateX(5px);
+    }
+  }
+
+  .read-more {
+    display: flex;
+
+    svg {
+      margin-right: 15px;
+
+      @include atMobile {
+        display: none;
+      }
+    }
+
+    .read-more-text {
+      margin: 0;
+      color: $white;
+
+      @include atMobile {
+        font-size: 1.25em;
+      }
+    }
+  }
+}

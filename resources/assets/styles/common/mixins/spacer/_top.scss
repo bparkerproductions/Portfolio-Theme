@@ -1,0 +1,19 @@
+@mixin mt-custom($large, $small) {
+  margin-top: $large;
+
+  @include atTablet {
+    margin-top: $small;
+  }
+}
+
+@mixin mt-custom-full($large, $medium, $small) {
+  margin-top: $large;
+
+  @include atTablet {
+    margin-top: $medium;
+  }
+
+  @include atSmall {
+    margin-top: $small;
+  }
+}

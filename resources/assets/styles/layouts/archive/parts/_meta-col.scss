@@ -1,0 +1,36 @@
+.meta-col {
+  margin-top: 12.5px;
+  display: flex;
+  align-items: center;
+
+  @include atTablet {
+    margin-top: 5px;
+  }
+
+  @include atMobile {
+    padding: 0;
+    border: none;
+  }
+
+  .icon-container {
+    width: 30px;
+    margin-right: 7.5px;
+
+    svg {
+      @include atTablet {
+        font-size: 1em;
+      }
+    }
+  }
+
+  &.meta-time {
+    @include atPortrait {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .time-container {
+      display: flex;
+    }
+  }
+}

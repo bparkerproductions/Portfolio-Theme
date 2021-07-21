@@ -1,0 +1,32 @@
+/* Global Spacer */
+.spacer {
+  @include spacer;
+}
+
+.spacer-small {
+  @include spacer-small;
+}
+
+.mb-none {
+  margin-bottom: 0;
+}
+
+.mb-medium {
+  @include mb-custom($spacer-medium, $spacer-small);
+}
+
+.mb-small {
+  @include mb-custom($spacer-small, $spacer-tiny);
+}
+
+.mt-none {
+  margin-top: 0;
+}
+
+.mt-small {
+  @include mt-custom($spacer-small, $spacer-tiny);
+}
+
+.mt-medium {
+  @include mt-custom($spacer-medium, $spacer-small);
+}

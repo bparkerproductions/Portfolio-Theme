@@ -1,0 +1,22 @@
+.categories {
+  a {
+    text-decoration: none;
+
+    @include atMobileAndUp {
+      padding-right: 5px;
+    }
+
+    &::after {
+      content: "-";
+      color: $shade-black;
+
+      @include atMobileAndUp {
+        margin-left: 5px;
+      }
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+}

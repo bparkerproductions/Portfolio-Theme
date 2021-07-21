@@ -1,0 +1,19 @@
+/* HOME page specific overrides for the related posts component */
+
+.blog-posts-container {
+  @include mb-custom(50px, 30px);
+
+  .related-posts {
+    padding: $spacer-small 0;
+    background-color: transparent;
+
+    .inner-container {
+      width: 100%;
+    }
+
+    a,
+    .title {
+      color: $blue;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.entry-meta {
+  @import "meta-col";
+  @import "categories";
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12.5px;
+
+  @include border-bottom($shade-black);
+
+  @include atMobile {
+    flex-direction: column;
+  }
+
+  .categories,
+  time {
+    @include atTablet {
+      font-size: 0.9em;
+    }
+  }
+
+  .post-technologies {
+    margin-left: 25px;
+
+    @include atPortrait {
+      margin: 15px 0 5px 0;
+    }
+
+    svg {
+      font-size: 1.25em;
+      margin: 0 3.5px;
+    }
+  }
+}

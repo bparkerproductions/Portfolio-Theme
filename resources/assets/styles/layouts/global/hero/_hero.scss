@@ -1,0 +1,58 @@
+.hero {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @import "hero-cards";
+
+  @include hard-center;
+
+  @include atMobile {
+    justify-content: flex-start;
+    padding-top: $spacer-large;
+    height: 100%;
+  }
+
+  @include allHeaders {
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  canvas#snowstorm {
+    @extend %absolute-fill;
+  }
+
+  .hero-title {
+    font-weight: 700;
+    color: $shade-black;
+    text-align: left;
+    margin: 0;
+
+    span {
+      font-weight: 700;
+      color: $shade-black;
+    }
+
+    @include atTablet {
+      text-align: center;
+    }
+  }
+
+  .toggle-more {
+    position: absolute;
+    bottom: 5vh;
+    right: 0;
+    width: 100%;
+
+    @include atMobile {
+      display: none;
+    }
+
+    svg {
+      color: $white;
+      margin-bottom: 10px;
+    }
+  }
+}

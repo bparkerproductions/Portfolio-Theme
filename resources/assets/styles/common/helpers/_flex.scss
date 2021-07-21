@@ -1,0 +1,15 @@
+.hard-center {
+  @include hard-center;
+}
+
+.hard-center-no-column {
+  @include hard-center-no-column;
+}
+
+.column-center {
+  @include column-center;
+}
+
+.column-v-center {
+  @include column-v-center;
+}

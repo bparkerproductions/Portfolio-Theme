@@ -1,0 +1,35 @@
+.hero-cards-container {
+  @import "hero-card";
+
+  display: flex;
+  justify-content: flex-start;
+
+  @include atTablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-cards {
+    display: flex;
+    border-top: 4px solid $blue;
+
+    @include atTablet {
+      padding-top: 20px;
+      border: 0;
+    }
+
+    @include atTiny {
+      flex-direction: column;
+    }
+  }
+
+  .button-container {
+    margin: 0 20px;
+    justify-content: flex-end;
+
+    @include atTablet {
+      margin-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+}

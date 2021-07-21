@@ -1,0 +1,61 @@
+.image-container {
+  position: relative;
+  background-color: $black;
+  height: 450px;
+  border-radius: 0 0 3px 3px;
+
+  @extend %image-border;
+
+  @include atTablet {
+    height: auto;
+  }
+
+  .project-info {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    opacity: 0;
+    padding: 0 25px;
+    transition: all 0.5s ease;
+    width: 80%;
+
+    svg {
+      font-size: 1.5em;
+      color: $white;
+    }
+
+    .link-text {
+      margin-left: 6px;
+      color: $white;
+      text-decoration: underline;
+    }
+
+    .description p {
+      line-height: 1.75;
+      color: $white;
+      margin-top: 20px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 3px 3px;
+
+    @include atTablet {
+      height: auto;
+    }
+  }
+
+  &:hover {
+    .project-info {
+      opacity: 1;
+    }
+
+    img {
+      opacity: 0.05;
+      transition: all 0.5s ease;
+    }
+  }
+}

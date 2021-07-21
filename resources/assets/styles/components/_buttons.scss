@@ -1,0 +1,46 @@
+.button {
+  @include btn-size-normal;
+  @include hard-center-no-column;
+  @include btn-base;
+}
+
+/* Sizes */
+.button.large {
+  @include btn-size-large;
+}
+
+.button.medium {
+  @include btn-size-normal-plus;
+}
+
+.button.small {
+  @include btn-size-small;
+}
+
+/* Colors */
+.button.black {
+  @include btn-black;
+}
+
+.button.dark-blue {
+  @include btn-dark-blue;
+}
+
+.button.rotate {
+  @include onHover {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.button.border {
+  background-color: transparent;
+  border: 3px solid $white;
+  font-weight: 400;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
+}

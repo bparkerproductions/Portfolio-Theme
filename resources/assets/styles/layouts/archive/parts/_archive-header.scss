@@ -1,0 +1,39 @@
+.archive-header {
+  padding: $spacer-larger 0 $spacer-medium 0;
+  border-bottom: 1px solid rgba($shade-black, 0.2);
+  clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%);
+  background-color: $shade-black;
+
+  @include allHeaders {
+    color: $white;
+    margin-bottom: 10px;
+  }
+
+  p,
+  .header,
+  a {
+    color: $white;
+  }
+
+  .subtitle-container {
+    @include mt-custom(50px, 30px);
+
+    display: flex;
+    align-items: center;
+
+    .icon-container svg {
+      font-size: 2em;
+      margin-right: 15px;
+      color: $faded-blue;
+    }
+
+    a {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    @include allHeaders {
+      font-weight: 400;
+    }
+  }
+}

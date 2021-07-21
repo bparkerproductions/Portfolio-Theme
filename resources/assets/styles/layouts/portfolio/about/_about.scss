@@ -1,0 +1,34 @@
+.about-section {
+  background-color: rgba($bg-grey, 0.5);
+  padding-bottom: 0;
+
+  @import "technologies";
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+
+    @include mb-custom(50px, 30px);
+
+    @include atTablet {
+      flex-direction: column;
+    }
+  }
+
+  .button-container {
+    margin-top: 30px;
+  }
+
+  .content-container {
+    width: 50%;
+
+    @include atTablet {
+      margin-bottom: $spacer-medium;
+      width: auto;
+    }
+  }
+}

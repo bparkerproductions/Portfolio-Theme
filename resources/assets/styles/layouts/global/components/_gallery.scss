@@ -1,0 +1,54 @@
+.image-gallery {
+  display: flex;
+  align-items: flex-start;
+
+  .header-container {
+    margin-bottom: $spacer-small;
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    .gallery-description {
+      margin: 0;
+    }
+  }
+
+  .gallery-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .image-container {
+      flex-basis: 30%;
+      margin: 0 3% 3% 0;
+      flex-grow: 1;
+
+      &:first-child {
+        flex-basis: 50%;
+      }
+
+      @include atTablet {
+        flex-basis: 45%;
+        margin: 25px 0;
+        margin-right: 5%;
+      }
+
+      @include atMobile {
+        flex-basis: 100%;
+        margin-right: 0;
+      }
+
+      .caption {
+        color: $grey;
+        font-size: 13px;
+      }
+    }
+
+    img {
+      width: 100%;
+
+      @extend %image-border;
+    }
+  }
+}

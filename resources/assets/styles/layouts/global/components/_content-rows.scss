@@ -1,0 +1,54 @@
+.content-rows {
+  width: 100%;
+
+  .content-row {
+    padding: 75px 0;
+    width: 100vw;
+
+    .inner-container {
+      display: flex;
+      justify-content: space-between;
+
+      @include atPortrait {
+        flex-direction: column;
+      }
+    }
+
+    &:first-of-type {
+      background-color: $black;
+    }
+
+    &:nth-child(2) {
+      background-color: $blue;
+    }
+
+    &:nth-child(3) {
+      background-color: $shade-black;
+    }
+
+    p {
+      color: $white;
+      margin-top: 0;
+    }
+  }
+
+  .header-container {
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+
+    .row-title {
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+
+  .row-content-container {
+    width: 50%;
+
+    @include atPortrait {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.primary-navigation {
+  @import "parts/toggle-container";
+  @import "parts/nav-dark";
+
+  .primary-content {
+    @import "content-container";
+    @import "navbar-scrolled";
+
+    padding: 35px 0 25px 0;
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    background-color: transparent;
+
+    @include atMobile {
+      transition: all 0.5s ease;
+      border-bottom: 1px solid rgba($black, 0.5);
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &:not(.active) {
+      @include atMobile {
+        transform: translateY(-100vh);
+      }
+    }
+
+    &.active {
+      @include atMobile {
+        background-color: $white;
+        transform: translateY(0);
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+footer.footer {
+  background-color: $black;
+
+  .list-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .footer-col {
+      flex-basis: 23.5%;
+
+      @include allHeaders {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      @include atTablet {
+        flex-basis: 32%;
+      }
+
+      @include atMobile {
+        flex-basis: 50%;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+          margin: 15px 0;
+
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    @include border-top($white);
+
+    p {
+      color: $white;
+      margin-top: 5px;
+    }
+  }
+}

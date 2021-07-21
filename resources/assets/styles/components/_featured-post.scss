@@ -1,0 +1,15 @@
+.featured-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 65px;
+  width: 65px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: $blue;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+
+  svg {
+    margin: 5px 5px 0 0;
+  }
+}

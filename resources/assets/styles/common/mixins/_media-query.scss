@@ -1,0 +1,97 @@
+@mixin atTiny() {
+  @media screen and (max-width: $tiny) {
+    @content;
+  }
+}
+
+@mixin atTinyAndUp() {
+  @media screen and (min-width: $tiny) {
+    @content;
+  }
+}
+
+@mixin atPortrait() {
+  @media screen and (max-width: $portrait) {
+    @content;
+  }
+}
+
+@mixin atPortraitAndUp() {
+  @media screen and (min-width: $portrait) {
+    @content;
+  }
+}
+
+@mixin atMobile() {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin atMobileAndUp() {
+  @media screen and (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin atMobileOnly() {
+  @media screen and (max-width: $mobile) and (min-width: $tiny) {
+    @content;
+  }
+}
+
+@mixin atLaptop() {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin atLaptopAndUp() {
+  @media screen and (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin atTabletAndUp() {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin atTablet() {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin atDesktopAndUp() {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin atDesktop() {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin atLargeAndUp() {
+  @media screen and (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin atLarge() {
+  @media screen and (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin onHover {
+  &:hover {
+    @include atTabletAndUp {
+      @content;
+    }
+  }
+}

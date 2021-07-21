@@ -1,0 +1,58 @@
+.cta {
+  background-color: $shade-black;
+
+  .social-media {
+    svg {
+      color: $white;
+      font-size: 2em;
+      margin: 0 5px;
+    }
+  }
+
+  .social-media,
+  h2,
+  .link-container {
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+
+    @include atTabletAndUp {
+      padding: 0 12.5px;
+      border-right: 1px solid rgba($white, 0.15);
+    }
+
+    @include atTablet {
+      margin: 10px 0;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  .header-container {
+    display: flex;
+    align-items: flex-end;
+
+    @include atTablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    h2 {
+      line-height: 1;
+
+      @include atMobile {
+        width: 100%;
+      }
+    }
+
+    .link-container a {
+      text-decoration: underline;
+    }
+  }
+}

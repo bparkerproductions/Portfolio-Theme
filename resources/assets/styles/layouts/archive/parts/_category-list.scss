@@ -1,0 +1,33 @@
+.archive-category-list {
+  @include mb-custom($spacer-medium, $spacer-tiny);
+
+  .archive-categories {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mt-custom(30px, 20px);
+    @include border-bottom($shade-black);
+
+    .single-category {
+      display: flex;
+      justify-content: center;
+      border-right: 1px solid rgba($white, 0.25);
+      transition: all 0.5s ease;
+
+      @include atTablet {
+        border: 1px solid rgba($white, 0.25);
+      }
+
+      a {
+        color: $shade-black;
+        text-align: center;
+        margin: 5px 15px 5px 0;
+        transition: all 0.35s ease;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}

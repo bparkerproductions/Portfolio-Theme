@@ -1,0 +1,34 @@
+.project-content {
+  @import "content-section";
+
+  .icon-container {
+    @extend %inline-icons;
+  }
+
+  #project-testimonial {
+    .slider-container {
+      @extend %layout-two-columns;
+    }
+
+    .slider-toggle-arrows {
+      display: none;
+    }
+
+    .testimonials-container {
+      width: 100%;
+    }
+
+    .testimonial {
+      margin: 15px 0;
+    }
+
+    .testimonials {
+      align-items: flex-start;
+      padding: 30px 0;
+    }
+  }
+
+  .cta {
+    width: 100%;
+  }
+}

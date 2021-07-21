@@ -1,0 +1,10 @@
+&.dark.primary-navigation .primary-content {
+  .content-container a {
+    color: $shade-black;
+  }
+
+  .home-item-container svg {
+    color: $blue;
+    margin-right: 12.5px;
+  }
+}

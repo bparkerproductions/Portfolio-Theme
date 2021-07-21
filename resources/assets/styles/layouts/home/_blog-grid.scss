@@ -1,0 +1,70 @@
+.blog-grid {
+  @include spacer;
+
+  @include atLaptopAndUp {
+    padding-bottom: 0;
+  }
+
+  .blog-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    a,
+    .single-blog-title,
+    .single-blog-description {
+      color: $white;
+    }
+
+    .single-blog-post {
+      flex-basis: 25%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+
+      @include atLarge {
+        flex-basis: 33.33%;
+      }
+
+      @include atTablet {
+        flex-basis: 50%;
+      }
+
+      @include atMobile {
+        flex-basis: 100%;
+      }
+
+      .single-post-link {
+        @extend %absolute-fill;
+      }
+
+      article {
+        padding: 65px 30px;
+        height: 100%;
+        box-sizing: border-box;
+        background-color: rgba($black, 0.9);
+        transition: all 0.35s ease;
+
+        @include onHover {
+          transform: scale(1.025);
+        }
+      }
+
+      &:nth-child(3n) {
+        article {
+          background-color: rgba($grey, 0.9);
+        }
+      }
+
+      &:nth-child(2n) {
+        article {
+          background-color: rgba($blue-dark, 0.9);
+        }
+      }
+    }
+  }
+}

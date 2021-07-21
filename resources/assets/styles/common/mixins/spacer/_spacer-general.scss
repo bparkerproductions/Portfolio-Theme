@@ -1,0 +1,15 @@
+@mixin spacer-custom($large, $small) {
+  padding: $large 0;
+
+  @include atTablet() {
+    padding: $small 0;
+  }
+}
+
+@mixin spacer-custom-side($large, $small) {
+  padding: 0 $large;
+
+  @include atTablet() {
+    padding: 0 $small;
+  }
+}

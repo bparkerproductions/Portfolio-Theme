@@ -1,0 +1,21 @@
+.toggle-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background-color: $white;
+  width: 50px;
+  height: 50px;
+  padding: 0 0 35px 35px;
+  -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+
+  svg {
+    font-size: 2em;
+    color: $shade-black;
+  }
+
+  @include atMobileAndUp {
+    display: none;
+  }
+}

@@ -1,0 +1,19 @@
+@mixin mb-custom($large, $small) {
+  margin-bottom: $large;
+
+  @include atTablet {
+    margin-bottom: $small;
+  }
+}
+
+@mixin mb-custom-full($large, $medium, $small) {
+  margin-bottom: $large;
+
+  @include atTablet {
+    margin-bottom: $medium;
+  }
+
+  @include atMobile {
+    margin-bottom: $small;
+  }
+}

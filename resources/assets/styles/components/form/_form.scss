@@ -1,0 +1,20 @@
+/* General default form styles */
+
+.label-container {
+  margin-bottom: 4px;
+
+  label {
+    color: $para;
+  }
+}
+
+.input-style {
+  padding: 10px 10px 10px 5px;
+  border: 1px solid rgba($shade-black, 0.05);
+  border-bottom: 2px solid $blue;
+
+  &:focus {
+    outline: none;
+  }
+}
+

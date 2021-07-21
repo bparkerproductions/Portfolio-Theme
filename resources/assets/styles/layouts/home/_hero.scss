@@ -1,0 +1,41 @@
+.home-hero {
+  .col {
+    padding: 10% 5% 2.5% 5%;
+    box-sizing: border-box;
+
+    .title {
+      margin-bottom: 15px;
+    }
+
+    .title,
+    .description,
+    a {
+      color: $white;
+    }
+
+    @include atMobileAndUp {
+      flex-basis: 50%;
+    }
+
+    @include atMobile {
+      padding: 7.5% 5%;
+    }
+  }
+
+  .layout-two-columns {
+    background-color: $blue-dark;
+  }
+
+  .left-column {
+    background-color: $shade-black;
+
+    @include atMobileAndUp {
+      padding-right: 10%;
+      clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+    }
+  }
+
+  .right-column {
+    background-color: $blue-dark;
+  }
+}

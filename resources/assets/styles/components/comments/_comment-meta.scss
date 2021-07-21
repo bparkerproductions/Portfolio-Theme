@@ -1,0 +1,30 @@
+.comment-meta {
+  display: flex;
+  align-items: flex-end;
+
+  @include atMobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comment-metadata {
+    time {
+      letter-spacing: 0;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 13px;
+      color: $shade-black;
+    }
+  }
+
+  .fn {
+    color: $blue;
+    margin: 0 5px;
+  }
+
+  .says {
+    display: none;
+  }
+}

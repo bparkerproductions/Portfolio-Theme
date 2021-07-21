@@ -1,0 +1,52 @@
+.comments-title {
+  margin-bottom: $spacer-small;
+}
+
+.comment-list {
+  padding: 0;
+
+  .comment {
+    @import "comment-meta";
+
+    padding: 0;
+    border-left: 3px solid $blue;
+
+    .comment-respond {
+      padding: 0 15px;
+    }
+
+    &.depth-1 {
+      margin: 25px 0;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    .comment-body {
+      padding: 30px 20px;
+      background-color: rgba($bg-grey, 0.5);
+    }
+
+    .comment-content {
+      margin-top: 10px;
+
+      p {
+        line-height: 1.25;
+        font-size: 18px;
+
+        @include atMobile {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .reply a {
+      color: $blue;
+      font-size: 15px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+}

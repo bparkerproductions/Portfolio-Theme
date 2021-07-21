@@ -1,0 +1,33 @@
+@mixin hide-toggle {
+  .toggle {
+    display: none;
+  }
+}
+
+&.hide-arrows-desktop {
+  @include atLaptopAndUp {
+    @include hide-toggle;
+  }
+}
+
+&.hide-arrows-tablet {
+  @include atPortraitAndUp {
+    @include hide-toggle;
+  }
+}
+
+&.hide-arrows-portrait {
+  @include atMobileAndUp {
+    @include hide-toggle;
+  }
+}
+
+&.hide-arrows-mobile {
+  @include atTinyAndUp {
+    @include hide-toggle;
+  }
+}
+
+&.hide-all {
+  @include hide-toggle;
+}

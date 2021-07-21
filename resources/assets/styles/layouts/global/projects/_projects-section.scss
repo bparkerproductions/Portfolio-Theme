@@ -1,0 +1,37 @@
+.projects-section {
+  @import "image-overlay";
+  @import "project-preview";
+
+  @include border-top($grey);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 0;
+
+  .button-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @include atMobile {
+      flex-direction: column;
+    }
+
+    .button-container {
+      width: 48%;
+      margin-top: 10px;
+
+      @include atMobile {
+        width: 100%;
+      }
+
+      .button {
+        width: 100%;
+
+        @include atMobileAndUp {
+          margin-right: 7.5px;
+        }
+      }
+    }
+  }
+}

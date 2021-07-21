@@ -1,0 +1,30 @@
+.projects {
+  @import "projects-header";
+  @import "projects-section";
+
+  .bottom-link-container {
+    font-size: 1.25em;
+    display: flex;
+
+    @include border-top($shade-black);
+
+    @include atMobile {
+      flex-direction: column;
+    }
+
+    a {
+      margin: 5px 0;
+      margin-right: 20px;
+    }
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+
+  .bottom-button-container {
+    display: flex;
+
+    @include mt-custom(35px, 20px);
+  }
+}

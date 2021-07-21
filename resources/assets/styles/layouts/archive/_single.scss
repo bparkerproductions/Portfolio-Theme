@@ -1,0 +1,28 @@
+.single-post {
+  @import "../global/components/social-share";
+  @import "parts/difficulty";
+
+  .entry-meta {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba($shade-black, 0.15);
+  }
+
+  .image-container img {
+    max-width: 700px;
+    height: auto;
+    margin-bottom: $spacer-small;
+
+    @include atPortrait {
+      max-width: 100%;
+    }
+  }
+
+  article.post {
+    max-width: 70%;
+
+    @include atPortrait {
+      max-width: 100%;
+    }
+  }
+}

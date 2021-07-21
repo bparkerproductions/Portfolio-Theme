@@ -1,0 +1,73 @@
+#respond {
+  @include mb-custom($spacer-medium, $spacer-small);
+}
+
+#cancel-comment-reply-link {
+  font-size: 16px;
+}
+
+.comment-form-cookies-consent {
+  display: none;
+}
+
+.comment-form {
+  padding: 25px;
+  background-color: $blue;
+
+  p,
+  a {
+    color: $white;
+    font-weight: bold;
+  }
+
+  textarea#comment,
+  input#your-name {
+    width: calc(100% - 40px);
+    max-width: calc(100% - 40px);
+    min-height: 100px;
+    max-height: 200px;
+    border-radius: 4px;
+    padding: 20px;
+    margin-right: 0;
+  }
+
+  input#your-name {
+    min-height: 0;
+  }
+}
+
+.comment-reply-title {
+  margin: 0;
+  background-color: $shade-black;
+  padding: 25px;
+  color: $white;
+  border-radius: 8px 8px 0 0;
+}
+
+.input-style {
+  margin: 0 5px 15px 0;
+  flex: 1;
+
+  @include atMobile {
+    width: 95%;
+  }
+}
+
+p.form-submit {
+  @include atMobile {
+    width: 100%;
+  }
+
+  input#submit {
+    @include btn-base;
+    @include btn-size-large;
+    @include btn-black;
+
+    width: 100%;
+
+    @include atMobile {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}

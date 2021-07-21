@@ -1,0 +1,49 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  @include font-smoothing;
+  @include font("Open Sans");
+}
+
+/* Headers */
+@include allHeaders {
+  @include font("Lato");
+
+  margin-top: 0;
+}
+
+/* Apply Fonts to menu items */
+@include menuItems {
+  @include font("Lato");
+
+  letter-spacing: 0.5px;
+}
+
+p {
+  color: $para;
+  line-height: 1.5;
+}
+
+/* Various Text Elements */
+a {
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+svg,
+i {
+  transition: all 0.5s ease;
+}
+
+button,
+.button {
+  @include font("Lato");
+}
+
+/* Inner Containers */
+.inner-container {
+  @include inner-container;
+}

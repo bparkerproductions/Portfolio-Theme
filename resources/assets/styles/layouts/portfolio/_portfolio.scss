@@ -1,0 +1,11 @@
+.template-portfolio {
+  @import "about/about";
+
+  //parts
+  @import "parts/related-posts";
+
+  .projects {
+    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0% 100%);
+    background-color: rgba($bg-grey, 0.5);
+  }
+}
