@@ -1,0 +1,23 @@
+
+aside {
+  background-color: $blue;
+  color: $white;
+  padding: 50px 25px;
+  width: 30%;
+}
+
+&-links {
+  ul {
+    list-style: none;
+    padding-left: 10px;
+
+    li {
+      margin: 5px 0;
+
+      a {
+        color: $white;
+        font-size: 16px;
+      }
+    }
+  }
+}

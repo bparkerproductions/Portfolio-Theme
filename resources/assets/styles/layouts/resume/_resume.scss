@@ -1,4 +1,6 @@
 .resume {
+  @import "resume-sidebar";
+
   font-size: 15px;
   background-color: $bg-grey;
 
@@ -35,12 +37,5 @@
       margin-top: 2px;
       margin-right: 7.5px;
     }
-  }
-
-  aside {
-    background-color: $blue;
-    color: $white;
-    padding: 50px 25px;
-    width: 30%;
   }
 }

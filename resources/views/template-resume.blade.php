@@ -30,7 +30,15 @@
           </div>
         </div>
         <aside>
-          Col 2
+          <div class="resume-links">
+            <ul>
+              @foreach($resume['links'] as $link)
+                <li>
+                  <a href="{{$link['link']['url']}}">{{$link['link']['title']}}</a>
+                </li>
+              @endforeach
+            </ul>
+          </div>
         </aside>
       </div>
     </div>
