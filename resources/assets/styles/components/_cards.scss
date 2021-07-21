@@ -5,9 +5,11 @@
   transform: translateY(0);
   transition: all 0.35s ease;
 
-  @include atMobileAndUp {
-    &:hover {
-      transform: translateY(-5px);
+  &:not(.no-hover) {
+    @include atMobileAndUp {
+      &:hover {
+        transform: translateY(-5px);
+      }
     }
   }
 
