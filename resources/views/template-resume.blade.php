@@ -28,6 +28,17 @@
               @endforeach
             </ul>
           </div>
+
+          <section class="resume-section">
+            <h3 class="resume-header">Experience</h3>
+            @foreach($resume['experience'] as $experience)
+              <div class="resume-info">
+                <h5 class="resume-info-name m-0">{{$experience['company']}}</h5>
+                <em class="resume-info-title">{{$experience['title']}} - {{$experience['date']}}</em>
+                <p class="resume-info-description">{{$experience['description']}}</p>
+              </div>
+            @endforeach
+          </section>
         </div>
         <aside>
           <div class="resume-links">
