@@ -206,6 +206,46 @@
                             "return_format": "id"
                         }
                     ]
+                },
+                {
+                    "key": "field_60f9e6f46d69a",
+                    "label": "Accomplishments",
+                    "name": "accomplishments",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_60f9e70f6d69b",
+                            "label": "Item",
+                            "name": "item",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
                 }
             ]
         }
@@ -227,5 +267,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1626902536
+    "modified": 1626990360
 }

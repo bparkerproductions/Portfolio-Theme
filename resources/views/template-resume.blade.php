@@ -61,6 +61,16 @@
               </div>
             @endforeach
           </div>
+
+          <div class="resume-accomplishments">
+            <h5 class="m-0">Accomplishments</h5>
+            <ul>
+              <li>{{wp_count_posts()->publish}} and counting technical blog posts</li>
+              @foreach($resume['accomplishments'] as $accomplishment)
+                <li>{{$accomplishment['item']}}</li>
+              @endforeach
+            </ul>
+          </div>
         </aside>
       </div>
     </div>
