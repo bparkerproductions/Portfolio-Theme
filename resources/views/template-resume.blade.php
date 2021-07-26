@@ -39,6 +39,34 @@
               </div>
             @endforeach
           </section>
+
+          <section class="resume-section">
+            <h3 class="resume-header">Projects</h3>
+            @foreach($resume['projects'] as $project)
+              <div class="resume-info">
+                <h5 class="resume-info-name m-0">{{$project['project']}}</h5>
+                <em class="resume-info-title">{{$project['title']}} - {{$experience['date']}}</em>
+                <p class="resume-info-description">{{$project['description']}}</p>
+              </div>
+              <div class="resume-more-info">
+                <p class="resume-more-info-text">
+                  <i class="fas fa-caret-up resume-more-info-icon"></i>
+                  <span>More Info</span>
+                </p>
+              </div>
+            @endforeach
+          </section>
+
+          <section class="resume-section">
+            <h3 class="resume-header">Education</h3>
+            @foreach($resume['education'] as $education)
+              <div class="resume-info">
+                <h5 class="resume-info-name m-0">{{$education['school']}}</h5>
+                <em class="resume-info-title">{{$education['title']}} - {{$experience['date']}}</em>
+                <p class="resume-info-description">{{$education['description']}}</p>
+              </div>
+            @endforeach
+          </section>
         </div>
         <aside>
           <div class="resume-links">
