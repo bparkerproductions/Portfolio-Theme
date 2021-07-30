@@ -1,5 +1,6 @@
 .resume {
   @import "resume-sidebar";
+  @import "resume-more-info";
 
   font-size: 15px;
   background-color: $bg-grey;
@@ -26,12 +27,6 @@
   &-header {
     margin-bottom: 15px;
     color: $shade-black;
-  }
-
-  &-more-info {
-    margin-top: 0;
-    font-weight: bold;
-    cursor: pointer;
   }
 
   &-intro {

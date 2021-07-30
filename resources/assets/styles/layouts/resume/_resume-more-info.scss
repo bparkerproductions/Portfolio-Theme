@@ -1,0 +1,61 @@
+&-more-info {
+  margin-top: 0;
+  font-weight: bold;
+  margin-bottom: 25px;
+
+  &-text {
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: flex;
+  }
+
+  &-content {
+    &.hide {
+      display: none;
+    }
+
+    .body {
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &-icon-container {
+    transition: all 0.3s ease;
+    margin-right: 5px;
+
+    &.toggled {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-points {
+    list-style: none;
+    padding-left: 15px;
+
+    .point-icon {
+      margin-right: 5px;
+    }
+
+    li {
+      margin-bottom: 7.5px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &-link {
+    color: $shade-black;
+    font-size: 13px;
+    margin-top: 10px;
+
+    svg {
+      margin-right: 3.5px;
+    }
+  }
+
+  &-tech {
+    border-bottom: 1px solid rgba($shade-black, 0.5);
+    padding-bottom: 5px;
+  }
+}

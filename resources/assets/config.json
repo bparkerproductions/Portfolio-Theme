@@ -8,7 +8,7 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/app/themes/bp-portfolio",
+  "publicPath": "/bpportfolio/wp-content/themes/bp-portfolio",
   "devUrl": "http://localhost/bpportfolio",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",

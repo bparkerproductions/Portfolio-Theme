@@ -49,10 +49,39 @@
                 <p class="resume-info-description">{{$project['description']}}</p>
               </div>
               <div class="resume-more-info">
-                <p class="resume-more-info-text">
-                  <i class="fas fa-caret-up resume-more-info-icon"></i>
+                <div class="resume-more-info-text">
+                  <div class="resume-more-info-icon-container">
+                    <i class="fas fa-caret-up resume-more-info-icon"></i>
+                  </div>
                   <span>More Info</span>
-                </p>
+                </div>
+
+                <div class="resume-more-info-content card no-hover hide">
+                  <div class="body">
+                    @if($project['technologies'])
+                      <div class="resume-more-info-tech">
+                        @foreach($project['technologies'] as $tech)
+                          <i class="{{get_field('fa_icon_class', $tech)}} resume-technologies-icon"></i>
+                        @endforeach
+                      </div>
+                    @endif
+                    
+                    <ul class="resume-more-info-points">
+                      @foreach($project['points'] as $point)
+                        <li>
+                          <i class="fas fa-plus-circle point-icon"></i>
+                          <span>{{$point['item']}}</span>
+                        </li>
+                      @endforeach
+                    </ul>
+
+                    @if($project['link'])
+                      <a class="resume-more-info-link" target="_blank" href="{{$project['link']['url']}}">
+                        <i class="fas fa-external-link-alt"></i><span>See Project</span>
+                      </a>
+                    @endif
+                  </div>
+                </div>
               </div>
             @endforeach
           </section>
