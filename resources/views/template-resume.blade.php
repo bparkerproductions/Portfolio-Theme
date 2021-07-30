@@ -70,7 +70,7 @@
                       @foreach($project['points'] as $point)
                         <li>
                           <i class="fas fa-plus-circle point-icon"></i>
-                          <span>{{$point['item']}}</span>
+                          <p class="m-0">{{$point['item']}}</p>
                         </li>
                       @endforeach
                     </ul>

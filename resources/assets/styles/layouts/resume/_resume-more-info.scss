@@ -34,23 +34,27 @@
     padding-left: 15px;
 
     .point-icon {
-      margin-right: 5px;
+      margin: -1px 7.5px 0 0;
+      color: $shade-black;
     }
 
     li {
       margin-bottom: 7.5px;
       font-size: 14px;
       font-weight: 500;
+      display: flex;
+      align-items: center;
     }
   }
 
   &-link {
     color: $shade-black;
     font-size: 13px;
-    margin-top: 10px;
+    margin-top: 20px;
+    display: block;
 
     svg {
-      margin-right: 3.5px;
+      margin: 1px 5px 0 0;
     }
   }
 
