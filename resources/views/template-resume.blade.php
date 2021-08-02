@@ -88,16 +88,18 @@
                 <div class="resume-technologies-list">
                   @foreach($technology['technology_list'] as $tech)
                     @if(get_field('fa_icon_class', $tech))
-                      <i class="{{get_field('fa_icon_class', $tech)}} resume-technologies-icon"></i>
+                      <i title="{{get_the_title($tech)}}" class="{{get_field('fa_icon_class', $tech)}} resume-technologies-icon"></i>
                     @endif
                   @endforeach
                 </div>
 
-                <ul class="resume-technologies-text-list">
-                  @foreach($technology['technology_list'] as $tech)
-                    <li>{{get_the_title($tech)}}</li>
-                  @endforeach
-                </ul>
+                @if(!$technology['hide_names'])
+                  <ul class="resume-technologies-text-list">
+                    @foreach($technology['technology_list'] as $tech)
+                      <li>{{get_the_title($tech)}}</li>
+                    @endforeach
+                  </ul>
+                @endif
               </div>
             @endforeach
           </div>

@@ -680,6 +680,25 @@
                             "min": "",
                             "max": "",
                             "return_format": "id"
+                        },
+                        {
+                            "key": "field_61085b47d4b8e",
+                            "label": "Hide Names",
+                            "name": "hide_names",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         }
                     ]
                 },
@@ -743,5 +762,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1627337389
+    "modified": 1627937660
 }
