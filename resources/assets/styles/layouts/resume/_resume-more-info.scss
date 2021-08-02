@@ -34,7 +34,7 @@
     padding-left: 15px;
 
     .point-icon {
-      margin: -1px 7.5px 0 0;
+      margin: 1px 7.5px 0 0;
       color: $shade-black;
     }
 
@@ -43,7 +43,11 @@
       font-size: 14px;
       font-weight: 500;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+
+      p {
+        line-height: 1.25;
+      }
     }
   }
 
