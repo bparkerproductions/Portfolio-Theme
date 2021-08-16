@@ -12,6 +12,16 @@
 
   <section class="resume demos spacer-small column-center">
     <div class="inner-container">
+      <div class="resume-options">
+        <div class="resume-options-icon">
+          <i class="fas fa-file-pdf fa-lg"></i>
+          <p class="p-0">PDF Friendly Version</p>
+        </div>
+        <div class="resume-options-icon download">
+          <i class="fas fa-download fa-lg"></i>
+          <p class="p-0">Download as PDF</p>
+        </div>
+      </div>
       <div class="resume-content card no-hover">
         <div class="resume-main-content">
           <h2 class="resume-title">Brandon Parker</h2>
@@ -118,3 +128,7 @@
     </div>
   </section>
 @endsection
+
+
+{{-- only want to load this resource for the resume page --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>

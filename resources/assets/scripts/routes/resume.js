@@ -1,6 +1,13 @@
 export default {
   init() {
     document.querySelectorAll('.resume-more-info').forEach( this.moreInfo.bind(this) )
+
+    // init PDF logic
+    this.downloadAsPdf()
+  },
+  downloadAsPdf() {
+    const icon = document.querySelectorAll('.resume-options-icon.download')[0]
+    console.log(icon)
   },
   moreInfo(elem) {
     const toggler = elem.querySelectorAll('.resume-more-info-text')[0]

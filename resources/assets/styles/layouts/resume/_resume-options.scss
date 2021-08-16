@@ -1,0 +1,19 @@
+&-options {
+  width: 100%;
+  display: flex;
+
+  @include atTiny {
+    flex-direction: column;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 30px;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+}
