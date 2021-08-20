@@ -3,7 +3,7 @@
     <div class="resume-more-info-icon-container">
       <i class="fas fa-caret-up resume-more-info-icon"></i>
     </div>
-    <span>More Info</span>
+    <span class="toggle-info">More Info</span>
   </div>
   <div class="resume-more-info-content card no-hover hide">
     <div class="body">

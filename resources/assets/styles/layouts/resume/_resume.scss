@@ -7,6 +7,8 @@
   background-color: $bg-grey;
 
   &-content {
+    @import "resume-pdf-friendly";
+
     display: flex;
 
     @include atMobile {

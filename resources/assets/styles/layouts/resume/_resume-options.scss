@@ -15,5 +15,10 @@
     svg {
       margin-right: 10px;
     }
+
+    &.active p {
+      color: $blue;
+      font-weight: bold;
+    }
   }
 }
