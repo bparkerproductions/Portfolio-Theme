@@ -19,62 +19,6 @@
         </div>
       </div>
       <div class="resume-content card no-hover">
-        <div class="resume-main-content">
-          <h2 class="resume-title">Brandon Parker</h2>
-
-          <div class="resume-intro">
-            <p class="m-0">{{$resume['intro']}}</p>
-
-            <ul class="resume-intro-list">
-              @foreach($resume['intro_points'] as $point)
-                <li>
-                  <i class="fas fa-plus-circle resume-intro-icon"></i>
-                  <p class="m-0">{{$point['point']}}</p>
-                </li>
-              @endforeach
-            </ul>
-          </div>
-
-          <section class="resume-section">
-            <h3 class="resume-header">Experience</h3>
-            @foreach($resume['experience'] as $experience)
-              <div class="resume-info">
-                <h5 class="resume-info-name m-0">{{$experience['company']}}</h5>
-                <em class="resume-info-title">{{$experience['title']}} - {{$experience['date']}}</em>
-                <p class="resume-info-description">{{$experience['description']}}</p>
-              </div>
-
-              @include('partials.resume.more-info', [ 'item' => $experience ])
-            @endforeach
-          </section>
-
-          <section class="resume-section">
-            <h3 class="resume-header">Projects</h3>
-            @foreach($resume['projects'] as $project)
-              <div class="resume-info">
-                <h5 class="resume-info-name m-0">{{$project['project']}}</h5>
-                <em class="resume-info-title">{{$project['title']}} - {{$experience['date']}}</em>
-                <p class="resume-info-description">{{$project['description']}}</p>
-              </div>
-        
-              @include('partials.resume.more-info', [ 'item' => $project ])
-            @endforeach
-          </section>
-
-          <section class="resume-section">
-            <h3 class="resume-header">Education</h3>
-            @foreach($resume['education'] as $education)
-              <div class="resume-info">
-                <h5 class="resume-info-name m-0">{{$education['school']}}</h5>
-                <em class="resume-info-title">{{$education['title']}} - {{$experience['date']}}</em>
-                <p class="resume-info-description">{{$education['description']}}</p>
-              </div>
-
-              @include('partials.resume.more-info', [ 'item' => $education ])
-            @endforeach
-          </section>
-        </div>
-
         <aside>
           <div class="resume-links">
             <ul>
@@ -120,6 +64,61 @@
             </ul>
           </div>
         </aside>
+        <div class="resume-main-content">
+          <h2 class="resume-title">Brandon Parker</h2>
+
+          <div class="resume-intro">
+            <p class="m-0">{{$resume['intro']}}</p>
+
+            <ul class="resume-intro-list">
+              @foreach($resume['intro_points'] as $point)
+                <li>
+                  <i class="fas fa-plus-circle resume-intro-icon"></i>
+                  <p class="m-0">{{$point['point']}}</p>
+                </li>
+              @endforeach
+            </ul>
+          </div>
+
+          <section class="resume-section">
+            <h3 class="resume-header">Experience</h3>
+            @foreach($resume['experience'] as $experience)
+              <div class="resume-info">
+                <h5 class="resume-info-name m-0">{{$experience['company']}}</h5>
+                <em class="resume-info-title">{{$experience['title']}} - {{$experience['date']}}</em>
+                <p class="resume-info-description">{{$experience['description']}}</p>
+              </div>
+
+              @include('partials.resume.more-info', [ 'item' => $experience ])
+            @endforeach
+          </section>
+
+          <section class="resume-section">
+            <h3 class="resume-header">Projects</h3>
+            @foreach($resume['projects'] as $project)
+              <div class="resume-info">
+                <h5 class="resume-info-name m-0">{{$project['project']}}</h5>
+                <em class="resume-info-title">{{$project['title']}} - {{$project['date']}}</em>
+                <p class="resume-info-description">{{$project['description']}}</p>
+              </div>
+        
+              @include('partials.resume.more-info', [ 'item' => $project ])
+            @endforeach
+          </section>
+
+          <section class="resume-section">
+            <h3 class="resume-header">Education</h3>
+            @foreach($resume['education'] as $education)
+              <div class="resume-info">
+                <h5 class="resume-info-name m-0">{{$education['school']}}</h5>
+                <em class="resume-info-title">{{$education['title']}} - {{$education['date']}}</em>
+                <p class="resume-info-description">{{$education['description']}}</p>
+              </div>
+
+              @include('partials.resume.more-info', [ 'item' => $education ])
+            @endforeach
+          </section>
+        </div>
       </div>
     </div>
   </section>
