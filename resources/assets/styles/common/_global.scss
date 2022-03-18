@@ -5,21 +5,14 @@ body {
 
 body {
   @include font-smoothing;
-  @include font("Open Sans");
+  @include font("Source Sans Pro");
 }
 
 /* Headers */
 @include allHeaders {
-  @include font("Lato");
+  @include font("Ubuntu");
 
   margin-top: 0;
-}
-
-/* Apply Fonts to menu items */
-@include menuItems {
-  @include font("Lato");
-
-  letter-spacing: 0.5px;
 }
 
 p {

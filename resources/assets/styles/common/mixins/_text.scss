@@ -18,19 +18,13 @@
   }
 }
 
-@mixin menuItems() {
-  li, ul {
-    @content;
-  }
-}
-
 @mixin font($family) {
-  font-family: $family, Helvetica, Arial, sans-serif;
+  font-family: $family, Roboto, Helvetica, Arial, sans-serif;
 }
 
 @mixin font-scale($scale) {
-  h1 { font-size: $scale*3.47em; }
-  h2 { font-size: $scale*2.6em; }
+  h1 { font-size: $scale*2.85em; }
+  h2 { font-size: $scale*2.4em; }
   h3 { font-size: $scale*1.95em; }
   h4 { font-size: $scale*1.466em; }
   h5 { font-size: $scale*1.1em; }
