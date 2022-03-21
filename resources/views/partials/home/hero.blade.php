@@ -1,4 +1,4 @@
-<section class="home-hero">
+<section class="home-hero bubble-header">
   <div class="layout-two-columns">
     <div class="left-column col">
       <h2 class="title">{{ $home_hero['section_1_header'] }}</h2>

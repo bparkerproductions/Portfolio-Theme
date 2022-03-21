@@ -23,19 +23,15 @@
   }
 
   .layout-two-columns {
-    background-color: $blue-dark;
+    background-color: $blue;
   }
 
   .left-column {
-    background-color: $shade-black;
+    background-color: darken($blue, 3%);
 
     @include atMobileAndUp {
       padding-right: 10%;
       clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
     }
-  }
-
-  .right-column {
-    background-color: $blue-dark;
   }
 }

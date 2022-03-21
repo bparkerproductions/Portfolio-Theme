@@ -5,6 +5,7 @@ import post from '../components/post';
 import relatedPosts from '../components/related-posts';
 import categories from '../components/categories';
 import difficulty from '../components/difficulty';
+import heroBubble from '../components/hero-bubble';
 
 export default {
   init() {
@@ -15,5 +16,6 @@ export default {
     post.init();
     relatedPosts.init();
     difficulty.init();
+    heroBubble.init();
   },
 };
