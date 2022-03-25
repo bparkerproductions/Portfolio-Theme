@@ -1,5 +1,5 @@
 .single-post {
-  @import "../global/components/social-share";
+  // @import "../global/components/social-share";
   @import "parts/difficulty";
 
   .entry-meta {
@@ -19,7 +19,7 @@
   }
 
   article.post {
-    max-width: 70%;
+    max-width: 80%;
 
     @include atPortrait {
       max-width: 100%;

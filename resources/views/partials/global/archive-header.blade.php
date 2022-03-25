@@ -1,4 +1,4 @@
-<section class="archive-header column-center">
+<section class="archive-header bubble-header column-center">
   <div class="inner-container">
     <h1>{!!APP::title()!!}</h1>
     @if($project_link)

@@ -53,7 +53,7 @@
         font-size: 14px;
 
         &:hover {
-          color: $blue;
+          color: $shade-black;
         }
 
         @include atMobile {
@@ -62,7 +62,7 @@
       }
 
       &.active a {
-        color: $blue;
+        color: $shade-black;
       }
 
       &.has-dropdown:hover .submenu {

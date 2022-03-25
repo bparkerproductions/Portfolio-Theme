@@ -1,12 +1,15 @@
 .archive-header {
-  padding: $spacer-larger 0 $spacer-medium 0;
   border-bottom: 1px solid rgba($shade-black, 0.2);
   clip-path: polygon(0 0, 100% 0%, 100% 95%, 0 100%);
-  background-color: $shade-black;
+  background-color: $blue;
 
   @include allHeaders {
     color: $white;
     margin-bottom: 10px;
+  }
+
+  .inner-container {
+    padding: $spacer-larger 0 $spacer-medium 0;
   }
 
   p,
@@ -16,7 +19,6 @@
   }
 
   .header-icon {
-    color: $blue;
     margin-right: 5px;
   }
 
@@ -29,7 +31,6 @@
     .icon-container svg {
       font-size: 2em;
       margin-right: 15px;
-      color: $faded-blue;
     }
 
     a {
