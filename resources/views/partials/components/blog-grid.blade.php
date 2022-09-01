@@ -1,6 +1,6 @@
 <section class="blog-grid column-center">
-  <div class="inner-container">
-    <h2 class="title">{{ $header }}</h2>
+  <div class="blog-grid-header">
+    <p class="title">{{ $header }}</p>
   </div>
   <div class="post-container">
     <ul class="blog-list">
