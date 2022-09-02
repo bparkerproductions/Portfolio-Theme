@@ -40,9 +40,23 @@ footer.footer {
   .footer-bottom {
     @include border-top($white);
 
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+
     p {
       color: $white;
       margin-top: 5px;
+    }
+
+    .copyright-text {
+      margin: 0 10px 0 0;
+      padding-right: 10px;
+      border-right: 1px solid white;
+    }
+
+    .fa-envelope {
+      margin-right: 3.5px;
     }
   }
 }
