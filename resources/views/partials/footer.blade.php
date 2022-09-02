@@ -29,7 +29,7 @@
         <i class="fas fa-envelope"></i>bparkerproductions@gmail.com
       </a>
 
-      <a href="{{$resume_link}}" class="white">
+      <a href="{{$resume_link}}" class="white footer-item">
         <i class="fas fa-file-code"></i>Resume
       </a>
     </div>
