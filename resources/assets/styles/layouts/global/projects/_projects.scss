@@ -2,6 +2,11 @@
   @import "projects-header";
   @import "projects-section";
 
+  .header {
+    margin: 0 0 5px 0;
+    color: $shade-black;
+  }
+
   .bottom-link-container {
     font-size: 1.25em;
     display: flex;
