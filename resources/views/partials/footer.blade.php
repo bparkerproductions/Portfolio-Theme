@@ -23,10 +23,14 @@
 
     {{-- Footer Bottom --}}
     <div class="footer-bottom">
-      <p class="copyright-text">{{$copyright_text}}</p>
+      <p class="footer-item">{{$copyright_text}}</p>
 
-      <a href="mailto:bparkerproductions@gmail.com" title="bparkerproductions@gmail.com" class="white">
+      <a href="mailto:bparkerproductions@gmail.com" title="bparkerproductions@gmail.com" class="white footer-item">
         <i class="fas fa-envelope"></i>bparkerproductions@gmail.com
+      </a>
+
+      <a href="{{$resume_link}}" class="white">
+        <i class="fas fa-file-code"></i>Resume
       </a>
     </div>
   </div>
