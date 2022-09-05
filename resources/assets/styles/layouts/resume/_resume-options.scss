@@ -1,22 +1,27 @@
 &-options {
   width: 100%;
   display: flex;
+  margin-bottom: 10px;
 
   @include atTiny {
     flex-direction: column;
   }
 
   &-icon {
-    display: flex;
-    align-items: center;
     cursor: pointer;
-    margin-right: 30px;
+    margin: 0 15px 0 0;
+    color: $shade-black;
+    line-height: 1;
 
-    svg {
-      margin-right: 10px;
+    @include atMobile {
+      margin-bottom: 10px;
     }
 
-    &.active p {
+    svg {
+      margin-right: 3.5px;
+    }
+
+    &.active {
       color: $blue;
       font-weight: bold;
     }

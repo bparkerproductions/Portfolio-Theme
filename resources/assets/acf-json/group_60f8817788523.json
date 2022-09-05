@@ -34,6 +34,25 @@
                     "endpoint": 0
                 },
                 {
+                    "key": "field_63161fb73b5db",
+                    "label": "Resume File",
+                    "name": "resume_file",
+                    "type": "file",
+                    "instructions": "Resume file that's available for download",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
                     "key": "field_60f881b45ff5a",
                     "label": "Intro",
                     "name": "intro",
@@ -129,6 +148,46 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_63162c1ef8bab",
+                            "label": "Tags",
+                            "name": "tags",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_63162c2df8bac",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
                         },
                         {
                             "key": "field_60f9e84a9f1ed",
@@ -762,5 +821,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1627937660
+    "show_in_rest": 0,
+    "modified": 1662397512
 }

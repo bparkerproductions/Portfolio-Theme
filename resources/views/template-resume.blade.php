@@ -13,10 +13,13 @@
   <section class="resume demos spacer-small column-center">
     <div class="inner-container">
       <div class="resume-options">
-        <div class="resume-options-icon pdf-friendly">
-          <i class="fas fa-file-pdf fa-lg"></i>
-          <p class="p-0">PDF Friendly Version</p>
-        </div>
+        <p class="resume-options-icon pdf-friendly">
+          <i class="fas fa-file-pdf"></i> PDF Friendly Version
+        </p>
+
+        <a class="resume-options-icon" href="{{$resume['resume_file']['url']}}" download>
+          <i class="fas fa-download"></i> Download
+        </a>
       </div>
       <div class="resume-content card no-hover">
         <aside>
@@ -84,7 +87,14 @@
             <h3 class="resume-header">Experience</h3>
             @foreach($resume['experience'] as $experience)
               <div class="resume-info">
-                <h5 class="resume-info-name m-0">{{$experience['company']}}</h5>
+                <h5 class="resume-info-name m-0">
+                  {{$experience['company']}}
+                  @if($experience['tags'])
+                    @foreach($experience['tags'] as $tag)
+                      <span class="resume-info-badge badge">{{$tag['text']}}</span>
+                    @endforeach
+                  @endif
+                </h5>
                 <em class="resume-info-title">{{$experience['title']}} - {{$experience['date']}}</em>
                 <p class="resume-info-description">{{$experience['description']}}</p>
               </div>
