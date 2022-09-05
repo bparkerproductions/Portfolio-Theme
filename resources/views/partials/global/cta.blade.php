@@ -21,5 +21,9 @@
         </li>
       </ul>
     </div>
+
+    <a href="{{$resume_link}}" class="view-resume white">
+      <i class="fas fa-file-code"></i> View resume
+    </a>
   </div>
 </section>

@@ -38,6 +38,7 @@
   .header-container {
     display: flex;
     align-items: flex-end;
+    margin-bottom: 10px;
 
     @include atTablet {
       flex-direction: column;
@@ -55,5 +56,9 @@
     .link-container a {
       text-decoration: underline;
     }
+  }
+
+  .view-resume {
+    font-size: 20px;
   }
 }
