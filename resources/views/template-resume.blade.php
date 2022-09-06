@@ -133,6 +133,21 @@
               @include('partials.resume.more-info', [ 'item' => $education ])
             @endforeach
           </section>
+
+          @if($resume['interests'])
+            <section class="resume-section interests">
+              <h3 class="resume-header">Interests</h3>
+
+              <ul class="resume-more-info-points">
+                @foreach($resume['interests'] as $interest)
+                  <li>
+                    <i class="fas fa-plus-circle point-icon"></i>
+                    <p class="m-0">{{$interest['text']}}</p>
+                  </li>
+                @endforeach
+              </ul>
+            </section>
+          @endif
         </div>
       </div>
     </div>
