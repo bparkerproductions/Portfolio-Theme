@@ -1,7 +1,7 @@
 <div class="resume-more-info">
   <div class="resume-more-info-text">
     <div class="resume-more-info-icon-container">
-      <i class="fas fa-caret-up resume-more-info-icon"></i>
+      <i class="fas fa-caret-down resume-more-info-icon"></i>
     </div>
     <span class="toggle-info">More Info</span>
   </div>

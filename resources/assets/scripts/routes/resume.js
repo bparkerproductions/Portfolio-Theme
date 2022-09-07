@@ -10,20 +10,29 @@ export default {
     const pdfFriendly = document.querySelectorAll('.resume-options-icon.pdf-friendly')[0]
     const resumeContent = document.querySelectorAll('.resume-content')[0]
 
-    this.toggleAll()
-  
     if (pdfFriendly.classList.contains('active')) {
       pdfFriendly.classList.remove('active')
       resumeContent.classList.remove('pdf-friendly')
+      this.closeAll()
     }
     else {
       pdfFriendly.classList.add('active')
       resumeContent.classList.add('pdf-friendly')
+      this.openAll()
     }
   },
-  toggleAll() {
-    document.querySelectorAll('.resume-more-info .toggle-info').forEach(elem => {
-      elem.click()
+  openAll() {
+    document.querySelectorAll('.resume-more-info-content').forEach(elem => {
+      if (elem.classList.contains('hide')) elem.classList.remove('hide')
+    })
+  },
+  closeAll() {
+    document.querySelectorAll('.resume-more-info-content').forEach(elem => {
+      if (!elem.classList.contains('hide')) elem.classList.add('hide')
+    })
+
+    document.querySelectorAll('.resume-more-info-text').forEach(elem => {
+      this.updateToggler(elem, false)
     })
   },
   moreInfo(elem) {
