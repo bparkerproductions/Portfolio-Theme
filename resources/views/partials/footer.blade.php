@@ -23,7 +23,7 @@
 
     {{-- Footer Bottom --}}
     <div class="footer-bottom">
-      <p class="footer-item">{{$copyright_text}}</p>
+      <p class="footer-item">Bparkerproductions @ {{date("Y")}}</p>
 
       <a href="mailto:bparkerproductions@gmail.com" title="bparkerproductions@gmail.com" class="white footer-item">
         <i class="fas fa-envelope"></i>bparkerproductions@gmail.com

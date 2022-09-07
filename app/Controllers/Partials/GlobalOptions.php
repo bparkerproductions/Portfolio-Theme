@@ -19,10 +19,6 @@ trait GlobalOptions {
     return get_field('footer_lists', 'option');
   }
 
-  public function copyrightText() {
-    return get_field('copyright_text', 'option');
-  }
-
   public function resumeLink() {
     $page_object = get_page_by_title('Resume');
     return get_permalink($page_object->ID);
