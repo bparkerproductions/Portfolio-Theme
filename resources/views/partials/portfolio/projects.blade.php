@@ -23,7 +23,7 @@
 
     <div class="bottom-button-container">
       <a href="{{$projects_link}}">
-        <button class="button large black">
+        <button class="button black">
           {{$projects_link_text}}
           <i class="fas fa-caret-right"></i>
         </button>

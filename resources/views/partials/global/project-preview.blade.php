@@ -7,9 +7,7 @@
     @endif
 
     <div class="header-container">
-      <h4 class="white">
-        {{get_field('title', $id)}}
-      </h4>
+      <h5 class="white project-title" title="{{get_field('title', $id)}}">{{get_field('title', $id)}}</h5>
       <div class="icon-container">
         @foreach(get_field('tech', $id) as $techID)
           <i class="{{get_field('fa_icon_class', $techID)}}"></i>
@@ -20,15 +18,16 @@
       <img src="{{get_field('image', $id)}}">
 
       <div role="toggle" class="project-info">
-        <div class="link-container">
-          @if(get_field('link', $id))
+        @if(get_field('link', $id))
+          <div class="link-container">
             <a href="{{get_field('link', $id)}}">
               <i class="fas fa-external-link-alt"></i>
               <span class="link-text">See Site</span>
             </a>
-          @endif
-        </div>
+          </div>
+        @endif
         <div class="description">
+          <h5 class="white description-title">{{get_field('title', $id)}}</h5>
           <p>{{get_field('description', $id)}}</p>
         </div>
       </div>
