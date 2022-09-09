@@ -13,7 +13,7 @@ $isDisabled = $company == "" ? 'disabled' : '';
   </a>
 
   {{-- Project Link --}}
-  @if($project && is_front_page())
+  @if($project && !(get_post_type() == "projects"))
     <a class="project-link" href="{{get_permalink($project[0])}}">
       <i class="fas fa-laptop-code"></i>
       <span class="link">See Project</span>
