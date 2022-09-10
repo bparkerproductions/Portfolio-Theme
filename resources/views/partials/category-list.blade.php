@@ -5,7 +5,7 @@
         <i class="fas fa-folder-open"></i>
       </div>
       <div class="single-category {{$blog_active}}">
-        <a href="{{$blog_link}}">All Categories</a>
+        <a class="all-categories" href="{{$blog_link}}">All Categories</a>
       </div>
       @foreach($category_list as $cat)
         @if($cat->count >= 3)

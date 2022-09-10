@@ -19,6 +19,11 @@
         border: 1px solid rgba($white, 0.25);
       }
 
+      .all-categories {
+        border-right: 1px solid $grey;
+        padding-right: 15px;
+      }
+
       a {
         color: $shade-black;
         text-align: center;
@@ -35,6 +40,19 @@
           display: inline;
           margin-left: 3.5px;
           padding: 0 7.5px;
+        }
+
+        &.active {
+          background-color: $blue;
+          padding: 3px 10px;
+          color: white;
+          border-radius: 3px;
+          pointer-events: none;
+          cursor: inherit;
+
+          .badge {
+            background-color: white;
+          }
         }
       }
     }
