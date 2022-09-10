@@ -10,7 +10,9 @@
       @foreach($category_list as $cat)
         @if($cat->count >= 3)
           <div class="single-category">
-            <a href="{{get_category_link($cat->cat_ID)}}">
+            <a 
+              href="{{get_category_link($cat->cat_ID)}}"
+              class="{{Archive::isActive($cat)}}">
               {{$cat->name}}
               <span class="badge">{{$cat->count}}</span>
             </a>
