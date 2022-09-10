@@ -5,8 +5,7 @@ namespace App\Controllers\Partials;
 trait ArchivePost {
   public function categoryList() {
     $args = [
-      'orderby' => 'name',
-      'parent' => 0
+      'orderby' => 'name'
     ];
 
     return get_categories($args);
