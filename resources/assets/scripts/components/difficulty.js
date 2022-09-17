@@ -1,15 +1,16 @@
 export default {
   textboxHeight: '',
   init() {
-    $('.post-difficulty .header-info').click(this.toggle.bind(this));
+    document.querySelectorAll('.post-difficulty .header-info')[0].addEventListener(
+      'click',
+      this.toggle.bind(this)
+    )
 
     // get initial box height and add it as variable
-    let $textbox = $('.post-difficulty .difficulty-information');
-    this.textboxHeight = $textbox.outerHeight();
-    $textbox.css({
-      'height': 0,
-      'padding': 0,
-    });
+    let $textbox = document.querySelectorAll('.post-difficulty .difficulty-information')[0]
+    this.textboxHeight = $textbox.clientHeight
+    $textbox.style.height = 0
+    $textbox.style.padding = 0
   },
   toggle() {
     let isOut = $('.post-difficulty').attr('aria-toggled') == 'true';
