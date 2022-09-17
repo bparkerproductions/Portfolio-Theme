@@ -2,23 +2,21 @@ import scroll from './scroll';
 
 export default {
   init() {
-    $('.toggle-container').on('click', this.toggleNav);
-    $('li.has-dropdown').on('hover', this.toggleSubmenu);
-    $(document).scroll(this.navScroll);
+    document.querySelectorAll('.toggle-container')[0].addEventListener(
+      'click',
+      this.toggleNav
+    )
+
+    document.addEventListener(
+      'scroll',
+      this.navScroll
+    )
   },
   toggleNav() {
-    let $navbar = $('.primary-content');
-    let $content = $('.content-container');
-    $navbar.toggleClass('active');
-    $content.toggleClass('active');
+    document.querySelectorAll('.primary-content')[0].classList.toggle('active')
+    document.querySelectorAll('.content-container')[0].classList.toggle('active')
   },
   navScroll() {
     scroll.addClassOnScroll('.primary-content', 120);
-  },
-  toggleSubmenu() {
-    let $submenu = $('.submenu', $(this));
-    let $hoverContainer = $('.hover-container', $(this));
-    $hoverContainer.toggleClass('active');
-    $submenu.toggleClass('active');
   },
 }
