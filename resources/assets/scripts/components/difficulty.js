@@ -7,36 +7,35 @@ export default {
     )
 
     // get initial box height and add it as variable
-    let $textbox = document.querySelectorAll('.post-difficulty .difficulty-information')[0]
+    const $textbox = document.querySelectorAll('.post-difficulty .difficulty-information')[0]
     this.textboxHeight = $textbox.clientHeight
     $textbox.style.height = 0
     $textbox.style.padding = 0
   },
   toggle() {
-    let isOut = $('.post-difficulty').attr('aria-toggled') == 'true';
-    if(isOut) {
-      $('.post-difficulty').attr('aria-toggled', 'false');
-      $('.post-difficulty .toggle-icon').removeClass('fa-caret-up');
-      $('.post-difficulty .toggle-icon').addClass('fa-caret-down');
+    const $difficulty = document.querySelectorAll('.post-difficulty')[0]
+    const $icon = document.querySelectorAll('.post-difficulty .toggle-icon')[0]
+    const $difficultyInformation = document.querySelectorAll('.post-difficulty .difficulty-information')[0]
+
+    if($difficulty.getAttribute('aria-toggled') === 'true') {
+      $difficulty.setAttribute('aria-toggled', 'false')
+      $icon.classList.remove('fa-caret-up')
+      $icon.classList.add('fa-caret-down')
 
       // toggle and style the information back on
-      $('.post-difficulty .difficulty-information').css({
-        'opacity': 0,
-        'height': 0,
-        'padding': 0,
-      })
+      $difficultyInformation.style.opacity = 0
+      $difficultyInformation.style.height = 0
+      $difficultyInformation.style.padding = 0
     }
     else {
-      $('.post-difficulty').attr('aria-toggled', 'true');
-      $('.post-difficulty .toggle-icon').removeClass('fa-caret-down');
-      $('.post-difficulty .toggle-icon').addClass('fa-caret-up');
+      $difficulty.setAttribute('aria-toggled', 'true')
+      $icon.classList.remove('fa-caret-down')
+      $icon.classList.add('fa-caret-up')
 
       // toggle and style the information back on
-      $('.post-difficulty .difficulty-information').css({
-        'opacity': 1,
-        'height': this.textboxHeight,
-        'padding': '15px',
-      })
+      $difficultyInformation.style.opacity = 1
+      $difficultyInformation.style.height = this.textboxHeight + 'px'
+      $difficultyInformation.style.padding = '15px'
     }
   },
 }
