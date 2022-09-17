@@ -21,6 +21,8 @@
   .demo-container {
     @include mt-medium;
 
+    margin-bottom: 15px;
+
     .card {
       border: 1px solid rgba($shade-black, 0.15);
 
@@ -33,5 +35,10 @@
         }
       }
     }
+  }
+
+  .view-all {
+    color: $black;
+    font-size: 18px;
   }
 }

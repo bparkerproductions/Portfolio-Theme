@@ -1,11 +1,13 @@
 .template-demos {
   .demos-section {
-    @include spacer;
-
     @extend %layout-three-columns;
   }
 
   .card {
+    &.col {
+      margin-bottom: 25px;
+    }
+
     .desc {
       @extend %text-small;
     }

@@ -10,8 +10,15 @@
 
     <div class="demo-container layout-three-columns">
       @foreach($demo_loop->posts as $key=>$post)
-        @include('partials.demo-card')
+        @if($key <= 2)
+          @include('partials.demo-card')
+        @endif
       @endforeach
     </div>
+
+    <a href="{{$demo_link['url']}}" class="view-all">
+      <i class="fas fa-angle-right"></i>
+      View all {{count($demo_loop->posts)}} code samples
+    </a>
   </div>
 </section>
