@@ -5,9 +5,13 @@ export default {
     }, 500, 'linear');
   },
   addClassOnScroll($elem, amount) {
-    let scroll = $(document).scrollTop();
+    if (!document.querySelectorAll($elem)[0]) return
 
-    if(scroll > amount) $($elem).addClass('scrolled');
-    else $($elem).removeClass('scrolled');
+    if (document.scrollingElement.scrollTop > amount) {
+      document.querySelectorAll($elem)[0].classList.add('scrolled')
+    }
+    else {
+      document.querySelectorAll($elem)[0].classList.remove('scrolled');
+    }
   },
 }
