@@ -5,8 +5,8 @@
   <meta name="{{$robots_meta[0]}}" content="{{$robots_meta[1]}}"></meta>
 
   @php wp_head() @endphp
-</head>
 
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&family=Ubuntu:wght@500;700&display=swap");
-</style>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&family=Ubuntu:wght@700&display=swap");
+  </style>
+</head>
