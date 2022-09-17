@@ -3,6 +3,13 @@
     @extend %layout-three-columns;
   }
 
+  .demo-count {
+    margin-left: 1%;
+    width: 100%;
+    margin-top: 0;
+    font-weight: bold;
+  }
+
   .card {
     &.col {
       margin-bottom: 25px;
