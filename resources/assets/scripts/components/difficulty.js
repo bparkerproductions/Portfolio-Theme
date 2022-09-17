@@ -1,6 +1,8 @@
 export default {
   textboxHeight: '',
   init() {
+    if (!document.querySelectorAll('.post-difficulty')[0]) return
+
     document.querySelectorAll('.post-difficulty .header-info')[0].addEventListener(
       'click',
       this.toggle.bind(this)

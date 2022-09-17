@@ -11,20 +11,18 @@ import './lib/fontawesome'
 import Router from './util/Router';
 import common from './routes/common';
 import bpportfolio from './routes/portfolio';
-import aboutUs from './routes/about';
 import home from './routes/home';
 import resume from './routes/resume';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
-  // All pages
+  // All pages /*
   common,
-  // Home Page
+  // Home Page /
   home,
-  // Portfolio page
+  // Portfolio page /bpportfolio
   bpportfolio,
-  // About Us page, note the change from about-us to aboutUs.
-  aboutUs,
+  // Resume Page /resume
   resume,
 });
 
