@@ -1,21 +1,18 @@
 export default {
+  textboxHeight: '',
   init() {
-    $('.post-difficulty .header-info').click(Difficulty.toggle);
+    $('.post-difficulty .header-info').click(this.toggle.bind(this));
 
     // get initial box height and add it as variable
     setTimeout(function() {
       let $textbox = $('.post-difficulty .difficulty-information');
-      Difficulty.textboxHeight = $textbox.outerHeight();
+      this.textboxHeight = $textbox.outerHeight();
       $textbox.css({
         'height': 0,
         'padding': 0,
       });
     }, 500)
   },
-}
-
-let Difficulty = {
-  textboxHeight: '',
   toggle() {
     let isOut = $('.post-difficulty').attr('aria-toggled') == 'true';
     if(isOut) {
@@ -38,7 +35,7 @@ let Difficulty = {
       // toggle and style the information back on
       $('.post-difficulty .difficulty-information').css({
         'opacity': 1,
-        'height': Difficulty.textboxHeight,
+        'height': this.textboxHeight,
         'padding': '15px',
       })
     }
