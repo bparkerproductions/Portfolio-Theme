@@ -4,14 +4,12 @@ export default {
     $('.post-difficulty .header-info').click(this.toggle.bind(this));
 
     // get initial box height and add it as variable
-    setTimeout(function() {
-      let $textbox = $('.post-difficulty .difficulty-information');
-      this.textboxHeight = $textbox.outerHeight();
-      $textbox.css({
-        'height': 0,
-        'padding': 0,
-      });
-    }, 500)
+    let $textbox = $('.post-difficulty .difficulty-information');
+    this.textboxHeight = $textbox.outerHeight();
+    $textbox.css({
+      'height': 0,
+      'padding': 0,
+    });
   },
   toggle() {
     let isOut = $('.post-difficulty').attr('aria-toggled') == 'true';
