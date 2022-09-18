@@ -71,19 +71,9 @@ export default {
       case 5:
         $('.blog-categories').addClass('hide-arrows-tablet')
         break;
-      default:
+      case 6:
         $('.blog-categories').addClass('hide-arrows-desktop')
         break;
     }
-
-    // if(this.showSlideCount() <= 2) {
-    //   $('.blog-categories').addClass('hide-all')
-    //   return;
-    // }
-
-    // if(this.showSlideCount() <= 6) $('.blog-categories').addClass('hide-arrows-desktop')
-    // if(this.showSlideCount() <= 5) $('.blog-categories').addClass('hide-arrows-tablet')
-    // if(this.showSlideCount() <= 4) $('.blog-categories').addClass('hide-arrows-portrait')
-    // if(this.showSlideCount() <= 3) $('.blog-categories').addClass('hide-arrows-mobile')
   },
 }
