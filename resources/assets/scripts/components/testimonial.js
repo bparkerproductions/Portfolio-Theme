@@ -2,29 +2,20 @@ import SlickOptions from './slick-options';
 
 export default {
   init() {
-    //initially set card amount
-    Slider.init();
-  },
-}
+    if (!document.querySelectorAll('.tesimonials')) return
 
-let Slider = {
-  init() {
-    Slider.initMainSlider();
-    Slider.setEventListeners();
-  },
-  setEventListeners() {
-    $('.toggle.previous').click(function() {
-      Slider.getSliderContainer().slick('slickPrev');
-    });
+    const $slider = $('.testimonials-container .slider-container:not(.no-slick)')
 
-    $('.toggle.next').click(function() {
-      Slider.getSliderContainer().slick('slickNext');
-    });
-  },
-  getSliderContainer() {
-    return $('.testimonials-container .slider-container:not(.no-slick)');
-  },
-  initMainSlider() {
-    Slider.getSliderContainer().slick(SlickOptions.verticalSlider());
+    $slider.slick(SlickOptions.verticalSlider());
+
+    document.querySelectorAll('.testimonials-container .toggle.previous')[0].addEventListener(
+      'click',
+      () => { $slider.slick('slickPrev') }
+    )
+
+    document.querySelectorAll('.testimonials-container .toggle.next')[0].addEventListener(
+      'click',
+      () => { $slider.slick('slickNext') }
+    )
   },
 }
