@@ -1,7 +1,7 @@
 export default {
   textboxHeight: '',
   init() {
-    if (!document.querySelectorAll('.post-difficulty')[0]) return
+    if (!document.querySelectorAll('.post-difficulty').length) return
 
     document.querySelectorAll('.post-difficulty .header-info')[0].addEventListener(
       'click',

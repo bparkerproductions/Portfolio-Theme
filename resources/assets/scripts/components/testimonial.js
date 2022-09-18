@@ -2,7 +2,7 @@ import SlickOptions from './slick-options';
 
 export default {
   init() {
-    if (!document.querySelectorAll('.tesimonials')) return
+    if (!document.querySelectorAll('.testimonials').length) return
 
     const $slider = $('.testimonials-container .slider-container:not(.no-slick)')
 

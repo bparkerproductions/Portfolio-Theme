@@ -4,6 +4,8 @@ import lax from 'lax.js';
 
 export default {
   init() {
+    if (!document.querySelectorAll('template-portfolio')) return
+    
     document.querySelectorAll('.projects-button')[0].addEventListener(
       'click',
       () => { Scroll.to('#projects-container') }

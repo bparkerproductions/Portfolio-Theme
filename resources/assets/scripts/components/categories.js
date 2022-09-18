@@ -1,14 +1,24 @@
 export default {
   init() {
-    if($('.blog-categories').length) {
-      this.slickCategories();
-    }
-
-    Categories.addClasses();
+    if(!document.querySelectorAll('.blog-categories').length) return
+    
+    this.slickCategories();
+    this.addClasses();
     this.setEventListeners();
   },
+  setEventListeners() {
+    document.querySelectorAll('.slide-previous')[0].addEventListener(
+      'click',
+      () => { this.getListElement().slick('slickPrev') }
+    )
+
+    document.querySelectorAll('.slide-next')[0].addEventListener(
+      'click',
+      () => { this.getListElement().slick('slickNext') }
+    )
+  },
   slickCategories() {
-    Categories.getListElement().slick({
+    this.getListElement().slick({
       infinite: true,
       slidesToShow: 6,
       slidesToScroll: 1,
@@ -41,33 +51,39 @@ export default {
       ],
     })
   },
-  setEventListeners() {
-    $('.slide-previous').click(function() {
-      Categories.getListElement().slick('slickPrev');
-    });
-
-    $('.slide-next').click(function() {
-      Categories.getListElement().slick('slickNext');
-    });
-  },
-}
-
-let Categories = {
   getListElement() {
     return $('.blog-categories .categories-list');
   },
   showSlideCount() {
-    return $($('.single-category'), Categories.getListElement()).length;
+    return $($('.single-category'), this.getListElement()).length;
   },
   addClasses() {
-    if(Categories.showSlideCount() <= 2) {
-      $('.blog-categories').addClass('hide-all')
-      return;
+    switch (this.showSlideCount()) {
+      case 2:
+        $('.blog-categories').addClass('hide-all')
+        break;
+      case 3:
+        $('.blog-categories').addClass('hide-arrows-mobile')
+        break;
+      case 4:
+        $('.blog-categories').addClass('hide-arrows-portrait')
+        break;
+      case 5:
+        $('.blog-categories').addClass('hide-arrows-tablet')
+        break;
+      default:
+        $('.blog-categories').addClass('hide-arrows-desktop')
+        break;
     }
 
-    if(Categories.showSlideCount() <= 6) $('.blog-categories').addClass('hide-arrows-desktop')
-    if(Categories.showSlideCount() <= 5) $('.blog-categories').addClass('hide-arrows-tablet')
-    if(Categories.showSlideCount() <= 4) $('.blog-categories').addClass('hide-arrows-portrait')
-    if(Categories.showSlideCount() <= 3) $('.blog-categories').addClass('hide-arrows-mobile')
+    // if(this.showSlideCount() <= 2) {
+    //   $('.blog-categories').addClass('hide-all')
+    //   return;
+    // }
+
+    // if(this.showSlideCount() <= 6) $('.blog-categories').addClass('hide-arrows-desktop')
+    // if(this.showSlideCount() <= 5) $('.blog-categories').addClass('hide-arrows-tablet')
+    // if(this.showSlideCount() <= 4) $('.blog-categories').addClass('hide-arrows-portrait')
+    // if(this.showSlideCount() <= 3) $('.blog-categories').addClass('hide-arrows-mobile')
   },
 }
