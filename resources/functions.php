@@ -66,8 +66,7 @@ function bp_defer_scripts( $tag, $handle, $src ) {
 	$defer_scripts = array(
         'bp-slick-js',
         'bp-fancybox-js',
-        'bp-icon',
-        'bp-font'
+        'bp-velocity'
 	);
 
     if ( in_array( $handle, $defer_scripts ) ) {
@@ -76,6 +75,17 @@ function bp_defer_scripts( $tag, $handle, $src ) {
 
     return $tag;
 }
+
+/*
+* remove dashicons in frontend to non-admin
+*/ 
+function wpdocs_dequeue_dashicon() {
+    if (current_user_can( 'update_core' )) {
+        return;
+    }
+    wp_deregister_style('dashicons');
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
 
 
 /**
