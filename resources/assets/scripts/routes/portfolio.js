@@ -4,18 +4,18 @@ import lax from 'lax.js';
 
 export default {
   init() {
-    this.setEventListeners();
+    document.querySelectorAll('.projects-button')[0].addEventListener(
+      'click',
+      () => { Scroll.to('#projects-container') }
+    )
+
+    document.querySelectorAll('.goto-about-me')[0].addEventListener(
+      'click',
+      () => { Scroll.to('#about-container') }
+    )
+
     this.initLax();
     Snowstorm.init();
-  },
-  setEventListeners() {
-    $('.projects-button').click(() => {
-      Scroll.to('#projects-container');
-    });
-
-    $('.goto-about-me').click(() => {
-      Scroll.to('#about-container');
-    });
   },
   initLax() {
     lax.setup() // init
