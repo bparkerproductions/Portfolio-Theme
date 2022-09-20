@@ -3,12 +3,12 @@ export default {
     document.querySelectorAll('.resume-more-info').forEach( this.moreInfo.bind(this) )
 
     // init PDF logic
-    const pdfFriendly = document.querySelectorAll('.resume-options-icon.pdf-friendly')[0]
+    const pdfFriendly = document.querySelector('.resume-options-icon.pdf-friendly')
     pdfFriendly.addEventListener('click', this.pdfFriendly.bind(this))
   },
   pdfFriendly() {
-    const pdfFriendly = document.querySelectorAll('.resume-options-icon.pdf-friendly')[0]
-    const resumeContent = document.querySelectorAll('.resume-content')[0]
+    const pdfFriendly = document.querySelector('.resume-options-icon.pdf-friendly')
+    const resumeContent = document.querySelector('.resume-content')
 
     if (pdfFriendly.classList.contains('active')) {
       pdfFriendly.classList.remove('active')
@@ -36,17 +36,17 @@ export default {
     })
   },
   moreInfo(elem) {
-    const toggler = elem.querySelectorAll('.resume-more-info-text')[0]
+    const toggler = elem.querySelector('.resume-more-info-text')
     toggler.addEventListener('click', () => {
-      const content = elem.querySelectorAll('.resume-more-info-content')[0]
+      const content = elem.querySelector('.resume-more-info-content')
       
       content.classList.contains('hide') ? content.classList.remove('hide') : content.classList.add('hide')
       this.updateToggler(toggler, !content.classList.contains('hide'))
     })
   },
   updateToggler(toggler, toggled) {
-    const text = toggler.querySelectorAll('span')[0]
-    const icon = toggler.querySelectorAll('.resume-more-info-icon-container')[0]
+    const text = toggler.querySelector('span')
+    const icon = toggler.querySelector('.resume-more-info-icon-container')
 
     toggled ? text.innerHTML = 'Hide Info' : text.innerHTML = 'More Info'
     toggled ? icon.classList.add('toggled') : icon.classList.remove('toggled')

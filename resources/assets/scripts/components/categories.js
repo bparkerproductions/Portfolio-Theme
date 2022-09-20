@@ -7,12 +7,12 @@ export default {
     this.setEventListeners();
   },
   setEventListeners() {
-    document.querySelectorAll('.slide-previous')[0].addEventListener(
+    document.querySelector('.slide-previous').addEventListener(
       'click',
       () => { this.getListElement().slick('slickPrev') }
     )
 
-    document.querySelectorAll('.slide-next')[0].addEventListener(
+    document.querySelector('.slide-next').addEventListener(
       'click',
       () => { this.getListElement().slick('slickNext') }
     )

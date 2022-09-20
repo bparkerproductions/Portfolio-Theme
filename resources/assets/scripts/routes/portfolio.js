@@ -5,13 +5,13 @@ import lax from 'lax.js';
 export default {
   init() {
     if (!document.querySelectorAll('template-portfolio')) return
-    
-    document.querySelectorAll('.projects-button')[0].addEventListener(
+
+    document.querySelector('.projects-button').addEventListener(
       'click',
       () => { Scroll.to('#projects-container') }
     )
 
-    document.querySelectorAll('.goto-about-me')[0].addEventListener(
+    document.querySelector('.goto-about-me').addEventListener(
       'click',
       () => { Scroll.to('#about-container') }
     )

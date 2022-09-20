@@ -2,10 +2,10 @@ import Scroll from '../components/scroll'
 
 export default {
   init() {
-    const $scrollDownHome = document.querySelectorAll('.scroll-down-home')
+    const $scrollDownHome = document.querySelector('.scroll-down-home')
     if (!$scrollDownHome) return
 
-    $scrollDownHome[0].addEventListener(
+    $scrollDownHome.addEventListener(
       'click',
       this.scrollDown.bind(this)
     )

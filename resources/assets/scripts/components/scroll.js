@@ -5,13 +5,13 @@ export default {
     }, 500, 'linear');
   },
   addClassOnScroll($elem, amount) {
-    if (!document.querySelectorAll($elem)[0]) return
+    if (!document.querySelector($elem)) return
 
     if (document.scrollingElement.scrollTop > amount) {
-      document.querySelectorAll($elem)[0].classList.add('scrolled')
+      document.querySelector($elem).classList.add('scrolled')
     }
     else {
-      document.querySelectorAll($elem)[0].classList.remove('scrolled');
+      document.querySelector($elem).classList.remove('scrolled');
     }
   },
 }

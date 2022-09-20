@@ -3,21 +3,21 @@ export default {
   init() {
     if (!document.querySelectorAll('.post-difficulty').length) return
 
-    document.querySelectorAll('.post-difficulty .header-info')[0].addEventListener(
+    document.querySelector('.post-difficulty .header-info').addEventListener(
       'click',
       this.toggle.bind(this)
     )
 
     // get initial box height and add it as variable
-    const $textbox = document.querySelectorAll('.post-difficulty .difficulty-information')[0]
+    const $textbox = document.querySelector('.post-difficulty .difficulty-information')
     this.textboxHeight = $textbox.clientHeight
     $textbox.style.height = 0
     $textbox.style.padding = 0
   },
   toggle() {
-    const $difficulty = document.querySelectorAll('.post-difficulty')[0]
-    const $icon = document.querySelectorAll('.post-difficulty .toggle-icon')[0]
-    const $difficultyInformation = document.querySelectorAll('.post-difficulty .difficulty-information')[0]
+    const $difficulty = document.querySelector('.post-difficulty')
+    const $icon = document.querySelector('.post-difficulty .toggle-icon')
+    const $difficultyInformation = document.querySelector('.post-difficulty .difficulty-information')
 
     if($difficulty.getAttribute('aria-toggled') === 'true') {
       $difficulty.setAttribute('aria-toggled', 'false')
