@@ -1,8 +1,6 @@
 export default {
   to(obj) {
-    $('html,body').animate({
-      scrollTop: $(obj).offset().top-50,
-    }, 500, 'linear');
+    document.querySelector(obj).scrollIntoView({behavior: 'smooth'})
   },
   addClassOnScroll($elem, amount) {
     if (!document.querySelector($elem)) return
