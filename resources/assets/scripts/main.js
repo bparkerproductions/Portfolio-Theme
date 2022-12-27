@@ -1,6 +1,3 @@
-// import external dependencies
-import 'jquery';
-
 // Import everything from autoload
 import './autoload/**/*'
 
@@ -27,4 +24,4 @@ const routes = new Router({
 });
 
 // Load Events
-jQuery(document).ready(() => routes.loadEvents());
+window.addEventListener('load', () => routes.loadEvents())
