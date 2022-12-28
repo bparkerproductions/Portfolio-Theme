@@ -11,8 +11,8 @@
     </div>
 
     {{-- Testimonials --}}
-    <div class="slider-container {{$slider_classes}}">
-    @foreach($testimonials as $testimonial)
+    <div class="slider-container">
+    @foreach(get_field('testimonials') as $testimonial)
       <div class="testimonial col card">
         <div class="head blue">
           <h5 class="category">{{get_field('name', $testimonial)}}</h5>
@@ -28,7 +28,22 @@
               </p>
             </div>
           </div>
-          @include('partials.portfolio.client-info')
+            <div class="client-info ">
+              <a class="client-company {{$company == "" ? 'disabled' : ''}}" href="{{get_field('company', $testimonial)}}">
+                <i class="fas fa-briefcase"></i>
+                <span class="link">
+                  Website
+                </span>
+              </a>
+
+              {{-- Project Link --}}
+              @if(get_field('project', $testimonial) && !(get_post_type() == "projects"))
+                <a class="project-link" href="{{get_permalink(get_field('project', $testimonial)[0])}}">
+                  <i class="fas fa-laptop-code"></i>
+                  <span class="link">See Project</span>
+                </a>
+              @endif
+            </div>
         </div>
       </div>
     @endforeach
