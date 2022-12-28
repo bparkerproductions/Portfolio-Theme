@@ -115,6 +115,24 @@ function disable_emojis_tinymce( $plugins ) {
 	}
 }
 
+/**
+ * Register New Widget Area for Testimonials
+ */
+function register_portfolio_widget_area() {
+    register_sidebar(
+        array(
+            'id' => 'portfolio-widgets',
+            'name' => esc_html__( 'Portfolio Widgets', 'bp-portfolio' ),
+            'description' => esc_html__( 'A widget area for displaying components on the portfolio page', 'theme-domain' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<div class="widget-title-holder"><h3 class="widget-title">',
+            'after_title' => '</h3></div>'
+        )
+    );
+    }
+    add_action( 'widgets_init', 'register_portfolio_widget_area' );
+
 
 /**
  * Sage required files

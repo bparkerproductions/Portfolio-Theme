@@ -16,24 +16,6 @@ function create_projects_post_type() {
 }
 add_action( 'init', 'create_projects_post_type' );
 
-
-/* TESTIOMINALS post type */
-function create_testimonials_post_type() {
-    register_post_type( 'testimonials',
-        [
-        'labels' => [
-            'name' => __( 'Testimonials' ),
-            'singular_name' => __( 'Testimonial' )
-        ],
-        'public' => true,
-        'has_archive' => true,
-        'menu_icon' => 'dashicons-editor-quote'
-        ]
-    );
-}
-add_action( 'init', 'create_testimonials_post_type' );
-
-
 /* DEMO post type */
 function create_demo_post_type() {
     register_post_type( 'demos',

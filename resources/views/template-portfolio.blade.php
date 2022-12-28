@@ -23,6 +23,13 @@
 
   @include('partials.portfolio.projects')
   @include('partials.portfolio.testimonials')
+  @if( is_active_sidebar( 'portfolio-widgets' ) )
+    <section id="secondary-sidebar" class="spacer column-center">
+      <div class="inner-container">
+        @php dynamic_sidebar( 'portfolio-widgets' ) @endphp
+      </div>
+    </section>
+  @endif
   @include('partials.global.code-demo-preview')
   @include('partials.global.cta')
 @endsection
