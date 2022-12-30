@@ -22,7 +22,8 @@
   </section>
 
   @include('partials.portfolio.projects')
-  @include('partials.portfolio.testimonials')
+
+  {{-- Portfolio widgets area  --}}
   @if( is_active_sidebar( 'portfolio-widgets' ) )
     <section id="secondary-sidebar" class="spacer column-center">
       <div class="inner-container">
@@ -30,6 +31,7 @@
       </div>
     </section>
   @endif
+  
   @include('partials.global.code-demo-preview')
   @include('partials.global.cta')
 @endsection
