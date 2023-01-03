@@ -20,12 +20,11 @@
 
     {{-- Show Testimonial If there is one --}}
     @if($testimonials)
-      <div id="project-testimonial">
-        @include('partials.portfolio.testimonials', [
-          'testimonials' => $testimonials,
-          'slider_classes' => 'no-slick'
-        ])
-      </div>
+      <section class="testimonials">
+        <div class="testimonials-container">
+          @php echo do_shortcode( '[bp-testimonial id="' . $testimonials[0] . '"]') @endphp
+        </div>
+      </section>
     @endif
 
     {{-- Technologies --}}
