@@ -1,4 +1,4 @@
-<section class="related-posts mt-medium">
+<section class="related-posts glider mt-medium">
   <div class="header-container">
     <h2 class="title">{{$component_title}}</h2>
 

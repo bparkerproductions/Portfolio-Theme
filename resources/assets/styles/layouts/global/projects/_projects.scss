@@ -2,6 +2,8 @@
   @import "projects-header";
   @import "projects-section";
 
+  background-color: rgba($bg-grey, 0.5);
+
   .header {
     margin: 0 0 5px 0;
     color: $shade-black;
