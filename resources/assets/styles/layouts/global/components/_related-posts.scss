@@ -36,38 +36,4 @@
       width: 100%;
     }
   }
-
-  .slick-slide {
-    height: 500px;
-    box-sizing: border-box;
-    margin: 0 15px;
-
-    @include atMobile {
-      height: auto;
-    }
-
-    .top-post {
-      height: 369px;
-      overflow: auto;
-      overflow-x: hidden;
-
-      @include scrollbar($blue, 5px);
-
-      @include atTablet {
-        height: 410px;
-      }
-
-      @include atMobile {
-        height: auto;
-      }
-    }
-
-    article,
-    > div {
-      @include atMobileAndUp {
-        height: 100%;
-        margin: 0;
-      }
-    }
-  }
 }

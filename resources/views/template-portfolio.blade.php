@@ -12,6 +12,8 @@
   {{-- About Section --}}
   @include('partials.portfolio.about')
 
+  @include('partials.portfolio.projects')
+
   {{-- Blog Posts Section --}}
   <section class="blog-posts-container column-center">
     <div class="inner-container">
@@ -21,8 +23,6 @@
     </div>
   </section>
 
-  @include('partials.portfolio.projects')
-
   {{-- Portfolio widgets area  --}}
   @if( is_active_sidebar( 'portfolio-widgets' ) )
     <section id="secondary-sidebar" class="spacer column-center">
@@ -31,7 +31,7 @@
       </div>
     </section>
   @endif
-  
+
   @include('partials.global.code-demo-preview')
   @include('partials.global.cta')
 @endsection
