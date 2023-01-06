@@ -65,7 +65,8 @@ function bp_defer_scripts( $tag, $handle, $src ) {
 	// The handles of the enqueued scripts we want to defer
 	$defer_scripts = array(
         'bp-fancybox-js',
-        'bp-velocity'
+        'bp-velocity',
+        'bp-glider-js'
 	);
 
     if ( in_array( $handle, $defer_scripts ) ) {

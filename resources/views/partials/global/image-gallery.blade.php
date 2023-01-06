@@ -13,10 +13,7 @@
     <div class="gallery-container">
       @foreach($gallery as $image)
         <div class="image-container">
-          <a data-caption="{{$image['description']}}"
-          data-fancybox="gallery" href="{{$image['image']}}">
-            <img src="{{$image['image']}}">
-          </a>
+          <img src="{{$image['image']}}">
           @if($image['description'])
             <p class="caption">
               {{$image['description']}}
