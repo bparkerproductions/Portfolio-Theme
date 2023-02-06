@@ -77,7 +77,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "jquery": "^3.4.0",
     "lax.js": "^1.1.0"
   }
 }
