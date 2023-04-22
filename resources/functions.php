@@ -23,15 +23,15 @@ $sage_error = function ($message, $subtitle = '', $title = '') {
 /**
  * Ensure compatible version of PHP is used
  */
-if (version_compare('7.1', phpversion(), '>=')) {
-    $sage_error(__('You must be using PHP 7.1 or greater.', 'sage'), __('Invalid PHP version', 'sage'));
+if (version_compare('8.0', phpversion(), '>=')) {
+    $sage_error(__('You must be using PHP 8.0 or greater.', 'sage'), __('Invalid PHP version', 'sage'));
 }
 
 /**
  * Ensure compatible version of WordPress is used
  */
-if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
-    $sage_error(__('You must be using WordPress 4.7.0 or greater.', 'sage'), __('Invalid WordPress version', 'sage'));
+if (version_compare('6.0.0', get_bloginfo('version'), '>=')) {
+    $sage_error(__('You must be using WordPress 6.0.0 or greater.', 'sage'), __('Invalid WordPress version', 'sage'));
 }
 
 /**

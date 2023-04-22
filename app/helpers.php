@@ -72,7 +72,7 @@ function template_path($file, $data = [])
  */
 function asset_path($asset)
 {
-    return sage('assets')->getUri($asset);
+    return get_template_directory_uri() . '/dist/' . $asset;
 }
 
 /**
