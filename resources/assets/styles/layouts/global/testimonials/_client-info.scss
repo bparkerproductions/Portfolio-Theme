@@ -1,0 +1,37 @@
+.client-info {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+
+  @include border-top($shade-black);
+
+  @include atMobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .client-name,
+  .client-company,
+  .project-link {
+    color: $shade-black;
+
+    @include atMobile {
+      margin-bottom: 10px;
+    }
+
+    .link,
+    .text {
+      margin-left: 4px;
+    }
+
+    .link {
+      text-decoration: underline;
+    }
+  }
+
+  .client-name,
+  .client-company {
+    margin-right: 15px;
+  }
+}

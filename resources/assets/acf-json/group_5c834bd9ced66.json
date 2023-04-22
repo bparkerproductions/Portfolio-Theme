@@ -1,11 +1,30 @@
 {
-    "key": "group_63454b747fbc7",
-    "title": "Subscriber details",
+    "key": "group_5c834bd9ced66",
+    "title": "Testimonial Fields",
     "fields": [
         {
-            "key": "field_63454b880f6b4",
-            "label": "First Name",
-            "name": "test_first_name",
+            "key": "field_5c834be1b8f7e",
+            "label": "Text",
+            "name": "text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5c834bf0b8f7f",
+            "label": "Name",
+            "name": "name",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,9 +41,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_63454b990f6b5",
-            "label": "Last Name",
-            "name": "test_last_name",
+            "key": "field_5c834c01b8f80",
+            "label": "Company",
+            "name": "company",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -41,12 +60,12 @@
             "maxlength": ""
         },
         {
-            "key": "field_63454ba30f6b6",
-            "label": "Email",
-            "name": "email",
-            "type": "email",
+            "key": "field_5c834c1cb8f81",
+            "label": "Classes",
+            "name": "classes",
+            "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -56,13 +75,14 @@
             "default_value": "",
             "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "maxlength": ""
         },
         {
-            "key": "field_63454bc30f6b7",
-            "label": "List",
-            "name": "list",
-            "type": "post_object",
+            "key": "field_5c85febc6b37e",
+            "label": "Project",
+            "name": "project",
+            "type": "relationship",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -72,13 +92,16 @@
                 "id": ""
             },
             "post_type": [
-                "test_list"
+                "projects"
             ],
             "taxonomy": "",
-            "allow_null": 1,
-            "multiple": 1,
-            "return_format": "object",
-            "ui": 1
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "id"
         }
     ],
     "location": [
@@ -86,7 +109,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "test_subscriber"
+                "value": "testimonials"
             }
         ]
     ],
@@ -96,23 +119,9 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
-        "the_content",
-        "excerpt",
-        "discussion",
-        "comments",
-        "revisions",
-        "slug",
-        "author",
-        "format",
-        "page_attributes",
-        "featured_image",
-        "categories",
-        "tags",
-        "send-trackbacks"
+        "the_content"
     ],
-    "active": true,
+    "active": 1,
     "description": "",
-    "show_in_rest": 0,
-    "modified": 1665486268
+    "modified": 1558684574
 }

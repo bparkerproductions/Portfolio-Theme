@@ -1,0 +1,10 @@
+.body {
+  @import "client-info";
+
+  padding: 20px;
+
+  .left-quote-container svg {
+    font-size: 2em;
+    color: $blue;
+  }
+}

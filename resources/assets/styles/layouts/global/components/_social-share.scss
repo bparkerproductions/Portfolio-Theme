@@ -1,0 +1,58 @@
+.social-share {
+  flex-direction: column;
+  position: fixed;
+  right: 10%;
+  background-color: rgba($bg-grey, 0.5);
+  padding: 15px 10px;
+  z-index: 1;
+  top: 50vh;
+  transition: all 1s ease;
+
+  @include atLaptop {
+    right: 5%;
+  }
+
+  @include atPortrait {
+    right: -10px;
+    padding: 0;
+    background-color: transparent;
+    bottom: 0;
+  }
+
+  &.scrolled {
+    top: 12.5vh;
+
+    @include atMobile {
+      z-index: -1;
+      top: 70vh;
+    }
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  p {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 15px;
+
+    @include atPortrait {
+      display: none;
+    }
+  }
+
+  svg {
+    &:hover {
+      color: $black;
+    }
+
+    @include atPortrait {
+      font-size: 2em;
+      margin: 0;
+    }
+  }
+}
