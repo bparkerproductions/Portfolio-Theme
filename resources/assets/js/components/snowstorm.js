@@ -1,4 +1,9 @@
+import Helpers from './../helpers/general.js'
+
 (function() {
+  if (!Helpers.hasElement('#snowstorm')) return
+
+  document.getElementById('snowstorm');
   requestFrame();
 
   // Set variables

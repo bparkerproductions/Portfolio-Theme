@@ -38,6 +38,8 @@ class App extends Controller {
     }
 
     public static function categoryIconID($id) {
+      echo 'h';
+      var_dump(get_field('category_icon', 'category_' . $id));
       return get_field('category_icon', 'category_' . $id)[0]->ID;
     }
 

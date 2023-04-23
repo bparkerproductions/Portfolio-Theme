@@ -1,7 +1,9 @@
 @extends('layouts.app')
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @component('components.header')
+    @component('components.header', [
+      'icon_class' => false
+    ])
       @if(get_post_type() == 'projects')
         @if($project_link)
           <a href="{{$project_link}}">

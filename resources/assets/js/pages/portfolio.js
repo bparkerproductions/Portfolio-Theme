@@ -1,9 +1,10 @@
 import Scroll from './../helpers/scroll.js'
+import Helpers from './../helpers/general.js'
 import './../components/snowstorm.js'
 import lax from 'lax.js'
 
 (function() {
-  if (!document.querySelectorAll('template-portfolio')) return
+  if (!Helpers.hasElement('template-portfolio')) return
 
   document.querySelector('.projects-button').addEventListener(
     'click',
@@ -16,7 +17,6 @@ import lax from 'lax.js'
   )
 
   initLax();
-  // Snowstorm.init();
 
   function initLax() {
     lax.setup() // init

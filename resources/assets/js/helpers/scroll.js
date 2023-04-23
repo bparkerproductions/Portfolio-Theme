@@ -11,5 +11,5 @@ export default {
     else {
       document.querySelector($elem).classList.remove('scrolled');
     }
-  },
+  }
 }
