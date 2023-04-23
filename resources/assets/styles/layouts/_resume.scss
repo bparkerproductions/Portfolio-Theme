@@ -1,0 +1,271 @@
+.resume {
+  font-size: 15px;
+  background-color: $secondary;
+
+  /* Sidebar */
+  aside {
+    background-color: $primary;
+    color: $light;
+    padding: 50px 25px;
+    width: 30%;
+    box-sizing: border-box;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  &-technologies {
+    &-container {
+      margin: 15px 0;
+      padding: 15px 0 0 0;
+      border-top: 1px solid rgba($light, 0.35);
+    }
+
+    &-list {
+      margin-top: 7.5px;
+    }
+
+    &-text-list {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10px;
+
+      li {
+        margin: 0 7.5px 7.5px 0;
+        padding-right: 7.5px;
+
+        &:not(:last-child) {
+          border-right: 1px solid rgba($light, 0.75);
+        }
+      }
+    }
+
+    &-icon {
+      color: $dark;
+      font-size: 20px;
+      margin: 0 5px 5px 0;
+    }
+  }
+
+  &-links {
+    margin-bottom: 35px;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0;
+
+      li {
+        margin-bottom: 5px;
+
+        a {
+          color: $light;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &-accomplishments {
+    margin-top: 25px;
+
+    ul {
+      margin-top: 7.5px;
+      padding-left: 25px;
+
+      li {
+        margin-bottom: 3.5px;
+      }
+    }
+  }
+
+  /* Resume more info */
+  &-more-info {
+    margin-top: 0;
+    font-weight: bold;
+    margin-bottom: 25px;
+  
+    &-text {
+      margin-bottom: 5px;
+      cursor: pointer;
+      display: flex;
+    }
+  
+    &-content {
+      &.hide {
+        display: none;
+      }
+  
+      .body {
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
+    }
+  
+    &-icon-container {
+      transition: all 0.3s ease;
+      margin-right: 5px;
+  
+      &.toggled {
+        transform: rotate(180deg);
+      }
+    }
+  
+    &-points {
+      list-style: none;
+      padding-left: 15px;
+  
+      .point-icon {
+        margin: 1px 7.5px 0 0;
+        color: $dark;
+      }
+  
+      li {
+        margin-bottom: 7.5px;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: flex-start;
+  
+        p {
+          line-height: 1.25;
+        }
+      }
+    }
+  
+    &-link {
+      color: $dark;
+      font-size: 13px;
+      margin-top: 20px;
+      display: block;
+  
+      svg {
+        margin: 1px 5px 0 0;
+      }
+    }
+  
+    &-tech {
+      border-bottom: 1px solid rgba($dark, 0.5);
+      padding-bottom: 5px;
+    }
+  }
+  
+
+  /* Resume options */
+  &-options {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+  
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+    }
+  
+    &-icon {
+      cursor: pointer;
+      margin: 0 15px 0 0;
+      color: $dark;
+      line-height: 1;
+  
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 10px;
+      }
+  
+      svg {
+        margin-right: 3.5px;
+      }
+  
+      &.active {
+        color: $primary;
+        font-weight: bold;
+      }
+    }
+  }  
+
+  &-content {
+    &.pdf-friendly {
+      .resume-more-info-text,
+      .resume-more-info-link {
+        display: none;
+      }
+    }
+
+    display: flex;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &-location {
+    margin: 0 0 10px 0;
+  }
+
+  &-title {
+    margin-bottom: 5px;
+    color: $dark;
+  }
+
+  &-main-content {
+    padding: 50px 25px;
+    width: 70%;
+    background-color: $light;
+    box-sizing: border-box;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  &-header {
+    margin-bottom: 15px;
+    color: $dark;
+  }
+
+  &-intro {
+    &-list {
+      list-style: none;
+      padding-left: 10px;
+      margin-top: 10px;
+
+      li {
+        display: flex;
+        margin-bottom: 7.5px;
+      }
+    }
+
+    &-icon {
+      color: $primary;
+      font-size: 18px;
+      margin-top: 2px;
+      margin-right: 7.5px;
+    }
+  }
+
+  &-info {
+    padding: 15px 0;
+    border-top: 1px solid rgba($dark, 0.35);
+
+    &-name {
+      color: $primary;
+      margin-bottom: 3.5px;
+    }
+
+    &-badge {
+      margin-left: 5px;
+    }
+
+    &-title {
+      font-size: 14px;
+      color: $dark;
+    }
+
+    &-description {
+      margin: 5px 0 0 0;
+    }
+  }
+}

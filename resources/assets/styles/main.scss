@@ -16,8 +16,9 @@
 /** Import global styles **/
 @import "layouts/global/global";
 
-/** Import theme styles */
 @import "common/global";
+
+/* Components */
 @import "components/comments";
 @import "components/bubble";
 @import "components/icons";
@@ -25,13 +26,10 @@
 @import "components/form";
 @import "components/featured-post";
 @import "components/cards";
-@import "layouts/header";
+
+/* Layouts */
 @import "layouts/404";
-@import "layouts/sidebar";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tinymce";
 @import "layouts/home/home";
 @import "layouts/portfolio/portfolio";
-@import "layouts/resume/resume";
+@import "layouts/resume";
 @import "layouts/archive/main";

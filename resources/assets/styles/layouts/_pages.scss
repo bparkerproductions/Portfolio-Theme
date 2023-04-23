@@ -1,7 +1,0 @@
-.page-content {
-  p {
-    @include media-breakpoint-up(sm) {
-      max-width: 80%;
-    }
-  }
-}
