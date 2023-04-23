@@ -1,3 +1,6 @@
+/* Class Helpers */
+
+// Flex
 .hard-center {
   @include hard-center;
 }
@@ -12,4 +15,14 @@
 
 .column-v-center {
   @include column-v-center;
+}
+
+// General Helpers
+.clickable-link {
+  @extend %absolute-fill;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.2;
 }
