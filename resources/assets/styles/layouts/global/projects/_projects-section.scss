@@ -2,7 +2,7 @@
   @import "image-overlay";
   @import "project-preview";
 
-  @include border-top($grey);
+  @include border-top($secondary);
 
   display: flex;
   flex-wrap: wrap;

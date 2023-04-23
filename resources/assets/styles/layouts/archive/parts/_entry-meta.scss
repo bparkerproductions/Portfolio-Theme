@@ -6,7 +6,7 @@
   flex-direction: column;
   margin-bottom: 12.5px;
 
-  @include border-bottom($shade-black);
+  @include border-bottom($dark);
 
   @include atMobile {
     flex-direction: column;

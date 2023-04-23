@@ -1,6 +1,6 @@
 .related-posts {
   @include atMobileAndUp {
-    background-color: rgba($bg-grey, 0.35);
+    background-color: rgba($secondary, 0.35);
     padding: 25px;
   }
 

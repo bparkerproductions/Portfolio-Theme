@@ -1,5 +1,5 @@
 .project-single-head {
-  background-color: rgba($bg-grey, 0.5);
+  background-color: rgba($secondary, 0.5);
   margin-top: -25px;
 
   .inner-container {
@@ -21,7 +21,7 @@
     }
 
     .caption {
-      color: $para;
+      color: $body;
       margin: 0;
     }
   }
@@ -39,7 +39,7 @@
       padding-left: 12px;
       margin-top: 5px;
 
-      @include color-bullets($blue);
+      @include color-bullets($primary);
 
       @include atPortrait {
         padding: 0;

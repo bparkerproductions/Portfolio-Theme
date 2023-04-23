@@ -35,7 +35,7 @@
 
     .point-icon {
       margin: 1px 7.5px 0 0;
-      color: $shade-black;
+      color: $dark;
     }
 
     li {
@@ -52,7 +52,7 @@
   }
 
   &-link {
-    color: $shade-black;
+    color: $dark;
     font-size: 13px;
     margin-top: 20px;
     display: block;
@@ -63,7 +63,7 @@
   }
 
   &-tech {
-    border-bottom: 1px solid rgba($shade-black, 0.5);
+    border-bottom: 1px solid rgba($dark, 0.5);
     padding-bottom: 5px;
   }
 }

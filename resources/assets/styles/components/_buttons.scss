@@ -36,11 +36,11 @@
 
 .button.border {
   background-color: transparent;
-  border: 3px solid $white;
+  border: 3px solid $light;
   font-weight: 400;
 
   &:hover {
-    background-color: $white;
-    color: $black;
+    background-color: $light;
+    color: $dark;
   }
 }

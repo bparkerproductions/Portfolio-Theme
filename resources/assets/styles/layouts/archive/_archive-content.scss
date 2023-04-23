@@ -2,12 +2,12 @@
 
 .entry-content {
   a {
-    color: $blue;
+    color: $primary;
     text-decoration: underline;
   }
 
   @include allHeaders {
-    color: $blue;
+    color: $primary;
     margin: 35px 0 10px 0;
 
     a {
@@ -21,14 +21,14 @@
   }
 
   ul {
-    @include color-bullets($blue);
+    @include color-bullets($primary);
 
     padding-left: 10px;
     margin-top: 5px;
 
     li,
     li a {
-      color: $black;
+      color: $dark;
       font-size: 1.05em;
     }
 
@@ -43,6 +43,6 @@
 
   strong {
     font-size: 1.1em;
-    color: $shade-black;
+    color: $dark;
   }
 }

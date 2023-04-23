@@ -2,18 +2,18 @@
   @import "projects-header";
   @import "projects-section";
 
-  background-color: rgba($bg-grey, 0.5);
+  background-color: rgba($secondary, 0.5);
 
   .header {
     margin: 0 0 5px 0;
-    color: $shade-black;
+    color: $dark;
   }
 
   .bottom-link-container {
     font-size: 1.25em;
     display: flex;
 
-    @include border-top($shade-black);
+    @include border-top($dark);
 
     @include atMobile {
       flex-direction: column;

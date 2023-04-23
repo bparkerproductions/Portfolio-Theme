@@ -3,13 +3,13 @@
   @import "replies";
 
   margin-top: $spacer-medium;
-  border-top: 1px solid rgba($black, 0.1);
+  border-top: 1px solid rgba($dark, 0.1);
 
   @include atMobileAndUp {
     max-width: 70%;
   }
 
   .comment-respond {
-    background-color: $bg-grey;
+    background-color: $secondary;
   }
 }

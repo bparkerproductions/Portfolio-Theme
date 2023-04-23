@@ -1,14 +1,14 @@
 &.active {
   a {
-    color: $shade-black;
+    color: $dark;
     padding-bottom: 4.5px;
 
     @include atMobileAndUp {
-      border-bottom: 2px solid $shade-black;
+      border-bottom: 2px solid $dark;
     }
 
     @include atMobile {
-      color: $blue;
+      color: $primary;
     }
   }
 }

@@ -12,11 +12,11 @@
 
 .comment-form {
   padding: 25px;
-  background-color: $blue;
+  background-color: $primary;
 
   p,
   a {
-    color: $white;
+    color: $light;
     font-weight: bold;
   }
 
@@ -38,9 +38,9 @@
 
 .comment-reply-title {
   margin: 0;
-  background-color: $shade-black;
+  background-color: $dark;
   padding: 25px;
-  color: $white;
+  color: $light;
   border-radius: 8px 8px 0 0;
 }
 

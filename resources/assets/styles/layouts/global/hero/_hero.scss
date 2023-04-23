@@ -16,7 +16,7 @@
 
   @include allHeaders {
     text-align: center;
-    color: $white;
+    color: $light;
     text-transform: uppercase;
   }
 
@@ -26,13 +26,13 @@
 
   .hero-title {
     font-weight: 700;
-    color: $shade-black;
+    color: $dark;
     text-align: left;
     margin: 0;
 
     span {
       font-weight: 700;
-      color: $shade-black;
+      color: $dark;
     }
 
     @include atTablet {
@@ -51,7 +51,7 @@
     }
 
     svg {
-      color: $white;
+      color: $light;
       margin-bottom: 10px;
     }
   }

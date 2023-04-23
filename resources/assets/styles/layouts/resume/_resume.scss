@@ -4,7 +4,7 @@
   @import "resume-options";
 
   font-size: 15px;
-  background-color: $bg-grey;
+  background-color: $secondary;
 
   &-content {
     &.pdf-friendly {
@@ -27,13 +27,13 @@
 
   &-title {
     margin-bottom: 5px;
-    color: $shade-black;
+    color: $dark;
   }
 
   &-main-content {
     padding: 50px 25px;
     width: 70%;
-    background-color: $white;
+    background-color: $light;
     box-sizing: border-box;
 
     @include atMobile {
@@ -47,7 +47,7 @@
 
   &-header {
     margin-bottom: 15px;
-    color: $shade-black;
+    color: $dark;
   }
 
   &-intro {
@@ -63,7 +63,7 @@
     }
 
     &-icon {
-      color: $blue;
+      color: $primary;
       font-size: 18px;
       margin-top: 2px;
       margin-right: 7.5px;
@@ -72,10 +72,10 @@
 
   &-info {
     padding: 15px 0;
-    border-top: 1px solid rgba($shade-black, 0.35);
+    border-top: 1px solid rgba($dark, 0.35);
 
     &-name {
-      color: $blue;
+      color: $primary;
       margin-bottom: 3.5px;
     }
 
@@ -85,7 +85,7 @@
 
     &-title {
       font-size: 14px;
-      color: $shade-black;
+      color: $dark;
     }
 
     &-description {

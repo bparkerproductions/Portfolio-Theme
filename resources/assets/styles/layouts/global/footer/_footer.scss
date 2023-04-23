@@ -1,5 +1,5 @@
 footer.footer {
-  background-color: $black;
+  background-color: $dark;
 
   .list-container {
     display: flex;
@@ -30,7 +30,7 @@ footer.footer {
           margin: 15px 0;
 
           a {
-            color: $white;
+            color: $light;
           }
         }
       }
@@ -38,7 +38,7 @@ footer.footer {
   }
 
   .footer-bottom {
-    @include border-top($white);
+    @include border-top($light);
 
     display: flex;
     align-items: center;
@@ -50,7 +50,7 @@ footer.footer {
     }
 
     p {
-      color: $white;
+      color: $light;
       margin-top: 5px;
     }
 

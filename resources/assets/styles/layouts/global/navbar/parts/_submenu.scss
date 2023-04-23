@@ -21,7 +21,7 @@
       border-style: solid;
       top: -10px;
       border-width: 0 8.5px 10px 8.5px;
-      border-color: transparent transparent $white transparent;
+      border-color: transparent transparent $light transparent;
     }
 
     position: relative;
@@ -32,9 +32,9 @@
     }
 
     @include atMobileAndUp {
-      background-color: $white;
+      background-color: $light;
       border-radius: 3px;
-      box-shadow: 0 0 5px rgba($black, 0.15);
+      box-shadow: 0 0 5px rgba($dark, 0.15);
       transition: all 0.25s ease;
       padding: 10px 30px;
     }
@@ -55,7 +55,7 @@
 
         @include atMobileAndUp {
           &:not(:last-child) {
-            border-bottom: 1px solid rgba($shade-black, 0.1);
+            border-bottom: 1px solid rgba($dark, 0.1);
           }
         }
 
@@ -64,13 +64,13 @@
         }
 
         a {
-          color: $shade-black;
+          color: $dark;
           font-weight: 400;
           font-size: 14px;
           transition: all 0.35s ease;
 
           &:hover {
-            color: $blue;
+            color: $primary;
           }
         }
       }

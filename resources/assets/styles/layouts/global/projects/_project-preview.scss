@@ -10,7 +10,7 @@
     flex-basis: 100%;
     max-width: 100%;
     padding: $spacer-medium 0;
-    border-bottom: 1px solid rgba($black, 0.15);
+    border-bottom: 1px solid rgba($dark, 0.15);
 
     &:last-child {
       border: none;
@@ -23,16 +23,16 @@
 
   .project-inner {
     position: relative;
-    box-shadow: 0 0 7px rgba($shade-black, 0.35);
+    box-shadow: 0 0 7px rgba($dark, 0.35);
   }
 
   .featured-icon {
-    background-color: $white;
+    background-color: $light;
     z-index: 2;
     border-radius: 0 3px 0 0;
 
     svg {
-      color: $faded-blue;
+      color: $primary;
     }
   }
 
@@ -41,9 +41,9 @@
     z-index: 1;
     width: 100%;
     text-align: center;
-    background-color: $blue;
+    background-color: $primary;
     border-radius: 3px 3px 0 0;
-    border-bottom: 1px solid rgba($black, 0.15);
+    border-bottom: 1px solid rgba($dark, 0.15);
 
     @include column-center;
 
@@ -51,7 +51,7 @@
       margin-top: 10px;
 
       svg {
-        color: $black;
+        color: $dark;
         font-size: 1.2em;
         margin: 0 3.5px;
       }

@@ -14,7 +14,7 @@
 
     @include atMobile {
       transition: all 0.5s ease;
-      border-bottom: 1px solid rgba($black, 0.5);
+      border-bottom: 1px solid rgba($dark, 0.5);
       justify-content: space-between;
       width: 100%;
     }
@@ -27,7 +27,7 @@
 
     &.active {
       @include atMobile {
-        background-color: $white;
+        background-color: $light;
         transform: translateY(0);
       }
     }

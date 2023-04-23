@@ -5,12 +5,12 @@
   margin-bottom: 45px;
 
   svg {
-    color: $shade-black;
+    color: $dark;
     font-size: 3em;
     margin: 0 15px;
 
     @include onHover {
-      color: $white;
+      color: $light;
     }
   }
 }

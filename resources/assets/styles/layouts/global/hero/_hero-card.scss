@@ -2,14 +2,14 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  background-color: rgba($shade-black, 0.85);
+  background-color: rgba($dark, 0.85);
   padding: 30px;
   box-sizing: border-box;
   border-radius: 2px;
   margin-right: 15px;
 
   @include mt-custom(35px, 15px);
-  @include border-bottom($shade-black);
+  @include border-bottom($dark);
 
   @include allHeaders {
     margin: 0;
@@ -29,7 +29,7 @@
   }
 
   svg {
-    color: $blue;
+    color: $primary;
     font-size: 2em;
   }
 
@@ -37,7 +37,7 @@
     font-size: 14.5px;
     margin-top: 5px;
     line-height: 1.25;
-    color: $white;
+    color: $light;
 
     @include atTablet {
       text-align: center;

@@ -1,7 +1,7 @@
 /* stylelint-disable */
 aside {
-  background-color: $blue;
-  color: $white;
+  background-color: $primary;
+  color: $light;
   padding: 50px 25px;
   width: 30%;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ aside {
   &-container {
     margin: 15px 0;
     padding: 15px 0 0 0;
-    border-top: 1px solid rgba($white, 0.35);
+    border-top: 1px solid rgba($light, 0.35);
   }
 
   &-list {
@@ -35,13 +35,13 @@ aside {
       padding-right: 7.5px;
 
       &:not(:last-child) {
-        border-right: 1px solid rgba($white, 0.75);
+        border-right: 1px solid rgba($light, 0.75);
       }
     }
   }
 
   &-icon {
-    color: $shade-black;
+    color: $dark;
     font-size: 20px;
     margin: 0 5px 5px 0;
   }
@@ -59,7 +59,7 @@ aside {
       margin-bottom: 5px;
 
       a {
-        color: $white;
+        color: $light;
         font-size: 16px;
       }
     }

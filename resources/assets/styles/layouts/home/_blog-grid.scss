@@ -11,7 +11,7 @@
     width: 100%;
 
     .title {
-      background-color: $faded-blue;
+      background-color: $primary;
       color: white;
       padding: 5px 30px;
       margin: 0 0 -5px 6px;
@@ -29,7 +29,7 @@
     a,
     .single-blog-title,
     .single-blog-description {
-      color: $white;
+      color: $light;
     }
 
     .single-blog-post {
@@ -60,7 +60,7 @@
         padding: 65px 30px;
         height: 100%;
         box-sizing: border-box;
-        background-color: rgba($black, 0.9);
+        background-color: rgba($dark, 0.9);
         transition: all 0.35s ease;
 
         @include onHover {
@@ -70,13 +70,13 @@
 
       &:nth-child(3n) {
         article {
-          background-color: rgba($grey, 0.9);
+          background-color: rgba($secondary, 0.9);
         }
       }
 
       &:nth-child(2n) {
         article {
-          background-color: rgba($blue-dark, 0.9);
+          background-color: rgba($primary, 0.9);
         }
       }
     }

@@ -22,7 +22,7 @@
       align-items: center;
 
       @include atMobileAndUp {
-        border-right: 1px solid rgba($shade-black, 0.5);
+        border-right: 1px solid rgba($dark, 0.5);
         margin-right: 20px;
       }
 
@@ -30,7 +30,7 @@
         margin-right: 15px;
 
         @include atMobileAndUp {
-          color: $white;
+          color: $light;
         }
       }
     }
@@ -48,21 +48,21 @@
       }
 
       a {
-        color: $white;
+        color: $light;
         font-weight: 700;
         font-size: 14px;
 
         &:hover {
-          color: $shade-black;
+          color: $dark;
         }
 
         @include atMobile {
-          color: $shade-black;
+          color: $dark;
         }
       }
 
       &.active a {
-        color: $shade-black;
+        color: $dark;
       }
 
       &.has-dropdown:hover .submenu {

@@ -8,7 +8,7 @@
 
     &::after {
       content: "-";
-      color: $shade-black;
+      color: $dark;
 
       @include atMobileAndUp {
         margin-left: 5px;

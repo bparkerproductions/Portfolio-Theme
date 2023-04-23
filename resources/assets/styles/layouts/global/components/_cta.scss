@@ -1,5 +1,5 @@
 .cta {
-  background-color: $shade-black;
+  background-color: $dark;
 
   h2 {
     margin: 0;
@@ -19,7 +19,7 @@
 
     @include atTabletAndUp {
       padding: 0 12.5px;
-      border-right: 1px solid rgba($white, 0.15);
+      border-right: 1px solid rgba($light, 0.15);
     }
 
     @include atTablet {

@@ -10,7 +10,7 @@
   &-icon {
     cursor: pointer;
     margin: 0 15px 0 0;
-    color: $shade-black;
+    color: $dark;
     line-height: 1;
 
     @include atMobile {
@@ -22,7 +22,7 @@
     }
 
     &.active {
-      color: $blue;
+      color: $primary;
       font-weight: bold;
     }
   }

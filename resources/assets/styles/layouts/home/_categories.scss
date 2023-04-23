@@ -3,7 +3,7 @@
 
   @include spacer-small;
 
-  background-color: rgba($bg-grey, 0.5);
+  background-color: rgba($secondary, 0.5);
 
   .inner-container {
     display: flex;
@@ -16,7 +16,7 @@
 
     svg {
       font-size: 2em;
-      color: $black;
+      color: $dark;
     }
   }
 
@@ -42,7 +42,7 @@
       .category-link {
         @include hard-center;
 
-        color: $blue;
+        color: $primary;
       }
 
       .category-icon {

@@ -27,7 +27,7 @@
         overflow: auto;
         overflow-x: auto;
 
-        @include scrollbar($blue, 6px);
+        @include scrollbar($primary, 6px);
       }
     }
   }

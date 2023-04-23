@@ -19,20 +19,20 @@
 }
 
 @mixin btn-black {
-  background-color: $shade-black;
-  color: $white;
+  background-color: $dark;
+  color: $light;
 
   &:hover {
-    background-color: $black;
+    background-color: $dark;
   }
 }
 
 @mixin btn-dark-blue {
-  background-color: $blue-dark;
-  color: $white;
+  background-color: $primary;
+  color: $light;
 
   &:hover {
-    background-color: rgba($blue-dark, 0.9);
+    background-color: rgba($primary, 0.9);
   }
 }
 

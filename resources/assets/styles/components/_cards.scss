@@ -1,5 +1,5 @@
 .card {
-  background-color: rgba($bg-grey, 0.5);
+  background-color: rgba($secondary, 0.5);
   border-radius: 6px;
   position: relative;
   transform: translateY(0);
@@ -15,18 +15,18 @@
 
   .head {
     padding: 15px 20px;
-    background-color: $black;
+    background-color: $dark;
     border-radius: 6px 6px 0 0;
 
     &.blue {
-      background-color: $blue;
+      background-color: $primary;
     }
 
     .category {
       margin: 0;
       line-height: 1;
       text-transform: uppercase;
-      color: $white;
+      color: $light;
       font-size: 1em;
     }
   }

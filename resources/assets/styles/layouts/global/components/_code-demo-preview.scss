@@ -1,7 +1,7 @@
 .code-demo-preview {
   .icon {
     font-size: 3em;
-    color: $blue;
+    color: $primary;
     margin-bottom: 25px;
   }
 
@@ -24,7 +24,7 @@
     margin-bottom: 15px;
 
     .card {
-      border: 1px solid rgba($shade-black, 0.15);
+      border: 1px solid rgba($dark, 0.15);
 
       .body {
         padding: 20px;
@@ -38,7 +38,7 @@
   }
 
   .view-all {
-    color: $black;
+    color: $dark;
     font-size: 18px;
   }
 }

@@ -4,7 +4,7 @@
   margin-top: 30px;
   width: 100%;
 
-  @include border-top($shade-black);
+  @include border-top($dark);
 
   @include atMobile {
     flex-direction: column;
@@ -14,7 +14,7 @@
   .client-name,
   .client-company,
   .project-link {
-    color: $shade-black;
+    color: $dark;
 
     @include atMobile {
       margin-bottom: 10px;

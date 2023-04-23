@@ -6,26 +6,26 @@
     flex-wrap: wrap;
 
     @include mt-custom(30px, 20px);
-    @include border-bottom($shade-black);
+    @include border-bottom($dark);
 
     .single-category {
       display: flex;
       justify-content: center;
       align-items: center;
-      border-right: 1px solid rgba($white, 0.25);
+      border-right: 1px solid rgba($light, 0.25);
       transition: all 0.5s ease;
 
       @include atTablet {
-        border: 1px solid rgba($white, 0.25);
+        border: 1px solid rgba($light, 0.25);
       }
 
       .all-categories {
-        border-right: 1px solid $grey;
+        border-right: 1px solid $secondary;
         padding-right: 15px;
       }
 
       a {
-        color: $shade-black;
+        color: $dark;
         text-align: center;
         margin: 5px 15px 5px 0;
         transition: all 0.35s ease;
@@ -33,7 +33,7 @@
         align-items: center;
 
         &:hover {
-          color: $blue;
+          color: $primary;
         }
 
         .badge {
@@ -43,7 +43,7 @@
         }
 
         &.active {
-          background-color: $blue;
+          background-color: $primary;
           padding: 3px 10px;
           color: white;
           border-radius: 3px;

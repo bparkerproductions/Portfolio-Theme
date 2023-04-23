@@ -2,9 +2,11 @@
 @import "~bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
-$primary: #FEC31D;
-$dark: #1A1C1D;
+$primary: #72addd;
+$dark: #23272a;
 $secondary: #EDEDED;
+$light: #fff;
+$body: #333;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
