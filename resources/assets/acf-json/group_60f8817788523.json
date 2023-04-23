@@ -6,6 +6,7 @@
             "key": "field_60f8817e5ff57",
             "label": "Resume",
             "name": "resume",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -21,6 +22,7 @@
                     "key": "field_60f881905ff58",
                     "label": "Main Content",
                     "name": "",
+                    "aria-label": "",
                     "type": "tab",
                     "instructions": "",
                     "required": 0,
@@ -37,6 +39,7 @@
                     "key": "field_63161fb73b5db",
                     "label": "Resume File",
                     "name": "resume_file",
+                    "aria-label": "",
                     "type": "file",
                     "instructions": "Resume file that's available for download",
                     "required": 0,
@@ -56,6 +59,7 @@
                     "key": "field_60f881b45ff5a",
                     "label": "Intro",
                     "name": "intro",
+                    "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -75,6 +79,7 @@
                     "key": "field_6317a5e4945db",
                     "label": "Location",
                     "name": "location",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -94,6 +99,7 @@
                     "key": "field_60f886226a16e",
                     "label": "Intro Points",
                     "name": "intro_points",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -107,12 +113,13 @@
                     "min": 0,
                     "max": 0,
                     "layout": "table",
-                    "button_label": "",
+                    "button_label": "Add Row",
                     "sub_fields": [
                         {
                             "key": "field_60f886306a16f",
                             "label": "Point",
                             "name": "point",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -126,14 +133,17 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_60f886226a16e"
                         }
-                    ]
+                    ],
+                    "rows_per_page": 20
                 },
                 {
                     "key": "field_60f9e7fc9f1eb",
                     "label": "Work Experience",
                     "name": "experience",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -147,12 +157,13 @@
                     "min": 0,
                     "max": 0,
                     "layout": "row",
-                    "button_label": "",
+                    "button_label": "Add Row",
                     "sub_fields": [
                         {
                             "key": "field_60f9e82a9f1ec",
                             "label": "Company",
                             "name": "company",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -166,12 +177,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_60f9e7fc9f1eb"
                         },
                         {
                             "key": "field_63162c1ef8bab",
                             "label": "Tags",
                             "name": "tags",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -185,12 +198,13 @@
                             "min": 0,
                             "max": 0,
                             "layout": "table",
-                            "button_label": "",
+                            "button_label": "Add Row",
                             "sub_fields": [
                                 {
                                     "key": "field_63162c2df8bac",
                                     "label": "Text",
                                     "name": "text",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -204,14 +218,18 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_63162c1ef8bab"
                                 }
-                            ]
+                            ],
+                            "rows_per_page": 20,
+                            "parent_repeater": "field_60f9e7fc9f1eb"
                         },
                         {
                             "key": "field_60f9e84a9f1ed",
                             "label": "Title",
                             "name": "title",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -225,12 +243,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_60f9e7fc9f1eb"
                         },
                         {
                             "key": "field_60f9e8569f1ee",
                             "label": "Date",
                             "name": "date",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -244,12 +264,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_60f9e7fc9f1eb"
                         },
                         {
                             "key": "field_60f9e85e9f1ef",
                             "label": "Description",
                             "name": "description",
+                            "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
                             "required": 0,
@@ -263,12 +285,14 @@
                             "placeholder": "",
                             "maxlength": "",
                             "rows": "",
-                            "new_lines": ""
+                            "new_lines": "",
+                            "parent_repeater": "field_60f9e7fc9f1eb"
                         },
                         {
                             "key": "field_60f9e8699f1f0",
                             "label": "Points",
                             "name": "points",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -282,12 +306,13 @@
                             "min": 0,
                             "max": 0,
                             "layout": "table",
-                            "button_label": "",
+                            "button_label": "Add Row",
                             "sub_fields": [
                                 {
                                     "key": "field_60f9e8799f1f1",
                                     "label": "Item",
                                     "name": "item",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -301,14 +326,18 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_60f9e8699f1f0"
                                 }
-                            ]
+                            ],
+                            "rows_per_page": 20,
+                            "parent_repeater": "field_60f9e7fc9f1eb"
                         },
                         {
                             "key": "field_60f9e8829f1f2",
                             "label": "Technologies",
                             "name": "technologies",
+                            "aria-label": "",
                             "type": "relationship",
                             "instructions": "",
                             "required": 0,
@@ -326,14 +355,17 @@
                             "elements": "",
                             "min": "",
                             "max": "",
-                            "return_format": "id"
+                            "return_format": "id",
+                            "parent_repeater": "field_60f9e7fc9f1eb"
                         }
-                    ]
+                    ],
+                    "rows_per_page": 20
                 },
                 {
                     "key": "field_60f9ed193f6da",
                     "label": "Projects",
                     "name": "projects",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -347,12 +379,13 @@
                     "min": 0,
                     "max": 0,
                     "layout": "row",
-                    "button_label": "",
+                    "button_label": "Add Row",
                     "sub_fields": [
                         {
                             "key": "field_60f9ed193f6db",
                             "label": "Project",
                             "name": "project",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -366,12 +399,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_60f9ed193f6da"
                         },
                         {
                             "key": "field_60f9ed193f6dc",
                             "label": "Title",
                             "name": "title",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -385,12 +420,35 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_60f9ed193f6da"
+                        },
+                        {
+                            "key": "field_64449ae6f6c67",
+                            "label": "Date",
+                            "name": "date",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_60f9ed193f6da"
                         },
                         {
                             "key": "field_60f9ed193f6de",
                             "label": "Description",
                             "name": "description",
+                            "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
                             "required": 0,
@@ -404,12 +462,14 @@
                             "placeholder": "",
                             "maxlength": "",
                             "rows": "",
-                            "new_lines": ""
+                            "new_lines": "",
+                            "parent_repeater": "field_60f9ed193f6da"
                         },
                         {
                             "key": "field_60f9ed193f6df",
                             "label": "Points",
                             "name": "points",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -423,12 +483,13 @@
                             "min": 0,
                             "max": 0,
                             "layout": "",
-                            "button_label": "",
+                            "button_label": "Add Row",
                             "sub_fields": [
                                 {
                                     "key": "field_60f9ed193f6e0",
                                     "label": "Item",
                                     "name": "item",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -442,14 +503,18 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_60f9ed193f6df"
                                 }
-                            ]
+                            ],
+                            "rows_per_page": 20,
+                            "parent_repeater": "field_60f9ed193f6da"
                         },
                         {
                             "key": "field_60f9ed193f6e1",
                             "label": "Technologies",
                             "name": "technologies",
+                            "aria-label": "",
                             "type": "relationship",
                             "instructions": "",
                             "required": 0,
@@ -467,12 +532,14 @@
                             "elements": "",
                             "min": "",
                             "max": "",
-                            "return_format": ""
+                            "return_format": "",
+                            "parent_repeater": "field_60f9ed193f6da"
                         },
                         {
                             "key": "field_60ff329b0acd9",
                             "label": "Link",
                             "name": "link",
+                            "aria-label": "",
                             "type": "link",
                             "instructions": "",
                             "required": 0,
@@ -482,14 +549,17 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "return_format": "array",
+                            "parent_repeater": "field_60f9ed193f6da"
                         }
-                    ]
+                    ],
+                    "rows_per_page": 20
                 },
                 {
                     "key": "field_60f9ed443f6e2",
                     "label": "Education",
                     "name": "education",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -503,12 +573,13 @@
                     "min": 0,
                     "max": 0,
                     "layout": "row",
-                    "button_label": "",
+                    "button_label": "Add Row",
                     "sub_fields": [
                         {
                             "key": "field_60f9ed443f6e3",
                             "label": "School",
                             "name": "school",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -522,12 +593,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_60f9ed443f6e2"
                         },
                         {
                             "key": "field_60f9ed443f6e4",
                             "label": "Title",
                             "name": "title",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -541,12 +614,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_60f9ed443f6e2"
                         },
                         {
                             "key": "field_60ff28bc58f1e",
                             "label": "Date",
                             "name": "date",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -560,12 +635,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_60f9ed443f6e2"
                         },
                         {
                             "key": "field_60f9ed443f6e5",
                             "label": "Description",
                             "name": "description",
+                            "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
                             "required": 0,
@@ -579,12 +656,14 @@
                             "placeholder": "",
                             "maxlength": "",
                             "rows": "",
-                            "new_lines": ""
+                            "new_lines": "",
+                            "parent_repeater": "field_60f9ed443f6e2"
                         },
                         {
                             "key": "field_60f9ed443f6e6",
                             "label": "Points",
                             "name": "points",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -598,12 +677,13 @@
                             "min": 0,
                             "max": 0,
                             "layout": "table",
-                            "button_label": "",
+                            "button_label": "Add Row",
                             "sub_fields": [
                                 {
                                     "key": "field_60f9ed443f6e7",
                                     "label": "Item",
                                     "name": "item",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -617,14 +697,18 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_60f9ed443f6e6"
                                 }
-                            ]
+                            ],
+                            "rows_per_page": 20,
+                            "parent_repeater": "field_60f9ed443f6e2"
                         },
                         {
                             "key": "field_60f9ed443f6e8",
                             "label": "Technologies",
                             "name": "technologies",
+                            "aria-label": "",
                             "type": "relationship",
                             "instructions": "",
                             "required": 0,
@@ -642,14 +726,17 @@
                             "elements": "",
                             "min": "",
                             "max": "",
-                            "return_format": "id"
+                            "return_format": "id",
+                            "parent_repeater": "field_60f9ed443f6e2"
                         }
-                    ]
+                    ],
+                    "rows_per_page": 20
                 },
                 {
                     "key": "field_60f881a35ff59",
                     "label": "Sidebar",
                     "name": "",
+                    "aria-label": "",
                     "type": "tab",
                     "instructions": "",
                     "required": 0,
@@ -666,6 +753,7 @@
                     "key": "field_60f88a444d57f",
                     "label": "Links",
                     "name": "links",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -679,12 +767,13 @@
                     "min": 0,
                     "max": 0,
                     "layout": "row",
-                    "button_label": "",
+                    "button_label": "Add Row",
                     "sub_fields": [
                         {
                             "key": "field_60f88a544d580",
                             "label": "Link",
                             "name": "link",
+                            "aria-label": "",
                             "type": "link",
                             "instructions": "",
                             "required": 0,
@@ -694,14 +783,17 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "return_format": "array",
+                            "parent_repeater": "field_60f88a444d57f"
                         }
-                    ]
+                    ],
+                    "rows_per_page": 20
                 },
                 {
                     "key": "field_60f88d67e22c4",
                     "label": "Technologies",
                     "name": "technologies",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -715,12 +807,13 @@
                     "min": 0,
                     "max": 0,
                     "layout": "row",
-                    "button_label": "",
+                    "button_label": "Add Row",
                     "sub_fields": [
                         {
                             "key": "field_60f88d7de22c5",
                             "label": "Title",
                             "name": "title",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -734,12 +827,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_60f88d67e22c4"
                         },
                         {
                             "key": "field_60f88d85e22c6",
                             "label": "Technology List",
                             "name": "technology_list",
+                            "aria-label": "",
                             "type": "relationship",
                             "instructions": "",
                             "required": 0,
@@ -757,12 +852,14 @@
                             "elements": "",
                             "min": "",
                             "max": "",
-                            "return_format": "id"
+                            "return_format": "id",
+                            "parent_repeater": "field_60f88d67e22c4"
                         },
                         {
                             "key": "field_61085b47d4b8e",
                             "label": "Hide Names",
                             "name": "hide_names",
+                            "aria-label": "",
                             "type": "true_false",
                             "instructions": "",
                             "required": 0,
@@ -776,14 +873,17 @@
                             "default_value": 0,
                             "ui": 0,
                             "ui_on_text": "",
-                            "ui_off_text": ""
+                            "ui_off_text": "",
+                            "parent_repeater": "field_60f88d67e22c4"
                         }
-                    ]
+                    ],
+                    "rows_per_page": 20
                 },
                 {
                     "key": "field_60f9e6f46d69a",
                     "label": "Accomplishments",
                     "name": "accomplishments",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -797,12 +897,13 @@
                     "min": 0,
                     "max": 0,
                     "layout": "table",
-                    "button_label": "",
+                    "button_label": "Add Row",
                     "sub_fields": [
                         {
                             "key": "field_60f9e70f6d69b",
                             "label": "Item",
                             "name": "item",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -816,14 +917,17 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_60f9e6f46d69a"
                         }
-                    ]
+                    ],
+                    "rows_per_page": 20
                 },
                 {
                     "key": "field_6317a61689d20",
                     "label": "Interests",
                     "name": "interests",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -837,12 +941,13 @@
                     "min": 0,
                     "max": 0,
                     "layout": "table",
-                    "button_label": "",
+                    "button_label": "Add Row",
                     "sub_fields": [
                         {
                             "key": "field_6317abd4428e5",
                             "label": "Text",
                             "name": "text",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -856,9 +961,11 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_6317a61689d20"
                         }
-                    ]
+                    ],
+                    "rows_per_page": 20
                 }
             ]
         }
@@ -881,5 +988,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1662495718
+    "modified": 1682217720
 }

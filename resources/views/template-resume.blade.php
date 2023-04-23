@@ -113,7 +113,9 @@
             @foreach($resume['projects'] as $project)
               <div class="resume-info">
                 <h5 class="resume-info-name m-0">{{$project['project']}}</h5>
-                <em class="resume-info-title">{{$project['title']}} - {{$project['date']}}</em>
+                @if ($project['date'])
+                  <em class="resume-info-title">{{$project['title']}} - {{$project['date']}}</em>
+                @endif
                 <p class="resume-info-description">{{$project['description']}}</p>
               </div>
         
