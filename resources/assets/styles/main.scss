@@ -18,14 +18,11 @@
 
 /** Import theme styles */
 @import "common/global";
-@import "components/comments/comments";
+@import "components/comments";
 @import "components/bubble";
-@import "components/forms";
-@import "components/text";
 @import "components/icons";
-@import "components/backgrounds";
 @import "components/badge";
-@import "components/form/form";
+@import "components/form";
 @import "components/featured-post";
 @import "components/cards";
 @import "layouts/header";
