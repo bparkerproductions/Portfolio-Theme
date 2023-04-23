@@ -1,5 +1,5 @@
 <section id="about-container" class="column-center spacer about-section">
-  <div class="inner-container">
+  <div class="container">
     <div class="top-row">
       <div class="content-container">
         <h1 class="blue mt-none">{{$about_title}}</h1>

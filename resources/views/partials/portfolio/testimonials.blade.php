@@ -1,5 +1,5 @@
 <section class="testimonials column-center spacer">
-  <div class="inner-container testimonials-container">
+  <div class="container testimonials-container">
 
     <div class="slider-toggle-arrows">
       <div class="previous toggle">

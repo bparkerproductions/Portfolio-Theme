@@ -1,5 +1,5 @@
 <section class="archive-category-list column-center">
-  <div class="inner-container">
+  <div class="container">
     <div class="archive-categories">
       <div class="single-icon-container">
         <i class="fas fa-folder-open"></i>

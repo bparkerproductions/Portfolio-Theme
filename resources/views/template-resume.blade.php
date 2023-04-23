@@ -11,7 +11,7 @@
   @endcomponent
 
   <section class="resume demos spacer-small column-center">
-    <div class="inner-container">
+    <div class="container">
       <div class="resume-options">
         <p class="resume-options-icon pdf-friendly">
           <i class="fas fa-file-pdf"></i> PDF Friendly Version

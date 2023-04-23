@@ -6,7 +6,7 @@
   <div class="hero lax"
   data-lax-translate-y="0 0, 1000 -250" style="{{$bgImage}}">
     <canvas id="snowstorm"></canvas>
-    <div class="inner-container">
+    <div class="container">
       <div class="content-container lax"
       data-lax-translate-y="0 0, 750 -250">
 

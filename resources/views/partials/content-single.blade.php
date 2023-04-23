@@ -1,5 +1,5 @@
 <div class="column-center spacer">
-  <div class="inner-container entry-content">
+  <div class="container entry-content">
 
     <article @php post_class() @endphp>
       <header>

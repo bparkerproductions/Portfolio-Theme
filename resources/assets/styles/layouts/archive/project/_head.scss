@@ -2,7 +2,7 @@
   background-color: rgba($secondary, 0.5);
   margin-top: -25px;
 
-  .inner-container {
+  .container {
     display: flex;
 
     @include atPortrait {

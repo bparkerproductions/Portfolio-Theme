@@ -1,5 +1,5 @@
 <section class="archive-header bubble-header column-center">
-  <div class="inner-container">
+  <div class="container">
     <h2 class="header">
       @if($icon_class)
         <i class="{{$icon_class}} header-icon"></i>

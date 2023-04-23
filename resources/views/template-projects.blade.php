@@ -12,7 +12,7 @@
   @endcomponent
 
   <section class="all-projects projects spacer-small column-center">
-    <div class="inner-container">
+    <div class="container">
       <h5 class="header">View {{count($all_projects)}} Projects</h5>
       <div class="projects-section">
         @foreach($all_projects as $id)

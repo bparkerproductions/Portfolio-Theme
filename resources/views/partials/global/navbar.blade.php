@@ -1,5 +1,5 @@
 <nav class="primary-navigation column-center {{$class}}">
-  <section class="primary-content inner-container">
+  <section class="primary-content container">
 
     <div class="content-container">
       <ul>

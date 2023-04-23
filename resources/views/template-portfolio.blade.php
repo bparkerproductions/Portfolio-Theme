@@ -16,7 +16,7 @@
 
   {{-- Blog Posts Section --}}
   <section class="blog-posts-container column-center">
-    <div class="inner-container">
+    <div class="container">
       @include('partials.global.related-posts', [
         'component_title' => 'See Blog Posts'
       ])
@@ -26,7 +26,7 @@
   {{-- Portfolio widgets area  --}}
   @if( is_active_sidebar( 'portfolio-widgets' ) )
     <section id="secondary-sidebar" class="spacer column-center">
-      <div class="inner-container">
+      <div class="container">
         @php dynamic_sidebar( 'portfolio-widgets' ) @endphp
       </div>
     </section>

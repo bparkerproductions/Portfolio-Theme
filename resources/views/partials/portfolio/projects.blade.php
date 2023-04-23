@@ -1,5 +1,5 @@
 <section id="projects-container" class="spacer column-center projects">
-  <div class="inner-container">
+  <div class="container">
     <div class="projects-section-header">
       <h2 class="blue title">{{$projects_title}}</h2>
     </div>

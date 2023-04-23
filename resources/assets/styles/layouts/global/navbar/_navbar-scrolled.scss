@@ -10,8 +10,6 @@
   transition: all 0.15s ease;
 
   .content-container {
-    @include inner-container;
-
     display: flex;
     justify-content: flex-start;
 

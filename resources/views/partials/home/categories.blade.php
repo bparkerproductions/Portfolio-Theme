@@ -1,5 +1,5 @@
 <section class="blog-categories column-center">
-  <div class="inner-container">
+  <div class="container">
     <ul class="categories-list">
       @foreach($categories as $category)
         @foreach($category as $id)

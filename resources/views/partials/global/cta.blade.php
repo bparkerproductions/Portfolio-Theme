@@ -1,5 +1,5 @@
 <section class="cta spacer column-center">
-  <div class="inner-container">
+  <div class="container">
     <div class="header-container">
       <h2 class="white">{{$cta_header}}</h2>
 

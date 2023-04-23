@@ -35,8 +35,3 @@ button,
 .button {
   @include font("Lato");
 }
-
-/* Inner Containers */
-.inner-container {
-  @include inner-container;
-}

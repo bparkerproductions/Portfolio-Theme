@@ -8,7 +8,7 @@
       <p>Learn more about me and how I can help you</p>
     @endcomponent
     <article class="column-center spacer">
-      <div class="inner-container page-content entry-content">
+      <div class="container page-content entry-content">
         @include('partials.content-page')
       </div>
     </article>

@@ -13,7 +13,7 @@
 
   <div id="not-found" class="column-center">
     @if (!have_posts())
-      <div class="inner-container">
+      <div class="container">
         <h1 class="shade-black">404</h1>
         <div class="icon-container">
         <h3>Sorry, but the page you were trying to view does not exist.</h3>

@@ -1,5 +1,5 @@
 <section class="code-demo-preview spacer column-center">
-  <div class="inner-container card">
+  <div class="container card">
     <div class="card-header">
       <a href="{{$demo_link['url']}}" class="clickable-link"></a>
       <i class="fas fa-code icon"></i>

@@ -1,5 +1,5 @@
 <section class="project-content column-center">
-  <div class="inner-container spacer">
+  <div class="container spacer">
 
     {{-- Overview --}}
     <div class="content-section spacer-small">

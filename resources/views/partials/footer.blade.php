@@ -1,5 +1,5 @@
 <footer class="footer column-center">
-  <div class="inner-container">
+  <div class="container">
 
     {{-- Footer Top --}}
     <div class="list-container footer-top spacer">
