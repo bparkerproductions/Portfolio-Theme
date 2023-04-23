@@ -1,0 +1,136 @@
+.hero {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include hard-center;
+
+  @include media-breakpoint-down(sm) {
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  @include allHeaders {
+    text-align: center;
+    color: $light;
+    text-transform: uppercase;
+  }
+
+  canvas#snowstorm {
+    @extend %absolute-fill;
+  }
+
+  .hero-title {
+    font-weight: 700;
+    color: $dark;
+    text-align: left;
+    margin: 0;
+
+    span {
+      font-weight: 700;
+      color: $dark;
+    }
+
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+  }
+
+  .toggle-more {
+    position: absolute;
+    bottom: 5vh;
+    right: 0;
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    svg {
+      color: $light;
+      margin-bottom: 10px;
+    }
+  }
+
+  /* Hero Cards */
+  .hero-cards-container {
+    display: flex;
+    justify-content: flex-start;
+  
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero-cards {
+      display: flex;
+      border-top: 4px solid $primary;
+  
+      @include media-breakpoint-down(lg) {
+        padding-top: 20px;
+        border: 0;
+      }
+  
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+      }
+    }
+  
+    .hero-card {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba($dark, 0.85);
+      padding: 30px;
+      box-sizing: border-box;
+      border-radius: 2px;
+      margin-right: 15px;
+      border-bottom: 1px solid $dark;
+    
+      @include allHeaders {
+        margin: 0;
+        margin-top: 17.5px;
+        font-weight: 400;
+      }
+    
+      @include media-breakpoint-down(lg) {
+        @include hard-center;
+    
+        justify-content: flex-start;
+        margin: 5px;
+      }
+    
+      @include media-breakpoint-down(xs) {
+        margin: 12.5px 0;
+      }
+    
+      svg {
+        color: $primary;
+        font-size: 2em;
+      }
+    
+      .subtitle {
+        font-size: 14.5px;
+        margin-top: 5px;
+        line-height: 1.25;
+        color: $light;
+    
+        @include media-breakpoint-down(lg) {
+          text-align: center;
+        }
+      }
+    }
+  
+    .button-container {
+      margin: 0 20px;
+      justify-content: flex-end;
+  
+      @include media-breakpoint-down(lg) {
+        margin-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+  
+}

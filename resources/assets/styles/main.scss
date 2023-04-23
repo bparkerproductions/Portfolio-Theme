@@ -14,19 +14,12 @@
 // @import "~some-node-module";
 
 /** Import global styles **/
-@import "layouts/global/global";
+@import "components/main";
 
 @import "common/global";
 
-/* Components */
-@import "components/blog-grid";
-@import "components/comments";
-@import "components/bubble";
-@import "components/icons";
-@import "components/badge";
-@import "components/form";
-@import "components/featured-post";
-@import "components/cards";
+/* Atomic elements */
+@import "elements/main";
 
 /* Layouts */
 @import "layouts/404";
