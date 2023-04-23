@@ -10,7 +10,6 @@
 
   @include media-breakpoint-down(sm) {
     justify-content: flex-start;
-    padding-top: $spacer-large;
     height: 100%;
   }
 

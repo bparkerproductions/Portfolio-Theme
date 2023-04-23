@@ -1,6 +1,4 @@
 .archive-category-list {
-  @include mb-custom($spacer-medium, $spacer-tiny);
-
   .archive-categories {
     display: flex;
     flex-wrap: wrap;

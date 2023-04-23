@@ -3,8 +3,6 @@
   article.post {
     border-bottom: 6px solid $primary;
 
-    @include mb-custom(60px, 30px);
-
     @include allHeaders {
       margin-bottom: 10px;
     }

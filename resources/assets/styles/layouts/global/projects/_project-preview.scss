@@ -1,6 +1,5 @@
 .project {
   position: relative;
-  padding: $spacer-small 0;
   transition: all 0.5s ease;
   transform: translateY(0);
   flex-basis: 49%;
@@ -9,7 +8,6 @@
   @include media-breakpoint-down(lg) {
     flex-basis: 100%;
     max-width: 100%;
-    padding: $spacer-medium 0;
     border-bottom: 1px solid rgba($dark, 0.15);
 
     &:last-child {

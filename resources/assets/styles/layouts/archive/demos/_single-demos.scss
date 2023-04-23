@@ -1,8 +1,6 @@
 .single-demos {
   .inline-icon-container {
     @extend %inline-icons;
-
-    @include mb-custom($spacer-medium, $spacer-small);
   }
 
   .demo-content {

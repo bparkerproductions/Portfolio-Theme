@@ -2,18 +2,6 @@
   display: flex;
   align-items: flex-start;
 
-  .header-container {
-    margin-bottom: $spacer-small;
-
-    .title {
-      margin-bottom: 10px;
-    }
-
-    .gallery-description {
-      margin: 0;
-    }
-  }
-
   .gallery-container {
     width: 100%;
     display: flex;

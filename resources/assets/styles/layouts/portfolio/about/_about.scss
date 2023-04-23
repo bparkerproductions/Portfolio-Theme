@@ -12,8 +12,6 @@
     display: flex;
     justify-content: space-between;
 
-    @include mb-custom(50px, 30px);
-
     @include media-breakpoint-down(lg) {
       flex-direction: column;
     }
@@ -27,7 +25,6 @@
     width: 50%;
 
     @include media-breakpoint-down(lg) {
-      margin-bottom: $spacer-medium;
       width: auto;
     }
   }

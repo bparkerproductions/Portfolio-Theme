@@ -1,7 +1,6 @@
 .related-media {
   .header-container {
     border-bottom: 1px solid $secondary;
-    @include mb-custom($spacer-medium, $spacer-small);
 
     .main-header {
       margin-bottom: 0;

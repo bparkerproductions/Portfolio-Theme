@@ -1,6 +1,5 @@
 .projects-section-header {
   display: flex;
-  margin-bottom: $spacer-small;
 
   @include media-breakpoint-down(md) {
     flex-direction: column;
