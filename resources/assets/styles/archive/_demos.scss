@@ -1,3 +1,15 @@
+.single-demos {
+  .inline-icon-container {
+    @extend %inline-icons;
+  }
+
+  .demo-content {
+    @include media-breakpoint-up(sm) {
+      max-width: 75%;
+    }
+  }
+}
+
 .template-demos {
   .demo-count {
     margin-left: 1%;

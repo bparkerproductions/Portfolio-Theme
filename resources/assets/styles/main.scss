@@ -19,6 +19,7 @@
 @import "common/global";
 
 /* Components */
+@import "components/blog-grid";
 @import "components/comments";
 @import "components/bubble";
 @import "components/icons";
@@ -29,7 +30,9 @@
 
 /* Layouts */
 @import "layouts/404";
-@import "layouts/home/home";
-@import "layouts/portfolio/portfolio";
+@import "layouts/home";
+@import "layouts/portfolio";
 @import "layouts/resume";
-@import "layouts/archive/main";
+
+/* Archive pages, including demos and projects */
+@import "archive/main";

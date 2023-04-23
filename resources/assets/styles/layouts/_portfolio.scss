@@ -1,0 +1,118 @@
+.template-portfolio {
+  .blog-posts-container {
+    .related-posts {
+      background-color: transparent;
+  
+      .container {
+        width: 100%;
+      }
+  
+      a,
+      .title {
+        color: $primary;
+      }
+    }
+  }
+
+  .about-section {
+    background-color: rgba($secondary, 0.5);
+    padding-bottom: 0;
+  
+    .technologies-container {
+      @include media-breakpoint-up(lg) {
+        width: 40%;
+      }
+    
+      .tech-header {
+        @include media-breakpoint-up(lg) {
+          margin-left: 15px;
+        }
+      }
+    
+      .technologies {
+        display: flex;
+        flex-wrap: wrap;
+    
+        @include media-breakpoint-down(lg) {
+          margin-left: -15px;
+        }
+    
+        .tech-col {
+          flex-basis: 25%;
+          margin-bottom: 20px;
+    
+          @include media-breakpoint-down(lg) {
+            flex-basis: 12.5%;
+          }
+    
+          @include media-breakpoint-down(sm) {
+            flex-basis: 25%;
+          }
+    
+          @include media-breakpoint-down(xs) {
+            flex-basis: 33%;
+          }
+    
+          .tech-label {
+            text-align: center;
+            font-size: 15px;
+          }
+    
+          svg {
+            color: $dark;
+            font-size: 3em;
+            margin-bottom: 7.5px;
+          }
+        }
+    
+        .specialized {
+          position: relative;
+    
+          .tech-label,
+          svg {
+            color: $primary;
+          }
+    
+          .specialized-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+    
+            svg {
+              font-size: 1.1em !important;
+            }
+    
+            svg {
+              color: $yellow;
+            }
+          }
+        }
+      }
+    }
+  
+    h1 {
+      margin-bottom: 10px;
+    }
+  
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+  
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+      }
+    }
+  
+    .button-container {
+      margin-top: 30px;
+    }
+  
+    .content-container {
+      width: 50%;
+  
+      @include media-breakpoint-down(lg) {
+        width: auto;
+      }
+    }
+  }
+}
