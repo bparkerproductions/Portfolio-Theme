@@ -357,6 +357,23 @@
                             "max": "",
                             "return_format": "id",
                             "parent_repeater": "field_60f9e7fc9f1eb"
+                        },
+                        {
+                            "key": "field_6444bc9a4aaa3",
+                            "label": "link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "parent_repeater": "field_60f9e7fc9f1eb"
                         }
                     ],
                     "rows_per_page": 20
@@ -728,6 +745,23 @@
                             "max": "",
                             "return_format": "id",
                             "parent_repeater": "field_60f9ed443f6e2"
+                        },
+                        {
+                            "key": "field_6444be1fa01e7",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "parent_repeater": "field_60f9ed443f6e2"
                         }
                     ],
                     "rows_per_page": 20
@@ -988,5 +1022,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682217720
+    "modified": 1682226734
 }

@@ -103,8 +103,7 @@
                 <em class="resume-info-title">{{$experience['title']}} - {{$experience['date']}}</em>
                 <p class="resume-info-description">{{$experience['description']}}</p>
               </div>
-
-              @include('partials.resume.more-info', [ 'item' => $experience ])
+                @include('partials.resume-more-info', [ 'item' => $experience ])
             @endforeach
           </section>
 
@@ -119,7 +118,7 @@
                 <p class="resume-info-description">{{$project['description']}}</p>
               </div>
         
-              @include('partials.resume.more-info', [ 'item' => $project ])
+              @include('partials.resume-more-info', [ 'item' => $project ])
             @endforeach
           </section>
 
@@ -132,7 +131,7 @@
                 <p class="resume-info-description">{{$education['description']}}</p>
               </div>
 
-              @include('partials.resume.more-info', [ 'item' => $education ])
+              @include('partials.resume-more-info', [ 'item' => $education ])
             @endforeach
           </section>
 

@@ -5,5 +5,6 @@ import 'lax.js'
 // Pages
 import './pages/portfolio.js'
 import './pages/home.js'
+import './pages/resume.js'
 
 // Components
