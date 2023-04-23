@@ -54,7 +54,13 @@
       }
 
       .specialized-icon {
-        @extend %icon-top-left;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        svg {
+          font-size: 1.1em !important;
+        }
 
         svg {
           color: $yellow;

@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="container">
-    <div class="posts-container layout-two-columns ">
+    <div class="posts-container">
       @foreach(ARCHIVE::randomPostIds(10) as $ID)
         <article class="col mt-small mb-small">
           <section class="top-post">

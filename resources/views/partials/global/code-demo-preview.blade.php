@@ -8,7 +8,7 @@
       <p class="description">Check out code samples written in JavaScript, React, Node, and more </p>
     </div>
 
-    <div class="demo-container layout-three-columns">
+    <div class="demo-container">
       @foreach($demo_loop->posts as $key=>$post)
         @if($key <= 2)
           @include('partials.demo-card')

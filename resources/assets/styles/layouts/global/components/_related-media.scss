@@ -29,8 +29,4 @@
   .link-container a {
     @extend %absolute-fill;
   }
-
-  .card-container {
-    @extend %layout-four-columns;
-  }
 }

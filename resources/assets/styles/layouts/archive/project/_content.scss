@@ -6,10 +6,6 @@
   }
 
   #project-testimonial {
-    .slider-container {
-      @extend %layout-two-columns;
-    }
-
     .slider-toggle-arrows {
       display: none;
     }

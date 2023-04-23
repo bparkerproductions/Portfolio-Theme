@@ -17,7 +17,16 @@
 
   p,
   li {
-    @extend %excerpt-text;
+    %excerpt-text {
+      margin-top: 0;
+      color: $body;
+      line-height: 1.5;
+      font-size: 1em;
+    
+      @include atMobile {
+        line-height: 1.4;
+      }
+    }
   }
 
   ul {

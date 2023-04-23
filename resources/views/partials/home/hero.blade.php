@@ -1,5 +1,5 @@
 <section class="home-hero bubble-header">
-  <div class="layout-two-columns">
+  <div>
     <div class="left-column col">
       <h2 class="title">{{ $home_hero['section_1_header'] }}</h2>
       @if($home_hero['text_section_1'])

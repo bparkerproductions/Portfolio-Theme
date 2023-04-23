@@ -1,8 +1,6 @@
 .posts-container {
   @import "parts/posts-navigation";
 
-  @extend %layout-two-columns;
-
   article {
     @import "parts/read-more";
 
