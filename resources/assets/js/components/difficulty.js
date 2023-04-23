@@ -1,20 +1,22 @@
-export default {
-  textboxHeight: '',
-  init() {
-    if (!document.querySelectorAll('.post-difficulty').length) return
+import Helpers from './../helpers/general.js'
 
-    document.querySelector('.post-difficulty .header-info').addEventListener(
-      'click',
-      this.toggle.bind(this)
-    )
+(function() {
+  let textboxHeight = ''
 
-    // get initial box height and add it as variable
-    const $textbox = document.querySelector('.post-difficulty .difficulty-information')
-    this.textboxHeight = $textbox.clientHeight
-    $textbox.style.height = 0
-    $textbox.style.padding = 0
-  },
-  toggle() {
+  if (!Helpers.hasElement('.post-difficulty')) return
+
+  document.querySelector('.post-difficulty .header-info').addEventListener(
+    'click',
+    toggle
+  )
+
+  // get initial box height and add it as variable
+  const $textbox = document.querySelector('.post-difficulty .difficulty-information')
+  textboxHeight = $textbox.clientHeight
+  $textbox.style.height = 0
+  $textbox.style.padding = 0
+
+  function toggle() {
     const $difficulty = document.querySelector('.post-difficulty')
     const $icon = document.querySelector('.post-difficulty .toggle-icon')
     const $difficultyInformation = document.querySelector('.post-difficulty .difficulty-information')
@@ -36,8 +38,8 @@ export default {
 
       // toggle and style the information back on
       $difficultyInformation.style.opacity = 1
-      $difficultyInformation.style.height = this.textboxHeight + 'px'
+      $difficultyInformation.style.height = textboxHeight + 'px'
       $difficultyInformation.style.padding = '15px'
     }
-  },
-}
+  }
+})()
