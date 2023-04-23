@@ -13,11 +13,11 @@
       color: $light;
     }
 
-    @include atMobileAndUp {
+    @include media-breakpoint-up(sm) {
       flex-basis: 50%;
     }
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       padding: 7.5% 5%;
     }
   }
@@ -25,7 +25,7 @@
   .left-column {
     background-color: darken($primary, 3%);
 
-    @include atMobileAndUp {
+    @include media-breakpoint-up(sm) {
       padding-right: 10%;
       clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
     }

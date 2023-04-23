@@ -28,13 +28,13 @@
         flex-basis: 50%;
       }
 
-      @include atTablet {
+      @include media-breakpoint-down(lg) {
         flex-basis: 45%;
         margin: 25px 0;
         margin-right: 5%;
       }
 
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         flex-basis: 100%;
         margin-right: 0;
       }

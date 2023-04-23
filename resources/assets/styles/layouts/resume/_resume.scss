@@ -16,7 +16,7 @@
 
     display: flex;
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       flex-direction: column;
     }
   }
@@ -36,7 +36,7 @@
     background-color: $light;
     box-sizing: border-box;
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       width: 100%;
     }
   }

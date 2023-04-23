@@ -23,7 +23,7 @@
       line-height: 1.5;
       font-size: 1em;
     
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         line-height: 1.4;
       }
     }

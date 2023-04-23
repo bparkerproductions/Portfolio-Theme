@@ -1,10 +1,10 @@
 .technologies-container {
-  @include atTabletAndUp {
+  @include media-breakpoint-up(lg) {
     width: 40%;
   }
 
   .tech-header {
-    @include atTabletAndUp {
+    @include media-breakpoint-up(lg) {
       margin-left: 15px;
     }
   }
@@ -13,7 +13,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include atTablet {
+    @include media-breakpoint-down(lg) {
       margin-left: -15px;
     }
 
@@ -21,15 +21,15 @@
       flex-basis: 25%;
       margin-bottom: 20px;
 
-      @include atTablet {
+      @include media-breakpoint-down(lg) {
         flex-basis: 12.5%;
       }
 
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         flex-basis: 25%;
       }
 
-      @include atTiny {
+      @include media-breakpoint-down(xs) {
         flex-basis: 33%;
       }
 

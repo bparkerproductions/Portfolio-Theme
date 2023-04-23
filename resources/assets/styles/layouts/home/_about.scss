@@ -1,6 +1,6 @@
 .home-about {
   .content-container {
-    @include atTabletAndUp {
+    @include media-breakpoint-up(lg) {
       width: 75%;
     }
   }

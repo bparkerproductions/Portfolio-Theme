@@ -5,7 +5,7 @@
     box-sizing: border-box;
     padding: 0 5px;
 
-    @include atMobileAndUp {
+    @include media-breakpoint-up(sm) {
       padding: 20px;
       height: 400px;
     }
@@ -22,7 +22,7 @@
     }
 
     .inner-content p {
-      @include atMobileAndUp {
+      @include media-breakpoint-up(sm) {
         height: 130px;
         overflow: auto;
         overflow-x: auto;

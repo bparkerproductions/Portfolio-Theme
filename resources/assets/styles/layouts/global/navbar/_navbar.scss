@@ -12,7 +12,7 @@
     z-index: 10;
     background-color: transparent;
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       transition: all 0.5s ease;
       border-bottom: 1px solid rgba($dark, 0.5);
       justify-content: space-between;
@@ -20,13 +20,13 @@
     }
 
     &:not(.active) {
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         transform: translateY(-100vh);
       }
     }
 
     &.active {
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         background-color: $light;
         transform: translateY(0);
       }

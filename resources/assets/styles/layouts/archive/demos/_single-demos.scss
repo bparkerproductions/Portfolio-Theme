@@ -6,7 +6,7 @@
   }
 
   .demo-content {
-    @include atMobileAndUp {
+    @include media-breakpoint-up(sm) {
       max-width: 75%;
     }
   }

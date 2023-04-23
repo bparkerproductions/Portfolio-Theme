@@ -4,7 +4,7 @@
   text-decoration: none;
   transition: all 0.35s ease;
 
-  @include atTablet {
+  @include media-breakpoint-down(lg) {
     padding: 10px;
   }
 
@@ -22,7 +22,7 @@
     svg {
       margin-right: 15px;
 
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         display: none;
       }
     }
@@ -31,7 +31,7 @@
       margin: 0;
       color: $light;
 
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         font-size: 1.25em;
       }
     }

@@ -6,7 +6,7 @@
   transition: all 0.35s ease;
 
   &:not(.no-hover) {
-    @include atMobileAndUp {
+    @include media-breakpoint-up(sm) {
       &:hover {
         transform: translateY(-5px);
       }

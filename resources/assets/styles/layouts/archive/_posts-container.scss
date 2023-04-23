@@ -21,16 +21,16 @@
       margin-bottom: 12.5px;
       position: relative;
 
-      @include atTablet {
+      @include media-breakpoint-down(lg) {
         padding: 20px 20px 0 20px;
       }
 
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         padding-top: 10px;
       }
 
       .entry-title {
-        @include atTablet {
+        @include media-breakpoint-down(lg) {
           margin-top: 10px;
         }
       }

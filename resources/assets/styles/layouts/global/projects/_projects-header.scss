@@ -2,14 +2,14 @@
   display: flex;
   margin-bottom: $spacer-small;
 
-  @include atPortrait {
+  @include media-breakpoint-down(md) {
     flex-direction: column;
   }
 
   .title {
     margin: 0;
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       text-align: center;
     }
   }
@@ -18,11 +18,11 @@
     display: flex;
     margin-left: 5%;
 
-    @include atPortrait {
+    @include media-breakpoint-down(md) {
       margin: 5% 0 0 0;
     }
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       display: flex;
       justify-content: center;
     }
@@ -37,7 +37,7 @@
       cursor: pointer;
       transition: all 0.5s ease;
 
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         padding: 5px;
         background-color: transparent;
       }
@@ -60,7 +60,7 @@
 
       span,
       svg {
-        @include atMobile {
+        @include media-breakpoint-down(sm) {
           color: $dark;
         }
       }

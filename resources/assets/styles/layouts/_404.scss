@@ -16,8 +16,6 @@
   }
 
   .link-container {
-    @include mt-custom(45px, 20px);
-
     padding-top: 10px;
     border-top: 1px solid rgba($dark, 0.2);
 

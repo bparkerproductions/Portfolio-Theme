@@ -35,7 +35,7 @@
         line-height: 1.25;
         font-size: 18px;
 
-        @include atMobile {
+        @include media-breakpoint-down(sm) {
           font-size: 15px;
         }
       }

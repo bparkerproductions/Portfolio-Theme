@@ -8,7 +8,7 @@
 
   @include hard-center;
 
-  @include atMobile {
+  @include media-breakpoint-down(sm) {
     justify-content: flex-start;
     padding-top: $spacer-large;
     height: 100%;
@@ -35,7 +35,7 @@
       color: $dark;
     }
 
-    @include atTablet {
+    @include media-breakpoint-down(lg) {
       text-align: center;
     }
   }
@@ -46,7 +46,7 @@
     right: 0;
     width: 100%;
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       display: none;
     }
 

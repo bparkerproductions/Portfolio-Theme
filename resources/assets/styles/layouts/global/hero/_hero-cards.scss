@@ -4,7 +4,7 @@
   display: flex;
   justify-content: flex-start;
 
-  @include atTablet {
+  @include media-breakpoint-down(lg) {
     flex-direction: column;
     align-items: center;
   }
@@ -13,12 +13,12 @@
     display: flex;
     border-top: 4px solid $primary;
 
-    @include atTablet {
+    @include media-breakpoint-down(lg) {
       padding-top: 20px;
       border: 0;
     }
 
-    @include atTiny {
+    @include media-breakpoint-down(xs) {
       flex-direction: column;
     }
   }
@@ -27,7 +27,7 @@
     margin: 0 20px;
     justify-content: flex-end;
 
-    @include atTablet {
+    @include media-breakpoint-down(lg) {
       margin-top: 40px;
       padding-bottom: 40px;
     }

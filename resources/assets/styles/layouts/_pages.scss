@@ -1,6 +1,6 @@
 .page-content {
   p {
-    @include atMobileAndUp {
+    @include media-breakpoint-up(sm) {
       max-width: 80%;
     }
   }

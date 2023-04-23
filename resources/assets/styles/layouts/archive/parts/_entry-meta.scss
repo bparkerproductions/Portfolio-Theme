@@ -7,13 +7,13 @@
   margin-bottom: 12.5px;
   border-bottom: 1px solid $dark;
 
-  @include atMobile {
+  @include media-breakpoint-down(sm) {
     flex-direction: column;
   }
 
   .categories,
   time {
-    @include atTablet {
+    @include media-breakpoint-down(lg) {
       font-size: 0.9em;
     }
   }
@@ -21,7 +21,7 @@
   .post-technologies {
     margin-left: 25px;
 
-    @include atPortrait {
+    @include media-breakpoint-down(md) {
       margin: 15px 0 5px 0;
     }
 

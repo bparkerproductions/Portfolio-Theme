@@ -14,7 +14,7 @@
 
     @include mb-custom(50px, 30px);
 
-    @include atTablet {
+    @include media-breakpoint-down(lg) {
       flex-direction: column;
     }
   }
@@ -26,7 +26,7 @@
   .content-container {
     width: 50%;
 
-    @include atTablet {
+    @include media-breakpoint-down(lg) {
       margin-bottom: $spacer-medium;
       width: auto;
     }

@@ -2,7 +2,7 @@
   a {
     text-decoration: none;
 
-    @include atMobileAndUp {
+    @include media-breakpoint-up(sm) {
       padding-right: 5px;
     }
 
@@ -10,7 +10,7 @@
       content: "-";
       color: $dark;
 
-      @include atMobileAndUp {
+      @include media-breakpoint-up(sm) {
         margin-left: 5px;
       }
     }

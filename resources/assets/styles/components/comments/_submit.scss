@@ -48,20 +48,20 @@
   margin: 0 5px 15px 0;
   flex: 1;
 
-  @include atMobile {
+  @include media-breakpoint-down(sm) {
     width: 95%;
   }
 }
 
 p.form-submit {
-  @include atMobile {
+  @include media-breakpoint-down(sm) {
     width: 100%;
   }
 
   input#submit {
     width: 100%;
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       margin: 0;
       width: 100%;
     }

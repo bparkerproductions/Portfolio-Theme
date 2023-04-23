@@ -14,7 +14,7 @@
     display: flex;
     border-top: 1px solid $dark;
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       flex-direction: column;
     }
 
@@ -30,7 +30,5 @@
 
   .bottom-button-container {
     display: flex;
-
-    @include mt-custom(35px, 20px);
   }
 }

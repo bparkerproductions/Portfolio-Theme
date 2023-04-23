@@ -1,8 +1,6 @@
 /* HOME page specific overrides for the related posts component */
 
 .blog-posts-container {
-  @include mt-custom(50px, 30px);
-
   .related-posts {
     padding: $spacer-small 0;
     background-color: transparent;

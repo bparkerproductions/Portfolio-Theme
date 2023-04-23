@@ -4,7 +4,7 @@
   height: 450px;
   border-radius: 0 0 3px 3px;
 
-  @include atTablet {
+  @include media-breakpoint-down(lg) {
     height: auto;
   }
 
@@ -19,7 +19,7 @@
     transition: all 0.5s ease;
     padding-top: 7.5%;
 
-    @include atTablet {
+    @include media-breakpoint-down(lg) {
       max-height: 90%;
       overflow-y: scroll;
     }
@@ -53,7 +53,7 @@
     object-fit: cover;
     border-radius: 0 0 3px 3px;
 
-    @include atTablet {
+    @include media-breakpoint-down(lg) {
       height: auto;
     }
   }

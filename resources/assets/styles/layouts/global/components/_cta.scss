@@ -17,12 +17,12 @@
       }
     }
 
-    @include atTabletAndUp {
+    @include media-breakpoint-up(lg) {
       padding: 0 12.5px;
       border-right: 1px solid rgba($light, 0.15);
     }
 
-    @include atTablet {
+    @include media-breakpoint-down(lg) {
       margin: 10px 0;
     }
 
@@ -40,7 +40,7 @@
     align-items: flex-end;
     margin-bottom: 10px;
 
-    @include atTablet {
+    @include media-breakpoint-down(lg) {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -48,7 +48,7 @@
     h2 {
       line-height: 1;
 
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         width: 100%;
       }
     }

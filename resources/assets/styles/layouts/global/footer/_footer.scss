@@ -14,11 +14,11 @@ footer.footer {
         margin-bottom: 10px;
       }
 
-      @include atTablet {
+      @include media-breakpoint-down(lg) {
         flex-basis: 32%;
       }
 
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         flex-basis: 50%;
       }
 
@@ -43,7 +43,7 @@ footer.footer {
     padding-bottom: 15px;
     border-top: 1px solid $light;
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -54,7 +54,7 @@ footer.footer {
     }
 
     .footer-item {
-      @include atMobileAndUp {
+      @include media-breakpoint-up(sm) {
         &:not(:last-child) {
           margin: 0 10px 0 0;
           padding-right: 10px;

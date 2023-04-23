@@ -1,5 +1,5 @@
 .blog-grid {
-  @include atLaptopAndUp {
+  @include media-breakpoint-up(xl) {
     padding-bottom: 0;
   }
 
@@ -38,15 +38,11 @@
       position: relative;
       overflow: hidden;
 
-      @include atLarge {
-        flex-basis: 33.33%;
-      }
-
-      @include atTablet {
+      @include media-breakpoint-down(lg) {
         flex-basis: 50%;
       }
 
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         flex-basis: 100%;
       }
 

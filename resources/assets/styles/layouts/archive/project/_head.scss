@@ -5,13 +5,13 @@
   .container {
     display: flex;
 
-    @include atPortrait {
+    @include media-breakpoint-down(md) {
       flex-direction: column;
     }
   }
 
   .image-container {
-    @include atPortraitAndUp {
+    @include media-breakpoint-up(md){
       width: 50%;
     }
 
@@ -27,7 +27,7 @@
   }
 
   .list-container {
-    @include atPortrait {
+    @include media-breakpoint-down(md) {
       margin-top: $spacer-small;
     }
 
@@ -41,7 +41,7 @@
 
       @include color-bullets($primary);
 
-      @include atPortrait {
+      @include media-breakpoint-down(md) {
         padding: 0;
       }
     }

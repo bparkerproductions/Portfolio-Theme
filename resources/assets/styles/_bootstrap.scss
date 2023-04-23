@@ -2,11 +2,21 @@
 @import "~bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
+
+// Colors
 $primary: #72addd;
 $dark: #23272a;
 $secondary: #EDEDED;
 $light: #fff;
 $body: #333;
+
+// Breakpoints
+$xs: 400px;
+$sm: 650px;
+$md: 800px;
+$lg: 1024px;
+$xl: 1200px;
+$xxl: 1450px;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";

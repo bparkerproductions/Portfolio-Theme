@@ -1,5 +1,5 @@
 .hover-container {
-  @include atMobileAndUp {
+  @include media-breakpoint-up(sm) {
     position: absolute;
     padding: 15px 10px 10px 10px;
     left: -30px;
@@ -31,7 +31,7 @@
       z-index: 2;
     }
 
-    @include atMobileAndUp {
+    @include media-breakpoint-up(sm) {
       background-color: $light;
       border-radius: 3px;
       box-shadow: 0 0 5px rgba($dark, 0.15);
@@ -39,7 +39,7 @@
       padding: 10px 30px;
     }
 
-    @include atMobileAndUp {
+    @include media-breakpoint-up(sm) {
       transform: translateY(-300px);
       opacity: 0;
     }
@@ -53,7 +53,7 @@
         padding-bottom: 7.5px;
         white-space: nowrap;
 
-        @include atMobileAndUp {
+        @include media-breakpoint-up(sm) {
           &:not(:last-child) {
             border-bottom: 1px solid rgba($dark, 0.1);
           }

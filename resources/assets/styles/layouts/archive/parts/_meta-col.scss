@@ -3,11 +3,11 @@
   display: flex;
   align-items: center;
 
-  @include atTablet {
+  @include media-breakpoint-down(lg) {
     margin-top: 5px;
   }
 
-  @include atMobile {
+  @include media-breakpoint-down(sm) {
     padding: 0;
     border: none;
   }
@@ -17,14 +17,14 @@
     margin-right: 7.5px;
 
     svg {
-      @include atTablet {
+      @include media-breakpoint-down(lg) {
         font-size: 1em;
       }
     }
   }
 
   &.meta-time {
-    @include atPortrait {
+    @include media-breakpoint-down(md) {
       flex-direction: column;
       align-items: flex-start;
     }

@@ -5,25 +5,25 @@
 }
 
 &.hide-arrows-desktop {
-  @include atLaptopAndUp {
+  @include media-breakpoint-up(xl) {
     @include hide-toggle;
   }
 }
 
 &.hide-arrows-tablet {
-  @include atPortraitAndUp {
+  @include media-breakpoint-up(md) {
     @include hide-toggle;
   }
 }
 
 &.hide-arrows-portrait {
-  @include atMobileAndUp {
+  @include media-breakpoint-up(sm) {
     @include hide-toggle;
   }
 }
 
 &.hide-arrows-mobile {
-  @include atTinyAndUp {
+  @include media-breakpoint-up(xs) {
     @include hide-toggle;
   }
 }

@@ -12,7 +12,7 @@
     right: 5%;
   }
 
-  @include atPortrait {
+  @include media-breakpoint-down(md) {
     right: -10px;
     padding: 0;
     background-color: transparent;
@@ -22,7 +22,7 @@
   &.scrolled {
     top: 12.5vh;
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       z-index: -1;
       top: 70vh;
     }
@@ -40,7 +40,7 @@
     font-weight: bold;
     font-size: 15px;
 
-    @include atPortrait {
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }
@@ -50,7 +50,7 @@
       color: $dark;
     }
 
-    @include atPortrait {
+    @include media-breakpoint-down(md) {
       font-size: 2em;
       margin: 0;
     }

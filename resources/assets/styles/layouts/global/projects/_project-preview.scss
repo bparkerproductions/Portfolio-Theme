@@ -6,7 +6,7 @@
   flex-basis: 49%;
   max-width: 49%;
 
-  @include atTablet {
+  @include media-breakpoint-down(lg) {
     flex-basis: 100%;
     max-width: 100%;
     padding: $spacer-medium 0;

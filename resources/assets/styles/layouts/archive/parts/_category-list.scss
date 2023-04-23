@@ -6,8 +6,6 @@
     flex-wrap: wrap;
     border-bottom: 1px solid $dark;
 
-    @include mt-custom(30px, 20px);
-
     .single-category {
       display: flex;
       justify-content: center;
@@ -15,7 +13,7 @@
       border-right: 1px solid rgba($light, 0.25);
       transition: all 0.5s ease;
 
-      @include atTablet {
+      @include media-breakpoint-down(lg) {
         border: 1px solid rgba($light, 0.25);
       }
 

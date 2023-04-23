@@ -37,14 +37,14 @@
     opacity: 0;
     margin-bottom: 15px;
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       flex-direction: column;
     }
 
     svg {
       display: block;
 
-      @include atMobile {
+      @include media-breakpoint-down(sm) {
         margin-bottom: 10px;
       }
     }

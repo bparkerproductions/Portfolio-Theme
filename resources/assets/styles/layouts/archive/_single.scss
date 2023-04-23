@@ -12,7 +12,7 @@
     height: auto;
     margin-bottom: $spacer-small;
 
-    @include atPortrait {
+    @include media-breakpoint-down(md) {
       max-width: 100%;
     }
   }
@@ -20,7 +20,7 @@
   article.post {
     max-width: 80%;
 
-    @include atPortrait {
+    @include media-breakpoint-down(md) {
       max-width: 100%;
     }
   }

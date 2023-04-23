@@ -3,11 +3,11 @@
     color: $dark;
     padding-bottom: 4.5px;
 
-    @include atMobileAndUp {
+    @include media-breakpoint-up(sm) {
       border-bottom: 2px solid $dark;
     }
 
-    @include atMobile {
+    @include media-breakpoint-down(sm) {
       color: $primary;
     }
   }
