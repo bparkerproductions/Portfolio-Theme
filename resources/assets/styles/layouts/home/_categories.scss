@@ -1,8 +1,6 @@
 .blog-categories {
   @import "toggle-arrow-conditionals";
 
-  @include spacer-small;
-
   background-color: rgba($secondary, 0.5);
 
   .container {

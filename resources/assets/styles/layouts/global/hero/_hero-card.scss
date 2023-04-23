@@ -7,9 +7,9 @@
   box-sizing: border-box;
   border-radius: 2px;
   margin-right: 15px;
+  border-bottom: 1px solid $dark;
 
   @include mt-custom(35px, 15px);
-  @include border-bottom($dark);
 
   @include allHeaders {
     margin: 0;

@@ -12,8 +12,7 @@
   .bottom-link-container {
     font-size: 1.25em;
     display: flex;
-
-    @include border-top($dark);
+    border-top: 1px solid $dark;
 
     @include atMobile {
       flex-direction: column;

@@ -38,11 +38,10 @@ footer.footer {
   }
 
   .footer-bottom {
-    @include border-top($light);
-
     display: flex;
     align-items: center;
     padding-bottom: 15px;
+    border-top: 1px solid $light;
 
     @include atMobile {
       flex-direction: column;

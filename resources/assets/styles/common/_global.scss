@@ -4,7 +4,10 @@ body {
 }
 
 body {
-  @include font-smoothing;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
   @include font("Source Sans Pro");
 }
 

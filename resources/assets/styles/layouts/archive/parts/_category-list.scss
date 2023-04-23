@@ -4,9 +4,9 @@
   .archive-categories {
     display: flex;
     flex-wrap: wrap;
+    border-bottom: 1px solid $dark;
 
     @include mt-custom(30px, 20px);
-    @include border-bottom($dark);
 
     .single-category {
       display: flex;

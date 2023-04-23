@@ -2,7 +2,7 @@
   @include mt-custom(35px, 20px);
 
   .header-container {
-    @include border-bottom($secondary);
+    border-bottom: 1px solid $secondary;
     @include mb-custom($spacer-medium, $spacer-small);
 
     .main-header {

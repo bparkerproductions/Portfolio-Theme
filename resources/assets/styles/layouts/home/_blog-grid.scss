@@ -1,6 +1,4 @@
 .blog-grid {
-  @include spacer;
-
   @include atLaptopAndUp {
     padding-bottom: 0;
   }

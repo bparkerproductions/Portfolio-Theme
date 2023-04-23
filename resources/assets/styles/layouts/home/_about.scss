@@ -1,6 +1,4 @@
 .home-about {
-  @include spacer;
-
   .content-container {
     @include atTabletAndUp {
       width: 75%;
