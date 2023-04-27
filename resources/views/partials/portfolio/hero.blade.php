@@ -3,8 +3,11 @@
 @endphp
 
 <section class="bg-mountain-blue">
-  <div class="hero lax"
-  data-lax-translate-y="0 0, 1000 -250" style="{{$bgImage}}">
+  <div 
+    class="hero home-hero lax"
+    data-lax-translate-y="0 0, 1000 -250"
+    style="{{$bgImage}}"
+  >
     <canvas id="snowstorm"></canvas>
     <div class="container">
       <div class="content-container lax"

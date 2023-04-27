@@ -8,8 +8,8 @@ import Helpers from './../helpers/general.js'
   function activateBubble() {
     function bubblesEverywhere(bubbleCount) {
       const header = document.querySelector('.bubble-header')
-      let i
-      for (i = 1; i <= bubbleCount; i++) {
+    
+      for (let i = 1; i <= bubbleCount; i++) {
         let bubbleID = 'bubble' + i
         header.style.position = 'relative'
         header.style.overflow = 'hidden'

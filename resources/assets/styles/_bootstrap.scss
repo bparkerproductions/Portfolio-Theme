@@ -4,9 +4,9 @@
 // 2. Include any default variable overrides here
 
 // Colors
-$primary: #72addd;
+$primary: #77CDF8;
 $dark: #23272a;
-$secondary: #EDEDED;
+$secondary: #d91fdb;
 $light: #fff;
 $body: #333;
 
@@ -17,6 +17,9 @@ $md: 800px;
 $lg: 1024px;
 $xl: 1200px;
 $xxl: 1450px;
+
+$card-spacer-y: 1.5rem;
+$card-spacer-x: 1.5rem;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
@@ -57,3 +60,5 @@ $xxl: 1450px;
 @import "~bootstrap/scss/offcanvas";
 @import "~bootstrap/scss/helpers";
 @import "~bootstrap/scss/utilities/api";
+
+// #d91fdb, #db1f8e, #d91f51

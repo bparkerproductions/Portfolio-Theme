@@ -1,41 +1,8 @@
 .card {
-  background-color: rgba($secondary, 0.5);
-  border-radius: 6px;
-  position: relative;
-  transform: translateY(0);
-  transition: all 0.35s ease;
-
-  &:not(.no-hover) {
-    @include media-breakpoint-up(sm) {
-      &:hover {
-        transform: translateY(-5px);
-      }
-    }
-  }
-
-  .head {
-    padding: 15px 20px;
-    background-color: $dark;
-    border-radius: 6px 6px 0 0;
-
-    &.blue {
-      background-color: $primary;
-    }
-
-    .category {
-      margin: 0;
-      line-height: 1;
-      text-transform: uppercase;
-      color: $light;
-      font-size: 1em;
-    }
-  }
-
-  .body {
-    padding: 35px 20px;
-
-    .title {
-      margin: 0 0 20px 0;
-    }
-  }
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);;
+  backdrop-filter: saturate(200%) blur(30px);
+  background-color: $light;
+  height: 100%;
+  z-index: 1;
+  border: 0;
 }
