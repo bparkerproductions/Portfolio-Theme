@@ -1,18 +1,23 @@
 .btn {
-  border: 0;
-  color: $light;
-  font-weight: 700;
-
-  &:hover {
-    color: $light;
+  &.btn-primary {
+    @include button-variant(
+      $background: $primary,
+      $border: $primary,
+      $color: $white,
+      $hover-background: lighten($primary, 2.5%),
+      $hover-border: $white,
+      $hover-color: $light
+    );
   }
 
   &.btn-secondary {
-    background: linear-gradient(60deg, $secondary 15%, lighten($secondary, 10%));
-  }
-
-  &.btn-lg {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    @include button-variant(
+      $background: $secondary,
+      $border: $secondary,
+      $color: $white,
+      $hover-background: lighten($secondary, 2.5%),
+      $hover-border: $white,
+      $hover-color: $light
+    );
   }
 }
