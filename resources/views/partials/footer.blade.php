@@ -1,37 +1,42 @@
-<footer class="footer column-center">
-  <div class="container">
-
+<footer class="footer column-center mt-5">
     {{-- Footer Top --}}
-    <div class="list-container footer-top spacer">
-      @foreach($footer_lists as $list)
-        <div class="footer-col">
-          @if($list['header'])
-            <h6 class="white">{{$list['header']}}</h6>
-          @endif
-          <ul class="list">
-            @foreach($list['link'] as $link)
-              <li class="white">
-                <a href="{{$link['item']['url']}}">
-                  {{$link['item']['title']}}
-                </a>
-              </li>
-            @endforeach
-          </ul>
-        </div>
-      @endforeach
+    <div class="container">
+      <div class="list-container py-5 row">
+        @foreach($footer_lists as $list)
+          <div class="footer-col col">
+            @if($list['header'])
+              <h4 class="white">{{$list['header']}}</h4>
+            @endif
+            <ul class="list list-unstyled">
+              @foreach($list['link'] as $link)
+                <li>
+                  <a href="{{$link['item']['url']}}" class="text-dark">
+                    {{$link['item']['title']}}
+                  </a>
+                </li>
+              @endforeach
+            </ul>
+          </div>
+        @endforeach
+      </div>
     </div>
 
     {{-- Footer Bottom --}}
-    <div class="footer-bottom">
-      <p class="footer-item">Bparkerproductions @ {{date("Y")}}</p>
+    <div class="footer-bottom bg-info w-100 px-5 py-3">
+      <div class="row">
+        <div class="col-2">
+          <p class="mb-0 text-white fw-bold">Bparkerproductions @ {{date("Y")}}</p>
+        </div>
 
-      {{-- <a href="mailto:bparkerproductions@gmail.com" title="bparkerproductions@gmail.com" class="white footer-item">
-        <i class="fas fa-envelope"></i>bparkerproductions@gmail.com
-      </a> --}}
+        {{-- <a href="mailto:bparkerproductions@gmail.com" title="bparkerproductions@gmail.com" class="white footer-item">
+          <i class="fas fa-envelope"></i>bparkerproductions@gmail.com
+        </a> --}}
 
-      <a href="{{$resume_link}}" class="white footer-item">
-        <i class="fas fa-file-code"></i>Resume
-      </a>
+        <div class="col-10">
+          <a href="{{$resume_link}}" class="text-white">
+            <i class="fas fa-file-code text-secondary fa-lg me-2"></i>Resume
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
 </footer>
