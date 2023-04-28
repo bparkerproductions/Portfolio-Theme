@@ -1,5 +1,8 @@
 footer.footer {
-  background-color: $grey-100;
-  padding-top: 6rem;
-  border-top: 1px solid $grey-200;
+  padding-top: 12rem;
+  background: linear-gradient(180deg, $light 15%, $grey-400 30%);
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 4rem;
+  }
 }

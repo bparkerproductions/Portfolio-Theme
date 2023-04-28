@@ -1,42 +1,26 @@
 <footer class="footer column-center mt-5">
     {{-- Footer Top --}}
-    <div class="container">
-      <div class="list-container py-5 row">
-        @foreach($footer_lists as $list)
-          <div class="footer-col col">
-            @if($list['header'])
-              <h4 class="white">{{$list['header']}}</h4>
-            @endif
-            <ul class="list list-unstyled">
-              @foreach($list['link'] as $link)
-                <li>
-                  <a href="{{$link['item']['url']}}" class="text-dark">
-                    {{$link['item']['title']}}
-                  </a>
-                </li>
-              @endforeach
-            </ul>
-          </div>
-        @endforeach
-      </div>
+    <div class="py-0 py-xl-5 mb-5 w-100 d-flex justify-content-center flex-column flex-xl-row">
+      @foreach($footer_lists as $list)
+        <div class="px-5 my-3">
+          @if($list['header'])
+            <h4 class="mb-3">{{$list['header']}}</h4>
+          @endif
+          <ul class="list list-unstyled">
+            @foreach($list['link'] as $link)
+              <li class="my-1">
+                <a href="{{$link['item']['url']}}" class="text-body">
+                  {{$link['item']['title']}}
+                </a>
+              </li>
+            @endforeach
+          </ul>
+        </div>
+      @endforeach
     </div>
 
     {{-- Footer Bottom --}}
-    <div class="footer-bottom bg-info w-100 px-5 py-3">
-      <div class="row">
-        <div class="col-2">
-          <p class="mb-0 text-white fw-bold">Bparkerproductions @ {{date("Y")}}</p>
-        </div>
-
-        {{-- <a href="mailto:bparkerproductions@gmail.com" title="bparkerproductions@gmail.com" class="white footer-item">
-          <i class="fas fa-envelope"></i>bparkerproductions@gmail.com
-        </a> --}}
-
-        <div class="col-10">
-          <a href="{{$resume_link}}" class="text-white">
-            <i class="fas fa-file-code text-secondary fa-lg me-2"></i>Resume
-          </a>
-        </div>
-      </div>
+    <div class="w-100 px-5 py-3 d-flex justify-content-center">
+      <p class="mb-0 text-muted">Bparkerproductions @ {{date("Y")}}</p>
     </div>
 </footer>
