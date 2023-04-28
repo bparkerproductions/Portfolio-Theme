@@ -3,6 +3,10 @@
   padding-top: 15em;
   padding-bottom: 5em;
 
+  @include media-breakpoint-down(xl) {
+    padding-top: 7.5rem;
+  }
+
   &.bubble-header .bubble {
     width: 0;
     height: 0;
