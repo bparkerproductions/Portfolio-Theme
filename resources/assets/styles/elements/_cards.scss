@@ -5,4 +5,26 @@
   height: 100%;
   z-index: 1;
   border: 0;
+  position: relative;
+  overflow: hidden;
+
+  &__bubble {
+    border: 6px solid rgba($secondary, 0.05);
+    border-radius: 50%;
+    position: absolute;
+
+    &--top-right {
+      width: 200px;
+      height: 200px;
+      top: -100px;
+      right: -50px;
+    }
+
+    &--bottom-left {
+      width: 250px;
+      height: 250px;
+      left: -25px;
+      bottom: -75px;
+    }
+  }
 }

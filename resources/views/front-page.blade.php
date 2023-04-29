@@ -9,8 +9,8 @@
 @include('partials.home.hero')
 
 @include('partials.home.about')
-@include('partials.home.categories')
-@include('partials.components.blog-grid', [
+{{-- @include('partials.home.categories') --}}
+{{-- @include('partials.components.blog-grid', [
   'header' => 'More Blog Posts',
   'blog_list' => ARCHIVE::RandomPostIds(9)
 ])
@@ -18,6 +18,10 @@
 @include('partials.components.blog-grid', [
   'header' => 'Featured Posts',
   'blog_list' => Archive::getFeaturedPosts()
+]) --}}
+{{-- @include('partials.global.code-demo-preview') --}}
+@include('partials.components.blog-grid', [
+  'header' => 'Featured Posts',
+  'blog_list' => Archive::getFeaturedPosts()
 ])
-@include('partials.global.code-demo-preview')
 @endsection

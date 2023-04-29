@@ -6,6 +6,7 @@
       <div class="row">
         <div class="col-12 col-md-6 col-xl-4 me-0 me-xl-3 mb-4 mb-md-0">
           <div class="card card-body d-flex flex-column justify-content-between">
+            <div class="card__bubble card__bubble--top-right"></div>
             <div>
               <h4 class="">Book.</h4>
               <p>I am currently open for work. Book a session today</p>
@@ -19,6 +20,7 @@
 
         <div class="col-12 col-md-6 col-xl-4">
           <div class="card card-body d-flex flex-column justify-content-between">
+            <div class="card__bubble card__bubble--bottom-left"></div>
             <div>
               <h4 class="">Explore</h4>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit praesentium numquam illum expedita.</p>
