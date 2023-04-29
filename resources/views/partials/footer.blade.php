@@ -1,4 +1,6 @@
-<footer class="footer column-center mt-5">
+<footer class="footer column-center mt-5 overflow-hidden position-relative">
+    <div class="bg-circle bg-circle--white bg-circle--bottom-left bg-circle--large"></div>
+
     {{-- Footer Top --}}
     <div class="py-0 py-xl-5 mb-5 w-100 d-flex justify-content-center flex-column flex-xl-row">
       @foreach($footer_lists as $list)
@@ -21,6 +23,6 @@
 
     {{-- Footer Bottom --}}
     <div class="w-100 px-5 py-3 d-flex justify-content-center">
-      <p class="mb-0 text-muted">Bparkerproductions @ {{date("Y")}}</p>
+      <p class="mb-0">Bparkerproductions @ {{date("Y")}}</p>
     </div>
 </footer>

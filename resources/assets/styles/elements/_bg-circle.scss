@@ -1,0 +1,50 @@
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  border: 8px solid rgba($primary, 0.05);
+
+  // Color
+  &--secondary {
+    border-color: rgba($secondary, 0.05);
+  }
+
+  &--white {
+    border-color: rgba($white, 0.5);
+  }
+
+  // Thickness
+
+  &--thick {
+    border-width: 12px;
+  }
+
+  &--thin {
+    border-width: 4px;
+  }
+
+  // Size
+
+  &--large {
+    height: 600px;
+    width: 600px;
+  }
+
+  &--small {
+    height: 200px;
+    width: 200px;
+  }
+
+  // Position
+
+  &--top-left {
+    top: -85px;
+    left: -60px;
+  }
+
+  &--bottom-left {
+    bottom: -85px;
+    left: -60px;
+  }
+}
