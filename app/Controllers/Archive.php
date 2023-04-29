@@ -28,7 +28,7 @@ class Archive extends Controller {
   public static function getFeaturedPosts() {
     $featuredPosts = new \WP_QUERY( array(
       'post__not_in' => array(get_the_ID()),
-      'posts_per_page' => 100,
+      'posts_per_page' => 6,
       'meta_query' => array (
         array (
           'key' => 'is_featured',

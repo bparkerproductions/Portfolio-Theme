@@ -35,6 +35,6 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
-    "lax.js": "^1.1.0"
+    "lax.js": "^2.0.3"
   }
 }

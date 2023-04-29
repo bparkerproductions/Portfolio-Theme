@@ -20,4 +20,15 @@
       $hover-color: $light
     );
   }
+
+  &.btn-info {
+    @include button-variant(
+      $background: $info,
+      $border: $info,
+      $color: $white,
+      $hover-background: lighten($info, 2.5%),
+      $hover-border: $white,
+      $hover-color: $light
+    );
+  }
 }

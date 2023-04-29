@@ -1,6 +1,7 @@
 // Library imports
 import './lib/font-awesome.js'
 import 'lax.js'
+// import './lib/lax-setup.js'
 
 // Pages
 import './pages/portfolio.js'
