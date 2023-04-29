@@ -8,23 +8,13 @@
   position: relative;
   overflow: hidden;
 
-  &__bubble {
-    border: 6px solid rgba($secondary, 0.05);
-    border-radius: 50%;
-    position: absolute;
+  .bg-circle--top-right {
+    top: -150px;
+    left: -100px;
+  }
 
-    &--top-right {
-      width: 200px;
-      height: 200px;
-      top: -100px;
-      right: -50px;
-    }
-
-    &--bottom-left {
-      width: 250px;
-      height: 250px;
-      left: -25px;
-      bottom: -75px;
-    }
+  .bg-circle--bottom-right {
+    bottom: -150px;
+    right: -150px;
   }
 }

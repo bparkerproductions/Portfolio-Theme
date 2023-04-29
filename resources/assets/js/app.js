@@ -10,6 +10,5 @@ import './pages/resume.js'
 
 // Components
 import './components/difficulty.js'
-import './components/hero-bubble.js'
 import './components/related-posts.js'
 import './components/navbar.js'

@@ -1,19 +1,15 @@
 .hero {
-  background: linear-gradient(180deg, rgba($primary, 0.5) 35%, $light 100%);
-  padding-top: 15em;
+  background: $info;
+  background: linear-gradient(90deg, $info 35%, $primary 100%);
+  padding-top: 10em;
   padding-bottom: 5em;
 
   @include media-breakpoint-down(xl) {
     padding-top: 7.5rem;
   }
 
-  &.bubble-header .bubble {
-    width: 0;
-    height: 0;
-    opacity: 0.15;
-    position: absolute;
-    bottom: -20px;
-    border: solid 4px;
-    border-radius: 50%;
+  .bg-circle--top-right {
+    border-color: rgba($white, 0.05);
+    right: -135px;
   }
 }
