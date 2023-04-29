@@ -25,10 +25,10 @@ class Archive extends Controller {
     return array_slice($latest->posts, 0, $count);
   }
 
-  public static function getFeaturedPosts() {
+  public static function getFeaturedPosts($amount) {
     $featuredPosts = new \WP_QUERY( array(
       'post__not_in' => array(get_the_ID()),
-      'posts_per_page' => 6,
+      'posts_per_page' => $amount,
       'meta_query' => array (
         array (
           'key' => 'is_featured',
@@ -39,6 +39,26 @@ class Archive extends Controller {
       ));
 
       return $featuredPosts->posts;
+  }
+
+  public static function getPostsFromCategory($category, $amount) {
+    return get_posts([
+      'numberposts' => $amount,
+      'category' => $category
+    ]);
+    // $categoryPosts = new \WP_QUERY( array(
+    //   'post__not_in' => array(get_the_ID()),
+    //   'posts_per_page' => $amount,
+    //   'meta_query' => array (
+    //     array (
+    //       'key' => 'category',
+    //       'value' => $category,
+    //       'compare' => '=',
+    //     )
+    //   )
+    //   ));
+
+    //   return $categoryPosts->posts;
   }
 
   public static function isPostFeatured() {
