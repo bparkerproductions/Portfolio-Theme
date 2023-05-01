@@ -4,7 +4,7 @@ import Helpers from './../helpers/general.js'
 (function() {
   if ( !Helpers.hasElement('.primary-navigation') ) return
 
-  document.querySelector('.toggle-container').addEventListener(
+  document.querySelector('.navbar-toggle-container').addEventListener(
     'click',
     toggleNav
   )
@@ -14,11 +14,10 @@ import Helpers from './../helpers/general.js'
     navScroll
   )
   function toggleNav() {
-    document.querySelector('.primary-content').classList.toggle('active')
-    document.querySelector('.content-container').classList.toggle('active')
+    document.querySelector('.primary-navigation').classList.toggle('active')
   }
 
   function navScroll() {
-    scroll.addClassOnScroll('.primary-content', 120);
+    scroll.addClassOnScroll('.primary-navigation', 120);
   }
 })()

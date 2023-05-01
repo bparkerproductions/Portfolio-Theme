@@ -34,7 +34,7 @@
 
       @include('partials.components.blog-grid', [
         'header' => 'JS',
-        'blog_list' => Archive::getPostsFromCategory('css', 3)
+        'blog_list' => Archive::getPostsFromCategory('javascript', 3)
       ])
     </div>
   </div>
