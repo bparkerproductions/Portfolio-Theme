@@ -5,10 +5,9 @@
 @extends('layouts.app')
 
 @section('content')
+
   {{-- Single Project Head --}}
-  @component('components.header', [
-    'icon_class' => 'fas fa-pencil-alt'
-  ])
+  @component('components.header')
     <p>See all {{single_cat_title()}} posts and media.</p>
   @endcomponent
 

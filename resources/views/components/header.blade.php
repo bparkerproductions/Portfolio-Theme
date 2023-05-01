@@ -1,12 +1,9 @@
-<section class="archive-header bubble-header column-center">
+<section class="hero position-relative overflow-hidden">
+  <div class="bg-circle bg-circle--bottom-left bg-circle--large"></div>
+  <div class="bg-circle bg-circle--white bg-circle--thick bg-circle--top-right bg-circle--large"></div>
   <div class="container">
-    <h2 class="header">
-      @if($icon_class)
-        <i class="{{$icon_class}} header-icon"></i>
-      @endif
-      {!!APP::title()!!}
-    </h2>
-    <div class="subtitle-container">
+    <h1 class="text-white">{!!APP::title()!!}</h1>
+    <div>
       {!! $slot !!}
     </div>
   </div>
