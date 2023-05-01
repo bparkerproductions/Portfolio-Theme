@@ -15,12 +15,7 @@ trait ArchivePost {
     return get_page_link(get_page_by_title('Blog')->ID);
   }
 
-  public function blogActive() {
-    $page_id = get_page_by_title('Blog')->ID;
-    return is_page($page_id) ? 'active' : '';
-  }
-
-  public static function isActive($cat) {
-    if ($cat->name === single_cat_title('', false)) return 'active';
+  public static function isSelected($cat) {
+    if ($cat->name === single_cat_title('', false)) return 'selected';
   }
 }

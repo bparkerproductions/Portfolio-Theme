@@ -11,7 +11,8 @@
     <p>See all {{single_cat_title()}} posts and media.</p>
   @endcomponent
 
-  @include('partials.category-list')
+  @include('partials.blog-categories')
+
   <div class="entry-content spacer-small column-center">
     <div class="container">
       <div class="posts-container">
