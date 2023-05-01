@@ -1,32 +1,18 @@
-<article @php post_class('col ' . Archive::isPostFeatured()) @endphp>
-  <section class="top-post">
-    @if(Archive::isPostFeatured())
-      <div class="featured-icon">
-        <i class="fas fa-star fa-lg white"></i>
-      </div>
-    @endif
-    <header>
+<article>
+  {{-- <section class="top-post">
       @if($show_meta)
         @include('partials/entry-meta', [
           'postID' => get_the_ID()
         ])
       @endif
-      <div>
-      <h4 class="entry-title">
-        <a href="{{ get_permalink() }}">
-          {!! get_the_title() !!}
-        </a>
-      </h4>
-    </header>
-    <div class="entry-summary">
-      @php the_excerpt() @endphp
-    </div>
-  </section>
+  </a> --}}
+  <article title="{{get_the_title()}}" class="position-relative blog-preview blog-preview--full-img">
+    <a class="absolute-fill" href="{{get_the_permalink()}}"></a>
 
-  <a class="read-more-link hard-center" href="{{get_permalink()}}">
-    <div class="read-more">
-      <i class="fas fa-hand-point-right white fa-2x"></i>
-      <h3 class="read-more-text">Read Post</h3>
-    </div>
-  </a>
+    <img class="img-fluid shadow rounded mb-4" src="{{ get_the_post_thumbnail_url() }}" />
+    <h4 title="{{get_the_title()}}" class="blog-preview__title">{!! get_the_title() !!}</h4>
+    <p class="single-blog-description">{!! the_excerpt() !!}</p>
+
+    <p class="text-primary mb-0">Read More</p>
+  </article>
 </article>

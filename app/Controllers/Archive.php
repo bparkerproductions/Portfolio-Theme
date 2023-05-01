@@ -46,24 +46,6 @@ class Archive extends Controller {
       'numberposts' => $amount,
       'category' => $category
     ]);
-    // $categoryPosts = new \WP_QUERY( array(
-    //   'post__not_in' => array(get_the_ID()),
-    //   'posts_per_page' => $amount,
-    //   'meta_query' => array (
-    //     array (
-    //       'key' => 'category',
-    //       'value' => $category,
-    //       'compare' => '=',
-    //     )
-    //   )
-    //   ));
-
-    //   return $categoryPosts->posts;
-  }
-
-  public static function isPostFeatured() {
-    $featured = get_field('blog_post_fields', get_the_ID())['is_featured'];
-    return $featured ? 'featured-post' : false;
   }
 
   public static function postTechnologies() {

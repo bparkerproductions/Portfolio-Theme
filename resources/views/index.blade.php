@@ -9,20 +9,17 @@
   {{-- Category list --}}
   @include('partials.blog-categories')
 
-  <div class="entry-content spacer-small column-center">
+  <section class="entry-content spacer-small column-center">
     <div class="container">
-      <div class="posts-container">
+      <div class="row">
         @while(have_posts()) @php the_post() @endphp
-          @include('partials.content-'.get_post_type(), [
-            'show_meta' => true
-          ])
+          <div class="col-6 mb-5">
+            @include('partials.content-'.get_post_type(), [
+              'show_meta' => true
+            ])
+          </div>
         @endwhile
-
-        {!! the_posts_navigation([
-          'prev_text' => 'More Posts',
-          'next_text' => 'Previous Posts'
-        ]) !!}
       </div>
     </div>
-  </div>
+  </section>
 @endsection
