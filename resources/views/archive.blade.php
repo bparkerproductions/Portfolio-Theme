@@ -5,17 +5,12 @@
 @extends('layouts.app')
 
 @section('content')
-
-  {{-- Single Project Head --}}
-  @component('components.header')
-    <p class="text-white">See all {{single_cat_title()}} posts and media.</p>
-  @endcomponent
-
-  @include('partials.blog-categories')
-
-  <section class="entry-content position-relative mt-4">
+  <section class="entry-content position-relative no-header-padding">
     <div class="bg-circle bg-circle--top-left bg-circle--thick"></div>
     <div class="bg-circle bg-circle--large bg-circle--secondary"></div>
+
+    @include('partials.blog-categories')
+
     <div class="container">
       <ul class="list-unstyled row">
         @while(have_posts()) @php the_post() @endphp
