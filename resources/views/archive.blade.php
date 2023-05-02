@@ -19,7 +19,7 @@
     <div class="container">
       <ul class="list-unstyled row">
         @while(have_posts()) @php the_post() @endphp
-          <div class="col-6 mb-5">
+          <div class="col-12 col-lg-6 mb-5">
             @include('partials.content-'.get_post_type())
           </div>
         @endwhile

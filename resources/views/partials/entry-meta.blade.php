@@ -6,7 +6,7 @@
     {{ get_the_date('', $postID) }}
   </time>
 
-  <div class="ms-0 ms-lg-4 d-flex align-items-center">
+  <div class="ms-4 d-flex align-items-center">
     <i class="fas fa-folder-open me-2 text-primary"></i>
     <ul class="list-unstyled d-flex flex-wrap">
       @foreach(get_the_category($postID) as $cat)
