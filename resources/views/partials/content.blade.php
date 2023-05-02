@@ -1,12 +1,8 @@
-{{-- <section class="top-post">
-    @if($show_meta)
-      @include('partials/entry-meta', [
-        'postID' => get_the_ID()
-      ])
-    @endif
-</a> --}}
 <li title="{{get_the_title()}}" class="position-relative blog-preview blog-preview--full-img">
   <article>
+    @include('partials/entry-meta', [
+      'postID' => get_the_ID()
+    ])
     <a class="absolute-fill" href="{{get_the_permalink()}}"></a>
 
     <img class="img-fluid shadow rounded mb-4" src="{{ get_the_post_thumbnail_url() }}" />

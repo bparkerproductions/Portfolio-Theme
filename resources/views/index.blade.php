@@ -9,7 +9,7 @@
   {{-- Category list --}}
   @include('partials.blog-categories')
 
-  <section class="entry-content position-relative">
+  <section class="entry-content position-relative mt-4">
     <div class="bg-circle bg-circle--top-left bg-circle--thick"></div>
     <div class="bg-circle bg-circle--large bg-circle--secondary"></div>
 

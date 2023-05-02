@@ -52,12 +52,6 @@
   justify-content: center;
 }
 
-@mixin hard-center-no-column {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 @mixin column-center {
   display: flex;
   flex-direction: column;

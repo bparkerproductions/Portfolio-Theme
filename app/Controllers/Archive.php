@@ -47,12 +47,4 @@ class Archive extends Controller {
       'category' => $category
     ]);
   }
-
-  public static function postTechnologies() {
-    $blogPostFields = get_field('blog_post_fields', get_the_ID());
-
-    if ($blogPostFields) {
-      return $blogPostFields['tech'];
-    }
-  }
 }
