@@ -8,20 +8,22 @@
 
   {{-- Single Project Head --}}
   @component('components.header')
-    <p>See all {{single_cat_title()}} posts and media.</p>
+    <p class="text-white">See all {{single_cat_title()}} posts and media.</p>
   @endcomponent
 
   @include('partials.blog-categories')
 
-  <div class="entry-content spacer-small column-center">
+  <section class="entry-content position-relative">
+    <div class="bg-circle bg-circle--top-left bg-circle--thick"></div>
+    <div class="bg-circle bg-circle--large bg-circle--secondary"></div>
     <div class="container">
-      <div class="posts-container">
+      <ul class="list-unstyled row">
         @while(have_posts()) @php the_post() @endphp
-          @include('partials.content-'.get_post_type(), [
-            'show_meta' => true
-          ])
+          <div class="col-6 mb-5">
+            @include('partials.content-'.get_post_type())
+          </div>
         @endwhile
-      </div>
+      </ul>
     </div>
-  </div>
+  </section>
 @endsection
