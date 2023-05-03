@@ -12,7 +12,7 @@
     </div>
 
     <article @php post_class() @endphp>
-      <div class="entry-content pt-4">
+      <div class="entry-content mt-4 col-12 col-xl-10">
         @php the_content() @endphp
       </div>
       <footer>
