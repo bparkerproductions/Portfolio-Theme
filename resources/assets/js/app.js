@@ -9,6 +9,4 @@ import './pages/home.js'
 import './pages/resume.js'
 
 // Components
-import './components/difficulty.js'
-import './components/related-posts.js'
 import './components/navbar.js'

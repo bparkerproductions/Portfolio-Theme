@@ -1,7 +1,8 @@
 <li title="{{get_the_title()}}" class="position-relative blog-preview blog-preview--full-img">
   <article>
     @include('partials/entry-meta', [
-      'postID' => get_the_ID()
+      'postID' => get_the_ID(),
+      'hide_date' => false
     ])
     <a class="absolute-fill" href="{{get_the_permalink()}}"></a>
 

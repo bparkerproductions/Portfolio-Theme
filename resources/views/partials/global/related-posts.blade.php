@@ -1,43 +1,23 @@
-<section class="related-posts glider mt-medium">
-  <div class="header-container">
-    <h2 class="title">{{$component_title}}</h2>
+<section class="related-posts pt-5">
+  <h2 class="title mb-4">{{$component_title}}</h2>
 
-    <div class="slider-toggle-arrows">
-      <div class="previous toggle">
-        <i class="fas fa-angle-left"></i>
-      </div>
-      <div class="next toggle">
-        <i class="fas fa-angle-right"></i>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="posts-container">
-      @foreach(ARCHIVE::randomPostIds(10) as $ID)
-        <article class="col mt-small mb-small">
-          <section class="top-post">
-            <header>
-              @include('partials/entry-meta', [
-                'postID' => $ID
-              ])
-              <div>
-              <h4 class="entry-title">
-                <a href="{{ get_permalink($ID) }}">
-                  {!! get_the_title($ID) !!}
-                </a>
-              </h4>
-            </header>
-            <div class="entry-summary">{!! get_the_excerpt($ID) !!}</div>
-          </section>
-
-          <a class="read-more-link hard-center" href="{{get_permalink($ID)}}">
-            <div class="read-more">
-              <i class="fas fa-hand-point-right white fa-2x"></i>
-              <h3 class="read-more-text">Read Post</h3>
-            </div>
-          </a>
+  <ul class="row list-unstyled">
+    @foreach(ARCHIVE::randomPostIds(6) as $ID)
+    <li class="blog-preview position-relative col-12 col-md-6 col-xl-4 mb-5">
+      <article>
+          @include('partials/entry-meta', [
+            'postID' => $ID,
+            'hide_date' => true
+          ])
+          <a class="absolute-fill" href="{{get_the_permalink($ID)}}"></a>
+      
+          <img class="img-fluid shadow rounded mb-4" src="{{ get_the_post_thumbnail_url($ID) }}" />
+          <h4 title="{{get_the_title($ID)}}" class="blog-preview__title">{!! get_the_title($ID) !!}</h4>
+          <p class="single-blog-description">{{ the_excerpt($ID) }}</p>
+      
+          <p class="text-primary mb-0">Read More</p>
         </article>
-      @endforeach
-    </div>
-  </div>
+      </li>
+    @endforeach
+  </ul>
 </section>

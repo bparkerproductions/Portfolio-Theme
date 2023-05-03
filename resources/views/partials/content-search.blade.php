@@ -5,7 +5,8 @@
     </h4>
     @if (get_post_type() === 'post')
       @include('partials/entry-meta', [
-          'postID' => get_the_ID()
+          'postID' => get_the_ID(),
+          'hide_date' => false
         ])
     @endif
   </header>

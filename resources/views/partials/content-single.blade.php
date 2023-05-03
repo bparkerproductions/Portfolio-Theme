@@ -1,26 +1,29 @@
-<div class="container entry-content no-header-padding">
-  @include('partials/entry-meta', [
-    'postID' => get_the_ID()
-  ])
+<div class=" no-header-padding">
+  <div class="container pt-4">
+    <h1 class="mb-5">{!! get_the_title() !!}</h1>
 
-  <div class="image-container">
-    {!! get_the_post_thumbnail() !!}
-  </div>
+    @include('partials/entry-meta', [
+      'postID' => get_the_ID(),
+      'hide_date' => false
+    ])
 
-  @include('partials/post-difficulty')
-
-  <article @php post_class() @endphp>
-    <div class="entry-content">
-      @php the_content() @endphp
+    <div class="col-12 col-lg-5">
+      <img src="{{get_the_post_thumbnail_url()}}" class="border shadow rounded w-100" />
     </div>
-    <footer>
-      {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-    </footer>
-  </article>
 
-  @php comments_template('', true); @endphp
+    <article @php post_class() @endphp>
+      <div class="entry-content pt-4">
+        @php the_content() @endphp
+      </div>
+      <footer>
+        {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
+      </footer>
+    </article>
 
-  @include('partials.global.related-posts', [
-    'component_title' => 'More Posts'
-  ])
+    @php comments_template('', true); @endphp
+
+    @include('partials.global.related-posts', [
+      'component_title' => 'More Posts'
+    ])
+  </div>
 </div>
