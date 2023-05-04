@@ -1,17 +1,17 @@
-.label-container {
-  margin-bottom: 4px;
+.input-style {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid $gray-700;
+  @extend .bg-light;
+  @extend .fw-light;
+  @extend .rounded-1;
 
-  label {
-    color: $body;
+  &::focus-visible {
+    border-color: blue;
   }
 }
 
-.input-style {
-  padding: 10px 10px 10px 5px;
-  border: 1px solid rgba($dark, 0.05);
-  border-bottom: 2px solid $primary;
-
-  &:focus {
-    outline: none;
-  }
+textarea.input-style {
+  border-radius: 0;
+  min-height: 150px;
 }

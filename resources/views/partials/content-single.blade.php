@@ -19,11 +19,11 @@
         {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
       </footer>
     </article>
-
-    @php comments_template('', true); @endphp
-
-    @include('partials.global.related-posts', [
-      'component_title' => 'More Posts'
-    ])
   </div>
+
+  @php comments_template('', true); @endphp
+
+  @include('partials.global.related-posts', [
+    'component_title' => 'More Posts'
+  ])
 </div>
