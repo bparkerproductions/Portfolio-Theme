@@ -9,7 +9,7 @@
   @include('partials.home.hero')
 
   {{-- Main section content --}}
-  <section class="container py-5">
+  <section class="container pt-5">
     <div class="col-12 col-xl-9">
       @php the_content() @endphp
     </div>

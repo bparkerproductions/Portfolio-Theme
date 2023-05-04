@@ -63,7 +63,11 @@ function comment_content($comment, $args, $depth) {
             </div>
 
              <!-- Date -->
-            <p class="date">Posted on <time><?=printf( __('%1$s'), get_comment_date() ); ?></time></p>
+            <p class="date">Posted on <time><?php printf( 
+                    __('%1$s'), 
+                    get_comment_date(),  
+                    get_comment_time() 
+                ); ?></time></p>
         </div>
 
     
