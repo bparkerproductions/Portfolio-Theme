@@ -27,7 +27,22 @@
     }
   }
 
-  .says,
+  .comment-meta {
+    @extend .mb-3;
+
+    cite.author {
+      @extend .me-3;
+      @extend .text-primary;
+      font-style: normal;
+    }
+
+    .date {
+      @extend .mb-0;
+      @extend .text-black-50;
+      font-size: $font-size-sm;
+    }
+  }
+
   .comments-title {
     @extend .d-none;
   }

@@ -47,6 +47,44 @@ if (!class_exists('Roots\\Sage\\Container')) {
     require_once $composer;
 }
 
+/* Custom comment content callback */
+function comment_content($comment, $args, $depth) {
+    ?>
+    <li 
+      <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> 
+      id="comment-<?php comment_ID() ?>"
+    >
+        <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+        <div class="comment-meta">
+            <!-- Author -->
+            <div>
+                <?php printf( __( '<cite class="author">%s</cite>' ), get_comment_author_link() ); ?>
+                <?php edit_comment_link( __( 'Edit Comment' ), '  ', '' ); ?>
+            </div>
+
+             <!-- Date -->
+            <p class="date">Posted on <time><?=printf( __('%1$s'), get_comment_date() ); ?></time></p>
+        </div>
+
+    
+        <?php comment_text(); ?>
+
+        <div class="reply"><?php 
+                comment_reply_link( 
+                    array_merge( 
+                        $args, 
+                        array( 
+                            'add_below' => 'comment', 
+                            'depth'     => $depth, 
+                            'max_depth' => $args['max_depth'] 
+                        ) 
+                    ) 
+                ); ?>
+        </div>
+    </li> 
+    <?php
+}
+
 /*
  * Options pages
  */
@@ -112,24 +150,6 @@ function disable_emojis_tinymce( $plugins ) {
 		return array();
 	}
 }
-
-/**
- * Register New Widget Area for Testimonials
- */
-function register_portfolio_widget_area() {
-    register_sidebar(
-        array(
-            'id' => 'portfolio-widgets',
-            'name' => esc_html__( 'Portfolio Widgets', 'bp-portfolio' ),
-            'description' => esc_html__( 'A widget area for displaying components on the portfolio page', 'theme-domain' ),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-            'after_widget' => '</div>',
-            'before_title' => '<div class="widget-title-holder"><h3 class="widget-title">',
-            'after_title' => '</h3></div>'
-        )
-    );
-    }
-    add_action( 'widgets_init', 'register_portfolio_widget_area' );
 
 
 /**
