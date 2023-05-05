@@ -27,15 +27,21 @@
         'blog_list' => Archive::getFeaturedPosts(6)
       ])
 
-      @include('partials.components.blog-grid', [
-        'header' => 'CSS',
-        'blog_list' => Archive::getPostsFromCategory('css', 3)
-      ])
+      {{-- Flexible Content --}}
+      @if ( have_rows('blog_post_categories') )
+        @while ( have_rows('blog_post_categories') ) @php the_row() @endphp
+          @if ( get_row_layout() == 'category_display')
+            @include('partials.components.blog-grid', [
+              'header' => get_sub_field('title'),
+              'blog_list' => Archive::getPostsFromCategory(
+                get_sub_field('category'),
+                get_sub_field('amount')
+              )
+            ])
+          @endif
+        @endwhile
+      @endif
 
-      @include('partials.components.blog-grid', [
-        'header' => 'JS',
-        'blog_list' => Archive::getPostsFromCategory('javascript', 3)
-      ])
     </div>
   </div>
 
