@@ -16,24 +16,6 @@ function create_projects_post_type() {
 }
 add_action( 'init', 'create_projects_post_type' );
 
-/* DEMO post type */
-function create_demo_post_type() {
-    register_post_type( 'demos',
-        [
-        'labels' => [
-            'name' => __( 'Code Demos' ),
-            'singular_name' => __( 'Code Demo' )
-        ],
-        'public' => true,
-        'has_archive' => true,
-        'menu_icon' => 'dashicons-controls-play',
-        'show_in_rest' => true,
-            'supports' => ['editor', 'title', 'excerpt']
-        ]
-    );
-}
-add_action( 'init', 'create_demo_post_type' );
-
 /* TECHNOLOGIES post type */
 function create_technologies_post_type() {
     register_post_type( 'technologies',

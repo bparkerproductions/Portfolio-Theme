@@ -32,6 +32,5 @@
     </section>
   @endif
 
-  @include('partials.global.code-demo-preview')
   @include('partials.global.cta')
 @endsection

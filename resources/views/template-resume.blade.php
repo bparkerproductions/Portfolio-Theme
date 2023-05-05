@@ -10,7 +10,7 @@
   ])
   @endcomponent
 
-  <section class="resume demos spacer-small column-center">
+  <section class="resume column-center">
     <div class="container">
       <div class="resume-options">
         <p class="resume-options-icon pdf-friendly">

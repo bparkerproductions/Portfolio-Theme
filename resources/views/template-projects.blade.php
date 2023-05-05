@@ -22,5 +22,4 @@
     </div>
   </section>
 
-  @include('partials.global.code-demo-preview')
 @endsection

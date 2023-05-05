@@ -68,15 +68,4 @@ class App extends Controller {
     public function heroBgImage() {
       return get_field('hero_background_image', 'option');
     }
-
-    public function demoLoop() {
-      $options = [
-        'post_type' => 'demos',
-        'post_status' => 'publish',
-        'orderby' => 'title',
-        'order' => 'ASC'
-      ];
-  
-      return new \WP_Query($options);
-    }
 }

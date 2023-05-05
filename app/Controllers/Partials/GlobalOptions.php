@@ -27,12 +27,4 @@ trait GlobalOptions {
   public function blogDescription() {
     return get_field('blog_description', 'option');
   }
-
-  public function demoLink() {
-    return get_field('demo_link', 'option');
-  }
-
-  public function demoDescription() {
-    return get_field('demo_description', 'option');
-  }
 }
