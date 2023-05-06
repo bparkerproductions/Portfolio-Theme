@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <section class="all-projects no-header-padding">
+  <section id="all-projects" class="no-header-padding">
     <div class="container">
       @foreach($all_projects as $id)
         <article class="project py-5">
