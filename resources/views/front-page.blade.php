@@ -30,6 +30,8 @@
       {{-- Flexible Content --}}
       @if ( have_rows('blog_post_categories') )
         @while ( have_rows('blog_post_categories') ) @php the_row() @endphp
+
+          {{-- Category Display --}}
           @if ( get_row_layout() == 'category_display')
             @include('partials.components.blog-grid', [
               'header' => get_sub_field('title'),
@@ -39,6 +41,7 @@
               )
             ])
           @endif
+          
         @endwhile
       @endif
 
