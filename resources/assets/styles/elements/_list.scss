@@ -1,0 +1,8 @@
+ul.list-styled {
+  @extend .list-unstyled;
+
+  li::marker {
+    content: "▢ ";
+    color: $primary;
+  }
+}

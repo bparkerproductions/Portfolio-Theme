@@ -3,47 +3,10 @@
     "title": "Projects",
     "fields": [
         {
-            "key": "field_5cc148e2905a1",
-            "label": "Hero Description",
-            "name": "hero_description",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5cc14959905a2",
-            "label": "Projects Description",
-            "name": "projects_description",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
             "key": "field_5cc1497a905a3",
             "label": "All Projects",
             "name": "all_projects",
+            "aria-label": "",
             "type": "relationship",
             "instructions": "",
             "required": 0,
@@ -54,16 +17,17 @@
                 "id": ""
             },
             "post_type": [
-                "projects"
+                "client-project"
             ],
+            "post_status": "",
             "taxonomy": "",
             "filters": [
                 "search"
             ],
-            "elements": "",
+            "return_format": "id",
             "min": "",
             "max": "",
-            "return_format": "id"
+            "elements": ""
         }
     ],
     "location": [
@@ -81,7 +45,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1558684569
+    "show_in_rest": 0,
+    "modified": 1683412410
 }

@@ -11,6 +11,7 @@ function create_projects_post_type() {
         'public' => true,
         'menu_icon' => 'dashicons-category',
         'has_archive' => true,
+        'supports' => ['title', 'editor', 'thumbnail']
         ]
     );
 }
