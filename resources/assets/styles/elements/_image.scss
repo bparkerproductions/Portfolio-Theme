@@ -1,0 +1,12 @@
+img {
+  &.external-link {
+    z-index: 1;
+    position: inherit;
+    transition: all 0.25s cubic-bezier(0.39, 0.58, 0.57, 1);
+
+    &:hover {
+      cursor: pointer;
+      transform: perspective(1000px) rotateX(7deg) translate3d(0,-3px,5px);
+    }
+  }
+}

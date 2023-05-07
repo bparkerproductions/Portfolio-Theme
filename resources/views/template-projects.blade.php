@@ -31,15 +31,13 @@
             {{-- Image --}}
             <div class="col-4">
               <div class="project__img-container position-relative">
-                <img class="shadow rounded w-100" src="{{get_the_post_thumbnail_url($id)}}" />
-                <div class="project__external-link">
-                  <a target="_blank" href="{{get_field('client_projects', $id)['project_link']['url']}}">
-                    <i class="fas fa-external-link-alt"></i>
-                    <span class="link-text">
-                      {{get_field('client_projects', $id)['project_link']['title']}}
-                    </span>
-                  </a>
-                </div>
+                <img class="shadow rounded w-100 external-link" src="{{get_the_post_thumbnail_url($id)}}" />
+                <a target="_blank" class="project__external-link" href="{{get_field('client_projects', $id)['project_link']['url']}}">
+                  <i class="fas fa-external-link-alt"></i>
+                  <span class="link-text">
+                    {{get_field('client_projects', $id)['project_link']['title']}}
+                  </span>
+                </a>
               </div>
             </div>
 
