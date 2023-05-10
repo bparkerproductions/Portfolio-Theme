@@ -2,37 +2,39 @@
   .project {
     min-height: 50vh;
 
+    &.light {
+      .project__icon,
+      .project__title,
+      .project__goals,
+      .project__goals__header {
+        color: $light;
+      }
+
+      .project__content {
+        p {
+          color: $light;
+        }
+
+        @include allHeaders {
+          color: $light;
+        }
+      }
+    }
+
+    &__right--container {
+    }
+
+    &__content {
+      overflow-x: scroll;
+
+      @include scrollbar($secondary, 12px);
+    }
+
     &__external-link {
       @extend %absolute-fill;
       @extend .d-flex;
       @extend .justify-content-center;
       @extend .align-items-center;
-    }
-
-    &__gallery {
-      &__arrow {
-        cursor: pointer;
-        position: absolute;
-        z-index: 1;
-        color: $white;
-        font-size: 2rem;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        top: 0;
-
-        &.next-arrow {
-          right: 10px;
-        }
-
-        &.prev-arrow {
-          left: 10px;
-        }
-      }
-
-      &__img {
-        width: 95%;
-      }
     }
   }
 }
