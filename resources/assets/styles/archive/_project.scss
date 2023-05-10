@@ -1,12 +1,38 @@
 #all-projects {
   .project {
-    height: 50vh;
+    min-height: 50vh;
 
     &__external-link {
       @extend %absolute-fill;
       @extend .d-flex;
       @extend .justify-content-center;
       @extend .align-items-center;
+    }
+
+    &__gallery {
+      &__arrow {
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        color: $white;
+        font-size: 2rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        top: 0;
+
+        &.next-arrow {
+          right: 10px;
+        }
+
+        &.prev-arrow {
+          left: 10px;
+        }
+      }
+
+      &__img {
+        width: 95%;
+      }
     }
   }
 }

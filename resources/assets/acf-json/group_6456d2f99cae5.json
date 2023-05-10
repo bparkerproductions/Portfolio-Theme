@@ -142,6 +142,27 @@
                             "prepend": "",
                             "append": "",
                             "parent_repeater": "field_6456d32e04765"
+                        },
+                        {
+                            "key": "field_645a89e0af86a",
+                            "label": "Col Width",
+                            "name": "col_width",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "col-6",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_6456d32e04765"
                         }
                     ]
                 },
@@ -216,6 +237,26 @@
                     "min": "",
                     "max": "",
                     "elements": ""
+                },
+                {
+                    "key": "field_645a8cba3ac2d",
+                    "label": "Featured Image Description",
+                    "name": "featured_image_description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         }
@@ -238,5 +279,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683413884
+    "modified": 1683655879
 }

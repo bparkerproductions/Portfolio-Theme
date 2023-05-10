@@ -40,9 +40,4 @@
       white-space: nowrap;
     }
   }
-
-  // For glide sliders
-  &:not(.visible) {
-    overflow: hidden;
-  }
 }
