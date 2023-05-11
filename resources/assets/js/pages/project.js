@@ -17,7 +17,6 @@
   document.querySelectorAll('.all-projects .project').forEach( elem => {
     const leftContainer = elem.querySelector('.project__left--container')
     const rightContainer = elem.querySelector('.project__right--container')
-    const rightContainerHeader = elem.querySelector('.project__right-container__header')
     const projectContent = elem.querySelector('.project__content')
 
     // projectContent.style.height = leftContainer.clientWidth + "px"

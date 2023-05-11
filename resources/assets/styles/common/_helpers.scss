@@ -40,6 +40,14 @@
   background-color: $gray-100;
 }
 
+.text-dark-50 {
+  color: rgba($dark, 0.5);
+}
+
+.text-dark-75 {
+  color: rgba($dark, 0.75);
+}
+
 // Extra FS classes
 .fs-normal {
   font-size: $font-size-base;

@@ -1,7 +1,5 @@
 #all-projects {
   .project {
-    min-height: 100vh;
-
     // Account for header spacing
     &:first-of-type {
       padding-top: 10rem !important;
@@ -10,29 +8,21 @@
     &.light {
       .project__icon,
       .project__title,
-      .project__goals,
-      .project__goals__header {
-        color: $light;
+      .project__goals li,
+      .project__duration,
+      .project__description {
+        @extend .text-white;
       }
 
       .project__content {
         p {
-          color: $light;
+          @extend .text-white;
         }
 
         @include allHeaders {
-          color: $light;
+          @extend .text-white;
         }
       }
-    }
-
-    &__right--container {
-    }
-
-    &__content {
-      overflow-x: scroll;
-
-      @include scrollbar($secondary, 12px);
     }
 
     &__external-link {
