@@ -5,13 +5,13 @@
 @extends('layouts.app')
 
 @section('content')
-  <section id="all-projects" class="no-header-padding">
+  <section id="all-projects" class="header-fluid-transparent">
       @foreach(get_field('all_projects') as $id)
         <article 
           style="background-color: {{get_field('client_projects', $id)['color']}};" 
-          class="project py-5 @if(get_field('client_projects', $id)['light']) light @endif"
+          class="project py-5 d-flex align-items-center @if(get_field('client_projects', $id)['light']) light @endif"
         >
-          <div class="container">
+          <div class="container-fluid px-5">
             <div class="d-flex align-items-center mb-2">
               @if(get_field('client_projects', $id)['is_featured'])
                 <p class="badge bg-secondary mb-0 me-3">Featured</p>
@@ -34,16 +34,35 @@
               <div class="col-6">
 
                 <div class="project__left--container">
-                  <div class="card h-auto mt-3 py-4">
+                  <div class="mt-3 py-4">
                     <div class="card-body row">
-                      <div class="col-6">
+                      <div class="col-3">
                         <img class="w-100 rounded shadow" src="{{get_the_post_thumbnail_url($id)}}" />
                       </div>
-                      <div class="col-6">
+                      <div class="col-9">
                         <header>
-                          <p class="text-black-50 fw-normal fs-small mb-1">{{get_field('client_projects', $id)['duration']}}</p>
+                          <div class="d-flex align-items-center mb-1">
+                            <p class="text-black-50 fw-normal fs-small mb-0">{{get_field('client_projects', $id)['duration']}}</p>
+
+                            @if (get_field('client_projects', $id)['filter_tags'])
+                              @foreach (get_field('client_projects', $id)['filter_tags'] as $tag)
+                                <span class="badge bg-primary ms-2">{{$tag['tag']}}</span>
+                              @endforeach
+                            @endif
+                          </div>
+                          
                       
-                          <p class="mb-0">{{get_the_excerpt($id)}}</p>
+                          <p class="mb-2">{{get_the_excerpt($id)}}</p>
+
+                          <div class="project__goals">
+                            {{-- <p class="fw-bold mb-0 h5 project__goals__header">Goals</p> --}}
+                            <ul class="list-styled ms-4">
+                              @foreach (get_field('client_projects', $id)['goals'] as $goal)
+                                <li class="my-1">{{$goal['goal']}}</li>
+                              @endforeach
+                            </ul>
+                          
+                        </div>
                         </header>
                       </div>
 
@@ -89,15 +108,7 @@
               <div class="col-6 py-4 ps-5">
                 <div class="project__right--container">
                   <div class="project__right-container__header">
-                    <div class="project__goals">
-                      <p class="fw-bold mb-0 h5 project__goals__header">Goals</p>
-                      <ul class="list-styled ms-4">
-                        @foreach (get_field('client_projects', $id)['goals'] as $goal)
-                          <li class="my-1">{{$goal['goal']}}</li>
-                        @endforeach
-                      </ul>
-                    </div>
-                  </div>
+                    
                 
                   {{-- Toggle --}}
                   {{-- <button class="btn text-dark fw-normal d-flex align-items-center">

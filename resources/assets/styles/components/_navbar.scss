@@ -17,6 +17,25 @@
     }
   }
 
+  // Alternative style
+  &.header-fluid-transparent {
+    .container {
+      @extend .container-fluid;
+      @extend .px-5;
+      @extend .border-0;
+      max-width: 100%;
+    }
+  }
+
+  &.header-fluid-transparent:not(.scrolled) {
+    @extend .bg-transparent;
+
+    .primary-navigation__logo,
+    a {
+      @extend .text-dark;
+    }
+  }
+
   &__link {
     color: $white;
 

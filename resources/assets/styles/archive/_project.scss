@@ -1,6 +1,11 @@
 #all-projects {
   .project {
-    min-height: 50vh;
+    min-height: 100vh;
+
+    // Account for header spacing
+    &:first-of-type {
+      padding-top: 10rem !important;
+    }
 
     &.light {
       .project__icon,

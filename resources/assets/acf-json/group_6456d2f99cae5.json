@@ -275,6 +275,51 @@
                     "ui": 0,
                     "ui_on_text": "",
                     "ui_off_text": ""
+                },
+                {
+                    "key": "field_645d176f77ad0",
+                    "label": "Filter Tags",
+                    "name": "filter_tags",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_645d178277ad1",
+                            "label": "Tag",
+                            "name": "tag",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_645d176f77ad0"
+                        }
+                    ]
                 }
             ]
         }
@@ -297,5 +342,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683738658
+    "modified": 1683822482
 }

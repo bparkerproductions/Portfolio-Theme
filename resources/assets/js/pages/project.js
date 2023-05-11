@@ -20,7 +20,7 @@
     const rightContainerHeader = elem.querySelector('.project__right-container__header')
     const projectContent = elem.querySelector('.project__content')
 
-    projectContent.style.height = leftContainer.clientWidth + "px"
+    // projectContent.style.height = leftContainer.clientWidth + "px"
     // projectContent.style.height = rightContainer.clientWidth - rightContainerHeader.clientWidth + "px"
     
   })
