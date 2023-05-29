@@ -8,20 +8,12 @@
     &.light {
       .project__icon,
       .project__title,
-      .project__goals li,
-      .project__duration,
-      .project__description {
+      .project__content p {
         @extend .text-white;
       }
 
-      .project__content {
-        p {
-          @extend .text-white;
-        }
-
-        @include allHeaders {
-          @extend .text-white;
-        }
+      @include allHeaders {
+        @extend .text-white;
       }
     }
 
