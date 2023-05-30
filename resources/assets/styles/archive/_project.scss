@@ -23,5 +23,29 @@
       @extend .justify-content-center;
       @extend .align-items-center;
     }
+
+    // Regular version of the content
+    &__content {
+      font-size: 1.2em;
+
+      h4 {
+        @extend .mt-4;
+        @extend .mb-2;
+        @extend .badge;
+        @extend .bg-primary;
+        @extend .fs-5;
+        @extend .rounded-1;
+      }
+
+      .wp-block-separator {
+        color: rgba($dark, 0.3);
+        border-width: 3px;
+      }
+    }
+
+    // Light version of the content
+    &.light .project__content {
+
+    }
   }
 }
