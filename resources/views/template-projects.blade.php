@@ -14,7 +14,7 @@
           <div class="container-fluid px-5">
 
             {{-- Header Information --}}
-            <header class="mb-3">
+            <header class="mb-5">
               <div class="d-flex align-items-center mb-1">
                 @if(get_field('client_projects', $id)['is_featured'])
                   <p class="badge bg-secondary mb-0 me-3 py-2 px-3 rounded-0">Featured</p>
@@ -37,12 +37,12 @@
               {{-- Image --}}
               <div class="col-6">
                 <div class="project__left--container">
-                  <div class="card">
-                    <div class="card-body row">
-                      <div class="col-3">
-                        <img class="w-100 rounded shadow" src="{{get_the_post_thumbnail_url($id)}}" />
+                  <div class="card border-0 shadow">
+                    <div class="card-body p-0 row">
+                      <div class="col-4">
+                        <img class="rounded-0 project__preview-image" src="{{get_the_post_thumbnail_url($id)}}" />
                       </div>
-                      <div class="col-9">
+                      <div class="col-8 p-3 pe-5">
                         <header>
                           <div class="d-flex align-items-center mb-1">
                             <p class="project__duration text-dark-50 fw-normal fs-small mb-0">{{get_field('client_projects', $id)['duration']}}</p>
@@ -74,7 +74,7 @@
                     {{-- <div class="prev-arrow project__gallery__arrow fa-2x text-primary">
                       <i class="fas fa-angle-left"></i>
                     </div> --}}
-                    <div class="project__gallery__container py-4 row">
+                    <div class="project__gallery__container py-4 row mt-4">
                       @if (get_field('client_projects', $id)['gallery'])
                         @foreach (get_field('client_projects', $id)['gallery'] as $img)
                           <div class="{{$img['col_width']}} position-relative">
@@ -108,7 +108,7 @@
               {{-- Content --}}
               <div class="col-6 px-5">
                 <section class="project__right--container d-flex justify-content-center">
-                  <div class="project__content col-10">
+                  <div class="project__content col-10 card card-body px-5">
                     @php echo get_post_field('post_content', $id) @endphp
                   </div>
                 </section>
