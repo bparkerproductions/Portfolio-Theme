@@ -108,7 +108,7 @@
               {{-- Content --}}
               <div class="col-6 px-5">
                 <section class="project__right--container d-flex justify-content-center">
-                  <div class="project__content col-10 card card-body px-5">
+                  <div class="project__content col-10 card card-body px-0">
                     @php echo get_post_field('post_content', $id) @endphp
                   </div>
                 </section>

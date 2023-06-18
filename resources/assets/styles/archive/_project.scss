@@ -14,16 +14,6 @@
       .project__title {
         @extend .text-white;
       }
-
-      .project__content h4 {
-        // @extend .bg-white;
-        // @extend .text-dark;
-        // @extend .fw-normal;
-      }
-
-      @include allHeaders {
-        // @extend .text-white;
-      }
     }
 
     &__external-link {
@@ -44,6 +34,10 @@
     .project__content {
       font-size: 1.05em;
 
+      p {
+        @extend .m-0;
+      }
+
       h4 {
         @extend .mt-4;
         @extend .mb-2;
@@ -53,6 +47,12 @@
         @extend .rounded-1;
         @extend .fw-semibold;
         width: fit-content;
+      }
+
+      // Section
+      .wp-block-group {
+        @extend .px-5;
+        border-bottom: 1px solid $gray-800;
       }
 
       .wp-block-separator {
