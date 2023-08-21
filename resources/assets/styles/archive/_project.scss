@@ -9,13 +9,6 @@
       @extend .text-dark;
     }
 
-    &.light {
-      .project__icon,
-      .project__title {
-        @extend .text-white;
-      }
-    }
-
     &__external-link {
       @extend %absolute-fill;
       @extend .d-flex;
@@ -29,6 +22,13 @@
       opacity: 0.8;
       object-fit: cover;
     }
+
+    // &__gallery {
+    //   &__image {
+    //     @extend .position-absolute;
+    //     top: 0;
+    //   }
+    // }
 
     // Regular version of the content
     .project__content {
@@ -47,17 +47,6 @@
         @extend .rounded-1;
         @extend .fw-semibold;
         width: fit-content;
-      }
-
-      // Section
-      .wp-block-group {
-        @extend .px-5;
-        border-bottom: 1px solid $gray-800;
-      }
-
-      .wp-block-separator {
-        color: rgba($dark, 0.3);
-        border-width: 3px;
       }
 
       strong {

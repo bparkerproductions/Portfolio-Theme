@@ -48,6 +48,15 @@ $btn-link-color: $light;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
+
+// $custom-colors: (
+//   "gray-900": $gray-900,
+//   "gray-400": $gray-400,
+// 	"gray-100": $gray-100
+// );
+
+// $theme-colors: map-merge($theme-colors, $custom-colors);
+
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/utilities";
