@@ -33,7 +33,7 @@ import Helpers from './../helpers/general.js'
   }
 
   /* Do the same for a header with the class header-fluid-transparent */
-  if ( document.querySelector('.header-fluid-transparent') ) {
-    document.querySelector('.primary-navigation').classList.add('header-fluid-transparent')
+  if ( document.querySelector('.header-transparent-dark') ) {
+    document.querySelector('.primary-navigation').classList.add('header-transparent-dark')
   }
 })()

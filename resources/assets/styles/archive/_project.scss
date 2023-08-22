@@ -17,10 +17,22 @@
     }
 
     &__preview-image {
-      height: 100%;
-      width: 100%;
-      opacity: 0.8;
-      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.08;
+        object-position: left;
+      }
+
+      &--overlay {
+        // opacity: 0.9;
+      }
     }
 
     // &__gallery {

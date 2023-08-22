@@ -8,9 +8,6 @@ import 'lax.js'
 import './pages/portfolio.js'
 import './pages/home.js'
 import './pages/resume.js'
-
-/* Vue pages/components */
-
 import './pages/project.js'
 
 // Components
