@@ -39,9 +39,10 @@
                   style="background-color: {{$clientProjects['color']}}"></div>
                 <img
                   class="rounded-0"
-                  src="{{get_the_post_thumbnail_url($id)}}"
+                  src="{{TemplateProjects::featuredImage($id)}}"
                   alt="The logo for the {{get_the_title($id)}} website."
                 />
+                
               </div>
               <div class="col-8 rounded-end bg-white">
                 <header>
