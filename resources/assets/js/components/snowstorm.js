@@ -1,7 +1,8 @@
 import Helpers from './../helpers/general.js'
 
 (function() {
-  if (!Helpers.hasElement('#snowstorm')) return
+
+  if ( !Helpers.hasElement('#snowstorm') ) return
 
   document.getElementById('snowstorm');
   requestFrame();
@@ -46,25 +47,35 @@ import Helpers from './../helpers/general.js'
     });
   }
 
-  function startAnimation() {
-    for (var i = 0; i < flakeCount; i++) {
-    var x = Math.floor(Math.random() * canvas.width),
-        y = Math.floor(Math.random() * canvas.height),
-        size = (Math.random() * 3) + 2,
-        speed = (Math.random() * 5) + 0.5,
-        opacity = (Math.random() * 0.5) + 0.3;
+  function flakeAttributes() {
+    return {
+      opacity : (Math.random() * 0.5) + 0.3,
+      speed: (Math.random() * 5) + 0.5,
+      size: (Math.random() * 50) + 2,
+      x: Math.floor(Math.random() * canvas.width),
+      y: Math.floor(Math.random() * canvas.height),
+      stepSize: (Math.random()) / 30,
+      velX: 0
+    }
+  }
 
-      flakes.push({
-        speed: speed,
-        velY: speed,
-        velX: 0,
-        x: x,
-        y: y,
-        size: size,
-        stepSize: (Math.random()) / 30,
-        step: 0,
-        opacity: opacity,
-    });
+  function startAnimation() {
+    for (let i = 0; i < flakeCount; i++) {
+
+      // Create each snowflake with its attributes
+        const attrs = flakeAttributes();
+
+        flakes.push({
+          speed: attrs['speed'],
+          velY: attrs['speed'],
+          velX: attrs['velX'],
+          x: attrs['x'],
+          y: attrs['y'],
+          size: attrs['size'],
+          stepSize: attrs['stepSize'],
+          step: 0,
+          opacity: attrs['opacity'],
+      });
     }
     snow();
   }
@@ -72,18 +83,18 @@ import Helpers from './../helpers/general.js'
   function snow() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    for (var i = 0; i < flakeCount; i++) {
-        var flake = flakes[i],
+    for (let i = 0; i < flakeCount; i++) {
+        let flake = flakes[i],
             x = mX,
             y = mY,
             minDist = 350,
             x2 = flake.x,
             y2 = flake.y;
 
-        var dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
+        const dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
 
         if (dist < minDist) {
-            var force = minDist / (dist * dist),
+            const force = minDist / (dist * dist),
                 xcomp = (x - x2) / dist,
                 ycomp = (y - y2) / dist,
                 deltaV = force / 2;
@@ -120,12 +131,14 @@ import Helpers from './../helpers/general.js'
   }
 
   function reset(flake) {
-    flake.x = Math.floor(Math.random() * canvas.width);
+    const attrs = flakeAttributes();
+
+    flake.x = attrs['x'];
     flake.y = 0;
-    flake.size = (Math.random() * 3) + 2;
-    flake.speed = (Math.random() * 1) + 0.5;
-    flake.velY = flake.speed;
-    flake.velX = 0;
-    flake.opacity = (Math.random() * 0.5) + 0.3;
+    flake.size = attrs['size'];
+    flake.speed = attrs['speed'];
+    flake.velY = attrs['speed'];
+    flake.velX = attrs['velX'];
+    flake.opacity = attrs['opacity'];
   }
 })()
