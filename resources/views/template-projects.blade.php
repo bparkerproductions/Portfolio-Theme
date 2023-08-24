@@ -51,9 +51,9 @@
                       {{$clientProjects['duration']}}
                     </p>
 
-                    @if ($clientProjects['filter_tags'])
-                      @foreach ($clientProjects['filter_tags'] as $tag)
-                        <span class="badge bg-primary ms-2">{{$tag['tag']}}</span>
+                    @if (get_the_tags($id))
+                      @foreach (get_the_tags($id) as $tag)
+                        <span class="badge bg-primary ms-2">{{$tag->name}}</span>
                       @endforeach
                     @endif
 
@@ -92,6 +92,14 @@
               </div>
 
             </div>
+
+            @if ($clientProjects['testimonial'])
+              @foreach($clientProjects['testimonial'] as $testimonial)
+                @include('partials.components.testimonial', [
+                  'testimonial' => $testimonial,
+                ])
+              @endforeach
+            @endif
 
             <div class="project__gallery__container row mt-3 px-1">
               @if ($clientProjects['gallery'])
