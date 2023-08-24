@@ -6,13 +6,11 @@
 
 @section('content')
 
-  {{-- Hero Section --}}
+  Hero Section
   @include('partials.portfolio.hero')
 
   {{-- About Section --}}
   @include('partials.portfolio.about')
-
-  @include('partials.portfolio.projects')
 
   {{-- Blog Posts Section --}}
   <section class="blog-posts-container column-center">
