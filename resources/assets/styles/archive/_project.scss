@@ -3,6 +3,10 @@
     // Account for header spacing
     &:first-of-type {
       padding-top: 10rem !important;
+
+      @include media-breakpoint-down(lg) {
+        padding-top: 7rem !important;
+      }
     }
 
     &__title {
@@ -30,36 +34,33 @@
         object-position: left;
         filter: blur(8px);
       }
+
+      @include media-breakpoint-down(lg) {
+        height: 300px;
+      }
+
+      &--overlay {
+        @include media-breakpoint-down(lg) {
+          border-top-right-radius: $border-radius;
+          border-top-left-radius: $border-radius;
+        }
+      }
     }
 
-    // Regular version of the content
-    .project__content {
-      font-size: 1.05em;
+    &__information {
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
 
-      p {
-        @extend .m-0;
+      @include media-breakpoint-down(lg) {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: $border-radius;
       }
+    }
 
-      h4 {
-        @extend .mt-4;
-        @extend .mb-2;
-        @extend .badge;
-        @extend .bg-primary;
-        @extend .fs-6;
-        @extend .rounded-1;
-        @extend .fw-semibold;
-        width: fit-content;
-      }
-
-      strong {
-        @extend .text-dark;
-        @extend .fw-semibold;
-      }
-
-      ul {
-        li {
-          @extend .mb-1;
-        }
+    &__gallery__col {
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        padding: 0;
       }
     }
   }

@@ -6,6 +6,7 @@
             "key": "field_5c834be1b8f7e",
             "label": "Text",
             "name": "text",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_5c834bf0b8f7f",
             "label": "Name",
             "name": "name",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -44,25 +46,7 @@
             "key": "field_5c834c01b8f80",
             "label": "Company",
             "name": "company",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5c834c1cb8f81",
-            "label": "Classes",
-            "name": "classes",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -82,6 +66,7 @@
             "key": "field_5c85febc6b37e",
             "label": "Project",
             "name": "project",
+            "aria-label": "",
             "type": "relationship",
             "instructions": "",
             "required": 0,
@@ -121,7 +106,8 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1558684574
+    "show_in_rest": 0,
+    "modified": 1692898514
 }

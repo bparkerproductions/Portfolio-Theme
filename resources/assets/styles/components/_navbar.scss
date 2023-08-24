@@ -18,7 +18,9 @@
   }
 
   &.header-transparent-dark:not(.scrolled) {
-    @extend .bg-transparent;
+    @include media-breakpoint-up(sm) {
+      background: transparent;
+    }
 
     .primary-navigation__logo,
     a {

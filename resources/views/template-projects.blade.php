@@ -32,8 +32,8 @@
               <h1 class="mb-0 project__title" title="{!! get_the_title($id) !!}">{!! get_the_title($id) !!}</h1>
             </header>
 
-            <div class="row px-3">
-              <div class="col-4 position-relative gx-0 project__preview-image">
+            <div class="row px-0 px-lg-3">
+              <div class="col-12 col-lg-4 position-relative gx-0 project__preview-image">
                 <div
                   class="absolute-fill project__preview-image--overlay"
                   style="background-color: {{$clientProjects['color']}}"></div>
@@ -44,7 +44,7 @@
                 />
                 
               </div>
-              <div class="col-8 rounded-end bg-white">
+              <div class="col-12 col-lg-8 project__information bg-white">
                 <header>
                   <div class="d-flex align-items-center mb-1 p-3 border-bottom bg-gray-100">
                     <p class="project__duration text-dark-50 fw-normal fs-small mb-0">
@@ -104,7 +104,7 @@
             <div class="project__gallery__container row mt-3 px-1">
               @if ($clientProjects['gallery'])
                 @foreach ($clientProjects['gallery'] as $img)
-                  <div class="{{$img['col_width']}} position-relative mb-4">
+                  <div class="{{$img['col_width']}} project__gallery__col position-relative mb-4">
                     <img
                       class="project__gallery__img rounded shadow w-100"
                       alt="{{$img['image_description']}}"
