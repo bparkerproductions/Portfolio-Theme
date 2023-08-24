@@ -23,7 +23,7 @@ import Helpers from './../helpers/general.js'
 
   function getFlakeCount() {
     let isSmaller = window.innerWidth <= 1024;
-    return isSmaller ? 50 : 200;
+    return isSmaller ? 10 : 20;
   }
 
   function requestFrame() {
@@ -49,12 +49,13 @@ import Helpers from './../helpers/general.js'
 
   function flakeAttributes() {
     return {
-      opacity : (Math.random() * 0.5) + 0.3,
-      speed: (Math.random() * 5) + 0.5,
-      size: (Math.random() * 50) + 2,
+      opacity : (Math.random() * 0.1),
+      speed: (Math.random() * 1),
+      size: (Math.random() * 50) + 20,
       x: Math.floor(Math.random() * canvas.width),
-      y: Math.floor(Math.random() * canvas.height),
+      y: Math.floor(Math.random() * (canvas.height / 2)),
       stepSize: (Math.random()) / 30,
+      step: 0,
       velX: 0
     }
   }
@@ -73,10 +74,11 @@ import Helpers from './../helpers/general.js'
           y: attrs['y'],
           size: attrs['size'],
           stepSize: attrs['stepSize'],
-          step: 0,
+          step: attrs['step'],
           opacity: attrs['opacity'],
       });
     }
+
     snow();
   }
 
@@ -115,12 +117,12 @@ import Helpers from './../helpers/general.js'
         flake.x += flake.velX;
 
         if (flake.y >= canvas.height || flake.y <= 0) {
-          reset(flake);
+          // reset(flake);
         }
 
 
         if (flake.x >= canvas.width || flake.x <= 0) {
-          reset(flake);
+          // reset(flake);
         }
 
         ctx.beginPath();
@@ -130,6 +132,7 @@ import Helpers from './../helpers/general.js'
     requestAnimationFrame(snow);
   }
 
+  // Readds the flake at the top of the canvas
   function reset(flake) {
     const attrs = flakeAttributes();
 

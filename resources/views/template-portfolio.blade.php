@@ -14,7 +14,6 @@ $bgImage = 'background-image: url(' . $hero_bg_image . ');';
   <div 
     class="hero home-hero lax"
     data-lax-translate-y="0 0, 1000 -250"
-    style="{{$bgImage}}"
   >
     <canvas id="snowstorm"></canvas>
     <div class="container">
