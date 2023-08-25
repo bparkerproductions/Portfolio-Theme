@@ -1,3 +1,3 @@
-<button class="btn">
-  button
+<button class="btn <?= get_field('classes') ?>">
+  <?= get_field('text'); ?>
 </button>

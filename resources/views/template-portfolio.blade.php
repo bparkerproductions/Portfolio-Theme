@@ -26,25 +26,9 @@ $bgImage = 'background-image: url(' . $hero_bg_image . ');';
             </div>
           @endforeach
         </div>
-
-        <div class="row mt-5">
-          <div class="col-4">
-            <button class="btn btn-dark btn-lg me-3 w-100 fw-normal py-3">
-              See Projects
-              <i class="fas fa-caret-right"></i>
-            </button>
-          </div>
-
-          <div class="col-4">
-            <button class="btn btn-dark btn-lg w-100 fw-normal py-3">
-              View Testimonials
-              <i class="fas fa-caret-right"></i>
-            </button>
-          </div>
-        </div>
       </section>
 
-      <section id="about-container" class="mt-5 container">
+      <section id="about-container" class="mt-6 container">
         {{-- Content from editor --}}
         @php the_content() @endphp
       </section>

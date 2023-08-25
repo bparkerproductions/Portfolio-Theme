@@ -2,6 +2,7 @@
   .home-hero {
     canvas#snowstorm {
       @extend %absolute-fill;
+      pointer-events: none;
     }
 
     @include media-breakpoint-down(sm) {
