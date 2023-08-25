@@ -13,7 +13,7 @@
     @endif
 
     @if (get_field('company', $testimonial))
-      <p>, <span class="fwt-italics">{{get_field('company', $testimonial)}}</span></p>
+      <p>, <span class="fst-italics">{{get_field('company', $testimonial)}}</span></p>
     @endif
   </div>
 </div>

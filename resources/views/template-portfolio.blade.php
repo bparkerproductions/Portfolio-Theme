@@ -10,53 +10,47 @@
 $bgImage = 'background-image: url(' . $hero_bg_image . ');';
 @endphp
 
-<section class="bg-mountain-blue">
-  <div 
-    class="hero home-hero lax"
-    data-lax-translate-y="0 0, 1000 -250"
-  >
+  <section class="hero home-hero">
     <canvas id="snowstorm"></canvas>
-    <div class="container">
-      <div class="content-container lax"
-      data-lax-translate-y="0 0, 750 -250">
+      <section class="container">
+        <h1 class="text-white">{!! $hero_title !!}</h1>
 
-      <div class="intro-container">
-        <h1 class="hero-title">{!! $hero_title !!}</h1>
-      </div>
-
-        <div class="hero-cards-container">
-          <div class="hero-cards">
-            @foreach($hero_blurbs as $card)
-              <div class="hero-card">
-                <div class="icon-container">
-                  <i class="{{$card['icon']}}"></i>
-                </div>
-                <h6>{{$card['title']}}</h6>
-                <p class="subtitle">{{$card['subtitle']}}</p>
+        <div class="row">
+          @foreach($hero_blurbs as $card)
+            <div class="col-12 col-lg-4">
+              <div class="card card-body">
+                <i class="{{$card['icon']}} fa-2x text-secondary"></i>
+                <h6 class="fs-4 text-dark mt-3">{{$card['title']}}</h6>
+                <p class="fw-light">{{$card['subtitle']}}</p>
               </div>
-            @endforeach
+            </div>
+          @endforeach
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-4">
+            <button class="btn btn-dark btn-lg me-3 w-100 fw-normal py-3">
+              See Projects
+              <i class="fas fa-caret-right"></i>
+            </button>
           </div>
 
-          <div class="button-container hard-center">
-            <a>
-              <button class="button black rotate projects-button">
-                {{$hero_button_text}}
-                <i class="fas fa-caret-right"></i>
-              </button>
-            </a>
+          <div class="col-4">
+            <button class="btn btn-dark btn-lg w-100 fw-normal py-3">
+              View Testimonials
+              <i class="fas fa-caret-right"></i>
+            </button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="toggle-more goto-about-me hard-center">
-        <i class="fas fa-chevron-down"></i>
-      </div>
+      <section id="about-container" class="mt-5 container">
+        {{-- Content from editor --}}
+        @php the_content() @endphp
+      </section>
+          
     </div>
-  </div>
   </section>
-
-  {{-- About Section --}}
-  @include('partials.portfolio.about')
 
   {{-- Blog Posts Section --}}
   <section class="blog-posts-container column-center">

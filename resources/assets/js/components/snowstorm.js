@@ -49,7 +49,7 @@ import Helpers from './../helpers/general.js'
 
   function flakeAttributes() {
     return {
-      opacity : (Math.random() * 0.1),
+      opacity : (Math.random() * 0.05),
       speed: (Math.random() * 1),
       size: (Math.random() * 50) + 20,
       x: Math.floor(Math.random() * canvas.width),

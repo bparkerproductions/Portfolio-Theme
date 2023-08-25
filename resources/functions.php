@@ -128,6 +128,14 @@ function wpdocs_dequeue_dashicon() {
 add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
 
 /**
+ * Register ACF Blocks
+ */
+function registerAcfBlocks() {
+    register_block_type( __DIR__ . '/views/blocks/technologies' );
+    register_block_type( __DIR__ . '/views/blocks/bs-button' );
+}
+
+/**
  * Disable the emoji's
  */
 function disable_emojis() {
@@ -142,7 +150,12 @@ function disable_emojis() {
 	// Remove from TinyMCE
 	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 }
-add_action( 'init', 'disable_emojis' );
+
+function onInit() {
+    disable_emojis();
+    registerAcfBlocks();
+}
+add_action( 'init', 'onInit' );
 
 /**
  * Filter out the tinymce emoji plugin.

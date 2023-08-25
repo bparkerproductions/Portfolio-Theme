@@ -1,0 +1,12 @@
+{
+  "name": "acf/bootstrap-button",
+  "title": "Bootstrap Button",
+  "description": "Bootstrap button",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["bootstrap", "button"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "bs-button.php"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "acf/technology",
+  "title": "Technology",
+  "description": "A custom technology  block that uses ACF fields.",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["technology", "portfolio"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "technology.php"
+  }
+}
