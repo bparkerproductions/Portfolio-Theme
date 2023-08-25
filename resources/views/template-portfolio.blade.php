@@ -7,7 +7,7 @@
 @section('content')
 
 @php
-$bgImage = 'background-image: url(' . $hero_bg_image . ');';
+  $bgImage = 'background-image: url(' . $hero_bg_image . ');';
 @endphp
 
   <section class="hero home-hero">
@@ -17,7 +17,7 @@ $bgImage = 'background-image: url(' . $hero_bg_image . ');';
 
         <div class="row">
           @foreach($hero_blurbs as $card)
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-6 col-xl-4 mb-4 mb-lg-0">
               <div class="card card-body">
                 <i class="{{$card['icon']}} fa-2x text-secondary"></i>
                 <h6 class="fs-4 text-dark mt-3">{{$card['title']}}</h6>
@@ -28,7 +28,7 @@ $bgImage = 'background-image: url(' . $hero_bg_image . ');';
         </div>
       </section>
 
-      <section id="about-container" class="mt-6 container">
+      <section id="about-container" class="mt-5 mt-xl-6 container">
         {{-- Content from editor --}}
         @php the_content() @endphp
       </section>

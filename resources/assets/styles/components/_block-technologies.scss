@@ -1,0 +1,12 @@
+.technologies {
+
+  &__column {
+    @include media-breakpoint-down(xl) {
+      flex-basis: calc(100%/10);
+    }
+
+    @include media-breakpoint-down(lg) {
+      flex-basis: calc(100%/6);
+    }
+  }
+}

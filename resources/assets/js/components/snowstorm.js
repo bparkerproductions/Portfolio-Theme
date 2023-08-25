@@ -22,8 +22,7 @@ import Helpers from './../helpers/general.js'
   setEventListener();
 
   function getFlakeCount() {
-    let isSmaller = window.innerWidth <= 1024;
-    return isSmaller ? 10 : 20;
+    return window.innerWidth <= 1024 ? 15 : 35;
   }
 
   function requestFrame() {
@@ -49,7 +48,7 @@ import Helpers from './../helpers/general.js'
 
   function flakeAttributes() {
     return {
-      opacity : (Math.random() * 0.05),
+      opacity : (Math.random() * 0.075),
       speed: (Math.random() * 1),
       size: (Math.random() * 50) + 20,
       x: Math.floor(Math.random() * canvas.width),

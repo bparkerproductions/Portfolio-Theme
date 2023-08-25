@@ -33,3 +33,7 @@ a {
 .project__gallery__slide:not(.visible) {
   overflow: hidden;
 }
+
+:where(.wp-block-columns.is-layout-flex) {
+  gap: 1em !important;
+}
