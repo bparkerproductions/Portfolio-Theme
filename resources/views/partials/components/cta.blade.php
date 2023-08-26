@@ -1,5 +1,7 @@
-<section class="cta spacer column-center">
-  <div class="container">
+<section class="cta container">
+  <div class="card bg-dark">
+    
+  </div>
     <div class="header-container">
       <h2 class="white">{{$cta_header}}</h2>
 
@@ -25,5 +27,4 @@
     <a href="{{$resume_link}}" class="view-resume white">
       <i class="fas fa-file-code"></i> View resume
     </a>
-  </div>
 </section>

@@ -22,7 +22,14 @@
     </div>
 
     {{-- Footer Bottom --}}
-    <div class="w-100 px-5 py-3 d-flex justify-content-center">
+    <div class="w-100 px-5 py-3 d-flex flex-column align-items-center">
+      <ul class="list-unstyled mb-2">
+        @foreach( get_field('social_media', 'option') as $social )
+          <a href="{{$social['link']}}"">
+            <i class="{{$social['class']}} fa-2x text-dark mx-1"></i>
+          </a>
+        @endforeach
+      </ul>
       <p class="mb-0">Bparkerproductions @ {{date("Y")}}</p>
     </div>
 </footer>

@@ -103,5 +103,5 @@
     </div>
   </section>
 
-  @include('partials.global.cta')
+  @include('partials.components.cta')
 @endsection
