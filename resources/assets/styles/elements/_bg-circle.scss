@@ -36,8 +36,29 @@
     width: 200px;
   }
 
-  // Position
+  // Fills
+  &--fill-white {
+    background-color: $white;
+  }
 
+  // Opacity
+  &--opacity-low {
+    opacity: 0.10;
+  }
+
+  &--opacity-quarter {
+    opacity: 0.25;
+  }
+
+  &--opacity-half {
+    opacity: 0.5;
+  }
+
+  &--opacity-three-fourths {
+    opacity: 0.75;
+  }
+
+  // Position
   &--top-left {
     top: -85px;
     left: -60px;
