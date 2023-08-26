@@ -37,10 +37,10 @@
   </section>
 
   {{-- Blog Posts Section --}}
-  <section class="blog-posts-container column-center py-6">
+  <section class="blog-posts-container column-center py-5">
     <div class="container">
       <h2 class="text-dark mb-3">
-        <span class="text-primary">{{wp_count_posts()->publish}}</span> Blog Posts and Counting
+        <span class="text-primary">{{wp_count_posts()->publish}}</span> Blog Posts and Counting.
       </h2>
       @include('partials.components.blog-grid', [
         'header' => 'Featured',
@@ -55,11 +55,33 @@
     </div>
   </section>
 
-  <section id="projects">
-    <h1>Projects</h1>
+  <section id="projects" class="py-5 project-container">
+    <div class="container">
+      <h2 class="text-dark mb-3">
+        Over
+        <span class="text-primary fw-bold">
+          {{wp_count_posts('client-project')->publish}}
+        </span> Successful Projects.
+      </h2>
+    </div>
+
+    @foreach(get_field('all_projects') as $id)
+      @php $clientProjects = get_field('client_projects', $id); @endphp
+      <article
+        class="project py-5"
+        data-bg-color="{{$clientProjects['color']}}"
+      >
+      <div class="container">
+        @include('partials.components.project', [
+          'project' => $clientProjects,
+          'smallHeader' => true
+        ])
+        </div>
+      </article>
+    @endforeach
   </section>
 
-  <section id="testimonials" class="py-6 bg-gray-100">
+  <section id="testimonials" class="py-5 bg-gray-100">
     <div class="container">
       <h1 class="mb-3">Read More From More Happy Clients</h1>
 

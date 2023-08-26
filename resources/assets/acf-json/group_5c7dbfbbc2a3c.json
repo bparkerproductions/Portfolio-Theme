@@ -185,16 +185,18 @@
                 "id": ""
             },
             "post_type": [
-                "projects"
+                "client-project"
             ],
+            "post_status": "",
             "taxonomy": "",
             "filters": [
                 "search"
             ],
-            "elements": "",
+            "return_format": "id",
             "min": "",
             "max": "",
-            "return_format": "id",
+            "elements": "",
+            "bidirectional": 0,
             "bidirectional_target": []
         },
         {
@@ -291,5 +293,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692985595
+    "modified": 1693023907
 }

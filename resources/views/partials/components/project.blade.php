@@ -1,4 +1,3 @@
-{{-- Header Information --}}
 <header class="mb-3">
   <div class="d-flex align-items-center mb-1">
     @if($project['is_featured'])
@@ -13,7 +12,12 @@
     </div>
 
   </div>
-  <h1 class="mb-0 project__title" title="{!! get_the_title($id) !!}">{!! get_the_title($id) !!}</h1>
+
+  @if (isset($smallHeader) && $smallHeader)
+    <h3 class="mb-0 project__title" title="{!! get_the_title($id) !!}">{!! get_the_title($id) !!}</h3>
+  @else
+    <h1 class="mb-0 project__title" title="{!! get_the_title($id) !!}">{!! get_the_title($id) !!}</h1>
+  @endif
 </header>
 
 <div class="row px-0 px-lg-3">

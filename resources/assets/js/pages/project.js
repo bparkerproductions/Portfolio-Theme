@@ -1,5 +1,5 @@
 (function() {
-  if ( !document.getElementById('all-projects')) return
+  if ( !document.querySelector('.project-container') ) return
 
   function setProjectBgColor() {
     document.querySelectorAll('.project').forEach( elem => {
