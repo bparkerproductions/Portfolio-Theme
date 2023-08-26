@@ -1,23 +1,16 @@
 .btn {
-
   &.icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
 
-    &.rotate:hover {
-      .btn__icon {
-        transform: rotate(90deg);
-        bottom: 6px;
-        right: -2rem;
-      }
+    &.rotate:hover svg {
+      transform: rotate(90deg);
     }
 
-    &.rotate .btn__icon {
+    &.rotate svg {
+      margin-top: 2px;
       transition: all 0.25s ease;
-      position: absolute;
-      right: -1.5rem;
-      bottom: -1px;
     }
   }
 
