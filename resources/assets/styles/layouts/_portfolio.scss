@@ -1,25 +1,18 @@
 .template-portfolio {
   .home-hero {
+    .bg-image {
+      object-fit: cover;
+      pointer-events: none;
+      opacity: 0.05;
+      filter: blur(2px);
+      object-position: bottom;
+    }
+
     canvas#snowstorm {
       @extend %absolute-fill;
       pointer-events: none;
-    }
-
-    @include media-breakpoint-down(sm) {
-      justify-content: flex-start;
-      height: 100%;
-    }
-  
-    .toggle-more {
-      position: absolute;
-      bottom: 5vh;
-      right: 0;
-      width: 100%;
-  
-      svg {
-        color: $light;
-        margin-bottom: 10px;
-      }
+      height: auto;
     }
   }
 }
+

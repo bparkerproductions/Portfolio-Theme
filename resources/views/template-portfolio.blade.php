@@ -6,12 +6,13 @@
 
 @section('content')
 
-@php
-  $bgImage = 'background-image: url(' . $hero_bg_image . ');';
-@endphp
-
-  <section class="hero home-hero">
+  <section class="hero home-hero position-relative">
     <canvas id="snowstorm"></canvas>
+
+    @if ($hero_bg_image)
+      <img class="absolute-fill bg-image" src="{{$hero_bg_image}}" alt="Portfolio background image" />
+    @endif
+
       <section class="container">
         <h1 class="text-white">{!! $hero_title !!}</h1>
 
@@ -33,7 +34,6 @@
         @php the_content() @endphp
       </section>
           
-    </div>
   </section>
 
   {{-- Blog Posts Section --}}
