@@ -1,7 +1,7 @@
-<div class="testimonial my-3 mt-5">
+<div class="testimonial {{$classes ?? ''}}">
   <div>
     <i class="fas fa-quote-left text-dark fa-2x"></i>
-    <p class="fw-light fw-light fst-italic fs-3">{{get_field('text', $testimonial)}}</p>
+    <p class="fw-light fw-light fst-italic {{$fontSize ?? 'fs-3'}}">{{get_field('text', $testimonial)}}</p>
   </div>
 
   <div class="d-flex">

@@ -1,4 +1,26 @@
 .btn {
+
+  &.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.rotate:hover {
+      .btn__icon {
+        transform: rotate(90deg);
+        bottom: 6px;
+        right: -2rem;
+      }
+    }
+
+    &.rotate .btn__icon {
+      transition: all 0.25s ease;
+      position: absolute;
+      right: -1.5rem;
+      bottom: -1px;
+    }
+  }
+
   &.btn-primary {
     @include button-variant(
       $background: $primary,

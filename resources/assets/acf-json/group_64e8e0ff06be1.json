@@ -23,16 +23,16 @@
             "append": ""
         },
         {
-            "key": "field_64e8e133d0f2f",
-            "label": "Text",
-            "name": "text",
+            "key": "field_64e8e846020d6",
+            "label": "Button Icon Class",
+            "name": "button_icon_class",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "100",
                 "class": "",
                 "id": ""
             },
@@ -43,24 +43,20 @@
             "append": ""
         },
         {
-            "key": "field_64e8e846020d6",
-            "label": "Button Icon Class",
-            "name": "button_icon_class",
+            "key": "field_64e9475b8e03c",
+            "label": "Button Link",
+            "name": "button_link",
             "aria-label": "",
-            "type": "text",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array"
         }
     ],
     "location": [
@@ -81,5 +77,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692985453
+    "modified": 1693009834
 }

@@ -37,22 +37,49 @@
   </section>
 
   {{-- Blog Posts Section --}}
-  <section class="blog-posts-container column-center">
+  <section class="blog-posts-container column-center py-6">
     <div class="container">
-      @include('partials.global.related-posts', [
-        'component_title' => 'See Blog Posts'
+      <h2 class="text-dark mb-3">
+        <span class="text-primary">{{wp_count_posts()->publish}}</span> Blog Posts and Counting
+      </h2>
+      @include('partials.components.blog-grid', [
+        'header' => 'Featured',
+        'blog_list' => Archive::getFeaturedPosts(3)
       ])
+
+      <a
+        href="{{get_post_type_archive_link('post')}}"
+        target="_blank"
+        class="btn btn-primary btn-lg rounded-3"
+      >See All Blog Posts</a>
     </div>
   </section>
 
-  {{-- Portfolio widgets area  --}}
-  @if( is_active_sidebar( 'portfolio-widgets' ) )
-    <section id="secondary-sidebar" class="spacer column-center">
-      <div class="container">
-        @php dynamic_sidebar( 'portfolio-widgets' ) @endphp
-      </div>
-    </section>
-  @endif
+  <section id="projects">
+    <h1>Projects</h1>
+  </section>
+
+  <section id="testimonials" class="py-6 bg-gray-100">
+    <div class="container">
+      <h1 class="mb-3">Read More From More Happy Clients</h1>
+
+      @if (get_field('testimonials') )
+        <div class="row">
+          @foreach(get_field('testimonials') as $testimonial)
+            <div class="col-12 col-lg-6 my-3">
+              <div class="card card-body">
+                @include('partials.components.testimonial', [
+                  'testimonial' => $testimonial,
+                  'classes' => 'd-flex justify-content-between flex-column h-100',
+                  'fontSize' => 'fs-5'
+                ])
+              </div>
+            </div>
+          @endforeach
+        </div>
+      @endif
+    </div>
+  </section>
 
   @include('partials.global.cta')
 @endsection

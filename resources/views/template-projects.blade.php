@@ -76,8 +76,8 @@
 
                   <div class="p-3 border-top">
                     @if ($clientProjects['what_i_did'])
-                        <h6 class="fw-bold mb-1 text-dark-75">What I Did</h6>
-                        <p class="mb-2 project__description">{{$clientProjects['what_i_did']}}</p>
+                      <h6 class="fw-bold mb-1 text-dark-75">What I Did</h6>
+                      <p class="mb-2 project__description">{{$clientProjects['what_i_did']}}</p>
                     @endif
 
                     <div class="project__goals">
@@ -97,6 +97,7 @@
               @foreach($clientProjects['testimonial'] as $testimonial)
                 @include('partials.components.testimonial', [
                   'testimonial' => $testimonial,
+                  'classes' => 'my-3 mt-5',
                 ])
               @endforeach
             @endif
