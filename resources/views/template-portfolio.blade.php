@@ -36,52 +36,43 @@
           
   </section>
 
-  {{-- Blog Posts Section --}}
-  <section class="blog-posts-container column-center py-5">
-    <div class="container">
-      <h2 class="text-dark mb-3">
-        <span class="text-primary">{{wp_count_posts()->publish}}</span> Blog Posts and Counting.
-      </h2>
-      @include('partials.components.blog-grid', [
-        'header' => 'Featured',
-        'blog_list' => Archive::getFeaturedPosts(3)
-      ])
-
-      <a
-        href="{{get_post_type_archive_link('post')}}"
-        target="_blank"
-        class="btn btn-primary btn-lg rounded-3"
-      >See All Blog Posts</a>
-    </div>
-  </section>
-
-  <section id="projects" class="py-5 project-container">
-    <div class="container">
-      <h2 class="text-dark mb-3">
-        Over
-        <span class="text-primary fw-bold">
-          {{wp_count_posts('client-project')->publish}}
-        </span> Successful Projects.
-      </h2>
-    </div>
-
+  <section id="projects" class="project-container">
     @foreach(get_field('all_projects') as $id)
       @php $clientProjects = get_field('client_projects', $id); @endphp
-      <article
-        class="project py-5"
-        data-bg-color="{{$clientProjects['color']}}"
-      >
-      <div class="container">
-        @include('partials.components.project', [
-          'project' => $clientProjects,
-          'smallHeader' => true
-        ])
+        <article
+          class="project py-5"
+          data-bg-color="{{$clientProjects['color']}}"
+        >
+        <div class="container">
+          @if ($loop->first)
+            <h2 class="text-dark mb-5">
+              Over
+              <span class="text-primary fw-bold">
+                {{wp_count_posts('client-project')->publish}}
+              </span> Successful Projects.
+            </h2>
+          @endif
+
+          @include('partials.components.project', [
+            'project' => $clientProjects,
+            'smallHeader' => true
+          ])
+
+          @if ($loop->last)
+            <div class="mt-4 mt-lg-5">
+              <a
+                target="_blank"
+                class="text-dark text-decoration-underline fs-3 fw-semibold"
+                href="{{get_post_type_archive_link('client_projects')}}"
+              >Want to See More Projects?</a>
+            </div>
+          @endif
         </div>
       </article>
     @endforeach
   </section>
 
-  <section id="testimonials" class="py-5 bg-gray-100">
+  <section id="testimonials" class="py-5 bg-gray-400">
     <div class="container">
       <h1 class="mb-3">Read More From More Happy Clients</h1>
 
@@ -100,6 +91,25 @@
           @endforeach
         </div>
       @endif
+    </div>
+  </section>
+
+  {{-- Blog Posts Section --}}
+  <section class="blog-posts-container column-center py-5">
+    <div class="container">
+      <h2 class="text-dark mb-3">
+        <span class="text-primary">{{wp_count_posts()->publish}}</span> Blog Posts and Counting.
+      </h2>
+      @include('partials.components.blog-grid', [
+        'header' => 'Featured',
+        'blog_list' => Archive::getFeaturedPosts(3)
+      ])
+
+      <a
+        href="{{get_post_type_archive_link('post')}}"
+        target="_blank"
+        class="btn btn-primary btn-lg rounded-3"
+      >See All Blog Posts</a>
     </div>
   </section>
 

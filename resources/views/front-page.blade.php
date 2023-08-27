@@ -2,7 +2,7 @@
   Template Name: Home Page
 --}}
 
-@extends('layouts.app', [ 'navbarClass' => 'test'])
+@extends('layouts.app')
 
 @section('content')
 

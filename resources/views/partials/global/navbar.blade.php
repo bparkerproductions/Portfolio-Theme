@@ -12,13 +12,11 @@
 
       <ul class="d-flex flex-column flex-sm-row list-unstyled p-0 m-0">
         @foreach($primary_nav_items as $item)
-          @php
-            $is_active = App::IsActive($item['link']['title']);
-            $has_dropdown = $item['has_dropdown'] ? 'has-dropdown' : false;
-          @endphp
-
-          <li class="mx-0 mx-sm-3 mb-1 mb-sm-0 d-flex align-items-center {{$is_active}} ">
-            <a class="primary-navigation__link" href="{{$item['link']['url']}}">
+          <li class="mx-0 mx-sm-3 mb-1 mb-sm-0 d-flex align-items-center">
+            <a
+              class="primary-navigation__link {{App::IsActive($item['link']['title'])}}"
+              href="{{$item['link']['url']}}"
+            >
               {{$item['link']['title']}}
             </a>
           </li>

@@ -17,14 +17,13 @@
     }
   }
 
-  &.header-transparent-dark:not(.scrolled) {
-    @include media-breakpoint-up(sm) {
-      background: transparent;
-    }
+  &__logo {
+    color: $white;
+    font-size: 2em;
 
-    .primary-navigation__logo,
-    a {
-      @extend .text-dark;
+    @include media-breakpoint-down(sm) {
+      color: $dark;
+      font-size: 3em;
     }
   }
 
@@ -38,15 +37,26 @@
     &:hover {
       color: $primary;
     }
+
+    &.active {
+      color: $dark;
+      pointer-events: none;
+    }
   }
 
-  &__logo {
-    color: $white;
-    font-size: 2em;
+  /* Transparent dark state */
+  &.header-dark:not(.scrolled) {
+    @include media-breakpoint-up(sm) {
+      background: transparent;
+    }
 
-    @include media-breakpoint-down(sm) {
-      color: $dark;
-      font-size: 3em;
+    .primary-navigation__logo,
+    .primary-navigation__link {
+      @extend .text-dark;
+
+      &.active {
+        color: $secondary;
+      }
     }
   }
 
@@ -60,6 +70,24 @@
     .primary-navigation__link,
     .primary-navigation__logo {
       color: $dark;
+
+      &.active {
+        color: $secondary;
+      }
     }
+  }
+}
+
+/* Toggle container */
+.navbar-toggle-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+
+  @include media-breakpoint-up(sm) {
+    display: none;
   }
 }

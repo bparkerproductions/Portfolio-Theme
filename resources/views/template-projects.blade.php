@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <section id="all-projects" class="project-container header-transparent-dark bg-gray-400">
+  <section id="all-projects" class="project-container header-dark bg-gray-400">
       @foreach(get_field('all_projects') as $id)
         @php $clientProjects = get_field('client_projects', $id); @endphp
         <article

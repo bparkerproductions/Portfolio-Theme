@@ -44,7 +44,10 @@ class App extends Controller {
     }
 
     public static function IsActive($page) {
-      return is_page($page) ? 'active' : '';
+      // Get slug then turn it into a title friendly String
+      $slug = get_post_field('post_name', get_the_ID());
+      $compareStr = ucwords(str_replace("-", " ", $slug));
+      return $compareStr == $page ? 'active' : '';
     }
 
     public function blogLink() {

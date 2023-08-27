@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <section class="entry-content position-relative no-header-padding">
+  <section class="entry-content position-relative header-scrolled">
     <div class="bg-circle bg-circle--top-left bg-circle--thick"></div>
     <div class="bg-circle bg-circle--large bg-circle--secondary"></div>
 
