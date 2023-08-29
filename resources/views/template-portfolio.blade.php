@@ -94,8 +94,17 @@
     </div>
   </section>
 
+  {{-- Credentials --}}
+  <section id="credentials" class="py-5">
+    <div class="container">
+      {{-- <div class="card card-body"> --}}
+        @include('partials.components.credentials')
+      {{-- </div> --}}
+    </div>
+  </section>
+
   {{-- Blog Posts Section --}}
-  <section class="blog-posts-container column-center py-5">
+  <section class="py-5">
     <div class="container">
       <h2 class="text-dark mb-3">
         <span class="text-primary">{{wp_count_posts()->publish}}</span> Blog Posts and Counting.

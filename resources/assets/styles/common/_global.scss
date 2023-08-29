@@ -29,9 +29,10 @@ a {
   transition: all 0.25s ease;
 }
 
-// For glide sliders
-.project__gallery__slide:not(.visible) {
-  overflow: hidden;
+/* Misc styles for global components */
+
+.credential__image {
+  width: 120px;
 }
 
 :where(.wp-block-columns.is-layout-flex) {
