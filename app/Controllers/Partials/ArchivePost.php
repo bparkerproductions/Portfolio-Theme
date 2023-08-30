@@ -4,11 +4,9 @@ namespace App\Controllers\Partials;
 
 trait ArchivePost {
   public function categoryList() {
-    $args = [
+    return get_categories([
       'orderby' => 'name'
-    ];
-
-    return get_categories($args);
+    ]);
   }
 
   public function blogLink() {

@@ -5,13 +5,16 @@
 
       {{-- Home link --}}
       <div class="me-4 me-sm-3">
-        <a class="primary-navigation__logo d-flex" href="{{$home_item['url']}}">
+        <a
+          class="primary-navigation__logo d-flex"
+          href="{{get_field('home_item', 'option')['url']}}"
+        >
           <i class="fab fa-js"></i>
         </a>
       </div>
 
       <ul class="d-flex flex-column flex-sm-row list-unstyled p-0 m-0">
-        @foreach($primary_nav_items as $item)
+        @foreach( get_field('navbar_list', 'option') as $item )
           <li class="mx-0 mx-sm-3 mb-1 mb-sm-0 d-flex align-items-center">
             <a
               class="primary-navigation__link {{App::IsActive($item['link']['title'])}}"
