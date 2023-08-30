@@ -35,12 +35,17 @@
     }
 
     &:hover {
-      @extend .text-secondary;
+      color: $secondary;
     }
 
     &.active {
-      @extend .text-dark;
+      color: $dark;
       pointer-events: none;
+      font-weight: 600;
+
+      @include media-breakpoint-down(sm) {
+        color: $secondary;
+      }
     }
   }
 
@@ -52,10 +57,11 @@
 
     .primary-navigation__logo,
     .primary-navigation__link {
-      @extend .text-dark;
+      color: $dark;
+
 
       &.active {
-        @extend .text-secondary;
+        color: $secondary;
       }
     }
   }
@@ -69,14 +75,14 @@
 
     .primary-navigation__link,
     .primary-navigation__logo {
-      @extend .text-dark;
+      color: $dark;
 
       &:hover {
-        @extend .text-primary;
+        color: $primary;
       }
 
       &.active {
-        @extend .text-secondary;
+        color: $secondary;
       }
     }
   }
@@ -90,8 +96,4 @@
   z-index: 10;
   width: 50px;
   height: 50px;
-
-  @include media-breakpoint-up(sm) {
-    display: none;
-  }
 }
