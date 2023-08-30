@@ -943,50 +943,6 @@
                         }
                     ],
                     "rows_per_page": 20
-                },
-                {
-                    "key": "field_6317a61689d20",
-                    "label": "Interests",
-                    "name": "interests",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "table",
-                    "button_label": "Add Row",
-                    "sub_fields": [
-                        {
-                            "key": "field_6317abd4428e5",
-                            "label": "Text",
-                            "name": "text",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
-                            "parent_repeater": "field_6317a61689d20"
-                        }
-                    ],
-                    "rows_per_page": 20
                 }
             ]
         }
@@ -1009,5 +965,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693434943
+    "modified": 1693439503
 }

@@ -1,8 +1,8 @@
 <div class="py-3">
   <div class="d-flex align-items-center">
-    <h4 class="text-dark mb-0 me-2">{{$item['company']}}</h4>
+    <h4 class="text-dark mb-0 me-2">{{$item[$type]}}</h4>
 
-    @if($item['tags'])
+    @if(isset($item['tags']) && $item['tags'])
       @foreach($item['tags'] as $tag)
         <span class="badge bg-dark mx-1">{{$tag['text']}}</span>
       @endforeach
@@ -32,8 +32,8 @@
   </ul>
 
   @if($item['link'])
-    <a class="resume-more-info-link" target="_blank" href="{{$item['link']['url']}}">
-      <i class="fas fa-external-link-alt"></i><span>See Project</span>
+    <a class="btn btn-dark rounded-1 badge py-2" target="_blank" href="{{$item['link']['url']}}">
+      <i class="fas fa-external-link-alt me-2"></i><span>See Project</span>
     </a>
   @endif
 </div>
