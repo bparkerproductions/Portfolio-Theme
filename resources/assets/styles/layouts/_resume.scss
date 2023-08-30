@@ -1,54 +1,8 @@
 .resume {
-  font-size: 15px;
-  background-color: $secondary;
 
-  /* Sidebar */
-  aside {
-    background-color: $primary;
-    color: $light;
-    padding: 50px 25px;
-    width: 30%;
-    box-sizing: border-box;
-
-    @include media-breakpoint-down(sm) {
-      width: 100%;
-    }
-  }
-
-  &-technologies {
-    &-container {
-      margin: 15px 0;
-      padding: 15px 0 0 0;
-      border-top: 1px solid rgba($light, 0.35);
-    }
-
-    &-list {
-      margin-top: 7.5px;
-    }
-
-    &-text-list {
-      padding-left: 0;
-      margin-bottom: 0;
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 10px;
-
-      li {
-        margin: 0 7.5px 7.5px 0;
-        padding-right: 7.5px;
-
-        &:not(:last-child) {
-          border-right: 1px solid rgba($light, 0.75);
-        }
-      }
-    }
-
-    &-icon {
-      color: $dark;
-      font-size: 20px;
-      margin: 0 5px 5px 0;
-    }
+  &__technology-icon {
+    width: 35px;
+    font-size: 1.25rem;
   }
 
   &-links {
@@ -95,7 +49,7 @@
       display: flex;
     }
   
-    &-content {
+    &__content {
       &.hide {
         display: none;
       }
@@ -149,7 +103,6 @@
     }
   
     &-tech {
-      border-bottom: 1px solid rgba($dark, 0.5);
       padding-bottom: 5px;
     }
   }
@@ -186,7 +139,7 @@
     }
   }  
 
-  &-content {
+  &__content {
     &.pdf-friendly {
       .resume-more-info-text,
       .resume-more-info-link {
@@ -210,15 +163,8 @@
     color: $dark;
   }
 
-  &-main-content {
-    padding: 50px 25px;
-    width: 70%;
-    background-color: $light;
+  &__main-content {
     box-sizing: border-box;
-
-    @include media-breakpoint-down(sm) {
-      width: 100%;
-    }
   }
 
   &-header {
@@ -248,7 +194,6 @@
 
   &-info {
     padding: 15px 0;
-    border-top: 1px solid rgba($dark, 0.35);
 
     &-name {
       color: $primary;

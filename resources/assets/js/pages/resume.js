@@ -6,7 +6,7 @@ import Helpers from './../helpers/general.js'
   document.querySelectorAll('.resume-more-info').forEach( moreInfo.bind(this) )
 
   // init PDF logic
-  const $pdfFriendly = document.querySelector('.resume-options-icon.pdf-friendly')
+  const $pdfFriendly = document.querySelector('.pdf-friendly')
   $pdfFriendly.addEventListener('click', pdfFriendly)
 
   function pdfFriendly() {

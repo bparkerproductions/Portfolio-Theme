@@ -5,58 +5,72 @@
 @extends('layouts.app')
 
 @section('content')
-  <section class="resume column-center">
+  <section class="resume pt-6 header-scrolled">
     <div class="container">
-      <div class="resume-options">
-        <p class="resume-options-icon pdf-friendly">
-          <i class="fas fa-file-pdf"></i> PDF Friendly Version
-        </p>
+      <div class="mb-3">
+        <button class="pdf-friendly btn btn-dark me-3 fw-normal fs-sm">
+          <i class="fas fa-file-pdf me-1"></i> PDF Friendly Version
+        </button>
 
-        <a class="resume-options-icon" href="{{$resume['resume_file']['url']}}" download>
+        <a class="fw-normal fs-sm text-dark" href="{{$resume['resume_file']['url']}}" download>
           <i class="fas fa-download"></i> Download
         </a>
       </div>
-      <div class="resume-content card no-hover">
-        <aside>
-          <div class="resume-links">
-            <ul>
+
+
+      <div class="resume__content border row">
+        <aside class="col-3 bg-primary text-white p-0">
+          <div class="p-4 border-bottom">
+            <ul class="list-unstyled mb-0">
               @foreach($resume['links'] as $link)
-                <li>
-                  <a target="_blank" href="{{$link['link']['url']}}">{{$link['link']['title']}}</a>
+                <li class="my-1">
+                  <a
+                    class="text-white"
+                    target="_blank"
+                    href="{{$link['link']['url']}}">
+                    {{$link['link']['title']}}
+                  </a>
                 </li>
               @endforeach
+
+              <ul class="list-unstyled mb-0 mt-3">
+                @foreach( get_field('social_media', 'option') as $social )
+                  <a href="{{$social['link']}}" target="_blank">
+                    <i class="{{$social['class']}} fa-2x text-white me-2"></i>
+                  </a>
+                @endforeach
+              </ul>
             </ul>
           </div>
 
-          <div class="resume-technologies">
+          <div class="resume__technologies">
             @foreach($resume['technologies'] as $technology)
-              <div class="resume-technologies-container">
-                <h5 class="m-0">{{$technology['title']}}</h5>
+              <div class="p-4 border-bottom">
+                <h6 class="mb-1 text-dark fw-semibold">{{$technology['title']}}</h6>
 
-                <div class="resume-technologies-list">
+                <ul class="list-unstyled mb-0">
                   @foreach($technology['technology_list'] as $tech)
-                    @if(get_field('fa_icon_class', $tech))
-                      <i title="{{get_the_title($tech)}}" class="{{get_field('fa_icon_class', $tech)}} resume-technologies-icon"></i>
-                    @endif
+                    <li class="fs-small d-flex align-items-center">
+                      <span class="resume__technology-icon d-block">
+                        <i
+                          title="{{get_the_title($tech)}}"
+                          class="{{get_field('fa_icon_class', $tech) ?get_field('fa_icon_class', $tech) :
+                          'fas fa-file-code'}} text-dark"
+                        ></i>
+                      </span>
+                      {{get_the_title($tech)}}
+                    </li>
                   @endforeach
-                </div>
-
-                @if(!$technology['hide_names'])
-                  <ul class="resume-technologies-text-list">
-                    @foreach($technology['technology_list'] as $tech)
-                      <li>{{get_the_title($tech)}}</li>
-                    @endforeach
-                  </ul>
-                @endif
+                </ul>
               </div>
             @endforeach
           </div>
 
           @if($resume['accomplishments'])
-            <div class="resume-accomplishments">
-              <h5 class="m-0">Accomplishments</h5>
-              <ul>
-                <li>{{wp_count_posts()->publish}} and counting technical blog posts</li>
+            <div class="p-4 border-bottom">
+              <h6 class="mb-1 text-dark fw-semibold">Accomplishments</h6>
+              <ul class="mb-0">
+                <li>{{wp_count_posts()->publish}} blog posts and counting</li>
                 @foreach($resume['accomplishments'] as $accomplishment)
                   <li>{{$accomplishment['item']}}</li>
                 @endforeach
@@ -64,7 +78,9 @@
             </div>
           @endif
         </aside>
-        <div class="resume-main-content">
+
+
+        <div class="resume__main-content bg-gray-400 p-4 col-9">
           <h2 class="resume-title">Brandon Parker</h2>
           <p class="resume-location">
             <i class="fas fa-map-marker-alt fa-lg"></i> {{$resume['location']}}
@@ -87,14 +103,14 @@
             <h3 class="resume-header">Experience</h3>
             @foreach($resume['experience'] as $experience)
               <div class="resume-info">
-                <h5 class="resume-info-name m-0">
+                <h4 class="text-dark mb-0">
                   {{$experience['company']}}
                   @if($experience['tags'])
                     @foreach($experience['tags'] as $tag)
                       <span class="resume-info-badge badge">{{$tag['text']}}</span>
                     @endforeach
                   @endif
-                </h5>
+                </h4>
                 <em class="resume-info-title">{{$experience['title']}} - {{$experience['date']}}</em>
                 <p class="resume-info-description">{{$experience['description']}}</p>
               </div>
