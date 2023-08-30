@@ -14,7 +14,7 @@
 
   <ul class="list-unstyled mb-0 mt-3">
     @foreach( get_field('social_media', 'option') as $social )
-      <a href="{{$social['link']}}"">
+      <a href="{{$social['link']}}" target="_blank">
         <i class="{{$social['class']}} fa-2x text-white mx-1"></i>
       </a>
     @endforeach
