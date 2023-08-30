@@ -35,11 +35,11 @@
     }
 
     &:hover {
-      color: $primary;
+      @extend .text-secondary;
     }
 
     &.active {
-      color: $dark;
+      @extend .text-dark;
       pointer-events: none;
     }
   }
@@ -55,7 +55,7 @@
       @extend .text-dark;
 
       &.active {
-        color: $secondary;
+        @extend .text-secondary;
       }
     }
   }
@@ -69,10 +69,14 @@
 
     .primary-navigation__link,
     .primary-navigation__logo {
-      color: $dark;
+      @extend .text-dark;
+
+      &:hover {
+        @extend .text-primary;
+      }
 
       &.active {
-        color: $secondary;
+        @extend .text-secondary;
       }
     }
   }

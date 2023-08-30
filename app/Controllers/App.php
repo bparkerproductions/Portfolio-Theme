@@ -38,14 +38,17 @@ class App extends Controller {
     }
 
     public static function categoryIconID($id) {
-      echo 'h';
       var_dump(get_field('category_icon', 'category_' . $id));
       return get_field('category_icon', 'category_' . $id)[0]->ID;
     }
 
     public static function IsActive($page) {
       // Get slug then turn it into a title friendly String
-      $slug = get_post_field('post_name', get_the_ID());
+      if ( is_home() ) {
+        $slug = get_the_title(get_option('page_for_posts'));
+      } else {
+        $slug = get_post_field('post_name', get_the_ID());
+      }
       $compareStr = ucwords(str_replace("-", " ", $slug));
       return $compareStr == $page ? 'active' : '';
     }

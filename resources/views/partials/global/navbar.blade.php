@@ -26,6 +26,6 @@
   </div>
 </nav>
 
-<div class="navbar-toggle-container bg-info me-2 mt-2 rounded hard-center">
+<div class="navbar-toggle-container bg-info me-2 mt-2 rounded flex-center">
   <i class="fas fa-bars text-white fa-lg"></i>
 </div>
