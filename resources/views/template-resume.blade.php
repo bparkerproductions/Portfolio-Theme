@@ -5,18 +5,13 @@
 @extends('layouts.app')
 
 @section('content')
-  <section class="resume pt-6 header-scrolled">
+  <section class="resume pt-6 header-scrolled bg-gray-200">
     <div class="container">
       <div class="mb-3">
-        <button class="pdf-friendly btn btn-dark me-3 fw-normal fs-sm">
-          <i class="fas fa-file-pdf me-1"></i> PDF Friendly Version
-        </button>
-
-        <a class="fw-normal fs-sm text-dark" href="{{$resume['resume_file']['url']}}" download>
+        <a class="fw-normal text-dark" href="{{$resume['resume_file']['url']}}" download>
           <i class="fas fa-download"></i> Download
         </a>
       </div>
-
 
       <div class="resume__content border row">
         <aside class="col-3 bg-primary text-white p-0">
@@ -46,7 +41,7 @@
           <div class="resume__technologies">
             @foreach($resume['technologies'] as $technology)
               <div class="p-4 border-bottom">
-                <h6 class="mb-1 text-dark fw-semibold">{{$technology['title']}}</h6>
+                <h6 class="mb-1 text-white fw-semibold">{{$technology['title']}}</h6>
 
                 <ul class="list-unstyled mb-0">
                   @foreach($technology['technology_list'] as $tech)
@@ -68,83 +63,58 @@
 
           @if($resume['accomplishments'])
             <div class="p-4 border-bottom">
-              <h6 class="mb-1 text-dark fw-semibold">Accomplishments</h6>
+              <h6 class="mb-1 text-white fw-semibold">Accomplishments</h6>
               <ul class="mb-0">
-                <li>{{wp_count_posts()->publish}} blog posts and counting</li>
+                <li class="text-dark fw-semibold">{{wp_count_posts()->publish}} blog posts and counting</li>
                 @foreach($resume['accomplishments'] as $accomplishment)
-                  <li>{{$accomplishment['item']}}</li>
+                  <li class="text-dark fw-semibold">{{$accomplishment['item']}}</li>
                 @endforeach
               </ul>
             </div>
           @endif
         </aside>
 
-
-        <div class="resume__main-content bg-gray-400 p-4 col-9">
+        <div class="resume__main-content p-4 col-9 bg-white">
           <h2 class="resume-title">Brandon Parker</h2>
           <p class="resume-location">
-            <i class="fas fa-map-marker-alt fa-lg"></i> {{$resume['location']}}
+            <i class="fas fa-map-marker-alt fa-lg me-2"></i> {{$resume['location']}}
           </p>
 
-          <div class="resume-intro">
+          <div class="mb-4">
             <p class="m-0">{{$resume['intro']}}</p>
 
-            <ul class="resume-intro-list">
+            <ul class="list-unstyled ps-3 mt-2">
               @foreach($resume['intro_points'] as $point)
-                <li>
-                  <i class="fas fa-plus-circle resume-intro-icon"></i>
+                <li class="d-flex align-items-center my-1">
+                  <i class="fas fa-plus-circle text-dark me-2"></i>
                   <p class="m-0">{{$point['point']}}</p>
                 </li>
               @endforeach
             </ul>
           </div>
 
-          <section class="resume-section">
-            <h3 class="resume-header">Experience</h3>
+          <div class="py-4">
+            <h5 class="fw-bold mb-0">Experience</h5>
             @foreach($resume['experience'] as $experience)
-              <div class="resume-info">
-                <h4 class="text-dark mb-0">
-                  {{$experience['company']}}
-                  @if($experience['tags'])
-                    @foreach($experience['tags'] as $tag)
-                      <span class="resume-info-badge badge">{{$tag['text']}}</span>
-                    @endforeach
-                  @endif
-                </h4>
-                <em class="resume-info-title">{{$experience['title']}} - {{$experience['date']}}</em>
-                <p class="resume-info-description">{{$experience['description']}}</p>
-              </div>
-                @include('partials.resume-more-info', [ 'item' => $experience ])
+              @include('partials.resume-more-info', [ 'item' => $experience ])
             @endforeach
-          </section>
+          </div>
 
-          <section class="resume-section">
-            <h3 class="resume-header">Projects</h3>
-            @foreach($resume['projects'] as $project)
-              <div class="resume-info">
-                <h5 class="resume-info-name m-0">{{$project['project']}}</h5>
-                @if ($project['date'])
-                  <em class="resume-info-title">{{$project['title']}} - {{$project['date']}}</em>
-                @endif
-                <p class="resume-info-description">{{$project['description']}}</p>
-              </div>
-        
-              @include('partials.resume-more-info', [ 'item' => $project ])
-            @endforeach
-          </section>
+          <h3 class="resume-header">Projects</h3>
+          @foreach($resume['projects'] as $project)
+            @include('partials.resume-more-info', [ 'item' => $project ])
+          @endforeach
 
-          <section class="resume-section">
-            <h3 class="resume-header">Education</h3>
-            @foreach($resume['education'] as $education)
-              <div class="resume-info">
-                <h5 class="resume-info-name m-0">{{$education['school']}}</h5>
-                <em class="resume-info-title">{{$education['title']}} - {{$education['date']}}</em>
-                <p class="resume-info-description">{{$education['description']}}</p>
-              </div>
+          <h3 class="resume-header">Education</h3>
+          @foreach($resume['education'] as $education)
+            <div class="resume-info">
+              <h5 class="resume-info-name m-0">{{$education['school']}}</h5>
+              <em class="resume-info-title">{{$education['title']}} - {{$education['date']}}</em>
+              <p class="resume-info-description">{{$education['description']}}</p>
+            </div>
 
-              @include('partials.resume-more-info', [ 'item' => $education ])
-            @endforeach
-          </section>
+            @include('partials.resume-more-info', [ 'item' => $education ])
+          @endforeach
 
           @if($resume['interests'])
             <section class="resume-section interests">
