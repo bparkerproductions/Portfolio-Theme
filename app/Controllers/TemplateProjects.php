@@ -5,10 +5,6 @@ namespace App\Controllers;
 use Sober\Controller\Controller;
 
 class TemplateProjects extends Controller {
-  public function allProjects() {
-    return get_field('all_projects');
-  }
-
   public static function featuredImage($id) {
     if ( get_the_post_thumbnail_url($id) ) {
       return get_the_post_thumbnail_url($id);

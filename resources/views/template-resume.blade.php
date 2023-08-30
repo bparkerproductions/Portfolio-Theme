@@ -5,11 +5,6 @@
 @extends('layouts.app')
 
 @section('content')
-  @component('components.header', [
-    'icon_class' => 'fas fa-file-code'
-  ])
-  @endcomponent
-
   <section class="resume column-center">
     <div class="container">
       <div class="resume-options">

@@ -6,7 +6,7 @@
 
 @section('content')
   <section id="all-projects" class="project-container header-dark bg-gray-400">
-      @foreach(get_field('all_projects') as $id)
+      @foreach( get_field('all_projects') as $id )
         @php $clientProjects = get_field('client_projects', $id); @endphp
         <article
           class="project py-5 d-flex align-items-center"

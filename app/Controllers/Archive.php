@@ -7,13 +7,6 @@ use Sober\Controller\Controller;
 class Archive extends Controller {
   use Partials\ArchivePost;
 
-  public static function postImageBg($id) {
-    $postImageUrl = get_the_post_thumbnail_url($id);
-
-    if($postImageUrl) return 'background-image: url("' . $postImageUrl . '")';
-    else return '';
-  }
-
   public static function randomPostIds($count) {
     $latest = new \WP_Query( array (
         'post__not_in' => array(get_the_ID()),
