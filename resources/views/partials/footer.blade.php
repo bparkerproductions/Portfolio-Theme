@@ -3,7 +3,7 @@
 
     {{-- Footer Top --}}
     <div class="py-0 py-xl-5 mb-5 w-100 d-flex justify-content-center flex-column flex-xl-row">
-      @foreach($footer_lists as $list)
+      @foreach( get_field('footer_lists', 'option') as $list )
         <div class="px-5 pt-5">
           @if($list['header'])
             <h4 class="mb-3">{{$list['header']}}</h4>

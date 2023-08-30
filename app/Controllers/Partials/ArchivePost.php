@@ -14,6 +14,8 @@ trait ArchivePost {
   }
 
   public static function isSelected($cat) {
-    if ($cat->name === single_cat_title('', false)) return 'selected';
+    if ($cat->name === single_cat_title('', false) ) {
+      return 'selected';
+    }
   }
 }

@@ -5,8 +5,8 @@ namespace App\Controllers\Partials;
 trait Comments {
   public function makeAuthorMarkup() {
     return '
-      <input 
-        tabindex="0" 
+      <input
+        tabindex="0"
         placeholder="Name (Optional)"
         class="input-style w-100 mt-3"
         type="text"
@@ -29,12 +29,12 @@ trait Comments {
   public function makeSubmitButton() {
     return '
     <div class="col-12 col-lg-6">
-      <input 
+      <input
         name="%1$s"
         type="submit"
         id="%2$s"
         class="%3$s btn btn-dark btn-lg rounded w-100"
-        value="%4$s" 
+        value="%4$s"
       />
     </div>';
   }
