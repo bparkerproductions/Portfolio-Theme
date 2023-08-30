@@ -1,7 +1,7 @@
 <ul class="list-unstyled row">
   @foreach( get_field('credentials', 'option') as $credential )
     <li class="col-6 my-2 d-flex align-items-center credential position-relative">
-      <div class="d-flex bg-gray-400 p-3 w-100 h-100">
+      <div class="d-flex bg-gray-400 p-3 w-100 h-100 animation-hover-link border">
         <div class="d-flex align-items-center me-3 py-2">
           <img
             class="credential__image"
@@ -11,6 +11,7 @@
         </div>
 
         <div class="d-flex flex-column justify-content-center">
+          <h6>{{$credential['title']}}</h6>
           @if ($credential['link'])
             <a
               target="_blank"

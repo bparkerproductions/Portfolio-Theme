@@ -1,0 +1,9 @@
+/* Generic animations that can be applied to elements */
+
+.animation-hover-link {
+  transition: all 0.3s cubic-bezier(0.81, 1.46, 1, 1);
+
+  &:hover {
+    transform: scaleY(1.025);
+  }
+}

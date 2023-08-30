@@ -74,7 +74,7 @@
 
   <section id="testimonials" class="py-5 bg-gray-400">
     <div class="container">
-      <h1 class="mb-3">Read More From More Happy Clients</h1>
+      <h2 class="mb-3">Read More From More Happy Clients</h2>
 
       @if (get_field('testimonials') )
         <div class="row">
@@ -94,15 +94,6 @@
     </div>
   </section>
 
-  {{-- Credentials --}}
-  <section id="credentials" class="py-5">
-    <div class="container">
-      {{-- <div class="card card-body"> --}}
-        @include('partials.components.credentials')
-      {{-- </div> --}}
-    </div>
-  </section>
-
   {{-- Blog Posts Section --}}
   <section class="py-5">
     <div class="container">
@@ -119,6 +110,14 @@
         target="_blank"
         class="btn btn-primary btn-lg rounded-3"
       >See All Blog Posts</a>
+    </div>
+  </section>
+
+  {{-- Credentials --}}
+  <section id="credentials" class="py-5">
+    <div class="container">
+      <h2 class="text-dark">Credentials</h2>
+      @include('partials.components.credentials')
     </div>
   </section>
 
