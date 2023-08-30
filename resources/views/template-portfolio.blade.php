@@ -10,15 +10,19 @@
   <section class="hero home-hero position-relative">
     <canvas id="snowstorm"></canvas>
 
-    @if ($hero_bg_image)
-      <img class="absolute-fill bg-image" src="{{$hero_bg_image}}" alt="Portfolio background image" />
+    @if (get_field('hero_background_image'))
+      <img
+        class="absolute-fill bg-image"
+        src="{{get_field('hero_background_image')}}"
+        alt="Portfolio background image"
+      />
     @endif
 
       <section class="container">
-        <h1 class="text-white">{!! $hero_title !!}</h1>
+        <h1 class="text-white">{!! get_field('home_hero_title') !!}</h1>
 
         <div class="row">
-          @foreach($hero_blurbs as $card)
+          @foreach(get_field('hero_blurbs') as $card)
             <div class="col-12 col-lg-6 col-xl-4 mb-4 mb-lg-0">
               <div class="card card-body">
                 <i class="{{$card['icon']}} fa-2x text-secondary"></i>

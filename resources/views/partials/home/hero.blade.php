@@ -1,6 +1,7 @@
 <section class="hero d-flex overflow-hidden position-relative">
   <div class="bg-circle bg-circle--bottom-left bg-circle--large"></div>
-  <div class="bg-circle bg-circle--white bg-circle--thick bg-circle--top-right bg-circle--large"></div>
+  <div class="bg-circle bg-circle--white bg-circle--thick
+  bg-circle--top-right bg-circle--large bg-circle--opacity-low bg-circle--fill-white"></div>
 
   <div class="container d-flex align-items-center justify-content-start">
     <div class="row">
