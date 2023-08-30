@@ -6,6 +6,7 @@
 
 @section('content')
 
+{{-- Hero and About Me --}}
   <section class="hero home-hero position-relative">
     <canvas id="snowstorm"></canvas>
 
@@ -30,12 +31,13 @@
       </section>
 
       <section id="about-container" class="mt-5 mt-xl-6 container">
-        {{-- Content from editor --}}
+        {{-- About Me content from editor --}}
         @php the_content() @endphp
       </section>
           
   </section>
 
+  {{-- Projects Preview --}}
   <section id="projects" class="project-container">
     @foreach(get_field('all_projects') as $id)
       @php $clientProjects = get_field('client_projects', $id); @endphp
@@ -72,6 +74,7 @@
     @endforeach
   </section>
 
+  {{-- Client Testimonials --}}
   <section id="testimonials" class="py-5 bg-gray-400">
     <div class="container">
       <h2 class="mb-3">Read More From More Happy Clients</h2>
@@ -121,6 +124,7 @@
     </div>
   </section>
 
+  {{-- CTA --}}
   <section class="cta container">
     <div class="card card-body bg-dark">
       @include('partials.components.cta')

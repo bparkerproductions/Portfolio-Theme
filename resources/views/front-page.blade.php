@@ -48,4 +48,11 @@
     </div>
   </div>
 
+  {{-- CTA --}}
+  <section class="cta container">
+    <div class="card card-body bg-dark">
+      @include('partials.components.cta')
+    </div>
+  </section>
+
 @endsection

@@ -17,7 +17,16 @@
             @include('partials.components.project', [
               'project' => $clientProjects
             ])
+
+            @if ( $loop->index % 4 == 0 && $loop->index > 1)
+              <section class="cta mt-5">
+                <div class="card card-body bg-dark">
+                  @include('partials.components.cta')
+                </div>
+              </section>
+            @endif
           </div>
+
         </article>
       @endforeach
   </section>
