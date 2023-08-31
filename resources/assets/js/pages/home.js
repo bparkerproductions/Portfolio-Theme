@@ -1,7 +1,8 @@
-import Scroll from './../helpers/scroll.js'
-import Helpers from './../helpers/general.js'
+import Helpers from './../helpers/general';
 
 (function() {
-  if (!Helpers.hasElement('.front-page')) return
+  window.addEventListener('DOMContentLoaded', () => {
+    if ( !Helpers.hasElement('.front-page') ) return;
 
+  });
 })()
