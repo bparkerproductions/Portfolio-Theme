@@ -48,7 +48,7 @@
       </div>
 
       <div class="p-3">
-        <h6 class="fw-bold mb-1 text-dark-75">About Them</h6>
+        <h6 class="fw-bold mb-1 text-dark">About Them</h6>
         <p class="mb-2 project__description">{{get_the_excerpt($id)}}</p>
 
         @if ($project['project_link'])
@@ -65,7 +65,7 @@
 
       <div class="p-3 border-top">
         @if ($project['what_i_did'])
-          <h6 class="fw-bold mb-1 text-dark-75">What I Did</h6>
+          <h6 class="fw-bold mb-1 text-dark">What I Did</h6>
           <p class="mb-2 project__description">{{$project['what_i_did']}}</p>
         @endif
 

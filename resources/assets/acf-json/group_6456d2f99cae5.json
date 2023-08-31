@@ -254,7 +254,8 @@
                     "return_format": "id",
                     "min": "",
                     "max": "",
-                    "elements": ""
+                    "elements": "",
+                    "bidirectional_target": []
                 },
                 {
                     "key": "field_64e3a07a1631c",
@@ -301,7 +302,28 @@
                     "return_format": "object",
                     "min": "",
                     "max": "",
-                    "elements": ""
+                    "elements": "",
+                    "bidirectional_target": []
+                },
+                {
+                    "key": "field_64f125e436bf5",
+                    "label": "Unique Identifier",
+                    "name": "unique_identifier",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         }
@@ -324,5 +346,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692895873
+    "modified": 1693525494
 }
