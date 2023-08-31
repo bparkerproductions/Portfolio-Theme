@@ -7,7 +7,11 @@
         <article title="{{get_the_title($ID)}}" class="position-relative">
           <a class="absolute-fill" href="{{get_the_permalink($ID)}}"></a>
 
-          <img class="img-fluid shadow rounded mb-4" src="{{ get_the_post_thumbnail_url($ID) }}" />
+          <img
+            alt="{{APP::getImageAlt($ID)}}"
+            class="img-fluid shadow rounded mb-4"
+            src="{{ get_the_post_thumbnail_url($ID) }}"
+          />
           <h4 title="{{get_the_title($ID)}}" class="blog-preview__title">{!! get_the_title($ID) !!}</h4>
           <p class="single-blog-description">{!! get_the_excerpt($ID) !!}</p>
 

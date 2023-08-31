@@ -10,9 +10,9 @@
     <div class="container">
       <ul class="row list-unstyled">
         @while(have_posts()) @php the_post() @endphp
-          <div class="col-12 col-lg-6 mb-5">
+          <li class="col-12 col-lg-6 mb-5">
             @include('partials.content-'.get_post_type())
-          </div>
+          </li>
         @endwhile
         </ul>
     </div>

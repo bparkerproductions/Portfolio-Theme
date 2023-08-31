@@ -14,7 +14,7 @@
       <img
         class="absolute-fill bg-image"
         src="{{get_field('hero_background_image')}}"
-        alt="Portfolio background image"
+        alt="Portfolio background decorative image"
       />
     @endif
 

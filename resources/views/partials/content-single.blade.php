@@ -8,6 +8,7 @@
 
   <div class="col-12 col-lg-5">
     <img
+      alt="{{APP::getImageAlt()}}"
       src="{{get_the_post_thumbnail_url()}}"
       class="border shadow rounded w-100"
     />

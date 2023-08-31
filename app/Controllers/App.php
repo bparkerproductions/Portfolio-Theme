@@ -16,6 +16,11 @@ class App extends Controller {
       return $compareStr == $page ? 'active' : '';
     }
 
+    public static function getImageAlt($id=false) {
+      $postId = $id ?: get_the_ID();
+      return html_entity_decode(get_the_title($postId), ENT_QUOTES, 'UTF-8');
+    }
+
     public function portfolioLink() {
       return get_page_link(get_page_by_title('Portfolio')->ID);
     }
