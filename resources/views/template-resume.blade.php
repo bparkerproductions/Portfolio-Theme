@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <section class="resume py-6 header-scrolled bg-gray-200">
+  <section class="resume py-5 py-lg-6 header-scrolled bg-gray-200">
     <div class="container">
       <div class="mb-3">
         <a class="fw-normal text-dark" href="{{$resume['resume_file']['url']}}" download>
@@ -14,7 +14,7 @@
       </div>
 
       <div class="resume__content border row">
-        <aside class="col-3 bg-primary text-white p-0">
+        <aside class="col-12 col-lg-3 bg-primary text-white p-0 order-2 order-lg-0">
           <div class="p-4 border-bottom">
             <ul class="list-unstyled mb-0">
               @foreach($resume['links'] as $link)
@@ -72,7 +72,7 @@
           @endif
         </aside>
 
-        <div class="resume__main-content p-4 col-9 bg-white">
+        <div class="resume__main-content p-4 col-12 col-lg-9 bg-white">
           <h2 class="resume-title">Brandon Parker</h2>
           <p class="resume-location">
             <i class="fas fa-map-marker-alt fa-lg me-2"></i> {{$resume['location']}}
@@ -120,6 +120,9 @@
               ])
             @endforeach
           </div>
+
+          {{-- Credentials --}}
+          @include('partials.components.credentials')
         </div>
       </div>
     </div>

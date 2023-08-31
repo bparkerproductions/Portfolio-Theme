@@ -1,18 +1,20 @@
 <div class="py-3">
-  <div class="d-flex align-items-center">
+  <div class="flex-column flex-lg-row d-flex align-items-start align-items-lg-center">
     <h4 class="text-dark mb-0 me-2">{{$item[$type]}}</h4>
 
-    @if(isset($item['tags']) && $item['tags'])
-      @foreach($item['tags'] as $tag)
-        <span class="badge bg-dark mx-1">{{$tag['text']}}</span>
-      @endforeach
-    @endif
+    <div class="my-1">
+      @if(isset($item['tags']) && $item['tags'])
+        @foreach($item['tags'] as $tag)
+          <span class="badge bg-dark mx-1">{{$tag['text']}}</span>
+        @endforeach
+      @endif
+    </div>
   </div>
 
-  <div class="d-flex align-items-center">
+  <div class="flex-column flex-xl-row d-flex align-items-start align-items-xl-end">
     <em class="text-dark-75 fs-small">{{$item['title']}} - {{$item['date']}}</em>
     @if($item['technologies'])
-      <div class="ms-3">
+      <div class="ms-0 ms-xl-3 mt-1">
         @foreach($item['technologies'] as $tech)
           <i class="{{get_field('fa_icon_class', $tech)}} resume__technology-icon me-2"></i>
         @endforeach
