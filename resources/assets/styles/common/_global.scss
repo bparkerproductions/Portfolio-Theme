@@ -7,25 +7,10 @@ body {
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @include font("Source Sans Pro");
-}
-
-/* Headers */
-@include allHeaders {
-  @include font("Ubuntu");
-
-  margin-top: 0;
-}
-
-p {
-  color: $body;
-  line-height: 1.5;
 }
 
 /* Various Text Elements */
 a {
-  text-decoration: none;
   transition: all 0.25s ease;
 }
 

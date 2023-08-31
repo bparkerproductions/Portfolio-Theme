@@ -9,7 +9,7 @@ $secondary: #f8a277;
 $dark: #2c2b2b;
 $light: #fff;
 $info: #46bbf6;
-$body: #3a3434;
+$body-color: #3a3434;
 
 // Grays
 $gray-900: #3a4146;
@@ -35,9 +35,15 @@ $border-radius: 0.75rem;
 $container-padding-x: 3rem;
 
 /* Text and fonts */
+
+// Default font family
+$headings-font-family: "Ubuntu", Roboto, Helvetica, Arial, sans-serif;
+$font-family-base: "Source Sans Pro", Roboto, Helvetica, Arial, sans-serif;
+
 $font-size-base: 1.1rem;
 $headings-color: $info;
 $font-size-sm: $font-size-base * .875;
+$link-decoration: none;
 
 /* Cards */
 $card-spacer-y: 1.5rem;
