@@ -1,7 +1,7 @@
 .project-container {
   .project {
     &__title {
-      @extend .text-dark;
+      color: $dark;
     }
 
     &__external-link {

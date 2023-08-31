@@ -14,6 +14,8 @@
       href="mailto:bparkerproductions@gmail.com?subject=I%20came%20across%20your%20portfolio%20...">email me directly
   </p>
 
+  <a href="{{$resume_link}}" class="text-decoration-underline text-white" target="_blank"> Looking for my resume?</a>
+
   <ul class="list-unstyled mb-0 mt-3">
     @foreach( get_field('social_media', 'option') as $social )
       <a href="{{$social['link']}}" target="_blank">

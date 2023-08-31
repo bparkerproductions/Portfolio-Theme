@@ -4,7 +4,7 @@
   <ul class="row list-unstyled">
     @foreach($blog_list as $ID)
       <li class="blog-preview col-12 col-md-6 col-xl-4 my-4">
-        <article title="{{get_the_title($ID)}}" class="position-relative">
+        <article title="{{get_the_title($ID)}}" class="position-relative blog-preview__inner">
           <a class="absolute-fill" href="{{get_the_permalink($ID)}}"></a>
 
           <img
