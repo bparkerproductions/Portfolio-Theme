@@ -84,7 +84,7 @@
 
 @if ($project['testimonial'])
   @foreach($project['testimonial'] as $testimonial)
-    @include('partials.components.testimonial', [
+    @include('partials.testimonial', [
       'testimonial' => $testimonial,
       'classes' => 'my-3 mt-5',
     ])

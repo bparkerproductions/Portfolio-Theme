@@ -1,7 +1,7 @@
 <header class="entry-meta d-flex align-items-center pb-2">
 
   @if (!$hide_date)
-    <time 
+    <time
       datetime="{{ get_post_time('c', true, $postID) }}"
       class="fw-light fs-sm bg-secondary rounded-0 text-white py-1 px-3"
     >

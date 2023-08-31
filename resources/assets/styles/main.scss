@@ -1,9 +1,7 @@
 @import 'bootstrap';
 
 // Common
-@import "common/helpers";
-@import "common/extends";
-@import "common/animations";
+
 
 /**
  * Import npm dependencies
@@ -14,15 +12,15 @@
 // @import "~some-node-module";
 
 /** Import global styles **/
-@import "components/main";
+@import "global";
+@import "helpers";
+@import "animations";
 
-@import "common/global";
+/* Components */
+@import "components/main";
 
 /* Atomic elements */
 @import "elements/main";
 
 /* Layouts */
 @import "layouts/main";
-
-/* Archive pages, including projects */
-@import "archive/main";

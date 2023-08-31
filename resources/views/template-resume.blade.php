@@ -122,7 +122,7 @@
           </div>
 
           {{-- Credentials --}}
-          @include('partials.components.credentials')
+          @include('partials.credentials')
         </div>
       </div>
     </div>

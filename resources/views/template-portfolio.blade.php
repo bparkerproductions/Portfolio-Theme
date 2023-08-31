@@ -59,7 +59,7 @@
             </h2>
           @endif
 
-          @include('partials.components.project', [
+          @include('partials.project', [
             'project' => $clientProjects,
             'smallHeader' => true
           ])
@@ -88,7 +88,7 @@
           @foreach(get_field('testimonials') as $testimonial)
             <div class="col-12 col-lg-6 my-3">
               <div class="card card-body">
-                @include('partials.components.testimonial', [
+                @include('partials.testimonial', [
                   'testimonial' => $testimonial,
                   'classes' => 'd-flex justify-content-between flex-column h-100',
                   'fontSize' => 'fs-5'
@@ -107,7 +107,7 @@
       <h2 class="text-dark mb-3">
         <span class="text-primary">{{wp_count_posts()->publish}}</span> Blog Posts and Counting.
       </h2>
-      @include('partials.components.blog-grid', [
+      @include('partials.blog-grid', [
         'header' => 'Featured',
         'blog_list' => Archive::getFeaturedPosts(3)
       ])
@@ -124,14 +124,14 @@
   <section id="credentials" class="py-5">
     <div class="container">
       <h2 class="text-dark">Credentials</h2>
-      @include('partials.components.credentials')
+      @include('partials.credentials')
     </div>
   </section>
 
   {{-- CTA --}}
   <section class="cta container">
     <div class="card card-body bg-dark">
-      @include('partials.components.cta')
+      @include('partials.cta')
     </div>
   </section>
 @endsection

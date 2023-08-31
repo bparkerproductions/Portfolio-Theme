@@ -4,7 +4,7 @@
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
     <div class="content">
-      @include('partials.global.navbar', [
+      @include('partials.navbar', [
         'class' => $navbarClass ?? ''
       ])
       <main class="main">

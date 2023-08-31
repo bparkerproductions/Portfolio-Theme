@@ -7,7 +7,10 @@
   ])
 
   <div class="col-12 col-lg-5">
-    <img src="{{get_the_post_thumbnail_url()}}" class="border shadow rounded w-100" />
+    <img
+      src="{{get_the_post_thumbnail_url()}}"
+      class="border shadow rounded w-100"
+    />
   </div>
 
   <article @php post_class() @endphp>
@@ -23,6 +26,6 @@
 
 @php comments_template('', true); @endphp
 
-@include('partials.global.related-posts', [
+@include('partials.related-posts', [
   'component_title' => 'More Posts'
 ])

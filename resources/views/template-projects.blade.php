@@ -14,14 +14,14 @@
         >
           <div class="container">
 
-            @include('partials.components.project', [
+            @include('partials.project', [
               'project' => $clientProjects
             ])
 
             @if ( $loop->index % 4 == 0 && $loop->index > 1)
               <section class="cta mt-5">
                 <div class="card card-body bg-dark">
-                  @include('partials.components.cta')
+                  @include('partials.cta')
                 </div>
               </section>
             @endif
