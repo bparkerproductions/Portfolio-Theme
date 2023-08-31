@@ -1,11 +1,12 @@
 {
     "key": "group_5e7a4d1bcf822",
-    "title": "Technologies",
+    "title": "Technologies Fields",
     "fields": [
         {
             "key": "field_5e7a4d24ad2f3",
             "label": "Fa Icon Class",
             "name": "fa_icon_class",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_5e7a4d56ad2f4",
             "label": "Icon Image",
             "name": "icon_image",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -44,25 +46,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_5e7ea230a3fc1",
-            "label": "Specialized skill",
-            "name": "specialized_skill",
-            "type": "true_false",
-            "instructions": "Show as a specialized skill on the portfolio page?",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
         }
     ],
     "location": [
@@ -82,7 +65,8 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1585357399
+    "show_in_rest": 0,
+    "modified": 1693511170
 }

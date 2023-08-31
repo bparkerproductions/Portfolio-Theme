@@ -59,7 +59,10 @@
     .primary-navigation__link {
       color: $dark;
 
-
+      &:hover {
+        color: $primary;
+      }
+      
       &.active {
         color: $secondary;
       }
