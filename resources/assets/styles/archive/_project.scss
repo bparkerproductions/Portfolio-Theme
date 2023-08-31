@@ -1,14 +1,3 @@
-#all-projects.project-container .project {
-  // Account for header spacing
-  &:first-of-type {
-    padding-top: 10rem !important;
-
-    @include media-breakpoint-down(lg) {
-      padding-top: 7rem !important;
-    }
-  }
-}
-
 .project-container {
   .project {
     &__title {

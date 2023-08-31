@@ -17,23 +17,12 @@ import Helpers from './../helpers/general.js'
       }
     }
 
-    function accountForNavbarOffsetHeight() {
-      // The scrolled header will now be applied at the top of the page.
-      // The header is fixed, so we need to account for the shift
-        
-      const paddingAmount = window.innerWidth > 576 ? primaryNavigation.offsetHeight : 0;
-      
-      document.querySelector('main').style.paddingTop = paddingAmount + 'px';
-    }
-
     /*
       If a class of header-scrolled is present on the page, there is no
       header and the navbar needs the "scrolled" class applied indefinitely
     */
     if ( document.querySelector('.header-scrolled') ) {
       primaryNavigation.classList.add('scrolled');
-
-      accountForNavbarOffsetHeight();
     }
 
     /* Do the same for a header with the class header-fluid-transparent */
@@ -51,7 +40,5 @@ import Helpers from './../helpers/general.js'
       'scroll',
       navScroll
     );
-
-    window.onresize = accountForNavbarOffsetHeight;
   })
 })()

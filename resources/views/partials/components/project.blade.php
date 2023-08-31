@@ -57,6 +57,7 @@
             class="btn btn-sm btn-dark px-3"
             href="{{$project['project_link']['url']}}"
           >
+            <i class="fas fa-external-link-alt fa-sm me-2"></i>
             See Site Live
           </a>
         @endif

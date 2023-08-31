@@ -31,7 +31,7 @@ class Archive extends Controller {
       )
       ));
 
-      return $featuredPosts->posts;
+    return $featuredPosts->posts;
   }
 
   public static function getPostsFromCategory($category, $amount) {

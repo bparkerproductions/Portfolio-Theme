@@ -9,7 +9,7 @@
       @foreach( get_field('all_projects') as $id )
         @php $clientProjects = get_field('client_projects', $id); @endphp
         <article
-          class="project py-5 d-flex align-items-center"
+          class="project py-5 d-flex align-items-center @if ($loop->first) pt-6 pt-lg-7 @endif"
           data-bg-color="{{$clientProjects['color']}}"
         >
           <div class="container">

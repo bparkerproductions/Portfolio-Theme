@@ -69,7 +69,7 @@
               <a
                 target="_blank"
                 class="text-dark text-decoration-underline fs-3 fw-semibold"
-                href="{{get_post_type_archive_link('client_projects')}}"
+                href="{{$projects_link}}"
               >Want to See More Projects?</a>
             </div>
           @endif
