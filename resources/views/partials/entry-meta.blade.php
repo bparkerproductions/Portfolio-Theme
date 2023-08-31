@@ -3,7 +3,7 @@
   @if (!$hide_date)
     <time 
       datetime="{{ get_post_time('c', true, $postID) }}"
-      class="fw-light fs-small bg-secondary rounded-0 text-white py-1 px-3"
+      class="fw-light fs-sm bg-secondary rounded-0 text-white py-1 px-3"
     >
       {{ get_the_date('', $postID) }}
     </time>

@@ -1,9 +1,4 @@
 /* Text */
-@mixin font-awesome {
-  font-weight: 900;
-  font-family: "Font Awesome 5";
-}
-
 @mixin allHeaders() {
   h1, h2, h3, h4, h5, h6 {
     @content;
@@ -12,43 +7,4 @@
 
 @mixin font($family) {
   font-family: $family, Roboto, Helvetica, Arial, sans-serif;
-}
-
-/* UI Elements */
-@mixin scrollbar($color, $size) {
-  &::-webkit-scrollbar {
-    width: $size;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: $color;
-  }
-}
-
-// Creates colors bullet points on lists
-@mixin color-bullets($color) {
-  list-style: none;
-
-  li {
-    padding-left: 1em;
-    position: relative;
-
-    &::before {
-      content: "• ";
-      color: $color;
-      font-size: 15px;
-      position: absolute;
-      top: 1px;
-      left: 0;
-    }
-  }
-}
-
-/* General */
-@mixin onHover {
-  &:hover {
-    @include media-breakpoint-up(lg) {
-      @content;
-    }
-  }
 }

@@ -35,7 +35,7 @@
   <div class="col-12 col-lg-8 project__information bg-white">
     <header>
       <div class="d-flex align-items-center mb-1 p-3 border-bottom bg-gray-100">
-        <p class="project__duration text-dark-50 fw-normal fs-small mb-0">
+        <p class="project__duration text-dark-50 fw-normal fs-sm mb-0">
           {{$project['duration']}}
         </p>
 
@@ -100,7 +100,7 @@
           alt="{{$img['image_description']}}"
           src="{{$img['image']['url']}}"
         />
-        <p class="mb-0 mt-3 text-dark-50 mt-2 fs-small project__gallery__image">
+        <p class="mb-0 mt-3 text-dark-50 mt-2 fs-sm project__gallery__image">
           {{$img['image_description']}}
         </p>
       </div>

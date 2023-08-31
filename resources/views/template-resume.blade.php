@@ -44,7 +44,7 @@
 
               <ul class="list-unstyled mb-0">
                 @foreach($technology['technology_list'] as $tech)
-                  <li class="fs-small d-flex align-items-center">
+                  <li class="fs-sm d-flex align-items-center">
                     <span class="resume__technology-icon d-block">
                       <i
                         title="{{get_the_title($tech)}}"

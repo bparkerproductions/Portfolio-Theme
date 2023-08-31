@@ -12,7 +12,7 @@
   </div>
 
   <div class="flex-column flex-xl-row d-flex align-items-start align-items-xl-end">
-    <em class="text-dark-75 fs-small">{{$item['title']}} - {{$item['date']}}</em>
+    <em class="text-dark-75 fs-sm">{{$item['title']}} - {{$item['date']}}</em>
     @if($item['technologies'])
       <div class="ms-0 ms-xl-3 mt-1">
         @foreach($item['technologies'] as $tech)

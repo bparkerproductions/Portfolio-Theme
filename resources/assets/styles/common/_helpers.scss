@@ -12,22 +12,17 @@
   @extend %absolute-fill;
 }
 
-.disabled {
-  pointer-events: none;
-  opacity: 0.2;
-}
-
 // Extra bg classes
 .bg-gray-900 {
   background-color: $gray-900;
 }
 
-.bg-gray-200 {
-  background-color: $gray-200;
-}
-
 .bg-gray-400 {
   background-color: $gray-400;
+}
+
+.bg-gray-200 {
+  background-color: $gray-200;
 }
 
 .bg-gray-100 {
@@ -43,10 +38,6 @@
 }
 
 // Extra FS classes
-.fs-normal {
-  font-size: $font-size-base;
-}
-
-.fs-small {
+.fs-sm {
   font-size: $font-size-sm;
 }

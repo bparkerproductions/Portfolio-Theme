@@ -29,7 +29,7 @@
           @endif
 
           @if ( $credential['certificate_number'] )
-            <p class="text-dark-50 fw-light mb-0 fs-small">{{$credential['certificate_number']}}</p>
+            <p class="text-dark-50 fw-light mb-0 fs-sm">{{$credential['certificate_number']}}</p>
           @endif
 
           <p class="mb-0 mt-1 text-dark-50">Issued on {{$credential['date_issued']}}</p>
