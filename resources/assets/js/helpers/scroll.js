@@ -6,7 +6,7 @@ export default {
     if (!document.querySelector($elem)) return
 
     if (document.scrollingElement.scrollTop > amount) {
-      document.querySelector($elem).classList.add('scrolled')
+      document.querySelector($elem).classList.add('scrolled');
     }
     else {
       document.querySelector($elem).classList.remove('scrolled');

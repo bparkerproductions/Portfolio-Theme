@@ -1,4 +1,4 @@
-<div class="container header-scrolled pt-4">
+<div class="container header-scrolled pt-5">
   <h1 class="mb-5">{!! get_the_title() !!}</h1>
 
   @include('partials/entry-meta', [

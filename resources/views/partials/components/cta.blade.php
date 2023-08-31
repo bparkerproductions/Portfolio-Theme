@@ -2,7 +2,7 @@
   <div class="bg-circle bg-circle--large bg-circle--white
   bg-circle--bottom-left bg-circle--opacity-low bg-circle--fill-white"></div>
 
-  <h2 class="text-white">{{$cta_header}}</h2>
+  <h2 class="text-white">{{get_field('cta_header', 'option')}}</h2>
 
   <p class="text-white">
     I am most active on

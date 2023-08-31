@@ -6,16 +6,6 @@ import lax from 'lax.js'
 (function() {
   if (!Helpers.hasElement('template-portfolio')) return
 
-  document.querySelector('.projects-button').addEventListener(
-    'click',
-    () => { Scroll.to('#projects-container') }
-  )
-
-  document.querySelector('.goto-about-me').addEventListener(
-    'click',
-    () => { Scroll.to('#about-container') }
-  )
-
   initLax();
 
   function initLax() {
