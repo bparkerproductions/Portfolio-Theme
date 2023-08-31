@@ -1,9 +1,20 @@
-/* Generic animations that can be applied to elements */
-
+// Stretches it out a bit vertically on hover
 .animation-hover-link {
   transition: all 0.3s cubic-bezier(0.81, 1.46, 1, 1);
 
   &:hover {
     transform: scaleY(1.025);
+  }
+}
+
+// Tilts the image to the top slightly on hover
+img.external-link {
+  z-index: 1;
+  position: inherit;
+  transition: all 0.25s cubic-bezier(0.39, 0.58, 0.57, 1);
+
+  &:hover {
+    cursor: pointer;
+    transform: perspective(1000px) rotateX(7deg) translate3d(0,-3px,5px);
   }
 }

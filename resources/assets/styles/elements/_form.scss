@@ -1,17 +1,12 @@
 .input-style {
   display: block;
   padding: 0.5rem 0.75rem;
-  border: 1px solid $gray-700;
+  border: 1px solid $gray-800;
   @extend .bg-light;
   @extend .fw-light;
   @extend .rounded-1;
-
-  &::focus-visible {
-    border-color: blue;
-  }
 }
 
 textarea.input-style {
-  border-radius: 0;
   min-height: 150px;
 }
