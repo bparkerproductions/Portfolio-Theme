@@ -5,6 +5,8 @@ import { hasElement, throttle, decodeHTMLEntities } from './../helpers/general.j
     if ( !hasElement('.infinite-load') ) return;
 
     const parent = document.querySelector('.infinite-load');
+    const pageCategory = parent.getAttribute('data-category') || null;
+    const postCount = parent.getAttribute('data-post-count') || null;
     const postsShown = 10;
     let loading = false;
     let endReached = false;
@@ -50,11 +52,14 @@ import { hasElement, throttle, decodeHTMLEntities } from './../helpers/general.j
     }
 
     function getEndpoint() {
-      return `${bp_object.home_url}/wp-json/blog-posts/all-posts`;
+      return `${bp_object.home_url}/wp-json/blog-posts/all-posts?category=${pageCategory}`;
     }
 
     function createPostCategories(el, categories) {
       const categoriesContainer = el.querySelector('.entry-meta__categories');
+
+      if ( !categoriesContainer ) return;
+
       const categoryBadge = categoriesContainer.querySelector('li');
       categoriesContainer.innerHTML = '';
 
@@ -111,8 +116,10 @@ import { hasElement, throttle, decodeHTMLEntities } from './../helpers/general.j
 
     function onScroll() {
       const targetEl = parent.getBoundingClientRect();
-
-      if ( targetEl.bottom <= window.innerHeight ) {
+      const isScrolledBottom = targetEl.bottom <= window.innerHeight;
+      const hasEnoughPosts = parseInt(postCount) > postsShown;
+      
+      if ( isScrolledBottom  && hasEnoughPosts ) {
         if ( !loading && !endReached) fetchPosts();
       }
     }
