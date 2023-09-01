@@ -11,3 +11,4 @@ import './pages/project.js'
 
 // Components
 import './components/navbar.js'
+import './components/infinite-load.js'

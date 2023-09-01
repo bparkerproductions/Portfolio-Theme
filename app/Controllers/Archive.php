@@ -40,4 +40,10 @@ class Archive extends Controller {
       'category' => $category
     ]);
   }
+
+  public static function getPosts($amount) {
+    return get_posts([
+      'numberposts' => $amount
+    ]);
+  }
 }

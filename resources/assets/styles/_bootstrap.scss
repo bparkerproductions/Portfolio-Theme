@@ -20,7 +20,10 @@ $gray-500: rgba($gray-800, 0.7);
 $gray-400: rgba($gray-800, 0.5);
 $gray-300: rgba($gray-800, 0.4);
 $gray-200: rgba($gray-800, 0.25);
-$gray-100: rgba($gray-800, 0.05);
+$gray-100: rgba($gray-800, 0.1);
+
+// Color vars
+$body-bg: $gray-200;
 
 /* Breakpoints */
 $xs: 400px;
