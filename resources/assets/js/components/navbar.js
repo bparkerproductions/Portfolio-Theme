@@ -1,9 +1,9 @@
 import scroll from './../helpers/scroll.js'
-import Helpers from './../helpers/general.js'
+import { hasElement } from './../helpers/general.js'
 
 (function() {
   window.addEventListener('DOMContentLoaded', () => {
-    if ( !Helpers.hasElement('.primary-navigation') ) return
+    if ( !hasElement('.primary-navigation') ) return
 
     const primaryNavigation = document.querySelector('.primary-navigation')
 

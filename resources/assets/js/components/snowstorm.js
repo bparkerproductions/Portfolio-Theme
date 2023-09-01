@@ -1,8 +1,8 @@
-import Helpers from './../helpers/general.js'
+import { hasElement } from './../helpers/general.js'
 
 (function() {
   window.addEventListener('DOMContentLoaded', () => {
-    if ( !Helpers.hasElement('#snowstorm') ) return
+    if ( !hasElement('#snowstorm') ) return
 
     document.getElementById('snowstorm');
     requestFrame();

@@ -3,7 +3,7 @@
   @if (!$hide_date)
     <time
       datetime="{{ get_post_time('c', true, $postID) }}"
-      class="fs-sm bg-secondary rounded-0 text-white py-1 px-3"
+      class="fs-sm bg-secondary rounded-0 text-white py-1 px-3 entry-meta__time"
     >
       {{ get_the_date('', $postID) }}
     </time>
@@ -14,7 +14,7 @@
       <i class="fas fa-folder-open me-2 text-primary"></i>
     @endif
 
-    <ul class="list-unstyled d-flex flex-wrap m-0">
+    <ul class="list-unstyled d-flex flex-wrap m-0 entry-meta__categories">
       @foreach(wp_get_post_categories($postID) as $cat)
         <li class="badge bg-primary me-2">
           <a href="{{get_category_link($cat)}}" class="text-white">

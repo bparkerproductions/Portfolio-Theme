@@ -1,8 +1,8 @@
-import Helpers from './../helpers/general';
+import { hasElement } from './../helpers/general';
 
 (function() {
   window.addEventListener('DOMContentLoaded', () => {
-    if ( !Helpers.hasElement('.project-container') ) return
+    if ( !hasElement('.project-container') ) return
 
     function setProjectBgColor() {
       document.querySelectorAll('.project').forEach( elem => {

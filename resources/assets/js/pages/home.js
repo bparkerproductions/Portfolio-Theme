@@ -1,8 +1,8 @@
-import Helpers from './../helpers/general';
+import { hasElement } from './../helpers/general';
 
 (function() {
   window.addEventListener('DOMContentLoaded', () => {
-    if ( !Helpers.hasElement('.front-page') ) return;
+    if ( !hasElement('.front-page') ) return;
 
   });
 })()
