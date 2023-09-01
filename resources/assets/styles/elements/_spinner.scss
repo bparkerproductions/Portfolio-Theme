@@ -1,0 +1,15 @@
+/* Spinner for infinite load posts */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner.infinite-load {
+  display: flex;
+  justify-content: center;
+
+  svg {
+    color: rgba($dark, 0.75);
+    animation: spin 1s linear infinite;
+  }
+}
