@@ -19,7 +19,7 @@
     @endif
 
       <section class="container">
-        <h1 class="text-white">{!! get_field('home_hero_title') !!}</h1>
+        <h1 class="text-white mb-3">{!! get_field('home_hero_title') !!}</h1>
 
         <div class="row">
           @foreach(get_field('hero_blurbs') as $card)
