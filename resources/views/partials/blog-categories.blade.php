@@ -1,7 +1,7 @@
 <section class="pt-4 pb-5 container blog-categories">
     <div class="d-flex flex-wrap">
       <a
-        class="{{!single_cat_title('', false) ? 'selected' : ''}}
+        class="{{!single_cat_title('', false) ? 'all-categories-selected' : ''}}
         blog-categories__category text-primary fs-sm me-4 fs-6 my-2"
         title="Go to the main blog page"
         href="{{$blog_link}}"
@@ -13,7 +13,7 @@
           <a
             href="{{get_category_link($cat->cat_ID)}}"
             title="Go to the {{$cat->name}} category page"
-            class="{{Archive::isSelected($cat)}} blog-category__category me-2
+            class="{{Archive::isSelected($cat)}} blog-categories__category me-2
              badge bg-secondary px-3 text-white rounded-5 d-flex align-items-center my-2 py-2"
           >
             {{$cat->name}} <span class="blog-categories__count ms-2 fs-xs">

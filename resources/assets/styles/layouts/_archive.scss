@@ -6,3 +6,18 @@
     @extend .mt-5;
   }
 }
+
+/* Archive content */
+.blog-categories {
+  &__category {
+    &.selected {
+      @extend .bg-primary;
+      font-weight: bold;
+      pointer-events: none;
+    }
+
+    &.all-categories-selected {
+      font-weight: bold;
+    }
+  }
+}
