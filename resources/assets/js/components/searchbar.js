@@ -1,4 +1,4 @@
-import { hasElement } from './../helpers/general.js'
+import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
 
 (function() {
   window.addEventListener('DOMContentLoaded', () => {
@@ -10,28 +10,50 @@ import { hasElement } from './../helpers/general.js'
 
     // DOM elements
     const $input = document.querySelector('.search-bar__input');
-    const $list = document.querySelector('.search-bar__results');
+    const $results = document.querySelector('.search-bar__results');
+    const $list = document.querySelector('.search-bar__list');
     const $loader = document.querySelector('.search-bar__loader');
     const $closeIcon = document.querySelector('.search-bar__close-icon');
     const $overlay = document.querySelector('.overlay');
+    const $listItem = $list.querySelector('li').cloneNode(true);
 
     // Show results element
     function toggleOn() {
-      $list.classList.remove('d-none');
+      $results.classList.remove('d-none');
       $closeIcon.classList.remove('d-none');
-      $loader.classList.remove('d-none');
 
       if ( $overlay ) $overlay.classList.remove('d-none');
+      toggleLoader();
+
+      document.addEventListener( 'scroll', closeOnScroll );
     }
 
     // Hide results element
     function toggleOff() {
-      $list.classList.add('d-none');
+      $results.classList.add('d-none');
       $closeIcon.classList.add('d-none');
 
       $input.value = '';
 
       if ( $overlay ) $overlay.classList.add('d-none');
+    }
+
+    function toggleLoader(on=true) {
+      if ( on ) $loader.classList.remove('d-none');
+
+      // remove loader
+      else $loader.classList.add('d-none');
+    }
+
+    function clearResults() {
+      document.querySelectorAll('.search-bar__list li').forEach( elem => {
+        elem.remove();
+      })
+    }
+
+    function closeOnScroll() {
+      toggleOff();
+      document.removeEventListener( 'scroll', closeOnScroll );
     }
 
     // REST API endpoint
@@ -46,7 +68,27 @@ import { hasElement } from './../helpers/general.js'
       fetch( getEndpoint(query) )
       .then( response => response.json() )
       .then ( data => {
-        console.log(data);
+        toggleLoader(false);
+        clearResults();
+        // document.querySelector('.search-bar__no-results').remove();
+
+        if (data.length) {
+          
+          data.forEach( elem => {
+            //elem.link
+            //elem.title.rendered
+            const newListItem = $listItem.cloneNode(true);
+            newListItem.querySelector('.search-bar__result-title').innerText = decodeHTMLEntities(elem.title.rendered);
+            newListItem.querySelector('a').setAttribute('href', elem.link);
+            $list.append(newListItem);
+          })
+        }
+        else {
+          const noResults = document.createElement('li');
+          noResults.innerText = "No results found.";
+          // noResults.classList.add('search-bar__no-results')
+          $list.append(noResults);
+        }
       })
     }
 
@@ -54,12 +96,15 @@ import { hasElement } from './../helpers/general.js'
       if ( e.key === "Escape" ) {
         toggleOff();
       }
-      else if ( e.target.value ) {
-        toggleOn();
-        queryData(e.target.value);
-      }
       else {
-        return;
+        clearTimeout(typingTimer);
+
+        if (e.target.value) {
+          typingTimer = setTimeout(() => {
+            toggleOn()
+            queryData(e.target.value)
+          }, doneTypingInterval); // Only call queryData after the user is "done" typing based on what doneTypingInterval is set to
+        }
       }
     }
 
@@ -67,9 +112,9 @@ import { hasElement } from './../helpers/general.js'
     $input.addEventListener( 'keyup', getResults );
     $input.addEventListener( 'click', e => e.stopPropagation() );
     $closeIcon.addEventListener( 'click', toggleOff );
+    
 
     // Close results on outside click
     document.querySelector('body').addEventListener( 'click', toggleOff );
-
   })
 })()

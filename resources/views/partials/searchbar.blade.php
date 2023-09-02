@@ -19,8 +19,10 @@
 
       <ul class="search-bar__list list-unstyled card mb-0 shadow">
         <li>
-          <i class="fas fa-file-alt me-3"></i>
-          <span class="search-bar__result-title"></span>
+          <a href="#">
+            <i class="fas fa-file-alt me-3"></i>
+            <span class="search-bar__result-title"></span>
+          </a>
         </li>
       </ul>
     </div>
