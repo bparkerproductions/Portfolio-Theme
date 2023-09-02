@@ -1,5 +1,5 @@
 // Stretches it out a bit vertically on hover
-.animation-hover-link {
+.animation--hover-link {
   transition: all 0.3s cubic-bezier(0.81, 1.46, 1, 1);
 
   &:hover {
@@ -8,7 +8,7 @@
 }
 
 // Tilts the image to the top slightly on hover
-img.external-link {
+.animation--external-link {
   z-index: 1;
   position: inherit;
   transition: all 0.25s cubic-bezier(0.39, 0.58, 0.57, 1);

@@ -19,13 +19,13 @@ import { hasElement, throttle, decodeHTMLEntities } from './../helpers/general.j
       loading = true;
 
       const spinnerContainer = document.createElement('div');
-      spinnerContainer.classList.add('spinner', 'infinite-load');
+      spinnerContainer.classList.add('spinner', 'spinner--infinite-load', 'd-flex', 'justify-content-center');
 
       const spinner = document.createElement('i');
       spinner.classList.add('fas', 'fa-circle-notch', 'fa-4x');
       spinnerContainer.append(spinner);
 
-      const spinnerEl = document.querySelector('.spinner.infinite-load');
+      const spinnerEl = document.querySelector('.spinner--infinite-load');
 
       if ( !spinnerEl ) {
         parent.append(spinnerContainer);
@@ -35,7 +35,7 @@ import { hasElement, throttle, decodeHTMLEntities } from './../helpers/general.j
     function destroySpinner() {
       loading = false;
       
-      const spinner = document.querySelector('.spinner.infinite-load');
+      const spinner = document.querySelector('.spinner--infinite-load');
 
       if ( spinner ) spinner.remove();
     }

@@ -2,26 +2,18 @@
   <input
     type="text"
     placeholder="Search Content..."
-    class="input-style input-lg w-100">
+    class="search-bar__input input-style input-lg w-100">
   </input>
 
-  <div class="search-bar__results">
+  <div class="search-bar__results d-none position-relative">
+    <div class="search-bar__loader absolute-fill flex-center">
+      <i class="search-bar__loader__icon fas fa-circle text-primary spinner spinner--grow"></i>
+    </div>
+
     <ul class="search-bar__list list-unstyled card">
       <li>
         <i class="fas fa-file-alt me-3"></i>
-        A Common Guide to Algorithms
-      </li>
-      <li>
-        <i class="fas fa-file-alt me-3"></i>
-        A Common Guide to Algorithms
-      </li>
-      <li>
-        <i class="fas fa-file-alt me-3"></i>
-        A Common Guide to Algorithms
-      </li>
-      <li>
-        <i class="fas fa-file-alt me-3"></i>
-        A Common Guide to Algorithms
+        <span class="search-bar__result-title"></span>
       </li>
     </ul>
   </div>

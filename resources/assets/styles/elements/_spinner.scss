@@ -1,15 +1,31 @@
 /* Spinner for infinite load posts */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { 
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.spinner.infinite-load {
-  display: flex;
-  justify-content: center;
+@keyframes spinner-grow {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+}
 
-  svg {
+.spinner {
+  &--infinite-load {
     color: rgba($dark, 0.75);
     animation: spin 1s linear infinite;
+  }
+
+  &--grow {
+    animation: 1.25s linear infinite spinner-grow;
   }
 }

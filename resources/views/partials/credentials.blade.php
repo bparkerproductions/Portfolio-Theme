@@ -1,7 +1,7 @@
 <ul class="list-unstyled row">
   @foreach( get_field('credentials', 'option') as $credential )
     <li class="col-12 col-lg-6 my-2 d-flex align-items-center credential position-relative">
-      <div class="d-flex flex-column bg-gray-400 p-3 w-100 h-100 animation-hover-link border">
+      <div class="d-flex flex-column bg-gray-400 p-3 w-100 h-100 animation--hover-link border">
         <h6 class="d-block d-sm-none">{{$credential['title']}}</h6>
 
         <div class="d-flex">

@@ -4,6 +4,18 @@
     position: absolute;
     z-index: 3;
     width: 100%;
+    transition: all 0.2s ease;
+  }
+
+  &__loader {
+    z-index: 5;
+    background-color: rgba($light, 0.75);
+    pointer-events: none;
+    @extend .rounded;
+
+    &__icon {
+      
+    }
   }
 
   &__list li {
