@@ -8,6 +8,7 @@
         'class' => $navbarClass ?? ''
       ])
       <main class="main">
+        <div class="overlay absolute-fill d-none"></div>
         @yield('content')
       </main>
       @if (App\display_sidebar())

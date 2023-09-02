@@ -1,4 +1,9 @@
 .search-bar {
+
+  &__input-container {
+    z-index: 3;
+  }
+  
   &__results {
     @extend .mt-2;
     position: absolute;
@@ -12,9 +17,18 @@
     background-color: rgba($light, 0.75);
     pointer-events: none;
     @extend .rounded;
+  }
 
-    &__icon {
-      
+  &__close-icon {
+    position: absolute;
+    right: 2rem;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+
+    svg {
+      cursor: pointer;
     }
   }
 
