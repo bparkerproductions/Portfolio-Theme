@@ -15,15 +15,11 @@ import { hasElement } from './../helpers/general.js'
     const $closeIcon = document.querySelector('.search-bar__close-icon');
     const $overlay = document.querySelector('.overlay');
 
-    // For the spinner element
-    function startLoader() {
-      $loader.classList.remove('d-none');
-    }
-
     // Show results element
     function toggleOn() {
       $list.classList.remove('d-none');
       $closeIcon.classList.remove('d-none');
+      $loader.classList.remove('d-none');
 
       if ( $overlay ) $overlay.classList.remove('d-none');
     }
@@ -38,13 +34,29 @@ import { hasElement } from './../helpers/general.js'
       if ( $overlay ) $overlay.classList.add('d-none');
     }
 
+    // REST API endpoint
+    function getEndpoint(query) {
+      const args = '?per_page=15&order=asc&orderby=relevance';
+      const searchQuery = `${bp_object.home_url}/wp-json/wp/v2/posts${args}&search=${query}`;
+
+      return searchQuery;
+    }
+
+    function queryData(query) {
+      fetch( getEndpoint(query) )
+      .then( response => response.json() )
+      .then ( data => {
+        console.log(data);
+      })
+    }
+
     function getResults(e) {
       if ( e.key === "Escape" ) {
         toggleOff();
       }
       else if ( e.target.value ) {
         toggleOn();
-        startLoader();
+        queryData(e.target.value);
       }
       else {
         return;
