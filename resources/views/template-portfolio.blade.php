@@ -7,7 +7,7 @@
 @section('content')
 
 {{-- Hero and About Me --}}
-  <section class="hero home-hero position-relative">
+  <section class="hero home-hero pt-7 pb-5 position-relative">
     <canvas id="snowstorm"></canvas>
 
     @if (get_field('hero_background_image'))
@@ -110,6 +110,11 @@
       @include('partials.blog-grid', [
         'header' => 'Featured',
         'blog_list' => Archive::getFeaturedPosts(3)
+      ])
+
+      @include('partials.searchbar', [
+        'scrollLock' => false,
+        'placeholder' => 'Find blog posts..'
       ])
 
       <a

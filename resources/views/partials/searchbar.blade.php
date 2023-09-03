@@ -1,8 +1,8 @@
-<div class="search-bar col-12 col-lg-6 mb-4">
+<div class="search-bar col-12 col-lg-6 mb-4 {{$classes ?? ''}}" data-scroll-lock={{$scrollLock}}>
   <div class="search-bar__input-container position-relative">
     <input
       type="text"
-      placeholder="Search Content..."
+      placeholder="{{$placeholder ?? 'Search Content...'}}"
       class="search-bar__input input-style input-lg w-100">
     </input>
 

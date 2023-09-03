@@ -56,6 +56,10 @@ import { hasElement, decodeHTMLEntities, scrollLock, scrollUnlock } from './../h
     }
 
     function toggleOverlay(on=true) {
+      const isLockingOn = $searchbar.getAttribute('data-scroll-lock');
+
+      if ( !isLockingOn ) return;
+
       if ( $overlay ) {
         if ( on ) {
           $overlay.classList.remove('d-none');

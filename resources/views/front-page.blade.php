@@ -17,7 +17,7 @@
     <div class="container">
         <h1 class="mb-3 text-white">{!! get_field('home_hero_header') !!}</h1>
 
-        @include('partials.searchbar')
+        @include('partials.searchbar', [ 'scrollLock' => true ])
 
         <section class="mt-6 col-12 col-lg-10">
           @php the_content() @endphp
