@@ -1,4 +1,4 @@
-import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
+import { hasElement, decodeHTMLEntities, scrollLock, scrollUnlock } from './../helpers/general.js'
 
 (function() {
   window.addEventListener('DOMContentLoaded', () => {
@@ -20,11 +20,11 @@ import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
 
     // If on desktop. make sure the list scrolls and takes up the remaining height under the input
     function calculateListHeight() {
-      const gap = 34;
+      const gap = 15;
       const bottomScroll = window.scrollY + window.innerHeight;
       const listPos = $searchbar.getBoundingClientRect().bottom;
 
-      $list.style.maxHeight = ((bottomScroll - listPos) - gap) + 'px';
+      $results.style.maxHeight = ((bottomScroll - listPos) - gap) + 'px';
     }
 
     // Show results element
@@ -32,12 +32,10 @@ import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
       $results.classList.remove('d-none');
       $closeIcon.classList.remove('d-none');
 
-      if ( $overlay ) $overlay.classList.remove('d-none');
+      toggleOverlay();
       toggleLoader();
 
-      document.addEventListener( 'scroll', closeOnScroll );
-
-      // calculateListHeight();
+      calculateListHeight();
     }
 
     // Hide results element
@@ -47,7 +45,7 @@ import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
 
       $input.value = '';
 
-      if ( $overlay ) $overlay.classList.add('d-none');
+      toggleOverlay(false);
     }
 
     function toggleLoader(on=true) {
@@ -57,15 +55,24 @@ import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
       else $loader.classList.add('d-none');
     }
 
+    function toggleOverlay(on=true) {
+      if ( $overlay ) {
+        if ( on ) {
+          $overlay.classList.remove('d-none');
+          scrollLock();
+        }
+        else {
+          $overlay.classList.add('d-none');
+          scrollUnlock();
+        }
+      }
+    }
+
+    // Clear the search result's list
     function clearResults() {
       document.querySelectorAll('.search-bar__list li').forEach( elem => {
         elem.remove();
       })
-    }
-
-    function closeOnScroll() {
-      toggleOff();
-      document.removeEventListener( 'scroll', closeOnScroll );
     }
 
     // REST API endpoint

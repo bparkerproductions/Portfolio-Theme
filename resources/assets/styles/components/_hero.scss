@@ -1,12 +1,6 @@
 .hero {
   background: $info;
   background: linear-gradient(90deg, $info 35%, $primary 100%);
-  padding-top: 10em;
-  padding-bottom: 5em;
-
-  @include media-breakpoint-down(xl) {
-    padding-top: 7.5rem;
-  }
 
   .bg-circle--top-right {
     border-color: rgba($white, 0.05);

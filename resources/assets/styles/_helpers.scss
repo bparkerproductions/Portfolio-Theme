@@ -45,3 +45,22 @@
 .fs-xs {
   font-size: $font-size-xs;
 }
+
+/* Helpers that can be applied to gutenberg editor */
+
+// Used on a column to make buttons sit next to each other on desktop and stack with full width on mobile
+.flex-buttons {
+  .btn:first-child {
+    @extend .me-0;
+    @extend .me-md-3;
+    @extend .mb-3;
+    @extend .mb-md-0;
+  }
+
+  .btn {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+

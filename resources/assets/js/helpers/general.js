@@ -3,7 +3,6 @@ export function hasElement(selector) {
   return document.querySelector(selector)
 }
 
-  
 export function throttle(fn, delay) { 
   let time = Date.now(); 
 
@@ -27,4 +26,20 @@ export function isBelow(breakpoint) {
   const breakpoints = { "sm": 576, "md": 768, "lg": 992, "xl": 1200 };
 
   return window.innerWidth < breakpoints[breakpoint];
+}
+
+export function scrollLock() {
+  const topPosition = document.body.scrollTop;
+
+  document.body.style.position= 'fixed';
+  document.body.style.top = -topPosition;
+  document.body.style.width = '100%';
+}
+
+export function scrollUnlock() {
+  const topPosition = -parseInt( window.getComputedStyle(document.querySelector('body')).top );
+
+  document.body.style.position = 'inherit';
+  window.scrollTo(0, topPosition);
+  document.body.style.width = 'inherit';
 }

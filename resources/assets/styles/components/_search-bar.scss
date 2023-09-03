@@ -11,6 +11,21 @@
     z-index: 3;
     width: 100%;
     transition: all 0.2s ease;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $gray-500;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $primary;
+      border-radius: 10px;
+    }
   }
 
   &__loader {
@@ -34,8 +49,6 @@
   }
 
   &__list {
-    overflow-y: scroll;
-
     li {
       transition: all 0.1s ease;
       cursor: pointer;
@@ -43,7 +56,6 @@
       align-items: center;
       @extend .px-4;
       @extend .py-3;
-      @extend .rounded;
   
       &:first-child {
         @extend .pt-4;
