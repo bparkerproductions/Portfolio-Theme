@@ -6,6 +6,7 @@
   
   &__results {
     @extend .mt-2;
+    // @extend .rounded;
     position: absolute;
     z-index: 3;
     width: 100%;
@@ -32,28 +33,39 @@
     }
   }
 
-  &__list li {
-    transition: all 0.1s ease;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    @extend .px-4;
-    @extend .py-2;
+  &__list {
+    overflow-y: scroll;
 
-    &:first-child {
-      @extend .pt-3;
+    li {
+      transition: all 0.1s ease;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      @extend .px-4;
+      @extend .py-3;
+      @extend .rounded;
+  
+      &:first-child {
+        @extend .pt-4;
+      }
+  
+      &:last-child {
+        @extend .pb-4;
+      }
+  
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray-400;
+      }
+  
+      &:hover {
+        background-color: $gray-400;
+      }
     }
 
-    &:last-child {
-      @extend .pb-3;
-    }
-
-    &:not(:last-child) {
-      border-bottom: 1px solid $gray-400;
-    }
-
-    &:hover {
-      background-color: $gray-400;
+    &__icon {
+      color: $dark;
+      font-size: 1.5rem;
+      @extend .mt-1;
     }
   }
 }

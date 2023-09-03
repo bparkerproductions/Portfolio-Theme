@@ -22,3 +22,9 @@ export function decodeHTMLEntities(text) {
   const decodedString = parser.parseFromString(text, 'text/html').body.textContent;
   return decodedString;
 }
+
+export function isBelow(breakpoint) {
+  const breakpoints = { "sm": 576, "md": 768, "lg": 992, "xl": 1200 };
+
+  return window.innerWidth < breakpoints[breakpoint];
+}

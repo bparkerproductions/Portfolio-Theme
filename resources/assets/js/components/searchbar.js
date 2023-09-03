@@ -9,6 +9,7 @@ import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
     const doneTypingInterval = 750;
 
     // DOM elements
+    const $searchbar = document.querySelector('.search-bar');
     const $input = document.querySelector('.search-bar__input');
     const $results = document.querySelector('.search-bar__results');
     const $list = document.querySelector('.search-bar__list');
@@ -16,6 +17,15 @@ import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
     const $closeIcon = document.querySelector('.search-bar__close-icon');
     const $overlay = document.querySelector('.overlay');
     const $listItem = $list.querySelector('li').cloneNode(true);
+
+    // If on desktop. make sure the list scrolls and takes up the remaining height under the input
+    function calculateListHeight() {
+      const gap = 34;
+      const bottomScroll = window.scrollY + window.innerHeight;
+      const listPos = $searchbar.getBoundingClientRect().bottom;
+
+      $list.style.maxHeight = ((bottomScroll - listPos) - gap) + 'px';
+    }
 
     // Show results element
     function toggleOn() {
@@ -26,6 +36,8 @@ import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
       toggleLoader();
 
       document.addEventListener( 'scroll', closeOnScroll );
+
+      // calculateListHeight();
     }
 
     // Hide results element
@@ -58,7 +70,7 @@ import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
 
     // REST API endpoint
     function getEndpoint(query) {
-      const args = '?per_page=15&order=asc&orderby=relevance';
+      const args = '?per_page=5&order=asc&orderby=relevance';
       const searchQuery = `${bp_object.home_url}/wp-json/wp/v2/posts${args}&search=${query}`;
 
       return searchQuery;
@@ -70,13 +82,10 @@ import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
       .then ( data => {
         toggleLoader(false);
         clearResults();
-        // document.querySelector('.search-bar__no-results').remove();
 
         if (data.length) {
           
           data.forEach( elem => {
-            //elem.link
-            //elem.title.rendered
             const newListItem = $listItem.cloneNode(true);
             newListItem.querySelector('.search-bar__result-title').innerText = decodeHTMLEntities(elem.title.rendered);
             newListItem.querySelector('a').setAttribute('href', elem.link);
@@ -86,7 +95,6 @@ import { hasElement, decodeHTMLEntities } from './../helpers/general.js'
         else {
           const noResults = document.createElement('li');
           noResults.innerText = "No results found.";
-          // noResults.classList.add('search-bar__no-results')
           $list.append(noResults);
         }
       })
