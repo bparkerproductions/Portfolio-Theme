@@ -1,6 +1,11 @@
 <footer class="footer column-center mt-5 pb-3 pt-5 position-relative overflow-hidden">
 
-    <div class="bg-circle" bgc-properties="bottom-left, large"></div>
+    <div class="bg-circle" bgc-top="200px" bgc-properties="bottom-left, large"></div>
+    <div 
+      class="bg-circle"
+      bgc-properties="top-right, secondary"
+      bgc-opacity="0.6" bgc-top="-43px" bgc-right="-70px">
+    </div>
 
     {{-- Footer Top --}}
     <div class="py-0 py-xl-5 mb-5 w-100 d-flex justify-content-center flex-column flex-xl-row">

@@ -26,7 +26,6 @@
   }
 
   // Size
-
   &--large {
     height: 600px;
     width: 600px;
@@ -40,6 +39,10 @@
   // Fills
   &--fill-white {
     background-color: $white;
+  }
+
+  &--fill-secondary {
+    background-color: $secondary;
   }
 
   // Opacity
