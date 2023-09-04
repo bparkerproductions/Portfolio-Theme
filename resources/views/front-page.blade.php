@@ -9,9 +9,8 @@
   {{-- Intro Hero Section --}}
   <section class="hero position-relative pt-7 pb-6">
     <div class="absolute-fill overflow-hidden pe-none">
-      <div class="bg-circle bg-circle--bottom-left bg-circle--large"></div>
-      <div class="bg-circle bg-circle--white bg-circle--thick
-      bg-circle--top-right bg-circle--large bg-circle--opacity-low bg-circle--fill-white"></div>
+      <div class="bg-circle" bgc-properties="bottom-left, large"></div>
+      <div class="bg-circle" bgc-opacity="0.05" bgc-properties="top-right, large, fill-white"></div>
     </div>
 
     <div class="container">
@@ -28,8 +27,9 @@
 
   {{-- Explore post categories --}}
   <div class="py-5 bg-gray-100 position-relative overflow-hidden">
-    <div class="bg-circle bg-circle--top-left"></div>
-    <div class="bg-circle bg-circle--large"></div>
+    <div class="bg-circle" bgc-properties="top-left" bgc-opacity="0.5"></div>
+    <div class="bg-circle" bgc-properties="large" bgc-opacity="0.5"></div>
+
     <div class="container">
       <h1 class="text-primary fw-bold mb-4 mt-5">Explore.</h1>
 

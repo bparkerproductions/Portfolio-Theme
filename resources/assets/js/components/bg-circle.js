@@ -1,8 +1,10 @@
 import { hasElement } from './../helpers/general.js'
 
 (function() {
-  window.addEventListener('DOMContentLoaded', () => {
-    if ( !hasElement('.bg-circle') ) return;
+  // window.addEventListener('DOMContentLoaded', () => {
+    // document.onreadystatechange = function(e) {
+      // if ( document.readyState === 'complete' ) {
+        if ( !hasElement('.bg-circle') ) return;
 
     function addDynamicClasses(elem) {
       const properties = elem.getAttribute('bgc-properties')
@@ -41,6 +43,12 @@ import { hasElement } from './../helpers/general.js'
       if ( circleElem.hasAttribute('bgc-opacity') ) {
         circleElem.style.opacity = circleElem.getAttribute('bgc-opacity');
       }
+      else {
+        circleElem.style.opacity = 1;
+      }
     })
-  })
+      // }
+    // }
+    
+  // })
 })()

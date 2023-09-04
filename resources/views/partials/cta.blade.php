@@ -1,6 +1,5 @@
 <div class="overflow-hidden">
-  <div class="bg-circle bg-circle--large bg-circle--white
-  bg-circle--bottom-left bg-circle--opacity-low bg-circle--fill-white"></div>
+  <div class="bg-circle" bgc-properties="large, bottom-left, fill-white" bgc-opacity="0.08"></div>
 
   <h2 class="text-white">{{get_field('cta_header', 'option')}}</h2>
 

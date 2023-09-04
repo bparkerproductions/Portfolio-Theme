@@ -5,6 +5,8 @@
   width: 300px;
   border: 8px solid rgba($primary, 0.05);
   pointer-events: none;
+  opacity: 0;
+  transition: all 2s ease;
 
   // Color
   &--secondary {
@@ -16,7 +18,6 @@
   }
 
   // Thickness
-
   &--thick {
     border-width: 12px;
   }
