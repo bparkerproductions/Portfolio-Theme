@@ -1,6 +1,6 @@
 <footer class="footer column-center mt-5 pb-3 pt-5 position-relative overflow-hidden">
 
-    <div class="bg-circle" bgc-top="200px" bgc-properties="bottom-left, large"></div>
+    <div class="bg-circle" bgc-top="200px" bgc-properties="bottom-left, large, primary"></div>
     <div 
       class="bg-circle"
       bgc-properties="top-right, secondary"

@@ -1,10 +1,7 @@
 import { hasElement } from './../helpers/general.js'
 
 (function() {
-  // window.addEventListener('DOMContentLoaded', () => {
-    // document.onreadystatechange = function(e) {
-      // if ( document.readyState === 'complete' ) {
-        if ( !hasElement('.bg-circle') ) return;
+    if ( !hasElement('.bg-circle') ) return;
 
     function addDynamicClasses(elem) {
       const properties = elem.getAttribute('bgc-properties')
@@ -46,9 +43,7 @@ import { hasElement } from './../helpers/general.js'
       else {
         circleElem.style.opacity = 1;
       }
+
+      console.log(circleElem)
     })
-      // }
-    // }
-    
-  // })
 })()

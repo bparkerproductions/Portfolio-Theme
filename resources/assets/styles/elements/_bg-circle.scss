@@ -1,14 +1,18 @@
 .bg-circle {
   position: absolute;
-  border-radius: 50%;
+  border-radius: 100%;
   height: 300px;
   width: 300px;
-  border: 8px solid rgba($primary, 0.05);
+  border: 8px solid transparent;
   pointer-events: none;
   opacity: 0;
-  transition: all 2s ease;
+  transition: opacity 1s ease;
 
   // Color
+  &--primary {
+    border-color: rgba($primary, 0.05);
+  }
+
   &--secondary {
     border-color: rgba($secondary, 0.05);
   }
@@ -44,23 +48,6 @@
 
   &--fill-secondary {
     background-color: $secondary;
-  }
-
-  // Opacity
-  &--opacity-low {
-    opacity: 0.10;
-  }
-
-  &--opacity-quarter {
-    opacity: 0.25;
-  }
-
-  &--opacity-half {
-    opacity: 0.5;
-  }
-
-  &--opacity-three-fourths {
-    opacity: 0.75;
   }
 
   // Position
