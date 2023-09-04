@@ -1,5 +1,6 @@
-<footer class="footer column-center mt-5 overflow-hidden position-relative">
-    <div class="bg-circle bg-circle--white bg-circle--bottom-left bg-circle--large"></div>
+<footer class="footer column-center mt-5 pb-3 pt-5 position-relative overflow-hidden">
+
+    <div class="bg-circle" bgc-properties="bottom-left, large"></div>
 
     {{-- Footer Top --}}
     <div class="py-0 py-xl-5 mb-5 w-100 d-flex justify-content-center flex-column flex-xl-row">
