@@ -87,6 +87,23 @@ import { hasElement, decodeHTMLEntities, scrollLock, scrollUnlock } from './../h
       return searchQuery;
     }
 
+    function appendListItems(data, query) {
+      data.forEach( elem => {
+        const newListItem = $listItem.cloneNode(true);
+        const title = newListItem.querySelector('.search-bar__result-title');
+        const decodedTitle = decodeHTMLEntities(elem.title.rendered);
+
+        const regex = new RegExp(query, 'gi');
+
+        title.innerHTML = decodedTitle.replace(regex, match => {
+          return `<strong>${match}</strong>`;
+        })
+
+        newListItem.querySelector('a').setAttribute('href', elem.link);
+        $list.append(newListItem);
+      })
+    }
+
     function queryData(query) {
       fetch( getEndpoint(query) )
       .then( response => response.json() )
@@ -94,15 +111,7 @@ import { hasElement, decodeHTMLEntities, scrollLock, scrollUnlock } from './../h
         toggleLoader(false);
         clearResults();
 
-        if (data.length) {
-          
-          data.forEach( elem => {
-            const newListItem = $listItem.cloneNode(true);
-            newListItem.querySelector('.search-bar__result-title').innerText = decodeHTMLEntities(elem.title.rendered);
-            newListItem.querySelector('a').setAttribute('href', elem.link);
-            $list.append(newListItem);
-          })
-        }
+        if (data.length) appendListItems(data, query)
         else {
           const noResults = document.createElement('li');
           noResults.innerText = "No results found.";
@@ -131,7 +140,6 @@ import { hasElement, decodeHTMLEntities, scrollLock, scrollUnlock } from './../h
     $input.addEventListener( 'keyup', getResults );
     $input.addEventListener( 'click', e => e.stopPropagation() );
     $closeIcon.addEventListener( 'click', toggleOff );
-    
 
     // Close results on outside click
     document.querySelector('body').addEventListener( 'click', toggleOff );
