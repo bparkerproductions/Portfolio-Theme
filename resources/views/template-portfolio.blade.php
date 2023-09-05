@@ -28,6 +28,15 @@
                 <i class="{{$card['icon']}} fa-2x text-secondary"></i>
                 <h6 class="fs-4 text-dark mt-3">{{$card['title']}}</h6>
                 <p class="fw-light">{{$card['subtitle']}}</p>
+
+                @if ($card['link'])
+                  <a
+                    href="{{$card['link']['url']}}"
+                    target="{{$card['link']['target']}}"
+                    class="btn btn-secondary px-4 py-2 btn-sm rounded-3 text-white">
+                    {{$card['link']['title']}}
+                  </a>
+                @endif
               </div>
             </div>
           @endforeach
@@ -79,7 +88,8 @@
   </section>
 
   {{-- Client Testimonials --}}
-  <section id="testimonials" class="py-5 bg-gray-400">
+  <section id="testimonials" class="py-5 bg-gray-400 position-relative overflow-hidden">
+    <div class="bg-circle" bgc-properties="white, top-right, large" bgc-opacity="0.5"></div>
     <div class="container">
       <h2 class="mb-3">Read More From More Happy Clients</h2>
 
@@ -126,7 +136,8 @@
   </section>
 
   {{-- Credentials --}}
-  <section id="credentials" class="py-5">
+  <section id="credentials" class="py-5 position-relative overflow-hidden">
+    <div class="bg-circle" bgc-properties="primary, top-left" bcg-opacity="0.7"></div>
     <div class="container">
       <h2 class="text-dark">Credentials</h2>
       @include('partials.credentials')
@@ -134,7 +145,7 @@
   </section>
 
   {{-- CTA --}}
-  <section class="cta container">
+  <section id="cta" class="cta container py-5">
     <div class="card card-body bg-dark">
       @include('partials.cta')
     </div>

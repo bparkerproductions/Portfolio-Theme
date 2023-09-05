@@ -53,11 +53,13 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "layout": "row",
+            "pagination": 0,
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "collapsed": "",
             "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_5cc61db1eb257",
@@ -121,9 +123,25 @@
                     "append": "",
                     "maxlength": "",
                     "parent_repeater": "field_5cc61d91eb256"
+                },
+                {
+                    "key": "field_64f63d218c374",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_5cc61d91eb256"
                 }
-            ],
-            "rows_per_page": 20
+            ]
         },
         {
             "key": "field_5db7a441bafd5",
@@ -225,5 +243,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693071353
+    "modified": 1693859120
 }

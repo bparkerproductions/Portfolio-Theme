@@ -99,24 +99,6 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 /*
- * Defer scripts
- */
-add_filter( 'script_loader_tag', 'bp_defer_scripts', 10, 3 );
-function bp_defer_scripts( $tag, $handle, $src ) {
-
-	// The handles of the enqueued scripts we want to defer
-	$defer_scripts = array(
-        'bp-glider-js'
-	);
-
-    if ( in_array( $handle, $defer_scripts ) ) {
-        return '<script src="' . $src . '" defer="defer" type="text/javascript"></script>' . "\n";
-    }
-
-    return $tag;
-}
-
-/*
 * remove dashicons in frontend to non-admin
 */ 
 function wpdocs_dequeue_dashicon() {
