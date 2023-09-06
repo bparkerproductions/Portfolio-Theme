@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <section class="resume py-5 py-lg-6 header-scrolled bg-gray-200">
+  <section class="resume py-5 py-lg-6 header-scrolled">
     <div class="container">
       <div class="mb-3">
         <a class="fw-normal text-dark" href="{{$resume['resume_file']['url']}}" download>
