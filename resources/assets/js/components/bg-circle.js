@@ -43,7 +43,5 @@ import { hasElement } from './../helpers/general.js'
       else {
         circleElem.style.opacity = 1;
       }
-
-      console.log(circleElem)
     })
 })()

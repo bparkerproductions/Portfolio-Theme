@@ -2,7 +2,6 @@ import lax from 'lax.js'
 
 window.onload = function () {
   lax.init()
-  console.log('init')
 
   // Add a driver that we use to control our animations
   lax.addDriver('scrollY', function () {
