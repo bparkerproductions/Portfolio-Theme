@@ -47,50 +47,8 @@ if (!class_exists('Roots\\Sage\\Container')) {
     require_once $composer;
 }
 
-/* Custom comment content callback */
-function comment_content($comment, $args, $depth) {
-    ?>
-    <li 
-      <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> 
-      id="comment-<?php comment_ID() ?>"
-    >
-        <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-        <div class="comment-meta">
-            <!-- Author -->
-            <div>
-                <?php printf( __( '<cite class="author">%s</cite>' ), get_comment_author_link() ); ?>
-                <?php edit_comment_link( __( 'Edit Comment' ), '  ', '' ); ?>
-            </div>
-
-             <!-- Date -->
-            <p class="date">Posted on <time><?php printf( 
-                    __('%1$s'), 
-                    get_comment_date(),  
-                    get_comment_time() 
-                ); ?></time></p>
-        </div>
-
-    
-        <?php comment_text(); ?>
-
-        <div class="reply"><?php 
-                comment_reply_link( 
-                    array_merge( 
-                        $args, 
-                        array( 
-                            'add_below' => 'comment', 
-                            'depth'     => $depth, 
-                            'max_depth' => $args['max_depth'] 
-                        ) 
-                    ) 
-                ); ?>
-        </div>
-    </li> 
-    <?php
-}
-
 /*
- * Options pages
+ * ACF Options pages
  */
 if( function_exists('acf_add_options_page') ) {
     acf_add_options_page([
@@ -162,7 +120,7 @@ array_map(function ($file) use ($sage_error) {
     if (!locate_template($file, true, true)) {
         $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
     }
-}, ['helpers', 'setup', 'filters']);
+}, ['helpers', 'setup', 'filters', 'comment', 'rest-api']);
 
 /**
  * Here's what's happening with these hooks:
@@ -194,52 +152,3 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
-
-/**
- * WP REST API function for loading more posts dynamically
- * It can get all posts or posts from a single category.
- * Takes the category and page param
- */
-
-function getMorePosts($request) {
-	$postsData = array();
-	$paged = $request->get_param('page');
-	$paged = (isset($paged) || !(empty($paged))) ? $paged : 1;
-
-	// Construct query
-	$args = [];
-	$args['post_type'] = 'post';
-	$args['posts_per_page'] = -1;
-
-	if ( $request->get_param( 'category' ) ) {
-		$args['cat'] = $request->get_param('category');
-	} else {
-		$args['cat'] = '';
-	}
-
-	foreach ( get_posts($args) as $post ) {
-    $id = $post->ID;
-
-    $postsData[] = (object)array(
-      'id' => $id,
-      'slug' => $post->post_name,
-	  'categories' => get_the_category($id),
-      'title' => html_entity_decode($post->post_title),
-      'featured_img_src' => get_the_post_thumbnail_url($id),
-      'url' => get_permalink($id),
-			'date' => date( 'F j, Y', strtotime( get_post($id)->post_date ) ),
-      'excerpt' => get_the_excerpt($id),
-    );
-  }
-
-	return $postsData;
-}
-
-add_action('rest_api_init', 'getCustomPostTypesApi');
-
-function getCustomPostTypesApi() {
-  register_rest_route('blog-posts', '/all-posts', array(
-    'methods' => 'GET',
-    'callback' => 'getMorePosts'
-  ));
-}
