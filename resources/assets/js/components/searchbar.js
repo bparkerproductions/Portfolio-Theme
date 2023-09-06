@@ -4,8 +4,8 @@ import { hasElement, decodeHTMLEntities, scrollLock, scrollUnlock } from './../h
   window.addEventListener('DOMContentLoaded', () => {
     if ( !hasElement('.search-bar') ) return;
 
-    let isLoading = false;
     let typingTimer;
+    let toggled = false;
     const doneTypingInterval = 750;
 
     // DOM elements
@@ -29,6 +29,8 @@ import { hasElement, decodeHTMLEntities, scrollLock, scrollUnlock } from './../h
 
     // Show results element
     function toggleOn() {
+      toggled = true;
+
       $results.classList.remove('d-none');
       $closeIcon.classList.remove('d-none');
 
@@ -40,12 +42,15 @@ import { hasElement, decodeHTMLEntities, scrollLock, scrollUnlock } from './../h
 
     // Hide results element
     function toggleOff() {
-      $results.classList.add('d-none');
-      $closeIcon.classList.add('d-none');
+      if ( toggled ) {
+        toggled = false
+        $results.classList.add('d-none');
+        $closeIcon.classList.add('d-none');
 
-      $input.value = '';
+        $input.value = '';
 
-      toggleOverlay(false);
+        toggleOverlay(false);
+      }
     }
 
     function toggleLoader(on=true) {

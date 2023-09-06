@@ -14,5 +14,3 @@ import './components/navbar.js'
 import './components/infinite-load.js'
 import './components/searchbar.js'
 import './components/bg-circle.js'
-
-console.log('test');
