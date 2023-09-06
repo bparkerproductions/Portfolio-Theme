@@ -1,5 +1,7 @@
 cd /var/www/html/wp-content/themes/Portfolio-Theme
 
+git reset --hard
+
 # Pull files
 git pull origin main
 
