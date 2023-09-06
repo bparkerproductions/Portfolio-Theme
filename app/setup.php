@@ -20,9 +20,20 @@ add_filter( 'wp_enqueue_scripts', function() {
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
+    wp_enqueue_style(
+        'sage/main.css',
+        asset_path('styles/main.css'),
+        filemtime(get_template_directory() . '/dist/styles/main.css'),
+        null
+    );
     
-    wp_enqueue_script('sage/main.js', asset_path('js/app.js'), '', null, true);
+    wp_enqueue_script(
+        'sage/main.js',
+        asset_path('js/app.js'),
+        '',
+        filemtime(get_template_directory() . '/dist/js/app.js'),
+        true
+    );
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
