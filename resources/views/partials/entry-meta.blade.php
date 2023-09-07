@@ -1,15 +1,15 @@
-<header class="entry-meta d-flex align-items-center pb-2">
+<header class="entry-meta d-flex flex-column flex-sm-row align-items-start align-items-sm-center pb-2">
 
   @if (!$hide_date)
     <time
       datetime="{{ get_post_time('c', true, $postID) }}"
-      class="fs-sm bg-secondary rounded-0 text-white py-1 px-3 entry-meta__time"
+      class="fs-sm bg-secondary rounded-0 text-white py-1 px-3 entry-meta__time mb-3 mb-sm-0"
     >
       {{ get_the_date('', $postID) }}
     </time>
   @endif
 
-  <div class="d-flex align-items-center @if(!$hide_date) ms-4 @endif">
+  <div class="d-flex align-items-center @if(!$hide_date) ms-0 ms-sm-4 @endif">
     @if (!$hide_date)
       <i class="fas fa-folder-open me-2 text-primary"></i>
     @endif

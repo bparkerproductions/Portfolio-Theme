@@ -98,6 +98,14 @@ function onInit() {
 add_action( 'init', 'onInit' );
 
 /**
+ * Change the [...] at the end of excerpts
+ */
+function custom_excerpt_more($more) {
+    return '<span>...</span>';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
+
+/**
  * Filter out the tinymce emoji plugin.
  */
 function disable_emojis_tinymce( $plugins ) {
