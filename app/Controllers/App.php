@@ -5,6 +5,8 @@ namespace App\Controllers;
 use Sober\Controller\Controller;
 
 class App extends Controller {
+  use Partials\BgCircle;
+
     public static function IsActive($page) {
       // Get slug then turn it into a title friendly String
       if ( is_home() ) {

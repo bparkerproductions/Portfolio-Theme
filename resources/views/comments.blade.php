@@ -5,6 +5,9 @@ if (post_password_required()) {
 @endphp
 
 <section id="comments" class="py-5 bg-gray-100 position-relative overflow-hidden">
+  @include('partials.bg-circle', [
+    "properties" => ["large", "thick", "primary", "top-left"],
+  ])
   <div class="bg-circle" bgc-properties="thick, large, primary, top-left"></div>
   <div class="container">
     <div class="col-12 col-xl-6">

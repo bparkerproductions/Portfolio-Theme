@@ -1,5 +1,8 @@
 <div class="overflow-hidden">
-  <div class="bg-circle" bgc-properties="large, bottom-left, fill-white" bgc-opacity="0.08"></div>
+  @include('partials.bg-circle', [
+    "properties" => ["large", "bottom-left", "fill-white"],
+    "opacity" => 0.08
+  ])
 
   <h2 class="text-white">{{get_field('cta_header', 'option')}}</h2>
 

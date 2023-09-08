@@ -6,7 +6,10 @@
 
 @section('content')
   <section class="entry-content pt-4 pt-sm-6 position-relative header-scrolled">
-    <div class="bg-circle" bgc-left="-75px" bgc-properties="large, secondary"></div>
+    @include('partials.bg-circle', [
+      "properties" => ["large", "secondary"],
+      "posLeft" => -75
+    ])
 
     @include('partials.blog-categories')
 

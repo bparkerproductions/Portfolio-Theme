@@ -89,7 +89,10 @@
 
   {{-- Client Testimonials --}}
   <section id="testimonials" class="py-5 bg-gray-400 position-relative overflow-hidden">
-    <div class="bg-circle" bgc-properties="white, top-right, large" bgc-opacity="0.5"></div>
+    @include('partials.bg-circle', [
+      "properties" => ["white", "top-right", "large"],
+      "opacity" => 0.5
+    ])
     <div class="container">
       <h2 class="mb-3">Read More From More Happy Clients</h2>
 
@@ -137,7 +140,10 @@
 
   {{-- Credentials --}}
   <section id="credentials" class="py-5 position-relative overflow-hidden">
-    <div class="bg-circle" bgc-properties="primary, top-left" bcg-opacity="0.7"></div>
+    @include('partials.bg-circle', [
+      "properties" => ["primary", "top-left"],
+      "posLeft" => 0.75
+    ])
     <div class="container">
       <h2 class="text-dark">Credentials</h2>
       @include('partials.credentials')
