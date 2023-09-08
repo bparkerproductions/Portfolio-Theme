@@ -21,7 +21,9 @@
       $color: $white,
       $hover-background: lighten($primary, 2.5%),
       $hover-border: $white,
-      $hover-color: $light
+      $hover-color: $light,
+      $active-background: $primary,
+      $active-color: $white
     );
   }
 
@@ -32,7 +34,9 @@
       $color: $white,
       $hover-background: lighten($secondary, 2.5%),
       $hover-border: $white,
-      $hover-color: $light
+      $hover-color: $light,
+      $active-background: $secondary,
+      $active-color: $white
     );
   }
 

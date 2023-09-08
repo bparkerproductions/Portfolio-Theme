@@ -1,26 +1,26 @@
-<header class="mb-3">
-  <div class="d-flex align-items-center mb-1">
-    @if($project['is_featured'])
-      <p class="badge bg-secondary mb-0 me-3 py-2 px-3 rounded-0">Featured</p>
-    @endif
-    <div class="icon-container">
-      @foreach($project['tech'] as $techID)
-        @if (get_field('fa_icon_class', $techID))
-          <i class="{{get_field('fa_icon_class', $techID)}} project__icon fa-lg me-2"></i>
-        @endif
-      @endforeach
-    </div>
-
-  </div>
-
-  @if (isset($smallHeader) && $smallHeader)
-    <h3 class="mb-0 project__title" title="{!! get_the_title($id) !!}">{!! get_the_title($id) !!}</h3>
-  @else
-    <h1 class="mb-0 project__title" title="{!! get_the_title($id) !!}">{!! get_the_title($id) !!}</h1>
-  @endif
-</header>
-
 <div class="row px-0 px-lg-3">
+  <header class="mb-3 col-12 gx-0">
+    <div class="d-flex align-items-center mb-1">
+      @if($project['is_featured'])
+        <p class="badge bg-secondary mb-0 me-3 py-2 px-3 rounded-0">Featured</p>
+      @endif
+      <div class="icon-container">
+        @foreach($project['tech'] as $techID)
+          @if (get_field('fa_icon_class', $techID))
+            <i class="{{get_field('fa_icon_class', $techID)}} project__icon fa-lg me-2"></i>
+          @endif
+        @endforeach
+      </div>
+  
+    </div>
+  
+    @if (isset($smallHeader) && $smallHeader)
+      <h3 class="mb-0 project__title" title="{!! get_the_title($id) !!}">{!! get_the_title($id) !!}</h3>
+    @else
+      <h1 class="mb-0 project__title" title="{!! get_the_title($id) !!}">{!! get_the_title($id) !!}</h1>
+    @endif
+  </header>
+
   <div class="col-12 col-lg-4 position-relative gx-0 project__preview-image">
     <div
       class="absolute-fill project__preview-image--overlay"
@@ -79,7 +79,6 @@
     </div>
     </header>
   </div>
-
 </div>
 
 @if ($project['testimonial'])

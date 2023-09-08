@@ -7,7 +7,7 @@
 @section('content')
 
   {{-- Intro Hero Section --}}
-  <section class="hero position-relative pt-7 pb-6">
+  <section class="hero position-relative pt-6 pt-lg-7 pb-5 pb-lg-6">
     <div class="absolute-fill overflow-hidden pe-none">
       @include('partials.bg-circle', [
         "properties" => ["primary", "bottom-left", "large"]
@@ -24,7 +24,7 @@
 
         @include('partials.searchbar', [ 'scrollLock' => true ])
 
-        <section class="mt-6 col-12 col-lg-10">
+        <section class="mt-5 mt-lg-6 col-12 col-lg-10">
           @php the_content() @endphp
         </section>
 

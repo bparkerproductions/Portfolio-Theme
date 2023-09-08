@@ -4,13 +4,6 @@
       color: $dark;
     }
 
-    &__external-link {
-      @extend %absolute-fill;
-      @extend .d-flex;
-      @extend .justify-content-center;
-      @extend .align-items-center;
-    }
-
     &__preview-image {
       display: flex;
       align-items: center;
