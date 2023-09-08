@@ -6,11 +6,9 @@
   
   &__results {
     @extend .mt-2;
-    // @extend .rounded;
     position: absolute;
     z-index: 3;
     width: 100%;
-    transition: all 0.2s ease;
     overflow-y: auto;
 
     &::-webkit-scrollbar {
@@ -50,7 +48,7 @@
 
   &__list {
     li {
-      transition: all 0.1s ease;
+      transition: background-color 0.1s ease;
       cursor: pointer;
       display: flex;
       align-items: center;

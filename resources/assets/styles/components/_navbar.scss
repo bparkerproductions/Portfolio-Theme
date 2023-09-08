@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 10;
   width: 100%;
-  transition: all 0.15s ease;
+  transition: background-color 0.25s ease;
 
   &:not(.active) {
     @include media-breakpoint-down(sm) {
@@ -74,7 +74,6 @@
     background-color: $light;
     border-bottom: 1px solid $gray-600;
     min-width: 100%;
-    transition: all 0.15s ease;
 
     .primary-navigation__link,
     .primary-navigation__logo {

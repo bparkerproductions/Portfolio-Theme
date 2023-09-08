@@ -1,6 +1,6 @@
 // Stretches it out a bit vertically on hover
 .animation--hover-link {
-  transition: all 0.3s cubic-bezier(0.81, 1.46, 1, 1);
+  transition: transform  0.3s cubic-bezier(0.81, 1.46, 1, 1);
 
   &:hover {
     transform: scaleY(1.025);
@@ -11,7 +11,7 @@
 .animation--external-link {
   z-index: 1;
   position: inherit;
-  transition: all 0.25s cubic-bezier(0.39, 0.58, 0.57, 1);
+  transition: transform 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
 
   &:hover {
     cursor: pointer;
