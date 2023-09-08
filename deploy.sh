@@ -12,4 +12,4 @@ composer install
 source ~/.nvm/nvm.sh
 nvm use 18
 npm i
-npm run build
+npm run prod
