@@ -1,7 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.app', [
+  $navbarClass = 'scrolled always-scrolled'
+])
 
 @section('content')
-  <section class="entry-content position-relative pt-4 pt-sm-6 header-scrolled">
+  <section class="entry-content position-relative pt-4 pt-sm-6">
     @include('partials.bg-circle', [
       "properties" => ["large", "secondary"],
       "posLeft" => -75

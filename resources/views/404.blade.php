@@ -1,7 +1,9 @@
-@extends('layouts.minimal')
+@extends('layouts.minimal', [
+  $navbarClass = 'scrolled always-scrolled'
+])
 
 @section('content')
-  <section id="not-found" class="py-5 py-lg-7 header-scrolled">
+  <section id="not-found" class="py-5 py-lg-7">
     @if (!have_posts())
       <div class="container">
         <i class="fas fa-tired fa-4x mb-4 text-secondary"></i>

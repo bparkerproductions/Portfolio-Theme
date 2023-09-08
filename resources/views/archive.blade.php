@@ -2,10 +2,12 @@
   Template Name: Archive Template
 --}}
 
-@extends('layouts.app')
+@extends('layouts.app', [
+  $navbarClass = 'scrolled always-scrolled'
+])
 
 @section('content')
-  <section class="entry-content pt-4 pt-sm-6 position-relative header-scrolled">
+  <section class="entry-content pt-4 pt-sm-6 position-relative">
     @include('partials.bg-circle', [
       "properties" => ["large", "secondary"],
       "posLeft" => -75

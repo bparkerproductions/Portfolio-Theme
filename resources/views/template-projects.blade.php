@@ -2,10 +2,12 @@
   Template Name: All Projects
 --}}
 
-@extends('layouts.app')
+@extends('layouts.app', [
+  $navbarClass = 'header-dark'
+])
 
 @section('content')
-  <section id="all-projects" class="project-container header-dark bg-gray-400">
+  <section id="all-projects" class="project-container bg-gray-400">
       @foreach( get_field('all_projects') as $id )
         @php $clientProjects = get_field('client_projects', $id); @endphp
         <article

@@ -2,10 +2,12 @@
   Template Name: Resume
 --}}
 
-@extends('layouts.app')
+@extends('layouts.app', [
+  $navbarClass = 'scrolled always-scrolled'
+])
 
 @section('content')
-  <section class="resume py-5 py-lg-6 header-scrolled">
+  <section class="resume py-5 py-lg-6">
     <div class="container">
       <div class="mb-3">
         <a class="fw-normal text-dark" href="{{$resume['resume_file']['url']}}" download>
