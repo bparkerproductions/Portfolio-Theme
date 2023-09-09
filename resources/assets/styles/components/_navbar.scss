@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 10;
   width: 100%;
-  transition: all 0.25s ease;
+  transition: background-color 0.25s ease;
 
   &:not(.active) {
     @include media-breakpoint-down(sm) {
@@ -11,6 +11,8 @@
   }
 
   &.active {
+    transition: transform 0.25s ease;
+  
     @include media-breakpoint-down(sm) {
       background-color: $light;
       transform: translateX(0);

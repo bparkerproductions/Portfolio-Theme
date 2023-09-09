@@ -1,5 +1,5 @@
-<div class="row px-0 px-lg-3">
-  <header class="mb-3 col-12 gx-0">
+<div class="row">
+  <header class="mb-3 col-12">
     <div class="d-flex align-items-center mb-1">
       @if($project['is_featured'])
         <p class="badge bg-secondary mb-0 me-3 py-2 px-3 rounded-0">Featured</p>
@@ -21,19 +21,21 @@
     @endif
   </header>
 
-  <div class="col-12 col-lg-4 position-relative gx-0 project__preview-image">
-    <div
-      class="absolute-fill project__preview-image--overlay"
-      style="background-color: {{$project['color']}}"></div>
-    <img
-      class="rounded-0"
-      src="{{TemplateProjects::featuredImage($id)}}"
-      alt="The logo for the {{get_the_title($id)}} website."
-    />
-    
+  <div class="col-12 col-lg-4 project__preview-image__col">
+    <div class="position-relative project__preview-image h-100">
+      <div
+        class="absolute-fill project__preview-image--overlay"
+        style="background-color: {{$project['color']}}"></div>
+      <img
+        class="rounded-0"
+        src="{{TemplateProjects::featuredImage($id)}}"
+        alt="The logo for the {{get_the_title($id)}} website."
+      />
+    </div>
   </div>
-  <div class="col-12 col-lg-8 project__information bg-white">
-    <header>
+
+  <div class="col-12 col-lg-8 project__information__col">
+    <header class="bg-white project__information">
       <div class="d-flex align-items-center mb-1 p-3 border-bottom bg-gray-100">
         <p class="project__duration text-dark-50 fw-normal fs-sm mb-0">
           {{$project['duration']}}
@@ -76,7 +78,7 @@
             @endforeach
           </ul>
         </div>
-    </div>
+      </div>
     </header>
   </div>
 </div>
@@ -90,18 +92,20 @@
   @endforeach
 @endif
 
-<div class="project__gallery__container row mt-3 px-1">
+<div class="project__gallery__container row mt-3">
   @if ($project['gallery'])
     @foreach ($project['gallery'] as $img)
-      <div class="{{$img['col_width']}} project__gallery__col position-relative mb-4">
-        <img
-          class="project__gallery__img rounded shadow w-100"
-          alt="{{$img['image_description']}}"
-          src="{{$img['image']['url']}}"
-        />
-        <p class="mb-0 mt-3 text-dark-50 mt-2 fs-sm project__gallery__image">
-          {{$img['image_description']}}
-        </p>
+      <div class="{{$img['col_width']}} project__gallery__col">
+        <div class="position-relative mb-4">
+          <img
+            class="project__gallery__img rounded shadow w-100"
+            alt="{{$img['image_description']}}"
+            src="{{$img['image']['url']}}"
+          />
+          <p class="mb-0 mt-3 text-dark-50 mt-2 fs-sm project__gallery__image">
+            {{$img['image_description']}}
+          </p>
+        </div>
       </div>
     @endforeach
   @endif

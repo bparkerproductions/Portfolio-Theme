@@ -1,4 +1,4 @@
-<footer class="footer column-center mt-5 pb-3 pt-5 position-relative overflow-hidden">
+<footer class="footer column-center pb-3 pt-4 pt-lg-5 position-relative overflow-hidden">
 
   @include('partials.bg-circle', [
     "properties" => ["bottom-left", "primary", "large"],
