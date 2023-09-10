@@ -73,6 +73,7 @@ add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
 function registerAcfBlocks() {
     register_block_type( __DIR__ . '/views/blocks/technologies' );
     register_block_type( __DIR__ . '/views/blocks/bs-button' );
+    register_block_type( __DIR__ . '/views/blocks/bs-alert' );
     register_block_type( __DIR__ . '/views/blocks/bs-list' );
 }
 
