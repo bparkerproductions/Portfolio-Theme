@@ -12,7 +12,7 @@
             class="img-fluid shadow rounded mb-4"
             src="{{ get_the_post_thumbnail_url($ID) }}"
           />
-          <h4 title="{{get_the_title($ID)}}" class="blog-preview__title">{!! get_the_title($ID) !!}</h4>
+          <h3 title="{{get_the_title($ID)}}" class="blog-preview__title h4">{!! get_the_title($ID) !!}</h3>
           <p class="single-blog-description">{!! get_the_excerpt($ID) !!}</p>
 
           <p class="text-primary mb-0">Read More</p>
