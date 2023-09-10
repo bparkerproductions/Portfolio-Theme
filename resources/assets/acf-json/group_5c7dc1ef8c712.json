@@ -25,24 +25,24 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_5cc5e95eb5e0a",
-                    "label": "Is CTA",
-                    "name": "is_cta",
+                    "key": "field_64fe5002b2457",
+                    "label": "Title",
+                    "name": "title",
                     "aria-label": "",
-                    "type": "true_false",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "message": "",
-                    "default_value": 1,
-                    "ui": 0,
-                    "ui_on_text": "",
-                    "ui_off_text": "",
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "parent_repeater": "field_5c7dc1f349200"
                 },
                 {
@@ -453,5 +453,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693242634
+    "modified": 1694388240
 }

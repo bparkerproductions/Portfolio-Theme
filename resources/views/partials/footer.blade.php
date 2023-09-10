@@ -34,15 +34,10 @@
 
     {{-- Footer Bottom --}}
     <div class="w-100 px-5 py-3 d-flex flex-column align-items-center">
-      <ul class="list-unstyled mb-2 d-flex">
-        @foreach( get_field('social_media', 'option') as $social )
-          <li>
-            <a href="{{$social['link']}}"">
-              <i class="{{$social['class']}} fa-2x text-dark mx-1"></i>
-            </a>
-          </li>
-        @endforeach
-      </ul>
+      @include('partials.social-media', [
+        'iconColor' => 'text-dark',
+        'classes' => 'mb-2'
+      ])
       <p class="mb-0">Bparkerproductions @ {{date("Y")}}</p>
     </div>
   </div>

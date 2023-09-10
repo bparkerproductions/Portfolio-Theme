@@ -18,13 +18,8 @@
 
   <a href="{{$resume_link}}" class="text-decoration-underline text-white" target="_blank"> Looking for my resume?</a>
 
-  <ul class="list-unstyled mb-0 mt-3 d-flex">
-    @foreach( get_field('social_media', 'option') as $social )
-      <li>
-        <a href="{{$social['link']}}" target="_blank">
-          <i class="{{$social['class']}} fa-2x text-white mx-1"></i>
-        </a>
-      </li>
-    @endforeach
-  </ul>
+  @include('partials.social-media', [
+    'iconColor' => 'text-white',
+    'classes' => 'mb-0 mt-3'
+  ])
 </div>

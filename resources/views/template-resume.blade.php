@@ -30,13 +30,10 @@
                 </li>
               @endforeach
 
-              <ul class="list-unstyled mb-0 mt-3">
-                @foreach( get_field('social_media', 'option') as $social )
-                  <a href="{{$social['link']}}" target="_blank">
-                    <i class="{{$social['class']}} fa-2x text-white me-2"></i>
-                  </a>
-                @endforeach
-              </ul>
+              @include('partials.social-media', [
+                'iconColor' => 'text-white',
+                'classes' => 'mb-0 mt-3'
+              ])
             </ul>
           </div>
 
