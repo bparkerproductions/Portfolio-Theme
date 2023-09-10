@@ -1,11 +1,11 @@
 {
     "key": "group_64fd2f6977681",
-    "title": "Alert",
+    "title": "Block - BS Alert",
     "fields": [
         {
-            "key": "field_64fd2f69bd613",
-            "label": "Alert Text",
-            "name": "alert_text",
+            "key": "field_64fe01ddd06bb",
+            "label": "Title",
+            "name": "alert_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -23,12 +23,32 @@
             "append": ""
         },
         {
+            "key": "field_64fd2f69bd613",
+            "label": "Text",
+            "name": "alert_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_64fd2fbabd614",
-            "label": "Alert Color",
+            "label": "Color",
             "name": "alert_color",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "Options: primary, secondary, dark, light, info",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -44,11 +64,11 @@
         },
         {
             "key": "field_64fd2fcabd615",
-            "label": "Alert Icon Class",
+            "label": "Icon Class",
             "name": "alert_icon_class",
             "aria-label": "",
             "type": "text",
-            "instructions": "",
+            "instructions": "[fas fa-] info-circle, info, exclamation, exclamation-circle, exclamation-triangle, bookmark, book",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -81,5 +101,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694315234
+    "modified": 1694368934
 }

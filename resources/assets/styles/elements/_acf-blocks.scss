@@ -1,0 +1,10 @@
+/* Aggregate styles for various ACF Blocks */
+
+// Alert block
+.block {
+  &__alert .alert-content {
+    p:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
