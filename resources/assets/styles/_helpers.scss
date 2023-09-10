@@ -12,6 +12,10 @@
   @extend %absolute-fill;
 }
 
+.w-fit-content {
+  width: fit-content;
+}
+
 // Extra bg classes
 .bg-gray-900 {
   background-color: $gray-900;

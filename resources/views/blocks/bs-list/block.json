@@ -1,0 +1,12 @@
+{
+  "name": "acf/bootstrap-list",
+  "title": "Bootstrap List",
+  "description": "Bootstrap list group",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["bootstrap", "list"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "bs-list.php"
+  }
+}
