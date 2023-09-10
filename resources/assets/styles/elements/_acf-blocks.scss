@@ -2,7 +2,8 @@
 
 // Alert block
 .block {
-  &__alert .alert-content {
+  &__alert .alert-content,
+  &__list .list-group-item {
     p:last-child {
       margin-bottom: 0px;
     }

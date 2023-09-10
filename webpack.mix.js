@@ -7,6 +7,8 @@ mix
   .purgeCss({
     enabled: true,
     extend: {
-      safelist: { deep: [/col/, /flex-buttons/, /spinner/, /bg-circle/, /alert/] }
+      safelist: {
+        deep: [/col/, /flex-buttons/, /spinner/, /bg-circle/, /alert/, /p-/, /text-/]
+      }
     }
   });

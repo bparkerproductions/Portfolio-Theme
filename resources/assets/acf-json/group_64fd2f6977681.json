@@ -44,7 +44,7 @@
         },
         {
             "key": "field_64fd2fbabd614",
-            "label": "Color",
+            "label": "Color + classes",
             "name": "alert_color",
             "aria-label": "",
             "type": "text",
@@ -101,5 +101,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1694368934
+    "modified": 1694369233
 }
