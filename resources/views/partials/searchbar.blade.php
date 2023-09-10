@@ -10,13 +10,13 @@
       <i class="fas fa-times text-dark-75"></i>
     </div>
 
-    <div class="search-bar__results d-none">
+    <div class="search-bar__results rounded d-none">
       <div class="position-relative">
         <div class="d-none search-bar__loader absolute-fill flex-center">
           <i class="search-bar__loader__icon fas fa-circle text-primary spinner spinner--grow"></i>
         </div>
 
-        <ul class="search-bar__list list-unstyled card mb-0 shadow">
+        <ul class="search-bar__list list-unstyled card mb-0">
 
           {{-- Cloneable list item --}}
           <li>

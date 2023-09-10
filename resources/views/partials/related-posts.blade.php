@@ -10,14 +10,20 @@
               'postID' => $ID,
               'hide_date' => true
             ])
-            <a class="absolute-fill" href="{{get_the_permalink($ID)}}"></a>
+            <a
+              class="absolute-fill"
+              href="{{get_the_permalink($ID)}}"
+              aria-label="{!! get_the_title($ID) !!}"
+              title="{!! get_the_title($ID) !!}"
+            >
+            </a>
         
             <img
-              alt="{{APP::getImageAlt($ID)}}"
+              alt="{{ APP::getImageAlt($ID) }}"
               class="img-fluid shadow rounded mb-4"
               src="{{ get_the_post_thumbnail_url($ID) }}"
             />
-            <h4 title="{{get_the_title($ID)}}" class="blog-preview__title">{!! get_the_title($ID) !!}</h4>
+            <h4 title="{!! get_the_title($ID) !!}" class="blog-preview__title">{!! get_the_title($ID) !!}</h4>
             <p class="single-blog-description">{{ the_excerpt($ID) }}</p>
         
             <p class="text-primary mb-0">Read More</p>

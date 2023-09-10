@@ -17,7 +17,7 @@
       @foreach( get_field('footer_lists', 'option') as $list )
         <div class="px-0 px-xl-5 mt-5">
           @if($list['header'])
-            <h4 class="mb-3">{{$list['header']}}</h4>
+            <h2 class="mb-3 h4">{{$list['header']}}</h2>
           @endif
           <ul class="list list-unstyled">
             @foreach($list['link'] as $link)
