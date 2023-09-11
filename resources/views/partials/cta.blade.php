@@ -14,6 +14,7 @@
       class="text-white text-decoration-underline"
       target="_blank"
       href="mailto:bparkerproductions@gmail.com?subject=I%20came%20across%20your%20portfolio%20...">email me directly
+    </a>
   </p>
 
   <a href="{{$resume_link}}" class="text-decoration-underline text-white" target="_blank"> Looking for my resume?</a>

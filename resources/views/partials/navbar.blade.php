@@ -7,6 +7,8 @@
       <div class="me-4 me-sm-3">
         <a
           class="primary-navigation__logo d-flex"
+          aria-label="Go to the home page"
+          title="Go to the home page"
           href="{{get_field('home_item', 'option')['url']}}"
         >
           <i class="fab fa-js"></i>
