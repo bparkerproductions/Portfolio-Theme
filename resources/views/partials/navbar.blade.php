@@ -11,7 +11,7 @@
           title="Go to the home page"
           href="{{get_field('home_item', 'option')['url']}}"
         >
-          <i class="fab fa-js"></i>
+          <i class="fas fa-home"></i>
         </a>
       </div>
 

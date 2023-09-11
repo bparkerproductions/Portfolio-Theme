@@ -51,6 +51,12 @@
 
   #reply-title {
     @extend .text-dark;
-    @extend .mb-3;
+    @extend .mb-2;
+    @extend .h6;
+
+    small {
+      font-size: 1rem;
+      @extend .ms-3;
+    }
   }
 }

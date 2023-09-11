@@ -1,9 +1,9 @@
 <div class="block__list mt-3 mb-4">
   <?php if (get_field('bs_list_title')): ?>
     <div class="bg-<?= get_field('bs_list_color') ?> px-3 py-2">
-      <h6 class="mb-0 <?= get_field('bs_list_title_classes') ?>">
+      <p class="mb-0 h6 <?= get_field('bs_list_title_classes') ?>">
         <?= get_field('bs_list_title'); ?>
-      </h6>
+      </p>
     </div>
   <?php endif ?>
 

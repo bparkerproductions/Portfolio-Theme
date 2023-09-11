@@ -8,7 +8,7 @@ mix
     enabled: true,
     extend: {
       safelist: {
-        deep: [/col/, /flex-buttons/, /spinner/, /bg-circle/, /alert/, /p-/, /text-/]
+        deep: [/col/, /flex-buttons/, /spinner/, /bg-circle/, /alert/, /p-/, /text-/, /reply-title/]
       }
     }
   });

@@ -10,6 +10,8 @@ if (post_password_required()) {
   ])
   <div class="bg-circle" bgc-properties="thick, large, primary, top-left"></div>
   <div class="container">
+    <h2 class="text-dark mb-0">Comments</h2>
+    
     <div class="col-12 col-xl-6">
       @php comment_form($comment_options); @endphp
     </div>

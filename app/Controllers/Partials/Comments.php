@@ -12,6 +12,7 @@ trait Comments {
         type="text"
         id="your-name"
         name="your-name"
+        aria-label="Name (Optional)"
       >
     ';
   }
@@ -22,6 +23,8 @@ trait Comments {
         class="input-style w-100"
         id="comment"
         name="comment"
+        placeholder="Leave a comment"
+        aria-label="Leave a comment"
         aria-required="true"></textarea>
     ';
   }
@@ -42,7 +45,7 @@ trait Comments {
   public function commentOptions() {
     return [
       'label_submit' => 'Post',
-      'title_reply' => 'Leave a Comment',
+      'title_reply' => '',
       'logged_in_as' => '',
       'fields' => [
         'author' => $this->makeAuthorMarkup(),

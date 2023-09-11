@@ -11,11 +11,12 @@ class Archive extends Controller {
     $latest = new \WP_Query( array (
         'post__not_in' => array(get_the_ID()),
         'orderby'               => 'rand',
-        'posts_per_page'        => 100,
-        'fields' => 'ids'
+        'posts_per_page'        => $count,
+        'fields' => 'ids',
+        'post_status' => 'publish'
     ));
 
-    return array_slice($latest->posts, 0, $count);
+    return $latest->posts;
   }
 
   public static function getFeaturedPosts($amount) {
@@ -25,6 +26,7 @@ class Archive extends Controller {
       'meta_query' => array (
         array (
           'key' => 'is_featured',
+          'post_status' => 'publish',
           'value' => '1',
           'compare' => '=',
         )
@@ -37,13 +39,15 @@ class Archive extends Controller {
   public static function getPostsFromCategory($category, $amount) {
     return get_posts([
       'numberposts' => $amount,
+      'post_status' => 'publish',
       'category' => $category
     ]);
   }
 
   public static function getPosts($amount) {
     return get_posts([
-      'numberposts' => $amount
+      'numberposts' => $amount,
+      'post_status' => 'publish'
     ]);
   }
 }
