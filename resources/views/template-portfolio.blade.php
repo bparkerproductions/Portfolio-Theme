@@ -2,7 +2,7 @@
   Template Name: Portfolio
 --}}
 
-@extends('layouts.app', [ 'navbarClass' => 'dark' ])
+@extends('layouts.app')
 
 @section('content')
 
@@ -23,11 +23,13 @@
 
         <div class="row">
           @foreach(get_field('hero_blurbs') as $card)
-            <div class="col-12 col-lg-6 col-xl-4 mb-4 mb-lg-0">
-              <div class="card card-body">
-                <i class="{{$card['icon']}} fa-2x text-secondary"></i>
-                <h6 class="fs-4 text-dark mt-3">{{$card['title']}}</h6>
-                <p class="fw-light">{{$card['subtitle']}}</p>
+            <div class="col-12 col-lg-6 col-xl-4 mb-4">
+              <div class="card card-body d=flex justify-content-between">
+                <div>
+                  <i class="{{$card['icon']}} fa-2x text-secondary"></i>
+                  <h6 class="fs-4 text-dark mt-3">{{$card['title']}}</h6>
+                  <p class="fw-light">{{$card['subtitle']}}</p>
+                </div>
 
                 @if ($card['link'])
                   <a
