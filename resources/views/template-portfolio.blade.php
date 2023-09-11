@@ -45,9 +45,11 @@
         </div>
       </section>
 
-      <section id="about-container" class="mt-5 mt-xl-6 container">
+      <section id="about-container" class="mt-5 container">
         {{-- About Me content from editor --}}
-        @php the_content() @endphp
+        <div class="card card-body pt-5">
+          @php the_content() @endphp
+        </div>
       </section>
           
   </section>
