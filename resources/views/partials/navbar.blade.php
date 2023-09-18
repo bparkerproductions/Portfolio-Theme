@@ -1,9 +1,9 @@
-<nav class="primary-navigation column-center py-3 {{$class}}">
+<nav class="primary-navigation column-center py-4 {{$class}}">
 
   <div class="container">
     <div class="content-container d-flex">
 
-      {{-- Home link --}}
+      {{-- Home link
       <div class="me-4 me-sm-3">
         <a
           class="primary-navigation__logo d-flex"
@@ -14,6 +14,7 @@
           <i class="fas fa-home"></i>
         </a>
       </div>
+      --}}
 
       <ul class="d-flex flex-column flex-sm-row list-unstyled p-0 m-0">
         @foreach( get_field('navbar_list', 'option') as $item )

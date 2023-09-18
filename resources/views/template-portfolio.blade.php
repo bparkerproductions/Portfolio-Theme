@@ -27,7 +27,7 @@
               <div class="card card-body d=flex justify-content-between">
                 <div>
                   <i class="{{$card['icon']}} fa-2x text-secondary"></i>
-                  <h6 class="fs-4 text-dark mt-3">{{$card['title']}}</h6>
+                  <h2 class="fs-4 text-dark mt-3">{{$card['title']}}</h2>
                   <p class="fw-light">{{$card['subtitle']}}</p>
                 </div>
 
