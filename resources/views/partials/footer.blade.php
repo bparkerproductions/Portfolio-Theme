@@ -38,6 +38,23 @@
         'iconColor' => 'text-dark',
         'classes' => 'mb-2'
       ])
+
+      @if (get_field('document_links', 'option'))
+        <ul class="list-unstyled d-flex mb-3 mt-2">
+          @foreach(get_field('document_links', 'option') as $docLink)
+            <li class="mx-2">
+              <a
+                href="{{$docLink['link']['url']}}"
+                class="text-decoration-underline text-dark-75"
+                target="_blank"
+              >
+                {{$docLink['link']['title']}}
+              </a>
+            </li>
+          @endforeach
+        </ul>
+      @endif
+
       <p class="mb-0">Bparkerproductions @ {{date("Y")}}</p>
     </div>
   </div>
