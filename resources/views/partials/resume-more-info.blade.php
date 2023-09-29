@@ -34,7 +34,12 @@
   </ul>
 
   @if($item['link'])
-    <a class="btn btn-dark rounded-1 badge py-2" target="_blank" href="{{$item['link']['url']}}">
+    <a
+      class="btn btn-dark rounded-1 badge py-2"
+      target="_blank"
+      rel="noreferrer"
+      href="{{$item['link']['url']}}"
+    >
       <i class="fas fa-external-link-alt me-2"></i><span>See Project</span>
     </a>
   @endif

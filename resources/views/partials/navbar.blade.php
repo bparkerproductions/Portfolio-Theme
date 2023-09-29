@@ -18,7 +18,7 @@
 
       <ul class="d-flex flex-column flex-sm-row list-unstyled p-0 m-0">
         @foreach( get_field('navbar_list', 'option') as $item )
-          <li class="mx-0 mx-sm-3 mb-1 mb-sm-0 d-flex align-items-center">
+          <li class="me-0 me-sm-4 mb-1 mb-sm-0 d-flex align-items-center">
             <a
               class="primary-navigation__link {{App::IsActive($item['link']['title'])}}"
               href="{{$item['link']['url']}}"

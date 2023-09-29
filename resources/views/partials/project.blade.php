@@ -56,6 +56,7 @@
         @if ($project['project_link'])
           <a
             target="_blank"
+            rel="noreferrer"
             class="btn btn-sm btn-dark px-3"
             href="{{$project['project_link']['url']}}"
           >
