@@ -3,19 +3,6 @@
   <div class="container">
     <div class="content-container d-flex">
 
-      {{-- Home link
-      <div class="me-4 me-sm-3">
-        <a
-          class="primary-navigation__logo d-flex"
-          aria-label="Go to the home page"
-          title="Go to the home page"
-          href="{{get_field('home_item', 'option')['url']}}"
-        >
-          <i class="fas fa-home"></i>
-        </a>
-      </div>
-      --}}
-
       <ul class="d-flex flex-column flex-sm-row list-unstyled p-0 m-0">
         @foreach( get_field('navbar_list', 'option') as $item )
           <li class="me-0 me-sm-4 mb-1 mb-sm-0 d-flex align-items-center">
