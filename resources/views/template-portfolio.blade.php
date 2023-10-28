@@ -24,7 +24,7 @@
         <div class="row">
           @foreach(get_field('hero_blurbs') as $card)
             <div class="col-12 col-lg-6 col-xl-4 mb-4">
-              <div class="card card-body d=flex justify-content-between">
+              <div class="card card-body white-gradient d-flex justify-content-between">
                 <div>
                   <i class="{{$card['icon']}} fa-2x text-secondary"></i>
                   <h2 class="fs-4 text-dark mt-3">{{$card['title']}}</h2>
@@ -103,7 +103,9 @@
       "opacity" => 0.5
     ])
     <div class="container">
-      <h2 class="mb-3">Read More From More Happy Clients</h2>
+      @if(get_field('testimonials_header'))
+        <h2 class="mb-3 text-dark">{{get_field('testimonials_header')}}</h2>
+      @endif
 
       @if (get_field('testimonials') )
         <div class="row">
@@ -154,7 +156,9 @@
       "posLeft" => 0.75
     ])
     <div class="container">
-      <h2 class="text-dark">Credentials</h2>
+      @if (get_field('credentials_header'))
+        <h2 class="text-dark">{{get_field('credentials_header')}}</h2>
+      @endif
       @include('partials.credentials')
     </div>
   </section>

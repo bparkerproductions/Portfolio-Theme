@@ -198,6 +198,26 @@
             "bidirectional_target": []
         },
         {
+            "key": "field_653d75c59bd45",
+            "label": "Testimonials Header",
+            "name": "testimonials_header",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_5c7dc843b0720",
             "label": "Testimonials",
             "name": "testimonials",
@@ -223,6 +243,26 @@
             "max": "",
             "return_format": "id",
             "bidirectional_target": []
+        },
+        {
+            "key": "field_653d76efea1f5",
+            "label": "Credentials Header",
+            "name": "credentials_header",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -243,5 +283,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693859120
+    "modified": 1698526973
 }

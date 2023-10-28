@@ -36,7 +36,7 @@
 
   <div class="col-12 col-lg-8 project__information__col">
     <header class="bg-white project__information">
-      <div class="d-flex align-items-center mb-1 p-3 border-bottom bg-gray-100">
+      <div class="d-flex align-items-center mb-1 p-3 border-bottom bg-gray-200">
         <p class="project__duration text-dark-50 fw-normal fs-sm mb-0">
           {{$project['duration']}}
         </p>
