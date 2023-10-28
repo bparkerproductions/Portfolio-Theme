@@ -47,7 +47,12 @@
 
       <section id="about-container" class="mt-5 container">
         {{-- About Me content from editor --}}
-        <div class="card card-body pt-5">
+        <div class="card card-body rounded-3 dark-gradient border-dark bg-dark text-white pt-5 overflow-hidden">
+          @include('partials.bg-circle', [
+            "properties" => ["large", "bottom-left", "fill-secondary"],
+            "posTop" => -100,
+            "opacity" => 0.02
+          ])
           @php the_content() @endphp
         </div>
       </section>
@@ -156,7 +161,7 @@
 
   {{-- CTA --}}
   <section id="cta" class="cta container py-5">
-    <div class="card card-body bg-dark">
+    <div class="card card-body bg-dark dark-gradient">
       @include('partials.cta')
     </div>
   </section>
