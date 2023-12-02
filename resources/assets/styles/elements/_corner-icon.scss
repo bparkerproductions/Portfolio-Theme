@@ -5,6 +5,7 @@
   clip-path: polygon(0 0, 0% 100%, 100% 0);
   width: 70px;
   height: 65px;
+  border-top-left-radius: $border-radius-lg;
   @extend .ps-2;
   @extend .pt-2;
 }

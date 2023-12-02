@@ -1,16 +1,16 @@
 <ul class="list-unstyled row">
 
   {{-- Degree --}}
-  <li class="col-12 mb-2">
+  <li class="col-12 mb-4 rounded-3">
     @include('partials.degree')
   </li>
 
   @foreach( get_field('credentials', 'option') as $credential )
-    <li class="col-12 col-lg-6 my-2 d-flex align-items-center credential position-relative">
-      <div class="d-flex flex-column bg-gray-400 p-3 w-100 h-100">
+    <li class="col-12 col-lg-6 my-2 d-flex align-items-center credential rounded-3 position-relative">
+      <div class="d-flex flex-column bg-gray-400 p-3 w-100 h-100 rounded-3 border">
         <h6 class="d-block d-sm-none">{{$credential['title']}}</h6>
 
-        <div class="d-flex">
+        <div class="d-flex flex-column flex-sm-row">
           <div class="d-flex align-items-center me-3 py-2">
             <img
               class="credential__image"
