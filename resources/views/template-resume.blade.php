@@ -62,9 +62,11 @@
             <div class="p-4 border-bottom">
               <h6 class="mb-1 text-white fw-semibold">Accomplishments</h6>
               <ul class="mb-0">
-                <li class="text-dark fw-semibold">{{wp_count_posts()->publish}} blog posts and counting</li>
+                <li class="text-white">{{wp_count_posts()->publish}} blog posts and counting</li>
+                <li class="text-white">Over 
+                  {{wp_count_posts('client-project')->publish}} successfully completed client projects</li>
                 @foreach($resume['accomplishments'] as $accomplishment)
-                  <li class="text-dark fw-semibold">{{$accomplishment['item']}}</li>
+                  <li class="text-white">{{$accomplishment['item']}}</li>
                 @endforeach
               </ul>
             </div>
@@ -80,17 +82,19 @@
           <div class="mb-4">
             <p class="m-0">{{$resume['intro']}}</p>
 
-            <ul class="list-unstyled ps-3 mt-2">
-              @foreach($resume['intro_points'] as $point)
-                <li class="d-flex align-items-center my-1">
-                  <i class="fas fa-plus-circle text-dark me-2"></i>
-                  <p class="m-0">{{$point['point']}}</p>
-                </li>
-              @endforeach
-            </ul>
+            @if($resume['intro_points'])
+              <ul class="list-unstyled ps-3 mt-2">
+                @foreach($resume['intro_points'] as $point)
+                  <li class="d-flex align-items-center my-1">
+                    <i class="fas fa-plus-circle text-dark me-2"></i>
+                    <p class="m-0">{{$point['point']}}</p>
+                  </li>
+                @endforeach
+              </ul>
+            @endif
           </div>
 
-          <div class="py-4">
+          <section class="py-4">
             <h5 class="fw-bold mb-0">Experience</h5>
             @foreach($resume['experience'] as $experience)
               @include('partials.resume-more-info', [
@@ -98,9 +102,9 @@
                 'type' => 'company'
               ])
             @endforeach
-          </div>
+          </section>
 
-          <div class="py-4">
+          <section class="py-4">
             <h5 class="fw-bold mb-0">Projects</h5>
             @foreach($resume['projects'] as $project)
               @include('partials.resume-more-info', [
@@ -108,20 +112,13 @@
                 'type' => 'project'
               ])
             @endforeach
-          </div>
+          </section>
 
-          <div class="pt-4">
-            <h5 class="fw-bold mb-0">Education</h5>
-            @foreach($resume['education'] as $education)
-              @include('partials.resume-more-info', [
-                'item' => $education,
-                'type' => 'school'
-              ])
-            @endforeach
-          </div>
-
-          {{-- Credentials --}}
-          @include('partials.credentials')
+          {{-- Credentials/Education --}}
+          <section>
+            <h5 class="fw-bold mb-3">Education</h5>
+            @include('partials.credentials')
+          </section>
         </div>
       </div>
     </div>

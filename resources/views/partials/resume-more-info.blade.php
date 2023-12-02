@@ -12,9 +12,14 @@
   </div>
 
   <div class="flex-column flex-xl-row d-flex align-items-start align-items-xl-end">
-    <em class="text-dark-75 fs-sm">{{$item['title']}} - {{$item['date']}}</em>
+    @if ($item['title'])
+      <em class="text-dark-75 fs-sm">{{$item['title']}} 
+        @if ($item['date']) - {{$item['date']}} @endif
+      </em>
+    @endif
+
     @if($item['technologies'])
-      <div class="ms-0 ms-xl-3 mt-1">
+      <div class="ms-0 @if ($item['title']) ms-xl-3 @endif mt-1">
         @foreach($item['technologies'] as $tech)
           <i class="{{get_field('fa_icon_class', $tech)}} resume__technology-icon me-2"></i>
         @endforeach
@@ -26,8 +31,8 @@
 
   <ul class="list-unstyled ms-3">
     @foreach($item['points'] as $point)
-      <li class="d-flex align-items-center">
-        <i class="fas fa-plus-circle me-2"></i>
+      <li class="d-flex align-items-start">
+        <i class="fas fa-plus-circle me-2 mt-1"></i>
         <p class="m-0">{{$point['item']}}</p>
       </li>
     @endforeach
