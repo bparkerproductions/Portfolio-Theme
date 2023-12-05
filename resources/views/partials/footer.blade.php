@@ -40,7 +40,7 @@
       ])
 
       @if (get_field('document_links', 'option'))
-        <ul class="list-unstyled d-flex mb-3 mt-2">
+        <ul class="list-unstyled d-flex flex-column flex-sm-row align-items-center mb-3 mt-2">
           @foreach(get_field('document_links', 'option') as $docLink)
             <li class="mx-2">
               <a
