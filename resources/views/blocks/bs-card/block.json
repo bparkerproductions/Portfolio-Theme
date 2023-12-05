@@ -1,0 +1,12 @@
+{
+  "name": "acf/bootstrap-card",
+  "title": "Bootstrap Card",
+  "description": "Bootstrap card",
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": ["bootstrap", "card"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "bs-card.php"
+  }
+}

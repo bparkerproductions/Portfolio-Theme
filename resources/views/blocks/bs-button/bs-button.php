@@ -1,6 +1,7 @@
 <a
   href="<?= get_field('button_link')['url'] ?>"
   class="btn <?= get_field('classes') ?>"
+  target="<?= get_field('button_link')['target'] ?>"
 >
   <?= get_field('button_link')['title']; ?>
   
