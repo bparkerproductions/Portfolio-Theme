@@ -92,7 +92,7 @@ import { hasElement } from './../helpers/general.js'
       const attrs = flakeAttributes();
 
       flake.x = attrs['x'];
-      flake.y = attrs['y'];
+      flake.y = -attrs['y'];
     }
   });
 })()
